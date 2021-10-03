@@ -1,0 +1,171 @@
+\chapter{Application of a covariance matrix}
+\label{application_cov_mat}
+In Chapter~\ref{introduction}, I have outlined the advantages of using the covariance matrix of NN potential parameters and briefly mentioned types of errors to the Nd scattering observables. In this chapter I discuss the various sources of theoretical uncertainties in the \textit{ab initio} type calculations based on the chiral SMS model at various orders, neglecting the 3N force present in describing the 3N processes. The main results of such study were previously shown in our Refs.~\cite{Skibinski2018, volkotrub2020uncertainty}. Studies of correlations among all calculated 2N and 3N observables, as well as between observable and specific potential parameters, will also be discussed.
+
+\section{Uncertainty quantification presented in 3N studies}
+\label{uq}
+
+\subsection{Determination of statistical uncertainty in a 3N system}
+\label{statistical}
+As defined in Chapter~\ref{introduction}, the statistical uncertainty refers to an error arising from uncertainties of parameters of a given NN interaction. In our method of estimation, computation of the statistical uncertainties requires a big sample of predictions obtained with different sets of parameters within one model of interaction. 
+%A key element in obtaining the magnitudes of statistical uncertainties is the covariance matrix (or equivalently the correlation matrix) of free parameters as repeatedly mentioned, is available for the SMS chiral potential of Ref.~\cite{Reinert2018} and the OPE-Gaussian potential of Ref.~\cite{NavarroPerez2014}. 
+
+%In Ref.~\cite{Skibinski2018} we described our method how to propagate theoretical uncertainties from NN force to 3N scattering observables in the case of the OPE-Gaussian potential. 
+The algorithm for determining statistical uncertainty and using it further for the chiral SMS force can be divided into the following steps:
+%Drawing on our procedure of determining the theoretical uncertainty arising from the NN potential parameters, which was described in ~\cite{Skibinski2018}, the statistical uncertainty can be found by the following steps:
+\begin{enumerate}
+\item Preparation of sets of the potential parameters.
+
+Having at our disposal covariance matrix for the potential parameters, as well as central values of parameters, I sample 50 sets of the potential parameters from the multivariate normal distribution. The multivariate sampling was done using the Mathematica\textsuperscript{\textregistered}~\cite{Mathematica11p3} computing system (see Appendix~\ref{appendix_1}). Such a number of sets guarantee a statistically meaningful probe, as will be shown in Chapter~\ref{error}. 
+%Being in contact with the Bochum-Bonn group we received one set $S_{0}$ of central values and the covariance matrices of LECs for all orders of the chiral expansion.
+%50 covariance matrices for all orders of the chiral expansion of the OPE-Gaussian potential parameters, sampled from the multivariate normal distribution (in space of parameters) with known expectation values and covariance matrix, and one set of expectation values of potential parameters $S_{0}$, see Ref.~\cite{Skibinski2018}. 
+%($S_i$ with $i = 1,  \ldots, 50$)
+%
+%In the case of the chiral SMS potentials from the Bochum group we have been equipped by the set $S_{0}$ and the covariance matrices for all orders of the chiral expansion.   
+%The potential parameters for the chiral interaction result from $\chi^{2}$ fitting of theoretical predictions directly to the data collected in the Granada database~\cite{Perez2013}. The fitting procedure is described in detail in Refs.~\cite{Reinert2018} and~\cite{ReinertMaster}. As a result, 
+%the central values of the parameters and their covariance matrix are obtained. Being in contact with members of the Bochum-Bonn group we received the set ($S_{0}$) of expectation values and the covariance matrices of potential parameters for all orders of chiral expansion. The various sets of potential parameters have been computed by sampling from the multivariate normal distribution (in space of parameters) with a given covariance matrix. As a result, we sampled 50 sets ($S_{i}, i = 1 \ldots 50)$ of NN potential parameters. Also in the case of the OPE-Gaussian interaction, we are already in contact with authors of this potential and have been equipped by them with the set of the central values of the parameters and a sample of 50 sets of potential parameters. 
+\item Computing observables for each set of potential parameters
+
+For each set $S_{i}$ $(i = 0,1, \ldots, 50)$ %I calculated the deuteron wave-function and the $t$ matrix, solved, at
+%each considered energy, the Faddeev equation to construct the transition amplitude from which the 3N observables can be obtained for all investigated models of NN interaction. 
+I computed the deuteron wave-function by solving the Schr{\"o}dinger equation and the $t$-matrix elements from the Lippman-Schwinger equation and solved the Faddeev equation to construct the transition amplitude from which the 3N observables can be obtained for all investigated models of NN interaction. From solutions of the Lippmann-Schwinger equation 2N observables can be also computed. More details about these calculations will be given in Chapter~\ref{formalism}. As a result, the angular dependence of various 3N scattering observables is known for each set of parameters $S_{i}$. The obtained predictions can be used to study
+%by solving the Schr{\"o}dinger equation in momentum space. In this case Schr{\"o}dinger equation can be expressed as an eigenvalue problem. The solutions of this problem -- eigenvalue which corresponds to the binding energy and corresponding eigenvector which can be directly linked to the deuteron wave function -- were obtained using the standard numerical methods~\cite{numrecipesFortran} and the LAPACK library. 
+\begin{enumerate}[label=(\alph*)] % (a), (b), (c), ...
+\item for a given observable $X$ at an energy $E$ and at a scattering angle $\theta$, the empirical probability density function of the observable $X$($E$, $\theta$) resulting when various sets $S_i$, ($i = 1, \ldots, 50$) are used;
+\item for a given observable $X$, both the angular and energy dependencies of results based on various sets $S_{i}$.
+\end{enumerate}
+This, in turn, allows one to find the magnitude of statistical uncertainty of a given 3N observable $X$ and to analyze correlations among all observables. 
+
+\item Quantification of the statistical uncertainty 
+
+Various estimators can be used to quantify the statistical uncertainty of the observable $X(E, \theta$). 
+For example, by assuming there are 50 sets of potential parameters: 
+\begin{enumerate}[label=(\alph*)]
+\item The sample standard deviation $\sigma (X) = \sqrt{\frac{1}{50-1}\sum\limits_{i = 1}^{50}\left(X_{i}(E,\theta) - \bar{X}(E, \theta)\right)^{2}}$, where $\bar{X}(E, \theta)$ is the mean value of predictions.
+\item $\frac{1}{2}\Delta_{100\%} \equiv \frac{1}{2}\left(\max\lbrace X_{i}(E, \theta)\rbrace - \min\lbrace X_{i}(E, \theta)\rbrace \right)$, where the minimum and maximum are taken over all predictions $\lbrace X_{i}(E, \theta)\rbrace$ based on 50 sets of LECs $S_{i}, i = 1, 2, \ldots, 50$.
+\item $\frac{1}{2}\Delta_{68\%} \equiv \frac{1}{2}\left(\max\lbrace X_{i}(E, \theta)\rbrace - \min\lbrace X_{i}(E, \theta)\rbrace \right)$, where the minimum and maximum are taken over 34 (68\% of 50) predictions based on different sets of LECs. The set of 34 observables is constructed by discarding the 8 lowest and the 8 highest
+predictions for a given observable and at specific scattering angle and energy.
+\item $\frac{1}{2}$IQR: half of the standard estimator of the interquartile range being the difference between the third and the first quartile IQR = $Q_{3} - Q_{1}$. For the sample of size 50, this corresponds to taking half of the difference between the predictions on 37th and 13th positions in a sample sorted in ascending order. 
+\end{enumerate}
+\end{enumerate}
+% and will be discussed in Section~\ref{stat} of Chapter~\ref{formalism}. The optimal estimator of the statistical uncertainty of the observable $O$($E$, $\theta$) at given energy and a scattering angle is calculated by the formula
+%\begin{equation}
+%\frac{1}{2}\Delta_{68\%} \equiv \frac{1}{2}\left(\max\lbrace O_{i}(E, \theta)\rbrace - \min\lbrace O_{i}(E, \theta)\rbrace \right)\;,
+%\end{equation}
+%where where the minimum and maximum are taken over 34 (68\% of 50) predictions based on 50 sets of the NN potential
+%parameters. The set of 34 observables is constructed by discarding the 8 lowest and the 8 highest
+%predictions for the observable $O$($E$, $\theta$). 
+%The computation of the 2N scattering observables requires a calculation of the transition amplitude between initial and final two-nucleon states. The amplitude is given as the matrix element of the $t$-operator, which is a solution of the Lippmann-Schwinger equation. Thus during this step, we solved, again for each of the investigated models of interaction and all sets of parameter values, this equation and after the suitable anti-symmetrization, the transition amplitude and the observables were computed~\cite{glockle1983quantum, Glockle1996}.  
+The estimators $\frac{1}{2}\Delta_{100\%}$ and $\sigma(X)$ are sensitive to possible outliers in the sample, and thus accepting them as estimators of dispersion can lead to overestimation of the statistical uncertainty. On the other hand, due to the fact that the IQR is calculated using only half of the elements in the sample can leads to an underestimation of the theoretical uncertainty. Therefore, we chose $\frac{1}{2}\Delta_{68\%}$ as an optimal measure for dispersion of predictions and consequently as an estimator of the statistical uncertainty~\cite{Skibinski2018}. 
+
+%compare its size with the statistical uncertainties already obtained
+\subsection{Determination of truncation errors within EKM method}
+\label{truncation}
+In addition to the statistical uncertainties, also the truncation errors, which play the role of systematic uncertainty can be evaluated. As was outlined in Chapter~\ref{introduction}, the truncation errors are uncertainties that arising from restriction to a given order of the chiral expansion. The one way to evaluate truncation errors is using the EKM approach~\cite{Epelbaum2015}. 
+Consider any 3N scattering observable $X$ which can be expanded up to the $k$-th order of the chiral expansion $Q^{k}$ ($k = 0, 2, 3, \ldots$) but at a fixed cutoff value $\Lambda$ in the form
+\begin{equation}
+X = X^{(0)} + \Delta X^{(0)} + \Delta X^{(2)} + \Delta X^{(3)} + \ldots + \Delta X^{(k)}\;,
+\label{eq:trunc1}
+\end{equation}
+where $\Delta X^{(2)} := X^{(2)} - X^{(0)}$, $\Delta X^{(k)} := X^{(k)} - X^{(k-1)}$ with $k > 2$, and $X^{(k)}$ is a prediction obtained at order $Q^{k}$.
+
+The truncation error $\delta (X)^{(k)}$ of an observable $X$ at $k$-th order of the chiral expansion with $k = 0, 2, \ldots$ can be estimated as
+\begin{equation}
+\begin{split}
+&\delta (X)^{(0)} \geq \max\left(Q^{2}|X^{(0)}|\right)\;,\\
+&\delta (X)^{(2)} \geq \max\left(Q^{3}|X^{(0)}|, Q|X^{(2)} - X^{(0)}|\right)\;,\\
+&\delta (X)^{(k)} \geq \max\limits_{2\leq j \leq k}\left(Q^{k+1}|X^{(0)}|, Q^{k+1-j}|\Delta^{(j)}|\right)~\mathrm{for}~j \geq 2\;,
+\end{split}
+\label{eq:trunc2}
+\end{equation}
+with the additional constraints $\delta (X)^{(2)} \geq Q\delta (X)^{(0)}$ and $\delta (X)^{(k)} \geq Q\delta (X)^{(k - 1)}$ for $k \geq 3$ are imposed on the truncation errors. 
+The chiral expansion parameter $Q$ is
+\begin{equation}
+Q = \max\left(\frac{p}{\Lambda_{b}}, \frac{m_{\pi}}{\Lambda_{b}}\right)\;.
+\label{eq:trunc3}
+\end{equation}
+In my calculations the breakdown scale of the chiral expansion $\Lambda_{b}$ was choosen as $\Lambda_{b}$ = 600~MeV based on the results from Refs~\cite{binder2016few, binder2018few} with the physical pion mass $m_{\pi}$ and the c.m.s. momentum $p$ corresponding to the considered incoming-nucleon laboratory $E_{\mathrm{lab}}$.
+\subsection{The truncation errors with a given Bayesian model}
+\label{bayes}
+Since the EKM approach does not provide a statistical interpretation of the alleged uncertainties, we apply also the Bayesian approach to estimate truncation error. The authors of Refs.~\cite{Furnstahl2015, melendez2017bayesian} developed the Bayesian method to calculate the posterior probability distribution of truncation errors in $\chi$EFT for the $np$ total cross section at selected energies by applying the chiral NN potentials from Ref.~\cite{Epelbaum2015}. Within the LENPIC project the Bayesian model of Ref.~\cite{melendez2017bayesian} was slightly modified to study truncation errors not only in NN but also in 3N scattering,~\cite{epelbaum2020towards}. The same Bayesian procedure was already used in Ref.~\cite{volkotrub2020uncertainty}.
+
+This Bayesian procedure determining the truncation errors was based on rewriting Eq. (\ref{eq:trunc1}) in terms of dimensionless expansion coefficients $c_{k}$ in the form
+\begin{equation}
+\begin{split}
+X &= X^{(0)} + \Delta X^{(2)}+ \Delta X^{(3)}+ \Delta X^{(4)}+\ldots + \Delta X^{(k)} +\ldots \\&= X_{\mathrm{ref}}\left(c_{0} + c_{2}Q^{2} + c_{3}Q^{3} + c_{4}Q^{4} + \ldots\right)\;,
+\end{split}
+\label{eq:trunc4}
+\end{equation}
+where $\Delta X^{(k)}$ are the same as in Eq. (\ref{eq:trunc2}) and the dimensionless expansion coefficients $c_{k}$ are
+\begin{equation}
+c_{k} = \frac{X^{(k)} - X^{(k-1)}}{X_{\mathrm{ref}}Q^{k}}\;.
+\end{equation}
+The overall scale $X_{\mathrm{ref}}$ is
+\begin{equation}
+  X_{\mathrm{ref}} =
+  \begin{cases}
+    \max\left(\vert X^{(0)}\vert, Q^{-2} \vert \Delta X^{(2)}\vert \right)  & \text{for $k = 2$}\;, \\
+    \max\left(\vert X^{(0)}\vert, Q^{-2} \vert \Delta X^{(2)}\vert, Q^{-3} \vert \Delta X^{(3)}\vert \right) & \text{for $k \geq 3$}\;,
+  \end{cases}
+\label{eq:trunc5}
+\end{equation}
+assuming that $\Delta X^{(i)}$ are known explicitly up to the $k = 3$. One can estimate the size of the truncation error at the k-th order of chiral expansion as $\delta X^{(k)}_{Bayes} \equiv X_{ref}\Delta$ where 
+$\Delta \equiv \sum^{\infty}_{i = k + 1}c_{i}Q^{i} \approx \sum^{k + h}_{i = k + 1}c_{i}Q^{i}$ is distributed, 
+given the knowledge of $\left\lbrace c_{i \leq k}\right\rbrace$
+with a posterior probability density function
+\begin{equation}
+\text{pr}_{h}\left(\Delta\mid \left\lbrace c_{i \leq k} \right\rbrace \right) = \frac{\int^{\infty}_{0}d\bar{c}~\text{pr}_{h}\left(\Delta\mid\bar{c} \right)\text{pr}(\bar{c})\prod_{i \in A}\text{pr}(c_{i}\mid\bar{c})}{\int^{\infty}_{0}d\bar{c}~\text{pr}(\bar{c})\prod_{i \in A}\text{pr}(c_{i}\mid\bar{c})}\;.
+\label{eq_posterior1}
+\end{equation}
+Here the prior probability density function $\text{pr}(c_{i}\mid\bar{c})$ is taken in form of a Gaussian N(0,$\bar{c}^2$) function 
+and $\text{pr}(\bar{c})$ is a log-uniform distribution in range $(\bar{c}_{<},\bar{c}_{>})$.
+Set $A$ is defined as 
+$A = \left\lbrace n \in \rm{N}_{0} \mid n \leq k~\wedge~n \neq 1 \wedge n \neq m \right\rbrace $, $m \in  \left\lbrace 0, 2, 3 \right\rbrace$ and 
+\begin{equation}
+\text{pr}_{h}(\Delta\mid\bar{c}) \equiv \left[\prod^{k + h}_{i = k + 1}\int^{\infty}_{\infty}dc_{i}\text{pr}(c_{i}\mid\bar{c}) \right] \delta\left[\Delta - \sum^{k + h}_{j = k + 1}c_{j}Q^{j} \right]\;,
+\label{eq_posterior2}
+\end{equation}
+with $h$ being the number of the chiral orders above $k$ which contributes to the truncation error.
+Resulting $\text{pr}_{h}(\Delta\mid \left\lbrace c_{i \leq k} \right\rbrace)$ is symmetric about $\Delta = 0$ thus 
+one can find the degree-of-belief (DoB) interval $(-d^{(p)}_{k},d^{(p)}_{k})$  at the probability $p$, 
+as an inversion problem from the numerical integration
+\begin{equation}
+p = \int_{-d^{(p)}_{k}}^{d^{(p)}_{k}} \text{pr}_{h}(\Delta\mid \left\lbrace c_{i \leq k} \right\rbrace) d\Delta
+\label{eq_posterior3}
+\end{equation}
+and thus find the truncation error $\delta X^{(k)}_{Bayes}=X_{ref} d^{(p)}_{k}$.
+
+In following we use $h=10$, $\bar{c}_{<}=0.5$, $\bar{c}_{>}=10$, $\Lambda_{b}=650$~MeV and $M^{\mathrm{eff}}_{\pi}= 200$~MeV.
+The two latter quantities enter the expansion parameter
+$Q = max\left( \frac{p}{\Lambda_{b}}, \frac{M^{\mathrm{eff}}_{\pi}}{\Lambda_{b}}\right)$ with momentum scale $p$ defined in Eq. (17) of Ref.~\cite{epelbaum2020towards} and reads as
+\begin{equation}
+p = \sqrt{\frac{A}{A+1}m E_{\mathrm{lab}}}\;,
+\end{equation}
+where $A$ = 2 for the deuteron, $m$ is the nucleon mass $m = 2m_{p}m_{n}/(m_{p}+m_{n})= 938.918$ MeV. 
+
+Finally, the detailed expression for $\text{pr}_{h}\left(\Delta\mid \left\lbrace c_{i \leq k} \right\rbrace \right)$ at assumed priors\footnote{Since, in general, the coefficients $c_{k}$ are unknown \textit{a priori}, they can be obtained from a random distribution (priors) with a characteristic size.} which was shown in Appendix A\footnote{The expression was first given in Appendix A of Ref.~\cite{melendez2017bayesian}} of Ref.~\cite{epelbaum2020towards} takes the form
+\begin{equation}
+\begin{split}
+\text{pr}_{h}\left(\Delta\mid \left\lbrace c_{i \leq k} \right\rbrace \right) &= \frac{1}{\sqrt{\pi \bar{q}^2 \boldsymbol{c_{k}^2}}} \left(\frac{\boldsymbol{c_{k}^2}}{\boldsymbol{c_{k}^2} + \Delta^{2}/\bar{q}^2}\right)^{k/2}\\
+&\times \frac{\Gamma\left[\frac{k}{2},\frac{1}{2\bar{c^{2}_{>}}}\right]\left(\boldsymbol{c^{2}_{k}} + \frac{\Delta^{2}}{\bar{q}^2} \right) - \Gamma\left[\frac{k}{2},\frac{1}{2\bar{c^{2}_{<}}}\right]\left(\boldsymbol{c^{2}_{k}} + \frac{\Delta^{2}}{\bar{q}^2} \right)}{\Gamma\left[\frac{k - 1}{2}, \frac{\boldsymbol{c^{2}_{k}}}{2\bar{c^{2}_{>}}} \right] - \Gamma\left[\frac{k - 1}{2}, \frac{\boldsymbol{c^{2}_{k}}}{2\bar{c^{2}_{<}}} \right]}
+\end{split}
+\label{eq_posterior4}
+\end{equation}
+where $\bar{q}^{2} \equiv \sum\limits^{k + h}_{i = k + 1} Q^{2i}$, $\boldsymbol{c^{2}_{k}} \equiv \sum_{i \in A} c^{2}_{i}$ and the incomplete gamma function is
+\begin{equation}
+\Gamma (s, x) = \int\limits_{x}^{\infty} t^{s-1}e^{-t}\mathrm{dt}\;.
+\end{equation}
+The choice of values of $h$, $\bar{c}_{<}$, $\bar{c}_{<}$ and $\Lambda_{b}$ corresponds to the model
+$\bar{C}^{650}_{0.5-10}$ from Ref.~\cite{epelbaum2020towards}.
+
+\section{Correlations among observables in reactions and bound states in 2N and 3N systems}
+In the second part of thesis (Chapter~\ref{correlations}) I focuse on looking for a set of observables which should (shouldn't) be taken into account while fixing the free parameters of the three-nucleon force. In general, to fix free parameters of the 3NFs various observables can be used. In the older models (like for the Tucson-Melbourne~\cite{coon1979two, coon1981two, coon2001reworking} or the UrbanaIX ones~\cite{pudliner1997quantum}) the $^{3}$H binding energy and the density of the nuclear matter have been used. 
+
+As outlined in Introduction, in the case of the chiral models, besides the $^{3}$H binding energy, the differential cross section for Nd elastic scattering at $E$ = 60 MeV around its minimum has been used to fix free parameters of 3NF. However, the question of a possible correlation between the binding energy $^{3}$H and the scattering cross section is still open. The answer is important since obviously using the strongly correlated observables to fix free parameters can bias results of such determination method. The study presented in this thesis allows me to answer this question and, in a systematic way, to point the correlated observables in the 3N system. However, the study of the correlations in the two-nucleon system is also interesting and can impact future procedures used to fix free parameters of the two-body force interaction.  Also, a systematic study of the correlations between the parameters of the NN potential and two-nucleon observables can also be valuable. While there exist many experimental data at low energies most of them are the unpolarized cross sections or polarization observables with only one particle polarized in the initial state. Within this thesis, by testing the correlations between potential parameters and the 2N observables, I would like to check if there are observables which shows a strong sensitivity to a given single potential parameter. If this is a case such observable should be used to fix this specific parameter. This, in turn, will reduce the number of the remaining free parameters what would simplify the fitting procedure. Existence of such correlated observable-potential parameter pair could also motivate experimental groups to perform precise measurement of such observable, especially in case if the suitable experiment has not been performed yet. To the best of my knowledge, the studies proposed in thesis project have not been done yet. In the past, the study of the correlation, at a statistically significant level, has not been possible due to lack of enough big number of the potential models and data. Currently, this situation is changed. Using the OPE-Gaussian or the chiral SMS forces allow us to prepare many sets of the potential parameters and thus, after a procedure described in the previous subsection, obtain enough big number of predictions to analyze correlations and to draw a plausible conclusion. Some attempts to study correlations in few-nucleon sectors are given in papers~\cite{Perez2016},~\cite{kirscher2010universal} and~\cite{kievsky2018correlations}. In Ref.~\cite{Perez2016} authors study, using the Monte-Carlo bootstrap analysis as a method to randomize $pp$ and $np$ scattering data, correlations between the ground states of the $^{2}$H, $^{3}$H and $^{4}$He binding energies, focusing mainly on the Tijon line~\cite{TJON1975217} (correlation between $^{3}$H and $^{4}$He binding energies), but not studying the scattering observables. In Ref.~\cite{kirscher2010universal} the correlations between three- and four-nucleon observables have been studied within the pionless Effective Field Theory with the Resonating Group Method. Because this method can be applied only to processes at very low energies authors focus on study bound state properties and the $^{3}$H-neutron $s$-wave scattering length, finding the latter correlated with the $^{3}$He binding energy. A. Kievsky \textit{et al.},~\cite{kievsky2018correlations} studied some correlations between low-energy bound observables in the two- and three-nucleon system, the triton binding energy, and extending this to study some features of the light nuclei and beyond up to the nuclear matter and neutron star properties. Using a simple model of ``Leading-order Effective Field Theory inspired potential" they found evidence of the connection between few- and many observables. Note, none of these works focuses on study correlations in the context of fixing 3NF parameters. 
+
+In practice, when all observables and potential parameters are collected, I calculate the standard sample correlation coefficients $r(X,Y)$
+\begin{equation}
+r(X,Y) = \frac{\sum\limits_{i=1}^{n}\left(x_{i} - \bar{X}\right)\left(y_{i} - \bar{Y}\right)}{\sqrt{\sum\limits_{i=1}^{n}\left(x_{i} - \bar{X}\right)^{2}\sum\limits_{i=1}\left(y_{i} - \bar{Y}\right)^{2}}}\;,
+\label{correlation}
+\end{equation}
+where $X$ and $Y$ stand for chosen observables or parameters and index $``i"$ runs over sets of $n = 50$ versions of potentials. $\bar{X}$ and $\bar{Y}$ denote averages $\bar{X} = \sum\limits_{i=1}^{n}x_{i}$, $\bar{Y} = \sum\limits_{i=1}^{n}y_{i}$. Results for sample correlation coefficients and the conclusions on mutual relations and correlations of observables and/or potential parameters are presented in Chapter~\ref{correlations}.

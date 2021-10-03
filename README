@@ -1,0 +1,30 @@
+To compile the text just enter the:
+   KT_PHD_TEMPLATE/
+directory and run:
+   make
+To clean up run:
+   make clean
+
+The main document is:
+   main.tex
+look in this file for more details.
+They are in the comments:
+%%%%%%%%%%%%%%%%%%%%%%%%%
+% This is a comment :-) %
+%%%%%%%%%%%%%%%%%%%%%%%%%
+
+The template hast two chapters. The text
+and plots for the chapters are in:
+   introduction/
+   summary/
+See the files in these directories for more details.
+
+Additionally:
+   abstract.tex
+contains the abstract and the directory:
+   acknowledgments/
+contains the text of the acknowledgments. 
+Look inside for more details.
+
+The bibliography file is:
+   bibl.bib

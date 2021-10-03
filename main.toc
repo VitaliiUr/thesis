@@ -1,0 +1,20 @@
+\contentsline {chapter}{Overview of the thesis}{2}{chapter*.2}
+\contentsline {chapter}{\numberline {1}Introduction}{5}{chapter.1}
+\contentsline {chapter}{\numberline {2}NN potentials}{13}{chapter.2}
+\contentsline {section}{\numberline {2.1}The OPE-Gaussian potential}{13}{section.2.1}
+\contentsline {section}{\numberline {2.2}The chiral SMS potential}{16}{section.2.2}
+\contentsline {chapter}{\numberline {3}Application of a covariance matrix}{19}{chapter.3}
+\contentsline {section}{\numberline {3.1}Uncertainty quantification presented in 3N studies}{19}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}Determination of statistical uncertainty in a 3N system}{19}{subsection.3.1.1}
+\contentsline {subsection}{\numberline {3.1.2}Determination of truncation errors within EKM method}{20}{subsection.3.1.2}
+\contentsline {subsection}{\numberline {3.1.3}The truncation errors with a given Bayesian model}{21}{subsection.3.1.3}
+\contentsline {section}{\numberline {3.2}Correlations among observables in reactions and bound states in 2N and 3N systems}{23}{section.3.2}
+\contentsline {chapter}{\numberline {4}Theoretical formalism and numerical realization}{25}{chapter.4}
+\contentsline {section}{\numberline {4.1}2N bound state}{25}{section.4.1}
+\contentsline {section}{\numberline {4.2}2N scattering}{28}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}The Lippman-Schwinger equation in PWD}{28}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}2N scattering observables}{30}{subsection.4.2.2}
+\contentsline {section}{\numberline {4.3}The Faddeev equation}{31}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}3N scattering observables}{35}{subsection.4.3.1}
+\contentsline {chapter}{Bibliography}{37}{chapter*.8}
+\contentsfinish 

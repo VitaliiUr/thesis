@@ -1,0 +1,19 @@
+\BOOKMARK [0][-]{chapter*.2}{Overview of the thesis}{}% 1
+\BOOKMARK [0][-]{chapter.1}{Introduction}{}% 2
+\BOOKMARK [0][-]{chapter.2}{NN potentials}{}% 3
+\BOOKMARK [1][-]{section.2.1}{The OPE-Gaussian potential}{chapter.2}% 4
+\BOOKMARK [1][-]{section.2.2}{The chiral SMS potential}{chapter.2}% 5
+\BOOKMARK [0][-]{chapter.3}{Application of a covariance matrix}{}% 6
+\BOOKMARK [1][-]{section.3.1}{Uncertainty quantification presented in 3N studies}{chapter.3}% 7
+\BOOKMARK [2][-]{subsection.3.1.1}{Determination of statistical uncertainty in a 3N system}{section.3.1}% 8
+\BOOKMARK [2][-]{subsection.3.1.2}{Determination of truncation errors within EKM method}{section.3.1}% 9
+\BOOKMARK [2][-]{subsection.3.1.3}{The truncation errors with a given Bayesian model}{section.3.1}% 10
+\BOOKMARK [1][-]{section.3.2}{Correlations among observables in reactions and bound states in 2N and 3N systems}{chapter.3}% 11
+\BOOKMARK [0][-]{chapter.4}{Theoretical formalism and numerical realization}{}% 12
+\BOOKMARK [1][-]{section.4.1}{2N bound state}{chapter.4}% 13
+\BOOKMARK [1][-]{section.4.2}{2N scattering}{chapter.4}% 14
+\BOOKMARK [2][-]{subsection.4.2.1}{The Lippman-Schwinger equation in PWD}{section.4.2}% 15
+\BOOKMARK [2][-]{subsection.4.2.2}{2N scattering observables}{section.4.2}% 16
+\BOOKMARK [1][-]{section.4.3}{The Faddeev equation}{chapter.4}% 17
+\BOOKMARK [2][-]{subsection.4.3.1}{3N scattering observables}{section.4.3}% 18
+\BOOKMARK [0][-]{chapter*.8}{Bibliography}{}% 19

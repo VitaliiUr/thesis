@@ -1,0 +1,158 @@
+\documentclass[oneside,12pt,a4paper,openright]{report}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{amsmath, amssymb, graphics, setspace, bbm}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{verbatim}
+\usepackage{float}
+\usepackage{xstring}
+\usepackage{titletoc}
+\usepackage{datetime}
+\usepackage{layout}
+\usepackage[utf8]{inputenc} % usually not needed (loaded by default)
+\usepackage[T1]{fontenc}
+\usepackage[nottoc]{tocbibind}
+\usepackage{csquotes}
+\usepackage{dsfont}
+\usepackage{bbm}
+\usepackage{epsfig}
+\usepackage{physics}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{textcomp}
+\usepackage{hyperref}
+\usepackage{geometry}
+\usepackage{fancyhdr}
+\usepackage{pdfpages}
+\usepackage{xparse}
+\pdfminorversion=5
+\usepackage{epstopdf}
+\epstopdfDeclareGraphicsRule{.eps}{pdf}{.pdf}{%
+  repstopdf --gsopt=-dCompatibilityLevel=1.5 #1 \OutputFile}
+%\usepackage[style=apa]{biblatex}
+\maxdeadcycles=200
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Enter the date that You want on the cover here:   %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newdate{date}{17}{09}{2020}
+
+%\setcounter{secnumdepth}{3}
+%\setcounter{tocdepth}{3}
+
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+
+%\setlength{\hoffset}{0pt}
+%\setlength{\evensidemargin}{28pt}
+%\setlength{\oddsidemargin}{79pt}
+%\setlength{\textwidth}{345pt}
+%\setlength{\marginparwidth}{15pt}
+%\setlength{\hoffset}{0pt}
+%\setlength{\evensidemargin}{28pt}
+%\setlength{\oddsidemargin}{3.5cm}
+%%\setlength{\textwidth}{345pt}
+%\setlength{\marginparwidth}{1.6cm}
+\linespread{1.0}
+\usepackage{geometry}
+ \geometry{
+ a4paper,
+ total={170mm,257mm},
+ left=35mm,
+ right=16mm,
+ top=25mm,
+ bottom=25mm
+ }
+
+
+\begin{document}
+
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% The titlepage starts here.                        %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{titlepage}
+\begin{center}
+
+~\\[5cm]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Enter Your title here:                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\HRule \\[0.4cm]
+{ 
+\huge \bfseries 
+Covariance matrix of nucleon-nucleon potential parameters in few-nucleon studies
+\\[0.4cm] 
+}
+\HRule \\[0.4cm]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Enter Your name below:                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+{
+\LARGE
+\bfseries
+Yuriy Volkotrub
+}
+\vfill
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Enter details below:                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+{
+\large
+Ph.D. thesis written under the supervision of dr. hab Roman Skibi\'nski \newline at the Jagiellonian University,
+Faculty of Physics, Astronomy \newline and Applied Computer Science, Krak\'ow,
+}
+\\
+{
+\large \displaydate{date}
+}
+%\let\origdoublepage\cleardoublepage
+%\newcommand{\clearemptydoublepage}{%
+%  \clearpage
+%  {\pagestyle{empty}\origdoublepage}%
+%}
+
+\end{center}
+\begin{center}
+	\includegraphics[height = 0.1 \textheight]{her_pds_c.pdf}
+\end{center}
+\end{titlepage}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% This generates the table of contents.             %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\tableofcontents
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Import the abstract.                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\input{PhD-text/Abstract/abstract.tex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Input the chapters of the thesis.                 %
+% The template has only two.                        %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\input{PhD-text/header}
+\input{PhD-text/1_Preface/preface.tex}
+\input{PhD-text/2_Introduction/introduction.tex}
+\input{PhD-text/3_Potentials/potentials.tex}
+\input{PhD-text/5_Application_of_CM/application_of_cm.tex}
+\input{PhD-text/4_Formalism/formalism.tex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Import the acknowledgments.                       %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\input{PhD-text/Acknowledgments/acknowledgments.tex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% This generates the bibliography.                  %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\bibliographystyle{unsrt}
+\bibliography{library}
+%\input{PhD-text/Bibliography/bibliography.tex}
+%\input{PhD-text/Bibliography/library}
+
+\end{document}
