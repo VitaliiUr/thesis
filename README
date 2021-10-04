@@ -1,6 +1,4 @@
-To compile the text just enter the:
-   KT_PHD_TEMPLATE/
-directory and run:
+To compile the text just run:
    make
 To clean up run:
    make clean
