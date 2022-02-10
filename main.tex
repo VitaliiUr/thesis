@@ -65,6 +65,27 @@
  bottom=25mm
  }
 
+ % links parameters
+ \hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    urlcolor=red,
+    pdftitle={Thesis Urbanevych},
+    }
+
+  % acronyms
+ \usepackage[acronym, automake]{glossaries-extra}
+\setabbreviationstyle[acronym]{long-short}
+
+\newacronym{qcd}{QCD}{Quantum chromodynamics}
+\newacronym{ceft}{$\chi$EFT}{Chiral effective field theory}
+\newacronym{eft}{EFT}{effective field theory}
+\makeglossaries
+
+
+% chapter name
+\usepackage[Conny]{fncychap}
+%Options: Sonny, Lenny, Glenn, Conny, Rejne, Bjarne, Bjornstrup
 
 \begin{document}
 
