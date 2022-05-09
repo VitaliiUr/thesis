@@ -212,3 +212,117 @@ and another one is similar, but with regularization applied in momentum space (S
 % to construct nuclear matrix elements, the crucial part 
 % of which is nuclear current. The currents should be consistent with
 % the force used
+
+\section*{Formalism \& numerical methods}
+
+
+In order to calculate any observable for the Deuteron photodisintegration,
+one has to find a nuclear matrix elements:
+
+\begin{equation}
+    N^\mu = \langle \Psi_f \vec{P_f} \mid \frac{1}{e}J^\mu(0) \mid \Psi_i \vec{P_i} \rangle =
+    \langle p' (l's')j'm_j't'm_t' \vec{P_f} \mid J^\mu \mid \phi_d m_d \vec{P}_i \rangle, 
+\end{equation}
+where $J^\mu$ is a four-vector current operator which acts between initial and final 
+two-nucleon states. 
+
+% $\vec{P_i}$($\vec{P_f}$) is an initial (final) total 2N m\vec{p}omentum.
+
+% One can introduce relative and total momenta for 2 nucleons:
+
+% \begin{eqnarray}
+    %     \vec{p} &=& \frac{1}{2} (\vec{p}_1 - \vec{p}_2)\\
+    %     \vec{\mathcal{P}} &=& \vec{p}_1 + \vec{p}_2\\
+    %     \pvec{p}^\prime &=& \frac{1}{2} (\pvec{p}_1^\prime - \pvec{p}_2^\prime)\\
+    %     \pvec{\mathcal{P}}^\prime &=& \pvec{p}_1^\prime + \pvec{p}_2^\prime,
+    % \end{eqnarray}
+    % where $\vec{p}_1$($\pvec{p}_1^\prime$) and $\vec{p}_2$($\pvec{p}_2^\prime$) are
+    % initial(final) momenta of the first and second nucleons.
+\subsubsection*{Deuteron bound state}
+    
+    Let's find a deuteron bound state wave function $\phi_d$. The time-independent Schrodinger
+    equation for two particles in such case will be:
+
+    \begin{equation}
+        (H_0 + V) \mid \psi_{12} \rangle  = E_d \mid \psi_{12} \rangle
+        \label{shrod_bound}
+    \end{equation}
+
+    $H_0$ is a kinetic energy of the nucleons and $V$ is a potential. 
+    The kinetic energy $H_0$ can be represented in terms of  relative and total momenta
+    of the particles:
+
+    \begin{equation}
+        H_0 = \frac{\vec{p}_1^2}{2m_1} + \frac{\vec{p}_2^2}{2m_2} = 
+        \frac{\vec{p}^2}{2\mu} + \frac{\vec{\mathcal{P}}^2}{2M}, 
+    \end{equation}
+    where relative and total momenta are defined as follows:
+
+    \begin{eqnarray}
+        \vec{p} &=& \frac{(m_1\vec{p}_1 - m_2\vec{p}_2)}{m_1 + m_2}\\
+        \vec{\mathcal{P}} &=& \vec{p}_1 + \vec{p}_2
+    \end{eqnarray}
+    and $M = m_1 + m_2$ is a total mass, $\mu = \frac{m_1m_2}{M}$ is a relative mass of two particles.
+
+    We are working in the momentum space, so acting by the momentum operator
+    on the Eq.\ref*{shrod_bound} one can obtain two separated equations:
+
+    \begin{eqnarray}
+        &\frac{\vec{p}^2}{2\mu} \langle \vec{p} \mid \Psi_{int} \rangle +
+        \int d \pvec{p}^\prime \langle \vec{p} \mid V \mid \pvec{p}^\prime \rangle
+        \langle \pvec{p}^\prime \mid \Psi_{int} \rangle = 
+        (E_d - E_{c.m.})\langle \vec{p} \mid \Psi_{int} \rangle \label{se1}\\
+        &\frac{\vec{\mathcal{P}}^2}{2M} \langle \mathcal{P} \mid \Psi_{c.m.} \rangle = 
+        E_{c.m.}\langle \mathcal{P} \mid \Psi_{c.m.} \rangle \label{se2}
+    \end{eqnarray}
+
+    Eq.\ref{se1} is basically a Schrodinger equation for one particle with mass $\mu$ 
+    and Eq.\ref{se2} can be regarded as a Schrodinger equation for particle with mass $M$ in 
+    a free motion. Assuming that deuteron is at rest ($E_{c.m.} = 0$) we can stick 
+    to the Eq.\ref{se1} only. So that:
+
+    \begin{equation}
+        \frac{\vec{p}^2}{2\mu} \langle \vec{p} \mid \Psi_{int} \rangle +
+        \int d \pvec{p}^\prime \langle \vec{p} \mid V \mid \pvec{p}^\prime \rangle
+        \langle \pvec{p}^\prime \mid \Psi_{int} \rangle = 
+        E_d \langle \vec{p} \mid \Psi_{int} \rangle
+    \end{equation}
+
+    Next we move to the partial-wave representation of the momentum state in the following form:
+
+    \begin{equation}
+        \mid \vec{p} \rangle = \mid p \alpha \rangle \equiv \mid p (ls) j m_j \rangle \mid t m_t \rangle,
+        \label{pwmain}
+    \end{equation}
+    where we introduce quantum numbers l, s ,j ,t as orbital angular momentum, total spin,
+    total angular momentum and total isospin respectively. $m_j$ and $m_t$ are isospin
+    and spin projections.
+
+    Yet one can introduce simpler states than it is in \ref{pwmain}.
+    
+    \begin{equation}
+        \mid p (ls) j m_j \rangle = \sum_{m_l} c(lsj;m_l, m_j\!-\!m_l, m_j) \mid p l m_l \rangle
+        \mid s~m_j\!-\!m_l \rangle
+        \label{full_decomp}
+    \end{equation}
+
+    Also we can decompose 2N spin and isospin states into single nucleon states as follows:
+
+    \begin{equation}
+        \mid s m_s \rangle = \sum_{m_1} c(\frac{1}{2}\frac{1}{2}s;m_1, m_s\!-\!m_1, m_s)
+        \mid \frac{1}{2} m_1 \rangle
+        \mid \frac{1}{2} m_s\!-\!m_1 \rangle
+        \label{spin_decomp}
+    \end{equation}
+
+    \begin{equation}
+        \mid t m_t \rangle = \sum_{\nu_1} c(\frac{1}{2}\frac{1}{2}t;\nu_1, m_t\!-\!\nu_1, m_t)
+        \mid \frac{1}{2} \nu_1 \rangle
+        \mid \frac{1}{2} m_t\!-\!\nu_1 \rangle
+        \label{isospin_decomp}
+    \end{equation}
+
+    In Eqs.\ref{full_decomp} -\ref{isospin_decomp},  $c(...)$ are Clebsh-Gordon coefficients.
+    Nucleons are spin $\frac{1}{2}$ particles, and also we treat proton and neutron as 
+    the same particle in different 
+    isospin states, so that isospin is $\nu_1 = \frac{1}{2}$ for proton and $\nu_1 = -\frac{1}{2}$ for neutron.

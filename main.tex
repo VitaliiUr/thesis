@@ -30,6 +30,8 @@
 \usepackage{indentfirst}
 \pdfminorversion=5
 \usepackage{epstopdf}
+\usepackage[mathscr]{euscript}
+\newcommand{\pvec}[1]{\vec{#1}\mkern2mu\vphantom{#1}}
 \epstopdfDeclareGraphicsRule{.eps}{pdf}{.pdf}{%
   repstopdf --gsopt=-dCompatibilityLevel=1.5 #1 \OutputFile}
 %\usepackage[style=apa]{biblatex}
