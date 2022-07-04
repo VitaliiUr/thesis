@@ -1,0 +1,326 @@
+\chapter{Formalism \& numerical methods}
+
+
+In order to calculate any observable for the Deuteron photodisintegration,
+one has to find a nuclear matrix elements:
+
+\begin{equation}
+    N^\mu = \langle \Psi_f \vec{P_f} \mid \frac{1}{e}J^\mu(0) \mid \Psi_i \vec{P_i} \rangle =
+    \langle p' (l's')j'm_j't'm_t' \vec{P_f} \mid J^\mu \mid \phi_d m_d \vec{P}_i \rangle, 
+\end{equation}
+where $J^\mu$ is a four-vector current operator which acts between initial and final 
+two-nucleon states. 
+
+% $\vec{P_i}$($\vec{P_f}$) is an initial (final) total 2N m\vec{p}omentum.
+
+% One can introduce relative and total momenta for 2 nucleons:
+
+% \begin{eqnarray}
+    %     \vec{p} &=& \frac{1}{2} (\vec{p}_1 - \vec{p}_2)\\
+    %     \vec{\mathcal{P}} &=& \vec{p}_1 + \vec{p}_2\\
+    %     \pvec{p}^\prime &=& \frac{1}{2} (\pvec{p}_1^\prime - \pvec{p}_2^\prime)\\
+    %     \pvec{\mathcal{P}}^\prime &=& \pvec{p}_1^\prime + \pvec{p}_2^\prime,
+    % \end{eqnarray}
+    % where $\vec{p}_1$($\pvec{p}_1^\prime$) and $\vec{p}_2$($\pvec{p}_2^\prime$) are
+    % initial(final) momenta of the first and second nucleons.
+\section{Deuteron bound state}
+    \label{sec:deut_bound}
+
+    Let's find a deuteron bound state wave function $\phi_d$. The time-independent Schrodinger
+    equation for two particles in such case will be:
+
+    \begin{equation}
+        (H_0 + V) \mid \psi_{12} \rangle  = E_d \mid \psi_{12} \rangle
+        \label{shrod_bound}
+    \end{equation}
+
+    $H_0$ is a kinetic energy of the nucleons and $V$ is a potential. 
+    The kinetic energy $H_0$ can be represented in terms of  relative and total momenta
+    of the particles:
+
+    \begin{equation}
+        H_0 = \frac{\vec{p}_1^2}{2m_1} + \frac{\vec{p}_2^2}{2m_2} = 
+        \frac{\vec{p}^2}{2\mu} + \frac{\vec{\mathcal{P}}^2}{2M}, 
+    \end{equation}
+    where relative and total momenta are defined as follows:
+
+    \begin{eqnarray}
+        \vec{p} &=& \frac{(m_1\vec{p}_1 - m_2\vec{p}_2)}{m_1 + m_2}\\
+        \vec{\mathcal{P}} &=& \vec{p}_1 + \vec{p}_2
+    \end{eqnarray}
+    and $M = m_1 + m_2$ is a total mass, $\mu = \frac{m_1m_2}{M}$ is a relative mass of two nucleons.
+
+    We are working in the momentum space, so acting by the momentum operator
+    on the Eq.\ref*{shrod_bound} one can obtain two separated equations:
+
+    \begin{eqnarray}
+        &\frac{\vec{p}^2}{2\mu} \langle \vec{p} \mid \Psi_{int} \rangle +
+        \int d \pvec{p}^\prime \langle \vec{p} \mid V \mid \pvec{p}^\prime \rangle
+        \langle \pvec{p}^\prime \mid \Psi_{int} \rangle = 
+        (E_d - E_{c.m.})\langle \vec{p} \mid \Psi_{int} \rangle \label{se1}\\
+        &\frac{\vec{\mathcal{P}}^2}{2M} \langle \mathcal{P} \mid \Psi_{c.m.} \rangle = 
+        E_{c.m.}\langle \mathcal{P} \mid \Psi_{c.m.} \rangle \label{se2}
+    \end{eqnarray}
+
+    Eq.\ref{se1} is basically a Schrodinger equation for one particle with mass $\mu$ 
+    and Eq.\ref{se2} can be regarded as a Schrodinger equation for particle with mass $M$ in 
+    a free motion. Assuming that deuteron is at rest ($E_{c.m.} = 0$) we can stick 
+    to the Eq.\ref{se1} only. So that:
+
+    \begin{equation}
+        \frac{\vec{p}^2}{2\mu} \langle \vec{p} \mid \Psi_{int} \rangle +
+        \int d \pvec{p}^\prime \langle \vec{p} \mid V \mid \pvec{p}^\prime \rangle
+        \langle \pvec{p}^\prime \mid \Psi_{int} \rangle = 
+        E_d \langle \vec{p} \mid \Psi_{int} \rangle
+        \label{shrod_old}
+    \end{equation}
+
+    Next we move to the partial-wave representation of the momentum state in the following form:
+
+    \begin{equation}
+        \mid \vec{p} \rangle = \mid p \alpha \rangle \equiv \mid p (ls) j m_j \rangle \mid t m_t \rangle,
+        \label{pwmain}
+    \end{equation}
+    where we introduce quantum numbers l, s ,j ,t as orbital angular momentum, total spin,
+    total angular momentum and total isospin respectively. $m_j$ and $m_t$ are isospin
+    and spin projections.
+
+
+    Yet one can introduce simpler states than it is in \ref{pwmain}.
+    
+    \begin{equation}
+        \mid p (ls) j m_j \rangle = \sum_{m_l} c(lsj;m_l, m_j\!-\!m_l, m_j) \mid p l m_l \rangle
+        \mid s~m_j\!-\!m_l \rangle
+        \label{full_decomp}
+    \end{equation}
+
+    Also we can decompose spin and isospin states as follows:
+
+    \begin{equation}
+        \mid s m_s \rangle = \sum_{m_1} c(\frac{1}{2}\frac{1}{2}s;m_1, m_s\!-\!m_1, m_s)
+        \mid \frac{1}{2} m_1 \rangle
+        \mid \frac{1}{2} m_s\!-\!m_1 \rangle
+        \label{spin_decomp}
+    \end{equation}
+
+    \begin{equation}
+        \mid t m_t \rangle = \sum_{\nu_1} c(\frac{1}{2}\frac{1}{2}t;\nu_1, m_t\!-\!\nu_1, m_t)
+        \mid \frac{1}{2} \nu_1 \rangle
+        \mid \frac{1}{2} m_t\!-\!\nu_1 \rangle
+        \label{isospin_decomp}
+    \end{equation}
+
+    In Eqs.\ref{full_decomp} -\ref{isospin_decomp},  $c(...)$ are Clebsh-Gordon coefficients.
+    Nucleons are spin $\frac{1}{2}$ particles, and also we treat proton and neutron as 
+    the same particle in different 
+    isospin states, so that isospin is $\nu_1 = \frac{1}{2}$ for proton and $\nu_1 = -\frac{1}{2}$ for neutron.
+
+    The states $\mid p l m_l \rangle$ from Eq.\ref{full_decomp} are orthogonal, so that
+    
+    \begin{equation}
+        \langle p^\prime l^\prime m_l^\prime \mid p l m_l \rangle = 
+        \frac{\delta(p - p^\prime)}{p^2} \delta_{ll^\prime}\delta_{m_l m_l^\prime}
+    \end{equation}
+    and also satisfy the completeness relation:
+
+    \begin{equation}
+        \sum_{l=0}^\infty \sum_{m_l=-l}^l \int dp p^2 \mid plm_l \rangle \langle plm_l \mid = \mathbb{1}
+    \end{equation}
+
+
+    These states also fulfill a relation
+
+    \begin{equation}
+        \langle \pvec{p}^\prime \mid plm_l \rangle = 
+        \frac{\delta ( \abs{\pvec{p}^\prime} - p)}{p^2} Y _{l m_l}(\hat{p}^\prime),
+    \end{equation}
+    where $Y _{l m_l}(\hat{p}^\prime)$ is a spherical harmonic and 'hat' means a unit vector.
+
+    If we exchange nucleons 1 and 2 there should be a sign change and this requirement 
+    can in mathematical form can be expressed as:
+
+    \begin{equation}
+        (-1)^{l+s+t} = -1
+        \label{parity}
+    \end{equation}
+
+    Taking into account Eq.\ref{parity}, one can find only one possible case for 
+    the deuteron bound state: 2 coupled channels for l=0,2; s=1; j=1and $t = m_t = 0$. 
+    These 2 channels are usually denoted as $^3S_1$ and $^3D_1$ and
+    corresponding wave functions are $\phi_0(p)$ and $\phi_2(p)$. 
+
+    So with a new basis Eq.\ref{shrod_old} takes a form:
+
+    \begin{equation}
+        \frac{\vec{p}^2}{2\mu} \phi_l(p) +
+        \sum_{l^\prime =0,2} \int d p^\prime p^{\prime 2} 
+        \langle plm_l \mid V \mid p^\prime l^\prime m_l^\prime  \rangle
+        \phi_{l^\prime}(p) = 
+        E_d \phi_l(p),
+        \label{integral}
+    \end{equation}
+    for $l=0,2$. Assuming that one has a matrix elements for the potential 
+    $\langle plm_l \mid V \mid p^\prime l^\prime m_l^\prime  \rangle$,
+    there is still one complication in the Eq.\ref{integral} - integration.
+    In order to get rid of the integral I use a Gaussian quadrature 
+    method of numerical integration \cite{jacobi1826ueber}.
+    It allows to replace an integral by the weighted sum:
+        $\int_a^b f(x)dx = \sum_{i=1}^n \omega_i f(x_i)$
+    In current work I used 72 points in the interval from $0$ to $50 fm$. 
+    Using this method, Eq.\ref{shrod_old} becomes  
+
+    
+    \begin{equation}
+        \frac{\vec{p}^2}{2\mu} \phi_l(p) +
+        \sum_{l^\prime =0,2}\sum_{j =0}^N  \omega_j p^{\prime 2}_j \langle p_jlm_l \mid V \mid p^\prime_j l^\prime m_l^\prime  \rangle
+        \phi_{l^\prime}(p) = 
+        E_d \phi_l(p),
+        \label{integral2}
+    \end{equation}
+
+    It is possible to solve this equation as an eigenvalue problem $M\Psi = E_n \Psi$ and
+    find simultaneously wave function values and binding energy $E_n$.
+
+\section{The Lippman-Schwinger equation}
+
+
+    % Let us consider a two-nucleon scattering state $\mid \Psi _f \rangle$, It fulfills
+    % a Schrodinger equation
+
+    % \begin{equation}
+    %     (H_0 + V) \mid \Psi _f \rangle = E \mid \Psi _f \rangle,
+    %     \label{schrod_scatt}
+    % \end{equation}
+    % with $H_0 = \frac{\vec{p}^2}{m}$ and $E > 0$.
+
+    % Solution to the Eq.\ref{schrod_scatt} can be presented in the form:
+
+    % \begin{equation}
+    %     \mid \Psi _f \rangle = \mid \Psi _0 \rangle + \frac{1}{E - H_0 \pm i \epsilon} V \mid \Psi _f \rangle
+    % \end{equation}
+
+    Let us start from the time-independent formulation of the scattering process.
+    In such a case Hamiltonian will be:
+
+    \begin{equation}
+        H = H_0 + V,
+    \end{equation}
+    where $H_0$ is a kinetic energy operator $H_0 = \frac{\vec{p}^2}{2m}$.
+    For a free particle motion, $V$ will be absent and we will denote an energy eigenstate as
+    $\mid \vec{p} \rangle$ - a free particle state.
+    In the case of the scattering process, the eigenstate will differ from $\mid \phi \rangle$,
+    but in case of elastic scattering (which we re interested in) the energy eigenvalue $E$ should be the same.
+
+    So below I write a system of Schrodinger equations for such scattering process:
+
+    \begin{equation}
+        \begin{cases}
+            H_0 \mid \vec{p} \rangle &= E \mid \vec{p} \rangle \\
+            (H_0 + V) \mid \psi \rangle &= E \mid \psi \rangle
+        \end{cases}
+        \label{system}
+    \end{equation}
+
+    I would like to find such a solution to Eq.~\ref*{system}, so that 
+    $\mid \psi \rangle \rightarrow \mid \vec{p} \rangle$ with $V \rightarrow 0$
+    and both $\mid \psi \rangle$ and $\mid \vec{p} \rangle$ have the same energy eigenvalues E.
+    As we have scattering process, the energy spectra for both operators $H_0$ and$H_0 + V$
+    are continuous. 
+
+    From Eq.~\ref*{system} follows that
+
+    \begin{equation}
+        \mid \psi \rangle = \frac{1}{E - H_0}V \mid \psi \rangle +  \mid \vec{p} \rangle,
+        \label{psieq}
+    \end{equation}
+    where $\mid \psi \rangle$ was added artificially in order to satisfy a criterion mentioned above 
+    and following the logic from \cite{Sakurai}. In addition, applying the operator $(E -H_0)$ to the 
+    \ref*{psieq} results in the second equation from the system \ref{system}.
+
+    In order to deal with a singular operator $\frac{1}{E - H_0}$ in eq.\ref*{psieq}, the well-known
+    technique is to make such an operator slightly complex by adding small imaginary number to the denominator
+    making it  $\frac{1}{E \pm i\epsilon - H_0}$.
+
+    \begin{equation}
+        \mid \psi \rangle = \frac{1}{E \pm i\epsilon - H_0}V \mid \psi \rangle +  \mid \vec{p} \rangle,
+        \label{lse}
+    \end{equation}
+
+    Eq.~\ref*{lse} is known as a Lippman-Schwinger equation. 
+    
+    Let me move to the coordinate representation of the Eq.~\ref{lse}:
+
+    \begin{equation}
+    \langle \vec{x}  \mid \psi \rangle = \langle \vec{x}  \mid \frac{1}{E \pm i\epsilon - H_0}V \mid \psi \rangle + \langle \vec{x}  \mid \vec{p} \rangle
+    \label{lse_coord}
+    \end{equation}
+
+    If we choose $\ket*{\vec{x}}$ to be normalized as
+    $\braket{\vec{x}^\prime}{\vec{x}} = \delta^3(\vec{x}^\prime - \vec{x})$ ,
+    the Fourier transform will give us \cite{elster_lectures}: 
+    \begin{equation}
+        \braket{\vec{x}}{\vec{p}} = \frac{1}{(2 \pi)^{3/2}} e^{i \vec{p} \cdot \vec{x}}.
+        \label{planewave}
+    \end{equation}
+
+    I can rewrite Eq.~\ref{lse_coord} as:
+
+
+    \begin{equation}
+        \langle \vec{x}  \mid \psi \rangle = \int d^3 \vec{x}^\prime G(\vec{x}, \vec{x}^\prime) 
+        \matrixel{\vec{x}^\prime}{V} {\psi} + \braket{\vec{x}}{\vec{p}},
+        \label{lse_green}
+    \end{equation}
+    with $G(\vec{x}, \vec{x}^\prime)$ denoting a Green function:
+
+    \begin{equation}
+        G(\vec{x}, \vec{x}^\prime) = \mel**{\vec{x}}{\frac{1}{E \pm i\epsilon - H_0}}{\vec{x}^\prime},
+        \label{green}
+    \end{equation}
+
+    One shall mention, that dealing with the plane-wave state in coordinate space 
+    is not normalizable, as it is not a Hilbert vector \cite{Sakurai}, anyway we
+    imply the "normalization" rule
+    $\int d^3\vec{x} \braket{\vec{p}}{\vec{x}} \braket{\vec{x}}{\pvec{p}^\prime} = \delta^3(\vec{p} - \pvec{p}^\prime)$.
+
+
+    The Green function Eq.\ref{green} can be written in the momentum basis as:
+
+    \begin{equation}
+        G(\vec{x}, \vec{x}^\prime) = \frac{1}{(2\pi)^3} \int d^3 \vec{p}^\prime
+        \frac{e^{i\pvec{p}'\cdot(\vec{x}'-\vec{x})}}{E \pm i\epsilon - \frac{\pvec{p}^{\prime 2}}{2m}},
+        \label{green_momentum}
+    \end{equation}
+
+    %  Moving to the spherical coordinates and introducing $r \equiv |x -x^\prime |$ I get Green function as:
+
+    Integration in the \ref*{green_momentum} can be done applying residual technique and here comes
+    the main profit of the $\pm i\epsilon$ in the denominator.
+    The final expression of the Green function will be:
+
+    \begin{equation}
+        G(\vec{x}, \vec{x}^\prime) = - \frac{m}{4\pi} \frac{e^{\pm i\sqrt{mE}|\pvec{x} -\pvec{x}^\prime |}}{|\pvec{x} -\pvec{x}^\prime |}
+        \label{green_final}
+    \end{equation}
+
+    The $(\pm)$ in the exponent specifies outgoing and incoming plane-waves. For a scattering
+    particle we are interested in the outgoing wave, so let's stick to the positive sign in the exponent
+    and assume that corresponding wave function is $\psi^{(+)}$. 
+
+    Let;s assume that potential $V$ is local: $\mel**{\pvec{x}^\prime}{V}{\pvec{x}} = \delta(\pvec{x}^\prime - \pvec{x})V(\pvec{x}^\prime)$. 
+    Then using this assumption and applying Eq.\ref{green_final} and 
+    Eq.\ref{planewave} to Eq.\ref*{lse_green} one gets:
+
+    \begin{equation}
+        \langle \vec{x}  \mid \psi^{(+)} \rangle \equiv \psi^{(+)}(\vec{x}) 
+        - \frac{m}{4\pi} \int d^3 \vec{x}^\prime \frac{e^{\pm i\sqrt{mE}|\pvec{x} -\pvec{x}^\prime |}}{|\pvec{x} -\pvec{x}^\prime |} 
+        V(\pvec{x}^\prime) \psi^{(+)}(\vec{x}^\prime) + \braket{\vec{x}}{\vec{p}},
+        \label{lse_green_explicit}
+    \end{equation}
+    which may be written in the asymptotic form (when $x \rightarrow \infty$) as:
+
+    \begin{equation}
+        \psi^{(+)}(\vec{x}) \rightarrow \frac{1}{(2\pi)^{1/3}}
+        \left( e^{i\vec{p} \cdot \vec{x}} + \frac{e^{i\vec{p} \cdot \vec{x}}}{\vec{x}} f(\hat{x}) \right)
+        \label{lse_green_explicit}
+    \end{equation}
