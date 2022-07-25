@@ -2,6 +2,7 @@ import os
 
 import pandas as pd
 import numpy as np
+from tqdm import tqdm
 
 FORCES = ["LO", "NLO", "N2LO", "N3LO", "N4LO", "N4LO+"]
 src = "Deuteron/data/"
@@ -32,8 +33,8 @@ def read_chiral(fname):
     df["CUTOFF"] = 350 + 50*int(fname.split(".")[3])
     ostat = int(fname.split(".")[2])
     df["FORCE"] = FORCES[ostat]
-    if FORCES[ostat] == "N4LO+":
-        print (fname, 350 + 50*int(fname.split(".")[3]), FORCES[ostat])
+    # if FORCES[ostat] == "N4LO+":
+    #     print (fname, 350 + 50*int(fname.split(".")[3]), FORCES[ostat])
     return df
 
 
@@ -59,9 +60,9 @@ if __name__ == "__main__":
                        [f for f in os.listdir(src) if f.endswith("mev")]))
     print(energies)
     df_all = pd.DataFrame()
-    for energy in energies:
+    for energy in tqdm(energies):
         data = [f for f in os.listdir(src) if f.endswith(
-            f"{energy}mev")]
+            f".{energy}mev")]
         df1 = pd.concat([read_data(fname) for fname in data if "dat1" in fname])
         df2 = pd.concat([read_data(fname) for fname in data if "dat2" in fname])
         df3 = pd.concat([read_data(fname) for fname in data if "dat3" in fname])
@@ -80,8 +81,13 @@ if __name__ == "__main__":
     src = "Deuteron/ExpData/"
     df_exp = pd.DataFrame()
     for f in os.listdir(src):
+        if not os.path.isfile(src+f) or not f.endswith(".dat"):
+            print(f"not a file {src+f}")
+            continue
         print(f)
-        df1 = pd.read_csv(src+f, delim_whitespace=True, skipfooter=2, header=None, engine='python',
+        df1 = pd.read_csv(src+f, delim_whitespace=True, comment="#",
+                        skip_blank_lines=True,
+                        header=None, engine='python',
                         names=["angle", "value", "error"])
         df1["fname"] = f
         for energy in [30, 100, 140]:
