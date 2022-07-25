@@ -1,5 +1,5 @@
 *.vscode
-Plotdata/Deuteron/data/*
+PlotData/Deuteron/data/*
 
 # Latex
 ## Core latex/pdflatex auxiliary files:
