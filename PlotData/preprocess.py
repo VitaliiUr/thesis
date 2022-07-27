@@ -11,7 +11,7 @@ src = "Deuteron/data/"
 def read_data(fname):
     df = read_av18(fname) if "av18" in fname else read_chiral(fname)
     if fname.startswith("0."):
-        df["WAVE"] = "PW"
+        df["WAVE"] = "1NC"
     else:
         df["WAVE"] = "SIEGERT"
     return df
