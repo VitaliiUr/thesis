@@ -5,7 +5,8 @@ import numpy as np
 from tqdm import tqdm
 
 FORCES = ["LO", "NLO", "N2LO", "N3LO", "N4LO", "N4LO+"]
-src = "../../../Deuteron/PRODUCTION1_DEUTERON_2022/output/"
+# src = "../../../Deuteron/PRODUCTION1_DEUTERON_2022/output/"
+src = "./Deuteron/data/"
 
 
 def read_data(fname):
