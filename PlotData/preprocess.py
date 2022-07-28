@@ -76,9 +76,9 @@ if __name__ == "__main__":
         df["Energy"] = energy
         df_all = df_all.append(df, ignore_index=True)
 
-    df_all.to_csv("deuteron_all_data.csv", index=False)
+    df_all.to_csv("Deuteron/deuteron_all_data.csv", index=False)
 
-    src = "Deuteron/ExpData/"
+    src = "Deuteron/ExpData/DiffCross"
     df_exp = pd.DataFrame()
     for f in os.listdir(src):
         if not os.path.isfile(src+f) or not f.endswith(".dat"):
@@ -86,13 +86,13 @@ if __name__ == "__main__":
             continue
         print(f)
         df1 = pd.read_csv(src+f, delim_whitespace=True, comment="#",
-                        skip_blank_lines=True,
-                        header=None, engine='python',
-                        names=["angle", "value", "error"])
+                          skip_blank_lines=True,
+                          header=None, engine='python',
+                          names=["angle", "CROSS", "error"])
         df1["fname"] = f
         for energy in [30, 100, 140]:
             if str(energy) in f:
                 df1["energy"] = energy
                 break
         df_exp = df_exp.append(df1)
-    df_exp.to_csv("deuteron_all_exp.csv", index=False)
+    df_exp.to_csv("Deuteron/deuteron_all_exp.csv", index=False)
