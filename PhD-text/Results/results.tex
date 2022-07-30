@@ -3,6 +3,28 @@
 \section{Deuteron photodisintegraion}
     % \label{sec:deut_bound}
 
+
+
+
+    
+    \begin{figure}[h]
+        \begin{center}
+        \includegraphics[width=0.75\textwidth]{Figures_python/TOTAL_CROSSSECTION.pdf}
+        \end{center}
+        \caption{Total cross section as a function of the photon's energy E$_\gamma$.
+        Solid blue line presents results obtained with SN+Siegert 
+        and dashed pink line - with only SN current.
+        The experimental data are from \cite{BOSMAN1979} (black filled circles),
+        \cite{Birenbaum1985} (empty circles),
+        \cite{Moreh1989} (red squares),
+        \cite{Bernabei1986} (olive triangles),
+        \cite{ARENDS1984} (cyan crosses X) and
+        \cite{Skopik1974} (magenta dimonds).
+        }
+        \label{TOTAL_CROSS}
+    \end{figure}
+        
+
     \begin{figure}[h]
         \begin{center}
         \includegraphics[width=0.95\textwidth]{Figures_python/CROSS2_30mev.pdf}
@@ -37,20 +59,6 @@
         
 
 
-    \begin{figure}[h]
-        \begin{center}
-        \includegraphics[width=0.95\textwidth]{Figures_python/T20_T22_vs_en.pdf}
-        \end{center}
-        \caption{Tensor analyzing powers T$_{20}$ and T$_{22}$ as a functions of the photon energy E$_\gamma$
-        with fixed outgoing proton angle $\theta_p = 88^{\circ}$ (in the center of mass frame).
-        My predictions (solid line) are obtained with SMS potential at chiral order N$^4$LO+
-        and with cutoff parameter $\Lambda$~=~450~MeV.
-        Dashed line presents calculations  from \cite{Schmitt1989}.
-        Experimental data is taken from \cite{rachek2007} (filled circles)
-        and \cite{mishev1993} (empty circles).}
-        \label{T20_vs_en}
-    \end{figure}
-
 
     \begin{figure}[h]
         \begin{center}
@@ -58,15 +66,20 @@
         \end{center}
         \caption{Tensor analyzing powers T$_{20}$, T$_{21}$ and T$_{22}$ as a functions of the
         outgoing proton angle $\theta_p$ (in the center of mass frame).
-        Filled bands show maximal spread of my predictions obtained with a 
+        Solid blue line is a mean value of my predictions obtained with a
         SMS potential at N$^4$LO+ chiral order and with $\Lambda$~=~450~MeV
-        for the energy span from 25 to 45 MeV. Filled circles is experimental data
+        at energy values from 25 to 45 MeV and
+        where SN current was used together with Siegert approach. 
+        Pink dashed line is similar prediction but with SN only. 
+        The corresponding bands show the deviation of predictions in the regarded
+        energy region.
+        % Filled bands show maximal spread of my predictions obtained with a 
+        % SMS potential at N$^4$LO+ chiral order and with $\Lambda$~=~450~MeV
+        % for the energy span from 25 to 45 MeV. Blue bands correspond to the
+        % case where SN current was used together with Siegert approach and 
+        % pink bands - to the SN currentonly. 
+        Filled circles are experimental data
         from \cite{rachek2007} for the analogous energy span.}
-        % My predictions (solid line) are obtained with SMS potential at chiral order N$^4$LO+
-        % and with cutoff parameter $\Lambda$~=~450~MeV.
-        % Dashed line presents calculations  from \cite{Schmitt1989}.
-        % Experimental data is taken from \cite{rachek2007} (filled circles)
-        % and \cite{mishev1993} (empty squares).}
         \label{tensor_angular_25-45}
     \end{figure}
 
@@ -74,7 +87,7 @@
         \begin{center}
         \includegraphics[width=0.95\textwidth]{Figures_python/Tensor_analyzing_power_angular_E45-70.pdf}
         \end{center}
-        \caption{The same as on \ref*{tensor_angular_25-45} but for energy bin 45~-~70~MeV}
+        \caption{The same as on the Fig.~\ref*{tensor_angular_25-45} but for energy bin 45~-~70~MeV}
         \label{tensor_angular_45-70}
     \end{figure}
 
@@ -82,24 +95,15 @@
         \begin{center}
         \includegraphics[width=0.95\textwidth]{Figures_python/Tensor_analyzing_power_angular_E70-100.pdf}
         \end{center}
-        \caption{The same as on \ref*{tensor_angular_25-45} but for energy bin 70~-~100~MeV}
+        \caption{The same as on the Fig.~\ref*{tensor_angular_25-45} but for energy bin 70~-~100~MeV}
         \label{tensor_angular_70-100}
-    \end{figure}
+    \end{figure}        
 
     \begin{figure}[h]
         \begin{center}
         \includegraphics[width=0.95\textwidth]{Figures_python/Tensor_analyzing_power_angular_E100-140.pdf}
         \end{center}
-        \caption{The same as on \ref*{tensor_angular_25-45} but for energy bin 100~-~140~MeV}
-        \label{tensor_angular_70-100}
-    \end{figure}
-        
-
-    \begin{figure}[h]
-        \begin{center}
-        \includegraphics[width=0.95\textwidth]{Figures_python/Tensor_analyzing_power_angular_E100-140.pdf}
-        \end{center}
-        \caption{The same as on \ref*{tensor_angular_25-45} but for energy bin 100~-~140~MeV}
+        \caption{The same as on the Fig.~\ref*{tensor_angular_25-45} but for energy bin 100~-~140~MeV}
         \label{tensor_angular_100-140}
     \end{figure}
         
@@ -109,7 +113,7 @@
         \begin{center}
         \includegraphics[width=0.95\textwidth]{Figures_python/Tensor_analyzing_power_angular_E140-180.pdf}
         \end{center}
-        \caption{The same as on \ref*{tensor_angular_25-45} but for energy bin 140~-~180~MeV}
+        \caption{The same as on the Fig.~\ref*{tensor_angular_25-45} but for energy bin 140~-~180~MeV}
         \label{tensor_angular_140-180}
     \end{figure}
         
@@ -118,7 +122,7 @@
         \begin{center}
         \includegraphics[width=0.95\textwidth]{Figures_python/Tensor_analyzing_power_angular_E180-230.pdf}
         \end{center}
-        \caption{The same as on \ref*{tensor_angular_25-45} but for energy bin 180~-~230~MeV}
+        \caption{The same as on the Fig.~\ref*{tensor_angular_25-45} but for energy bin 180~-~230~MeV}
         \label{tensor_angular_180-230}
     \end{figure}
 
@@ -126,7 +130,64 @@
         \begin{center}
         \includegraphics[width=0.95\textwidth]{Figures_python/Tensor_analyzing_power_angular_E230-330.pdf}
         \end{center}
-        \caption{The same as on \ref*{tensor_angular_25-45} but for energy bin 230~-~330~MeV}
+        \caption{The same as on the Fig.~\ref*{tensor_angular_25-45} but for energy bin 230~-~330~MeV}
         \label{tensor_angular_230-330}
     \end{figure}
         
+
+
+    \begin{figure}[h]
+        \begin{center}
+        \includegraphics[width=0.75\textwidth]{Figures_python/T20_T22_vs_en.pdf}
+        \end{center}
+        \caption{Tensor analyzing powers T$_{20}$ and T$_{22}$ as a functions of the photon energy E$_\gamma$
+        with fixed outgoing proton angle $\theta_p = 88^{\circ}$ (in the center of mass frame).
+        My predictions (blue solid line) are obtained with SMS potential at chiral order N$^4$LO+
+        and with cutoff parameter $\Lambda$~=~450~MeV.
+        Dashed purple line presents calculations from \cite{Schmitt1989}.
+        Experimental data is taken from \cite{rachek2007} (filled circles)
+        and \cite{mishev1993} (empty circles).}
+        \label{T20_vs_en}
+    \end{figure}
+
+    \begin{figure}[h]
+        \begin{center}
+        \includegraphics[width=0.95\textwidth]{Figures_python/TensorPower_Th24-48.pdf}
+        \end{center}
+        \caption{Tensor analyzing powers T$_{20}$, T$_{21}$ and T$_{22}$ as a functions of the
+        photon's energy within the outgoing proton's angle range $24^{\circ} - 48^{\circ}$
+        (in the center of mass frame).
+        Solid blue line is a mean value of my predictions obtained with
+        SMS potential at N$^4$LO+ chiral order and with $\Lambda$~=~450~MeV
+        at energy values from 25 to 45 MeV within
+        a given angles range and
+        where SN current was used together with Siegert approach. 
+        Pink dashed line is similar prediction but with SN only. 
+        The corresponding bands show the deviation of predictions in the regarded
+        energy region.
+        Filled circles are experimental data
+        from \cite{rachek2007} for the analogous energy span.}
+        \label{tensor_energy_24-48}
+    \end{figure}
+
+    \begin{figure}[h]
+        \begin{center}
+        \includegraphics[width=0.95\textwidth]{Figures_python/TensorPower_Th70-102.pdf}
+        \end{center}
+        \caption{The same as on the Fig.~\ref*{tensor_energy_24-48} but
+        for the angles' range $70^{\circ} - 102^{\circ}$.}
+        \label{tensor_energy_70-102}
+    \end{figure}
+        
+    % I will try to figure out why we can see such a wide band of predictions
+    % for $T_{20}$ in the Fig.~\ref*{tensor_energy_24-48} and
+    % for $T_{21}$  in the Fig.~\ref*{tensor_energy_70-102}.
+    % Let's stick to the particular energy value E$_\gamma = 120$~MeV.
+    % The spread of predictions is high in the both cases for such energy value.
+    % The corresponding angular distribution of these observables
+    % one can find on the  Fig.~\ref*{tensor_angular_100-140}
+    % (of course there is some energy range on the Figure, but let's assume that 
+    % energy dependance is not so strong around 120~MeV and for $T_{20}$
+    % it is confirmed by the Fig.~\ref*{T20_vs_en}).
+    % In the first case we have a prediction for angles' range $24^{\circ} - 48^{\circ}$
+    % and we can see that $T_{20}$ in this region has 
