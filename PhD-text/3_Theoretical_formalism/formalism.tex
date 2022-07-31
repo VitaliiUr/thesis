@@ -52,7 +52,7 @@ two-nucleon states.
     and $M = m_1 + m_2$ is a total mass, $\mu = \frac{m_1m_2}{M}$ is a relative mass of two nucleons.
 
     We are working in the momentum space, so acting by the momentum operator
-    on the Eq.\ref*{shrod_bound} one can obtain two separated equations:
+    on the Eq.(\ref{shrod_bound}) one can obtain two separated equations:
 
     \begin{eqnarray}
         &\frac{\vec{p}^2}{2\mu} \langle \vec{p} \mid \Psi_{int} \rangle +
@@ -63,10 +63,10 @@ two-nucleon states.
         E_{c.m.}\langle \mathcal{P} \mid \Psi_{c.m.} \rangle \label{se2}
     \end{eqnarray}
 
-    Eq.\ref{se1} is basically a Schrodinger equation for one particle with mass $\mu$ 
-    and Eq.\ref{se2} can be regarded as a Schrodinger equation for particle with mass $M$ in 
+    Eq.(\ref{se1}) is basically a Schrodinger equation for one particle with mass $\mu$ 
+    and Eq.(\ref{se2}) can be regarded as a Schrodinger equation for particle with mass $M$ in 
     a free motion. Assuming that deuteron is at rest ($E_{c.m.} = 0$) we can stick 
-    to the Eq.\ref{se1} only. So that:
+    to the Eq.(\ref{se1}) only. So that:
 
     \begin{equation}
         \frac{\vec{p}^2}{2\mu} \langle \vec{p} \mid \Psi_{int} \rangle +
@@ -87,7 +87,7 @@ two-nucleon states.
     and spin projections.
 
 
-    Yet one can introduce simpler states than it is in \ref{pwmain}.
+    Yet one can introduce simpler states than it is in (\ref{pwmain}).
     
     \begin{equation}
         \mid p (ls) j m_j \rangle = \sum_{m_l} c(lsj;m_l, m_j\!-\!m_l, m_j) \mid p l m_l \rangle
@@ -111,12 +111,12 @@ two-nucleon states.
         \label{isospin_decomp}
     \end{equation}
 
-    In Eqs.\ref{full_decomp} -\ref{isospin_decomp},  $c(...)$ are Clebsh-Gordon coefficients.
+    In Eqs.(\ref{full_decomp}) -(\ref{isospin_decomp}),  $c(...)$ are Clebsh-Gordon coefficients.
     Nucleons are spin $\frac{1}{2}$ particles, and also we treat proton and neutron as 
     the same particle in different 
     isospin states, so that isospin is $\nu_1 = \frac{1}{2}$ for proton and $\nu_1 = -\frac{1}{2}$ for neutron.
 
-    The states $\mid p l m_l \rangle$ from Eq.\ref{full_decomp} are orthogonal, so that
+    The states $\mid p l m_l \rangle$ from Eq.(\ref{full_decomp}) are orthogonal, so that
     
     \begin{equation}
         \langle p^\prime l^\prime m_l^\prime \mid p l m_l \rangle = 
@@ -145,12 +145,12 @@ two-nucleon states.
         \label{parity}
     \end{equation}
 
-    Taking into account Eq.\ref{parity}, one can find only one possible case for 
+    Taking into account Eq.(\ref{parity}), one can find only one possible case for 
     the deuteron bound state: 2 coupled channels for l=0,2; s=1; j=1and $t = m_t = 0$. 
     These 2 channels are usually denoted as $^3S_1$ and $^3D_1$ and
     corresponding wave functions are $\phi_0(p)$ and $\phi_2(p)$. 
 
-    So with a new basis Eq.\ref{shrod_old} takes a form:
+    So with a new basis Eq.(\ref{shrod_old}) takes a form:
 
     \begin{equation}
         \frac{\vec{p}^2}{2\mu} \phi_l(p) +
@@ -162,13 +162,13 @@ two-nucleon states.
     \end{equation}
     for $l=0,2$. Assuming that one has a matrix elements for the potential 
     $\langle plm_l \mid V \mid p^\prime l^\prime m_l^\prime  \rangle$,
-    there is still one complication in the Eq.\ref{integral} - integration.
+    there is still one complication in the Eq.(\ref{integral}) - integration.
     In order to get rid of the integral I use a Gaussian quadrature 
     method of numerical integration \cite{jacobi1826ueber}.
     It allows to replace an integral by the weighted sum:
         $\int_a^b f(x)dx = \sum_{i=1}^n \omega_i f(x_i)$
     In current work I used 72 points in the interval from $0$ to $50 fm$. 
-    Using this method, Eq.\ref{shrod_old} becomes  
+    Using this method, Eq.(\ref{shrod_old}) becomes  
 
     
     \begin{equation}
@@ -194,10 +194,10 @@ two-nucleon states.
     % \end{equation}
     % with $H_0 = \frac{\vec{p}^2}{m}$ and $E > 0$.
 
-    % Solution to the Eq.\ref{schrod_scatt} can be presented in the form:
+    % Solution to the Eq.(\ref{schrod_scatt}) can be presented in the form:
 
     % \begin{equation}
-    %     \mid \Psi _f \rangle = \mid \Psi _0 \rangle + \frac{1}{E - H_0 \pm i \epsilon} V \mid \Psi _f \rangle
+    %     \mid \Psi _f \rangle = \mid \Psi _0 \rangle + \frac{1}{E - H_0 + i \epsilon} V \mid \Psi _f \rangle
     % \end{equation}
 
     Let us start from the time-independent formulation of the scattering process.
@@ -222,151 +222,191 @@ two-nucleon states.
         \label{system}
     \end{equation}
 
-    I would like to find such a solution to Eq.~\ref*{system}, so that 
+    I would like to find such a solution to Eq.~(\ref{system}), so that 
     $\mid \psi \rangle \rightarrow \mid \vec{p} \rangle$ with $V \rightarrow 0$
     and both $\mid \psi \rangle$ and $\mid \vec{p} \rangle$ have the same energy eigenvalues E.
     As we have scattering process, the energy spectra for both operators $H_0$ and$H_0 + V$
     are continuous. 
 
-    From Eq.~\ref*{system} follows that
+    From Eq.~(\ref{system}) follows that
 
     \begin{equation}
         \mid \psi \rangle = \frac{1}{E - H_0}V \mid \psi \rangle +  \mid \vec{p} \rangle,
         \label{psieq}
     \end{equation}
-    where $\mid \psi \rangle$ was added artificially in order to satisfy a criterion mentioned above 
-    and following the logic from \cite{Sakurai}. In addition, applying the operator $(E -H_0)$ to the 
-    \ref*{psieq} results in the second equation from the system \ref{system}.
+    where $\mid \vec{p} \rangle$ was added artificially in order to satisfy a criterion mentioned above 
+    and following the logic from \cite{Sakurai}. In addition, it guarantees that
+     application of the operator $(E -H_0)$ to the 
+    (\ref{psieq}) results in the second equation from the system (\ref{system}).
 
-    In order to deal with a singular operator $\frac{1}{E - H_0}$ in eq.\ref*{psieq}, the well-known
+    In order to deal with a singular operator $\frac{1}{E - H_0}$ in eq.(\ref{psieq}), the well-known
     technique is to make such an operator slightly complex by adding small imaginary number to the denominator
-    making it  $\frac{1}{E \pm i\epsilon - H_0}$.
+    so Eq.(\ref{psieq}) becomes
+    % making it  $\frac{1}{E + i\epsilon - H_0}$.
 
     \begin{equation}
-        \mid \psi \rangle = \frac{1}{E \pm i\epsilon - H_0}V \mid \psi \rangle +  \mid \vec{p} \rangle,
+        \ket{\psi} = G_0(E \pm i\epsilon)V \mid \psi \rangle +  \mid \vec{p} \rangle,
         \label{lse}
     \end{equation}
+    where $G_0$ is a free propagator:
 
-    Eq.~\ref*{lse} is known as a Lippman-Schwinger equation. 
+    \begin{equation}
+        G_0(z) = \frac{1}{z - H_0}
+    \end{equation}
+
+    Solution with $G_0(E - i\epsilon)$ corresponds to the incoming spherical wave,
+    while $G_0(E - i\epsilon)$ - to the outgoing one. Since we are interested in the scattering
+    process, we will use the $(+)$ sign further.
     
-    Let me move to the coordinate representation of the Eq.~\ref{lse}:
+    Eq.~(\ref{lse}) is known as a Lippman-Schwinger equation (LSE) and using
+    the definition of the transition operator $t$:
 
     \begin{equation}
-    \langle \vec{x}  \mid \psi \rangle = \langle \vec{x}  \mid \frac{1}{E \pm i\epsilon - H_0}V \mid \psi \rangle + \langle \vec{x}  \mid \vec{p} \rangle
-    \label{lse_coord}
+        t \ket{\vec{p}} = V \ket{\psi}
+        \label{t-op}
     \end{equation}
-
-    If we choose $\ket*{\vec{x}}$ to be normalized as
-    $\braket{\vec{x}^\prime}{\vec{x}} = \delta^3(\vec{x}^\prime - \vec{x})$ ,
-    the Fourier transform will give us \cite{elster_lectures}: 
-    \begin{equation}
-        \braket{\vec{x}}{\vec{p}} = \frac{1}{(2 \pi)^{3/2}} e^{i \vec{p} \cdot \vec{x}}.
-        \label{planewave}
-    \end{equation}
-
-    I can rewrite Eq.~\ref{lse_coord} as:
-
+    we can rewrite it as 
 
     \begin{equation}
-        \langle \vec{x}  \mid \psi \rangle = \int d^3 \vec{x}^\prime G(\vec{x}, \vec{x}^\prime) 
-        \matrixel{\vec{x}^\prime}{V} {\psi} + \braket{\vec{x}}{\vec{p}},
-        \label{lse_green}
-    \end{equation}
-    with $G(\vec{x}, \vec{x}^\prime)$ denoting a Green function:
-
-    \begin{equation}
-        G(\vec{x}, \vec{x}^\prime) = \mel**{\vec{x}}{\frac{1}{E \pm i\epsilon - H_0}}{\vec{x}^\prime},
-        \label{green}
+        \ket{\psi} = (1 + G_0(E + i\epsilon)V t)  \ket {\vec{p}}
     \end{equation}
 
-    One shall mention, that dealing with the plane-wave state in coordinate space 
-    is not normalizable, as it is not a Hilbert vector \cite{Sakurai}, anyway we
-    imply the "normalization" rule
-    $\int d^3\vec{x} \braket{\vec{p}}{\vec{x}} \braket{\vec{x}}{\pvec{p}} = \delta^3(\vec{p} - \pvec{p})$.
+    With substitution of \eq{lse} into \eq{t-op} we can find
+    an explicit form of the $t$ operator:
+
+    \begin{eqnarray}
+        t \ket{\vec{p}} = V G_0(E + i\epsilon)V \mid \psi \rangle +  V \mid \vec{p} \rangle = \nonumber\\
+        = V G_0(E + i\epsilon) t \ket{\vec{p}} +  V \mid \vec{p} \rangle
+        \label{top2}
+    \end{eqnarray}
+
+    Getting rid of the initial state $\ket{\vec{p}}$ in the \eq{top2} we get a LSE
+    for the transition operator:
+
+    \begin{eqnarray}
+        t = V + V G_0(E + i\epsilon)V t = \nonumber\\
+        = V + V G_0(E + i\epsilon) V + V G_0(E + i\epsilon) V G_0(E + i\epsilon)V t = ...
+    \end{eqnarray}
+
+    % Let me move to the coordinate representation of the Eq.~(\ref{lse}):
+
+    % \begin{equation}
+    % \langle \vec{x}  \mid \psi \rangle = \langle \vec{x}  \mid \frac{1}{E + i\epsilon - H_0}V \mid \psi \rangle + \langle \vec{x}  \mid \vec{p} \rangle
+    % \label{lse_coord}
+    % \end{equation}
+
+    % If we choose $\ket*{\vec{x}}$ to be normalized as
+    % $\braket{\vec{x}^\prime}{\vec{x}} = \delta^3(\vec{x}^\prime - \vec{x})$ ,
+    % the Fourier transform will give us \cite{elster_lectures}: 
+    % \begin{equation}
+    %     \braket{\vec{x}}{\vec{p}} = \frac{1}{(2 \pi)^{3/2}} e^{i \vec{p} \cdot \vec{x}}.
+    %     \label{planewave}
+    % \end{equation}
+
+    % I can rewrite Eq.~(\ref{lse_coord}) as:
 
 
-    The Green function Eq.\ref{green} can be written in the momentum basis as:
+    % \begin{equation}
+    %     \langle \vec{x}  \mid \psi \rangle = \int d^3 \pvec{x} 
+    %     \mel**{\vec{x}}{G_0(E + i\epsilon)}{\vec{x}^\prime}
+    %     \matrixel{\vec{x}^\prime}{V} {\psi} + \braket{\vec{x}}{\vec{p}},
+    %     \label{lse_green}
+    % \end{equation}
 
-    \begin{equation}
-        G(\vec{x}, \vec{x}^\prime) = \frac{1}{(2\pi)^3} \int d^3 \vec{p}^\prime
-        \frac{e^{i\pvec{p}'\cdot(\vec{x}'-\vec{x})}}{E \pm i\epsilon - \frac{\pvec{p}^{\prime 2}}{2m}},
-        \label{green_momentum}
-    \end{equation}
+    % One shall mention, that dealing with the plane-wave state in coordinate space 
+    % is not normalizable, as it is not a Hilbert vector \cite{Sakurai}, anyway we
+    % imply the "normalization" rule
+    % $\int d^3\vec{x} \braket{\vec{p}}{\vec{x}} \braket{\vec{x}}{\pvec{p}} = \delta^3(\vec{p} - \pvec{p})$.
 
-    %  Moving to the spherical coordinates and introducing $r \equiv |x -x^\prime |$ I get Green function as:
 
-    Integration in the \ref*{green_momentum} can be done applying residual technique and here comes
-    the main profit of the $\pm i\epsilon$ in the denominator.
-    The final expression of the Green function will be:
+    % % The Green function Eq.(\ref{green}) can be written in the momentum basis as:
 
-    \begin{equation}
-        G(\vec{x}, \vec{x}^\prime) = - \frac{m}{4\pi} \frac{e^{\pm i\sqrt{mE}|\pvec{x} -\pvec{x} |}}{|\pvec{x} -\pvec{x} |}
-        \label{green_final}
-    \end{equation}
+    % % \begin{equation}
+    % %     G(\vec{x}, \vec{x}^\prime) = \frac{1}{(2\pi)^3} \int d^3 \pvec{p}
+    % %     \frac{e^{i\pvec{p}\cdot(\vec{x}'-\vec{x})}}{E + i\epsilon - \frac{\pvec{p}^{2}}{2m}},
+    % %     \label{green_momentum}
+    % % \end{equation}
 
-    The $(\pm)$ in the exponent specifies outgoing and incoming plane-waves. For a scattering
-    particle we are interested in the outgoing wave, so let's stick to the positive sign in the exponent
-    and assume that corresponding wave function is $\psi^{(+)}$. 
+    % %  Moving to the spherical coordinates and introducing $r \equiv |x -x^\prime |$ I get Green function as:
+    % % Integration in the (\ref{lse_green}) can be done applying residual technique and here comes
+    % % the main profit of the $+ i\epsilon$ in the denominator.
+    % The final expression of the Green function can be found using
+    % standard residual technique and it will be:
 
-    Let;s assume that potential $V$ is local: $\mel**{\pvec{x}}{V}{\pvec{x}} = \delta(\pvec{x} - \pvec{x})V(\pvec{x})$. 
-    Then using this assumption and applying Eq.\ref{green_final} and 
-    Eq.\ref{planewave} to Eq.\ref*{lse_green} one gets:
+    % \begin{equation}
+    %     \mel**{\vec{x}}{G_0(E + i\epsilon)}{\vec{x}^\prime} = 
+    %     - \frac{m}{4\pi} \frac{e^{i\sqrt{mE}|\pvec{x} -\pvec{x} |}}{|\pvec{x} -\pvec{x} |}
+    %     \label{green_final}
+    % \end{equation}
 
-    \begin{equation}
-        \langle \vec{x}  \mid \psi^{(+)} \rangle \equiv \psi^{(+)}(\vec{x}) 
-        - \frac{m}{4\pi} \int d^3 \vec{x}^\prime \frac{e^{\pm i\sqrt{mE}|\pvec{x} -\pvec{x} |}}{|\pvec{x} -\pvec{x} |} 
-        V(\pvec{x}) \psi^{(+)}(\vec{x}^\prime) + \braket{\vec{x}}{\vec{p}},
-        \label{lse_green_explicit}
-    \end{equation}
-    which may be written in the asymptotic form (when $|\vec{x}| \rightarrow \infty$) as:
+    % % The $(+)$ in the exponent specifies outgoing and incoming plane-waves. For a scattering
+    % % state we are interested in the outgoing wave, so let's stick to the positive sign in the exponent
+    % % and assume that corresponding wave function is $\psi^{(+)}$. 
 
-    \begin{equation}
-        \psi^{(+)}(\vec{x}) \rightarrow \frac{1}{(2\pi)^{1/3}}
-        \left( e^{i\vec{p} \cdot \vec{x}} + \frac{e^{i\vec{p} \cdot \vec{x}}}{\vec{x}} f(\hat{x}) \right)
-        \label{lse_green_explicit}
-    \end{equation}
+    % Assuming that potential $V$ is local (that is $\mel**{\pvec{x}}{V}{\pvec{x}} = \delta(\pvec{x} - \pvec{x})V(\pvec{x})$) we come to:
 
-    From the Eq.~\ref*{lse_green_explicit} one can conclude that at large distances
-    we obtain a wave function which consists of the original plane wave plus
-    an outgoing spherical wave with a scattering amplitude $f(\hat{x})$:
+    % \begin{equation}
+    %     \langle \vec{x}  \mid \psi^{(+)} \rangle \equiv \psi^{(+)}(\vec{x}) =
+    %     - \frac{m}{4\pi} \int d^3 \vec{x}^\prime \frac{e^{+ i\sqrt{mE}|\pvec{x} -\pvec{x} |}}{|\pvec{x} -\pvec{x} |} 
+    %     V(\pvec{x}) \psi^{(+)}(\vec{x}^\prime) + \braket{\vec{x}}{\vec{p}},
+    %     \label{lse_green_explicit}
+    % \end{equation}
+    % which may be written in the asymptotic form (when $|\vec{x}| \rightarrow \infty$) as:
 
-    \begin{equation}
-        f(\hat{x}) \equiv -m \sqrt{\frac{\pi}{2}} \int d^3 x^\prime e^{-ip\hat{x}\cdot\pvec{x}}
-        V(\pvec{x})\psi^{(+)}(\pvec{x})
-        %  = \mel{\pvec{p}}{V}{\psi^{(+)}}
-        \label{scat_ampl}
-    \end{equation}
+    % \begin{equation}
+    %     \psi^{(+)}(\vec{x}) \rightarrow \frac{1}{(2\pi)^{1/3}}
+    %     \left( e^{i\vec{p} \cdot \vec{x}} + \frac{e^{i\vec{p} \cdot \vec{x}}}{\vec{x}} f(\hat{x}) \right)
+    %     \label{lse_green_explicit}
+    % \end{equation}
 
-    With substitution a scattered momentum $\pvec{p} \equiv p\hat{x}$ into Eq.~\ref{scat_ampl},
-    we can simplify it and get a matrix element of the transition operator $t$:
+    % From the Eq.~(\ref{lse_green_explicit}) one can conclude that at large distances
+    % we obtain a wave function which consists of the original plane wave plus
+    % an outgoing spherical wave with a scattering amplitude $f(\hat{x})$:
 
-    \begin{equation}
-        \mel{\pvec{p}}{t}{\vec{p}} \equiv \frac{1}{(2\pi)^{1/3}} \int d^3 x^\prime e^{-i\pvec{p}\cdot\pvec{x}}
-        V(\pvec{x})\psi^{(+)}(\pvec{x}) = \mel{\pvec{p}}{V}{\psi^{(+)}}
-        \label{trans_operator_matrix_form}
-    \end{equation}
+    % \begin{equation}
+    %     f(\hat{x}) \equiv -m \sqrt{\frac{\pi}{2}} \int d^3 x^\prime e^{-ip\hat{x}\cdot\pvec{x}}
+    %     V(\pvec{x})\psi^{(+)}(\pvec{x})
+    %     %  = \mel{\pvec{p}}{V}{\psi^{(+)}}
+    %     \label{scat_ampl}
+    % \end{equation}
 
-    Combining Equations \ref*{trans_operator_matrix_form} and \ref*{lse} one can obtain:
+    % With substitution a scattered momentum $\pvec{p} \equiv p\hat{x}$ into Eq.~(\ref{scat_ampl}),
+    % we can simplify it and get a matrix element of the transition operator $t$:
 
-    \begin{equation}
-        t \ket{\vec{p}} = V \ket{\vec{p}} + V G_0 V \ket{\psi^{(+)}}
-        =  V \ket{\vec{p}} + V G_0 t \ket{\vec{p}},
-        \label{lse_psi} 
-    \end{equation}
-    or in the operator form:
+    % \begin{equation}
+    %     \mel{\pvec{p}}{t}{\vec{p}} \equiv \frac{1}{(2\pi)^{1/3}} \int d^3 x^\prime e^{-i\pvec{p}\cdot\pvec{x}}
+    %     V(\pvec{x})\psi^{(+)}(\pvec{x}) = \mel{\pvec{p}}{V}{\psi^{(+)}}
+    %     \label{trans_operator_matrix_form}
+    % \end{equation}
 
-    \begin{equation}
-        t  =  V  + V G_0 t 
-        \label{trans_operator}
-    \end{equation}
+    % Combining Equations (\ref{trans_operator_matrix_form}) and (\ref{lse}) one can obtain:
 
-    Practical application Eq.\ref*{trans_operator} has mostly in the iterative form.
-    It is a Born series with respect to power of potential $V$ and can be interpreted
-    as taking into account more and more vertices of the rescattering process:
+    % \begin{equation}
+    %     t \ket{\vec{p}} = V \ket{\vec{p}} + V G_0 V \ket{\psi^{(+)}}
+    %     =  V \ket{\vec{p}} + V G_0 t \ket{\vec{p}},
+    %     \label{lse_psi} 
+    % \end{equation}
+    % or in the operator form:
+
+    % \begin{equation}
+    %     t  =  V  + V G_0 t 
+    %     \label{trans_operator}
+    % \end{equation}
+
+    % Practical application Eq.(\ref{trans_operator}) has mostly in the iterative form.
+    % It is a Born series with respect to power of potential $V$ and can be interpreted
+    % as taking into account more and more vertices of the rescattering process:
     
-    \begin{equation}
-        t  =  V  + V G_0 (V  + V G_0 t) = V  + V G_0 V  + V G_0 V G_0 V  + ... 
-        \label{trans_operator_iterative}
-    \end{equation}
-    
-    Substitution of Eq.\ref*{lse_psi} into  Eq.\ref{main} ...
+    % \begin{equation}
+    %     t  =  V  + V G_0 (V  + V G_0 t) = V  + V G_0 V  + V G_0 V G_0 V  + ... 
+    %     \label{trans_operator_iterative}
+    % \end{equation}
+
+    % Having all this information about the t-operator we can write a final scattering state as follows:
+
+    % \begin{equation}
+    %     \ket{\psi^{(+)}} = (1 + G_0t) \ket{\vec{p}}
+    % \end{equation}
+
+
+    % Substitution of Eq.(\ref{lse_psi}) into  Eq.(\ref{main}) ...

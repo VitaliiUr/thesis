@@ -49,7 +49,7 @@ def read_av18(fname):
 
 if __name__ == "__main__":
     energies = set(map(lambda x: int(x.split(".")[-1].rstrip("mev")),
-                       [f for f in os.listdir(src) if f.endswith("mev")]))
+                       [f for f in os.listdir(src) if f.endswith("mev") and not f.endswith("2p5mev")]))
     print(energies)
     df_all = pd.DataFrame()
     for energy in tqdm(energies):
@@ -71,6 +71,24 @@ if __name__ == "__main__":
                       on=["angle", "CUTOFF", "FORCE", "WAVE"])
         df["Energy"] = energy
         df_all = df_all.append(df, ignore_index=True)
+    
+    data = [f for f in os.listdir(src) if f.endswith(".2p5mev")]
+    df1 = pd.concat([read_data(fname) for fname in data if "dat1" in fname])
+    df2 = pd.concat([read_data(fname) for fname in data if "dat2" in fname])
+    df3 = pd.concat([read_data(fname) for fname in data if "dat3" in fname])
+    df4 = pd.concat([read_data(fname) for fname in data if "dat4" in fname])
+    df5 = pd.concat([read_data(fname) for fname in data if "dat5" in fname])
+
+    df = pd.merge(left=df1, right=df2.drop(columns=["THCM"]),
+                    on=["angle", "CUTOFF", "FORCE", "WAVE"])
+    df = pd.merge(left=df, right=df3.drop(columns=["THCM"]),
+                    on=["angle", "CUTOFF", "FORCE", "WAVE"])
+    df = pd.merge(left=df, right=df4.drop(columns=["THCM"]),
+                    on=["angle", "CUTOFF", "FORCE", "WAVE"])
+    df = pd.merge(left=df, right=df5.drop(columns=["THCM"]),
+                    on=["angle", "CUTOFF", "FORCE", "WAVE"])
+    df["Energy"] = 2.5
+    df_all = df_all.append(df, ignore_index=True)
 
     df_all.to_csv("Deuteron/deuteron_all_data.csv", index=False)
 
