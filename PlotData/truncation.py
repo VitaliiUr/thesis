@@ -14,6 +14,7 @@ EBDEUTALL = np.array([-2.1189454304609652, -2.1830488263808228,
                       -2.2232629164870863, -2.2232628519800381])
 PIONMASS = 139.570  # MeV
 
+
 def get_truncation(df, energy, cutoff=450,
                    observable="CROSS2", wave="SIEGERT"):
 
@@ -21,7 +22,7 @@ def get_truncation(df, energy, cutoff=450,
     ECMNN = ELABNN-energy**2/(4.0*MM)
     P0MEV = np.sqrt(ECMNN*MM)
     # denom = cutoff
-    denom = 600
+    denom = 650
 
     # EPSILON = max([P0MEV[-1]/cutoff, PIONMASS/cutoff]) # ??????????
     EPSILON = max([P0MEV[-1]/denom, PIONMASS/denom]) # ??????????
@@ -48,7 +49,6 @@ def get_truncation(df, energy, cutoff=450,
                         * EPSILON**(order+1-j))
         for j in range(i):
             maxdiff2.append(df_diff[FORCES[j]]*EPSILON**(i-j))
-        # print(order, force)
         df_diff[force] = np.max((base, maxdiff, *diff, *maxdiff2), axis=0)
 
     return df_diff
