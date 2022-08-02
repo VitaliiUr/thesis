@@ -15,32 +15,40 @@ EBDEUTALL = np.array([-2.1189454304609652, -2.1830488263808228,
 PIONMASS = 139.570  # MeV
 
 
-def get_truncation(df, energy, cutoff=450,
-                   observable="CROSS2", wave="SIEGERT"):
+def get_truncation(df, energy, Lambda=650):
+    """Calculate truncation error
 
+    Parameters
+    ----------
+    df : pd.DataFrame
+        pandas data frame with index - x value of observables (angle) and each columns is 
+        a prediction in subsequent chiral orders
+    energy : float
+        Energy of the incoming particle (photon)
+    Returns
+    -------
+    pd.DataFrame
+        Truncation errors for each order
+    """
+    FORCES = df.columns
     ELABNN = energy-np.abs(EBDEUTALL)
     ECMNN = ELABNN-energy**2/(4.0*MM)
     P0MEV = np.sqrt(ECMNN*MM)
-    # denom = cutoff
-    denom = 650
 
-    # EPSILON = max([P0MEV[-1]/cutoff, PIONMASS/cutoff]) # ??????????
-    EPSILON = max([P0MEV[-1]/denom, PIONMASS/denom]) # ??????????
+    EPSILON = max([P0MEV[-1]/Lambda, PIONMASS/Lambda]) # ??????????
+    print(EPSILON)
+    df_piv = df.sort_index()
 
-    df_tmp = df[(df.CUTOFF == cutoff) &
-                (df.Energy == energy) &
-                (df.WAVE == wave)]
-    df_tmp.sort_values("angle", inplace=True)
-
-    df_piv = df_tmp.pivot(index="angle", columns="FORCE")[observable]
+    # df_piv = df_tmp.pivot(index="angle", columns="FORCE")[observable]
     df_diff = pd.DataFrame(columns=FORCES)
     orders = np.arange(len(FORCES))
     orders[1:] += 1
 
     for i, (order, force) in enumerate(zip(orders, FORCES)):
+        base = df_piv["LO"]*EPSILON**(order+1+int(order == 0))
+        # maximal difference max(|X^{j>=i} - X^{k>=i}|)
         maxdiff = df_piv[FORCES[i:]].max(axis=1) - \
             df_piv[FORCES[i:]].min(axis=1)
-        base = df_piv["LO"]*EPSILON**(order+1+int(order == 0))
         diff = []
         maxdiff2 = []
         for j in range(2, order+1):

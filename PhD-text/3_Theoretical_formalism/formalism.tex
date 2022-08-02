@@ -269,6 +269,7 @@ two-nucleon states.
 
     \begin{equation}
         \ket{\psi} = (1 + G_0(E + i\epsilon)V t)  \ket {\vec{p}}
+        \label{psi_toper}
     \end{equation}
 
     With substitution of \eq{lse} into \eq{t-op} we can find
@@ -280,13 +281,76 @@ two-nucleon states.
         \label{top2}
     \end{eqnarray}
 
-    Getting rid of the initial state $\ket{\vec{p}}$ in the \eq{top2} we get a LSE
-    for the transition operator:
+    Getting rid of the initial state $\ket{\vec{p}}$ in the \eq{top2} we can get a LSE
+    for the transition operator in the iterative form:
 
     \begin{eqnarray}
-        t = V + V G_0(E + i\epsilon)V t = \nonumber\\
-        = V + V G_0(E + i\epsilon) V + V G_0(E + i\epsilon) V G_0(E + i\epsilon)V t = ...
+        t = V + V G_0V t = \nonumber\\
+        = V + V G_0 V + V G_0 V G_0V t = ...
     \end{eqnarray}
+
+    Using \eq{psi_toper} we can write \eq{main} as
+    
+    \begin{equation}
+        N^\mu = \bra{\phi m_p m_n} (1 + G_0(E + i\epsilon)V t) \frac{1}{e}J^\mu(0) \mid \Psi_i \vec{P_i} \rangle
+        \label{main_top}
+    \end{equation}
+
+    %TODO: rewrite everything in \phi m_d m_n
+    
+
+
+    \section{Theoretical uncertainties}
+    
+    \subsection*{Truncation error}
+
+    As it was mention above, each subsequent order of chiral
+    expansion provide us with more and more sophisticated
+    potential. Starling from the leading order (LO) and coming to next
+    N2LO, N3LO and so on we toke into account more Feynmann diagrams 
+    and in result potential is able to provide us with more precise predictions
+    for the regarded process and observable. But the chiral expansion (as any expansion) 
+    in principle can be continued to the infinity, improving the resulting series.
+    In practice we are limited by some number of terms, but we would like to find out
+    the uncertainty appearing from cutting off remaining part of the expansion.
+    This uncertainty is called a truncation error and there some ways of estimation its value
+    for the potential of each order of chiral expansion having predictions for some limited number
+    of terms \cite{Epelbaum2015_trunc, Epelbaum2014SCS, Binder2015, Epelbaum_pos}.
+
+    Let's regard some observable $X^i(p)$ which is calculated at $i$-s order of chiral expansion 
+    with expansion parameter $Q$ ($i = 0,2,3...)$\footnote{We do not have a first order of expansion
+    because this term is always vanished and NLO  corresponds to the second term}. Here $p$ specifies
+    {\textcolor{red}{?????}} a momentum
+    scale of the current reaction in the center of mass frame (in the case of deuteron photodisintegration it would be a
+    photon's momentum).  
+
+    If i define a difference between observable at each subsequent orders as:
+
+    \begin{equation}
+        \Delta X^{(2)} = |X^{(2)} - X^{(0)}|, \Delta X^{(i>2)} = |X^{(i)} - X^{(i-1)}|,
+    \end{equation}
+    then chiral expansion for X is:
+
+    \begin{equation}
+        X = X^{(0)} + \Delta X^{(2)} + \Delta X^{(3)} + ... + \Delta X^{(i)}
+    \end{equation}
+     
+    \begin{figure}[h]
+        \begin{center}
+        \includegraphics[width=0.95\textwidth]{Figures_python/TOTAL_CROSSSECTION_Truncation_100mev.pdf}
+        \end{center}
+        \caption{Total cross section as a dependance on the chiral order for the E$_\gamma$=100~MeV.
+        Error bands show an estimated truncation error at each order.}
+        \label{Trunc_100}
+    \end{figure}
+
+
+
+
+
+
+
+
 
     % Let me move to the coordinate representation of the Eq.~(\ref{lse}):
 
@@ -410,3 +474,5 @@ two-nucleon states.
 
 
     % Substitution of Eq.(\ref{lse_psi}) into  Eq.(\ref{main}) ...
+
+
