@@ -40,23 +40,29 @@ def get_truncation(df, energy, Lambda=650):
     df_piv = df.sort_index()
 
     # df_piv = df_tmp.pivot(index="angle", columns="FORCE")[observable]
+    # \delta X - truncation
     df_diff = pd.DataFrame(columns=FORCES)
     orders = np.arange(len(FORCES))
     orders[1:] += 1
 
-    for i, (order, force) in enumerate(zip(orders, FORCES)):
+    for force_num, (order, force) in enumerate(zip(orders, FORCES)):
+        # Q^{i+1} X^{(0)}
         base = df_piv["LO"]*EPSILON**(order+1+int(order == 0))
-        # maximal difference max(|X^{j>=i} - X^{k>=i}|)
-        maxdiff = df_piv[FORCES[i:]].max(axis=1) - \
-            df_piv[FORCES[i:]].min(axis=1)
+        # Q^{i+1-j} \Delta X^{(j)}
         diff = []
-        maxdiff2 = []
         for j in range(2, order+1):
             diff.append((df_piv[FORCES[np.where(orders == j)[0][0]]] -
                         df_piv[FORCES[np.where(orders == j)[0][0]-1]])
                         * EPSILON**(order+1-j))
-        for j in range(i):
-            maxdiff2.append(df_diff[FORCES[j]]*EPSILON**(i-j))
-        df_diff[force] = np.max((base, maxdiff, *diff, *maxdiff2), axis=0)
+        # maximal difference max(|X^{j>=i} - X^{k>=i}|)
+        maxdiff = df_piv[FORCES[force_num:]].max(axis=1) - \
+            df_piv[FORCES[force_num:]].min(axis=1)
+        # maxdiff2 = []
+        # for j in range(i):
+        #     maxdiff2.append(df_diff[FORCES[j]]*EPSILON**(i-j))
+        # \delta X^(i) > Q \delta X^(i-1)
+        if order >= 2:
+            maxdiff.append(df_diff[FORCES[force_num-1]]*EPSILON)
+        df_diff[force] = np.max((base, maxdiff, *diff), axis=0)
 
     return df_diff

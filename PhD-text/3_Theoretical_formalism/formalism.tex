@@ -319,30 +319,101 @@ two-nucleon states.
 
     Let's regard some observable $X^i(p)$ which is calculated at $i$-s order of chiral expansion 
     with expansion parameter $Q$ ($i = 0,2,3...)$\footnote{We do not have a first order of expansion
-    because this term is always vanished and NLO  corresponds to the second term}. Here $p$ specifies
+    because this term in chiral expansion is always vanished
+    and NLO  corresponds to the quadratic term (number 2)}.
+    Here $p$ specifies
     {\textcolor{red}{?????}} a momentum
     scale of the current reaction in the center of mass frame (in the case of deuteron photodisintegration it would be a
     photon's momentum).  
 
-    If i define a difference between observable at each subsequent orders as:
+    If I define a difference between observable at each subsequent orders as:
 
     \begin{equation}
         \Delta X^{(2)} = |X^{(2)} - X^{(0)}|, \Delta X^{(i>2)} = |X^{(i)} - X^{(i-1)}|,
     \end{equation}
-    then chiral expansion for X is:
+    then chiral expansion for X can be written as:
 
     \begin{equation}
         X = X^{(0)} + \Delta X^{(2)} + \Delta X^{(3)} + ... + \Delta X^{(i)}
+        \label{trunc1}
     \end{equation}
-     
+        
+    The truncation error at order i $\delta X^{(i)}$ is estimated using actual and expected values of the observable at 
+    higher orders. In order to do that I use following expressions:
+
+    \begin{eqnarray}
+        \delta X^{(0)} &=& Q^2 \left| X^{(0)} \right| \label{trunc2}\\ 
+        \delta X^{(i)} &=& \max_{2 \leq j \leq i} \left( Q^{i+1} \left| X^{(0)} \right|,
+        Q^{i+1-j} \left| \Delta X^{(j)} \right| \right) \label{trunc3} 
+    \end{eqnarray}
+
+    Additionally, following the \cite{Binder2015} I use the actual high-order predictions 
+    in order to specify uncertainties so that:
+
+    \begin{equation}
+        \delta X^{(i)} \geq \max_{j,k} (|X^{j \geq i} - X^{k \geq i}|)
+        \label{trunc4}
+    \end{equation}
+    and to be conservative I use additional restriction:
+
+    \begin{equation}
+        \delta X^{(i)} \geq Q \delta X^{(i-1)}
+        \label{trunc5}
+    \end{equation}
+
+    
     \begin{figure}[h]
         \begin{center}
-        \includegraphics[width=0.95\textwidth]{Figures_python/TOTAL_CROSSSECTION_Truncation_100mev.pdf}
+            \includegraphics[width=0.95\textwidth]{Figures_python/TOTAL_CROSSSECTION_Truncation.pdf}
         \end{center}
-        \caption{Total cross section as a dependance on the chiral order for the E$_\gamma$=100~MeV.
+        \caption{Total cross section of the deuteron photonisintegration
+        process as a dependance on the chiral order for three photon energy E$_\gamma$ values: 30, 100 and 140 MeV.
         Error bands show an estimated truncation error at each order.}
         \label{Trunc_100}
     \end{figure}
+    
+    In Fig. \ref{Trunc_100} I present a total cross-section for the deuteron photodisintegration 
+    at 3 photon energie values: 30,100 and140 MeV as a dependance on the chiral order.
+    Error bands show truncation errors calculated using described above method.
+    One can see that errors are being reduced with each consecutive chiral order: for LO it is the biggest
+    while for N4LO+ it is hardly visible at presented scale.
+
+
+    \subsection*{Cutoff dependency}
+
+
+
+    Another uncertainty comes from the choice of the cutoff parameter's value.
+   According to \cite{reinkrebs2018}, where the SMS potential was presented,
+   4 values of the cutoff parameter $\Lambda$ are recommended: 400, 450, 500 and 550 MeV.
+   Using each of them one obtains different predictions which may differ 
+   from actual (experimental) value. Therefore the choice of $\Lambda$ value
+   may affect a quality of the prediction.
+
+
+   \begin{figure}[h]
+    \begin{center}
+        \includegraphics[width=0.95\textwidth]{Figures_python/TOTAL_CROSSSECTION_cutoff.pdf}
+    \end{center}
+    \caption{Total cross section of the deuteron photonisintegration
+    process as a dependance on the cutoff parameter $\Lambda$ 
+    for three photon energy E$_\gamma$ values: 30, 100 and 140 MeV.}
+    \label{Cutoff_dep}
+    \end{figure}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
