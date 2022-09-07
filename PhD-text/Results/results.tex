@@ -2,6 +2,7 @@
 
 \section{Deuteron photodisintegraion}
 
+    \subsection{Cross section}
     In this section I will show the results of my calculation starting from the
     deuteron photodisintegration process. One of the most
     studying observable is obviously cross section. There is
@@ -15,7 +16,7 @@
     I present predictions for the
     total cross section $\sigma_{tot}~[\mu\text{b}]$ which I obtained
     using the chiral potential at the order N$^4$LO+ and with 
-    the cut off parameter $\Lambda=450$~MeV.
+    the cut off parameter $\Lambda=450$~MeV (my best predictions).
     Looking at Fig.~\ref{TOTAL_CROSS_small}, we can see that at low photon energies
     (below 50 MeV) my predictions which include 2N contributions
     using Siegert approach, describe experimental results quite well.
@@ -24,7 +25,24 @@
     are often in between the data from different sources.
     Moreover even at such low energies the 1N current is clearly not enough
     to describe this observable as dashed pink line has much lower values and
-    the difference becomes even larger increasing photon's energy. 
+    the difference becomes even larger with larger photon's energies. 
+
+    Having look at the higher energies (above 50~MeV, Fig.~\ref{TOTAL_CROSS})
+    we can notice that the difference with experimental data is not only 
+    quantitative, but also qualitative.  There is a peak around 300~MeV
+    in the experimental data from \cite{Bernabei1986} which is not
+    reflected in my predictions. The reason of such discrepancy 
+    is most likely coming from the relativistic effects
+    which I do not take into account. At higher energies their contribution
+    becomes larger and here we observe a clear justification of such a lack.
+    It is also confirmed by the calculations in \cite{ArenhovelPhotodisint1991}
+    where authors present predictions obtained with and without including
+    relativistic effects and such a peak appears in the latter case. 
+    
+    Nevertheless my main goal is to describe deuteron photodisintegration at low energies and predictions seem to be well describing experimental data at
+    $E_\gamma \lesssim 50$~MeV. The higher energies region is presented in order
+    to investigate how far the predictions are from experimental results and 
+    what can be improved in the future (e.g. include relativistic part). 
 
     
     \begin{figure}[h]
@@ -54,6 +72,70 @@
         \label{TOTAL_CROSS_small}
     \end{figure}
         
+    {\color{red} Maybe better reorganize figures, combine similar figures for different energies in one?}
+
+    Figures \ref{CROSS_30} - \ref{CROSS_140} show my predictions for the differential cross section
+    $\frac{d\sigma}{d\Omega}$ at three values of the photon energy:
+    30, 100 and 140~MeV. They all are organized in a similar way: the left panel
+    presents predictions obtained using SMS potential at different chiral orders (from LO to N$^4$LO+)
+    with cut off parameter $L = 450$~MeV,
+    the middle panel includes the truncation error's bands (described in Sec. \ref{sec:deut_bound})
+    for each chiral order starting
+    from NLO. And the right panel shows predictions obtained with different values of the
+    cut off parameter at the chiral order N$^4$LO+.
+
+    Comparing the best predictions (N$^4$LO+, $\Lambda=450$~MeV) for each
+    of the Fig.~\ref{CROSS_30} - \ref{CROSS_140} we can once more 
+    conclude that the higher photon's energy is, the larger is 
+    difference between the theoretical predictions and experimental 
+    measurements. At $E_\gamma = 30$~MeV (Fig.~\ref{CROSS_30}) my predictions
+    almost perfectly match the data and the difference is almost always
+    within the experimental uncertainties. Going to the energy 100~MeV (Fig.~\ref{CROSS_100})
+    the descriptions seems not to be such good: theoretical
+    predictions match experimental data qualitatively, but
+    the gap in the angles range ($60^{\circ} < \theta_p < 130^{\circ}$) 
+    is around 30\% ({\color{red} check the value!}).
+    Looking at the Fig.~\ref{CROSS_140} it is hard to say even about 
+    good qualitative description, the general trend of the
+    angular dependance is presented, but still the predictions are 
+    far from experimental values.
+    In addition, figures for each energy confirm the convergence 
+    of the predictions with respect to the chiral order.
+    We see that the curves at LO are far from both experimental 
+    data and the best potential's predictions (N$^4$LO+) and
+    the higher is photon's energy, the larger is this
+    difference. With each subsequent chiral order, the 
+    curves are more closer to each other and the difference
+    between N$^4$LO and N$^4$LO+ is hardly visible at current scale.
+    So I can conclude that predictions are converged and 
+    further chiral orders would rather not bring large contribution 
+    to the cross section values. What may be helpful
+    in a better data description is a 2N current 
+    and relativistic correction, mentioned earlier.
+
+    The middle pane of Fig.~\ref{CROSS_30} - \ref{CROSS_140} 
+    presents theoretical (truncation) uncertainties and it once more
+    confirm that for the regarded nuclear reaction chiral order
+    N$^4$LO+ is able to produce converged predictions: 
+    the black band is hardly visible for the $E_\gamma=30$~MeV 
+    and quit thin for larger energies. 
+    The difference with experimental data is rather systematic 
+    and is independent on the chiral order. 
+
+    The right panes in discussed figures present a cut off dependency
+    of my predictions. The ideal case is when the dependency is so weak that
+    the choice of the parameter $\Lambda$ would not make large 
+    changes. In practice the choice of this parameter can be 
+    important as it makes a noticeable difference in predictions.
+    
+    On the Fig.~\ref{CROSS_30} the cut off dependance is so weak,
+    that, in fact, it all the lines (for different $\Lambda$ values)
+    overlap each other and we cannot see the difference with the naked eye.
+    With increasing photon's energy to 100 and 140~MeV (Fig.~\ref{CROSS_100}
+    and Fig.~\ref{CROSS_140}) the spread becomes larger. 
+    Although the spread is visible, it is not so large and even for 140~MeV
+    it is within 12\%. 
+    
 
     \begin{figure}[h]
         \begin{center}
@@ -87,8 +169,9 @@
         \label{CROSS_140}
     \end{figure}
         
+    \subsection{Tensor analyzing power}
 
-
+      
 
     \begin{figure}[h]
         \begin{center}
