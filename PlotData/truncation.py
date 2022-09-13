@@ -36,7 +36,7 @@ def get_truncation(df, energy, Lambda=650):
     P0MEV = np.sqrt(ECMNN*MM)
 
     EPSILON = max([P0MEV[-1]/Lambda, PIONMASS/Lambda]) # ??????????
-    print(EPSILON)
+    # print(EPSILON)
     df_piv = df.sort_index()
 
     # df_piv = df_tmp.pivot(index="angle", columns="FORCE")[observable]
