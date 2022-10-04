@@ -473,10 +473,33 @@
     \end{figure}
     
     
+    % \begin{figure}[h]
+    %     \begin{center}
+    %     \includegraphics[width=0.6\textwidth]{Figures_python/AX2_100mev.pdf}
+    %     \end{center}
+    %     \caption{The photon asymmetry $\Sigma_\gamma$ 
+    %     as a function of the outgoing proton angle in the center of mass frame 
+    %     for the photon's energy 100 MeV.
+    %     Top figure presents results obtained using potential
+    %     with different chiral orders (from LO to N$^4$LO+) with cutoff parameter $\Lambda=450$~MeV.
+    %     The middle pane shows truncation errors for each 
+    %     chiral order starting from NLO and
+    %     bottom figure presents a cutoff dependency (chiral potential N$^4$LO+).
+    %     For the sake of comparison, predictions obtained with AV18 potential are on  figures as well.}
+    %     \label{AX_100_vert}
+    % \end{figure}
     \begin{figure}[h]
-        \begin{center}
-        \includegraphics[width=0.6\textwidth]{Figures_python/AX2_100mev.pdf}
-        \end{center}
+        \centering
+        \begin{subfigure}[b]{0.48\textwidth}
+            \includegraphics[width=\textwidth]{Figures_python/AX2_30mev.pdf}
+            \caption{\small E$_\gamma = 30$~MeV}
+            \label{AX_30_vert}
+        \end{subfigure}
+        \begin{subfigure}[b]{0.48\textwidth}
+            \includegraphics[width=\textwidth]{Figures_python/AX2_100mev.pdf}
+            \caption{\small E$_\gamma = 100$~MeV}
+            \label{AX_100_vert}
+        \end{subfigure}
         \caption{The photon asymmetry $\Sigma_\gamma$ 
         as a function of the outgoing proton angle in the center of mass frame 
         for the photon's energy 100 MeV.
@@ -486,9 +509,8 @@
         chiral order starting from NLO and
         bottom figure presents a cutoff dependency (chiral potential N$^4$LO+).
         For the sake of comparison, predictions obtained with AV18 potential are on  figures as well.}
-        \label{AX_100_vert}
     \end{figure}
-    
+     
     % \begin{figure}[h]
     %     \begin{center}
     %     \includegraphics[width=0.6\textwidth]{Figures_python/POLNOUT2(y)_100mev.pdf}
@@ -510,10 +532,12 @@
         \begin{subfigure}[b]{0.48\textwidth}
             \includegraphics[width=\textwidth]{Figures_python/POLNOUT2(y)_30mev.pdf}
             \caption{\small E$_\gamma = 30$~MeV}
+            \label{PY_30_vert}
         \end{subfigure}
         \begin{subfigure}[b]{0.48\textwidth}
             \includegraphics[width=\textwidth]{Figures_python/POLNOUT2(y)_100mev.pdf}
             \caption{\small E$_\gamma = 100$~MeV}
+            \label{PY_100_vert}
         \end{subfigure}
         \caption{Proton polarisation $P_y$ 
         as a function of the outgoing proton angle in the center of mass frame 
@@ -524,38 +548,72 @@
         chiral order starting from NLO and
         bottom figure presents a cutoff dependency (chiral potential N$^4$LO+).
         For the sake of comparison, predictions obtained with AV18 potential are on  figures as well.}
-\end{figure}
+    \end{figure}
     
 \section{Helium photodisintegration}
 
 \subsection{3N photodisintegration}
     \begin{figure}[h]
         \begin{center}
-            \includegraphics[width=0.9\textwidth]{Figures_HE/CROSS_excl_40mev.pdf}
+            \includegraphics[width=0.9\textwidth]{Figures_HE/CROSS_excl_30mev.pdf}
             \end{center}
             \caption{The five-fold differential cross section for the photon 
-            energy E$_\gamma=40$~MeV.
+            energy E$_\gamma=30$~MeV.
             The left figure presents results obtained using potential
             with different chiral orders (from LO to N$^4$LO+) with cutoff parameter $\Lambda=450$~MeV.
             The right figure presents a cutoff dependency (chiral potential N$^4$LO+).}
+            \label{CROSS_HE_EXCL_30}
+        \end{figure}
+
+        \begin{figure}[h]
+            \begin{center}
+            \includegraphics[width=0.9\textwidth]{Figures_HE/CROSS_excl_40mev.pdf}
+            \end{center}
+            \caption{{\color{red} no lines for $\Lambda$ = 500, 550}The same as on Fig.~\ref{CROSS_HE_EXCL_30} but 
+            for the photon energy E$_\gamma=40$~MeV}
             \label{CROSS_HE_EXCL_40}
+        \end{figure}
+
+        \begin{figure}[h]
+            \begin{center}
+            \includegraphics[width=0.9\textwidth]{Figures_HE/CROSS_excl_100mev.pdf}
+            \end{center}
+            \caption{The same as on Fig.~\ref{CROSS_HE_EXCL_30} but 
+            for the photon energy E$_\gamma=100$~MeV}
+            \label{CROSS_HE_EXCL_100}
         \end{figure}
 
         \begin{figure}[h]
             \begin{center}
             \includegraphics[width=0.9\textwidth]{Figures_HE/CROSS_excl_120mev.pdf}
             \end{center}
-            \caption{The same as on Fig.~\ref{CROSS_HE_EXCL_40} but 
+            \caption{{\color{red} no lines for $\Lambda$ = 500, 550}The same as on Fig.~\ref{CROSS_HE_EXCL_30} but 
             for the photon energy E$_\gamma=120$~MeV}
             \label{CROSS_HE_EXCL_120}
         \end{figure}
 
         \begin{figure}[h]
             \begin{center}
+            \includegraphics[width=0.9\textwidth]{Figures_HE/CROSS_incl_30mev_60deg.pdf}
+            \end{center}
+            \caption{Inclusive cross section... E$_\gamma=30$~MeV, $\theta=60^\circ$ }
+            \label{CROSS_HE_INCL_30_60deg}
+        \end{figure}
+
+        \begin{figure}[h]
+            \begin{center}
             \includegraphics[width=0.9\textwidth]{Figures_HE/CROSS_incl_40mev_60deg.pdf}
             \end{center}
-            \caption{Inclusive cross section... E$_\gamma=40$~MeV, $\theta=60^\circ$ }
+            \caption{Inclusive cross section...  E$_\gamma=40$~MeV, $\theta=60^\circ$}
             \label{CROSS_HE_INCL_40_60deg}
+        \end{figure}
+
+        \begin{figure}[h]
+            \begin{center}
+            \includegraphics[width=0.9\textwidth]{Figures_HE/CROSS_incl_100mev_60deg.pdf}
+            \end{center}
+            \caption{Inclusive cross section...  E$_\gamma=100$~MeV, $\theta=60^\circ$}
+            \label{CROSS_HE_INCL_100_60deg}
         \end{figure}
 
         \begin{figure}[h]
@@ -570,19 +628,37 @@
 
 \begin{figure}[h]
     \begin{center}
-        \includegraphics[width=0.9\textwidth]{Figures_HE/CROSS_nd_40mev.pdf}
+        \includegraphics[width=0.9\textwidth]{Figures_HE/CROSS_nd_30mev.pdf}
         \end{center}
         \caption{Differential cross section for the d-$\gamma$ 
         two-body photodisintegraion of $^3$He as a function of the d$\gamma$ angle.
-        The initial photon energy $E_\gamma=40$~MeV.}
+        The initial photon energy $E_\gamma=30$~MeV.}
+        \label{CROSS_nd_30}
+    \end{figure}
+
+    \begin{figure}[h]
+        \begin{center}
+        \includegraphics[width=0.9\textwidth]{Figures_HE/CROSS_nd_40mev.pdf}
+        \end{center}
+        \caption{The same as on Fig.~\ref{CROSS_nd_30} but 
+        for the photon energy E$_\gamma=40$~MeV}
         \label{CROSS_nd_40}
+    \end{figure}
+
+    \begin{figure}[h]
+        \begin{center}
+        \includegraphics[width=0.9\textwidth]{Figures_HE/CROSS_nd_100mev.pdf}
+        \end{center}
+        \caption{The same as on Fig.~\ref{CROSS_nd_30} but 
+        for the photon energy E$_\gamma=100$~MeV}
+        \label{CROSS_nd_100}
     \end{figure}
 
     \begin{figure}[h]
         \begin{center}
         \includegraphics[width=0.9\textwidth]{Figures_HE/CROSS_nd_120mev.pdf}
         \end{center}
-        \caption{The same as on Fig.~\ref{CROSS_nd_40} but 
+        \caption{The same as on Fig.~\ref{CROSS_nd_30} but 
         for the photon energy E$_\gamma=120$~MeV}
         \label{CROSS_nd_120}
     \end{figure}
