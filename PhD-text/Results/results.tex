@@ -160,39 +160,65 @@
         \label{Diff_cross_order}
     \end{figure}
 
+
     \begin{figure}[h]
-        \begin{center}
-        \includegraphics[width=0.7\textwidth]{Figures_python/CROSS2_truncation_vert.pdf}
-        \end{center}
-        \caption{Truncation error's bands for the differential cross section 
-        as a function of the outgoing proton angle in the center of mass frame 
-        The photon's energy is 30 MeV (top pane), 100 MeV (middle) and 140 MeV (bottom). Results are obtained using potential
-        with different chiral orders (from LO to N$^4$LO+) with cutoff parameter $\Lambda=450$~MeV.
+        \centering
+        \begin{subfigure}[b]{0.46\textwidth}
+            \includegraphics[width=\textwidth]{Figures_python/CROSS2_truncation_vert.pdf}
+            \caption{Truncation error bands}
+            \label{Diff_cross_truncation}
+        \end{subfigure}
+        \begin{subfigure}[b]{0.46\textwidth}
+            \includegraphics[width=\textwidth]{Figures_python/CROSS2_cutoff_vert.pdf}
+            \caption{Cutoff dependance}
+            \label{Diff_cross_cutoff}
+        \end{subfigure}
+        \caption{Differential cross section as a function of the outgoing proton angle in the center of mass frame 
+        for the photon's energy is 30 MeV (top row), 100 MeV (middle row) and 140 MeV (bottom row).
+        Figure {\bf(a)} presents a truncation error bands for each energy in corresponant row. 
+        Results are obtained using potential with different chiral orders (from NLO to N$^4$LO+) 
+        with cutoff parameter $\Lambda=450$~MeV.
+        Figure {\bf (b)} shows predictions obtained using different values of the cutoff parameter $\Lambda$
+        (double-dotted-dashed red line presents results obtaining with 
+        a cutoff values $\Lambda=400$~MeV, solid black line - 450~MeV, dashed green line - 500~MeV
+        and dotted blues line - 550~MeV) and chiral potential N$^4$LO+. 
         Data points (filled and empty circles) are from \cite{Ying_Experiment_Deut}
         for (30 and 100 meV)
-        and \cite{DeSanctis_Experiment_Deut} (for energy 140 MeV).}
-        \label{Diff_cross_truncation}
+        and \cite{DeSanctis_Experiment_Deut} (for 140~MeV).}
     \end{figure}
+
+
+    % \begin{figure}[h]
+    %     \begin{center}
+    %     \includegraphics[width=0.7\textwidth]{Figures_python/CROSS2_truncation_vert.pdf}
+    %     \end{center}
+    %     \caption{Truncation error's bands for the differential cross section 
+    %     as a function of the outgoing proton angle in the center of mass frame 
+    %     The photon's energy is 30 MeV (top pane), 100 MeV (middle) and 140 MeV (bottom). Results are obtained using potential
+    %     with different chiral orders (from LO to N$^4$LO+) with cutoff parameter $\Lambda=450$~MeV.
+    %     Data points (filled and empty circles) are from \cite{Ying_Experiment_Deut}
+    %     for (30 and 100 meV)
+    %     and \cite{DeSanctis_Experiment_Deut} (for energy 140 MeV).}
+    %     \label{Diff_cross_truncation}
+    % \end{figure}
 
     
 
-    \begin{figure}[h]
-        \begin{center}
-        \includegraphics[width=0.7\textwidth]{Figures_python/CROSS2_cutoff_vert.pdf}
-        \end{center}
-        \caption{Truncation error's bands for the differential cross section 
-        as a function of the outgoing proton angle in the center of mass frame 
-        ThDifferential cross section as a function of the outgoing proton angle in the center of mass frame 
-        for the photon's energy is 30 MeV (top pane), 100 MeV (middle) and 140 MeV (bottom). 
-        The double-dotted-dashed red line presents results obtaining with 
-        a cutoff values $\Lambda=400$~MeV, solid black line - 450~MeV, dashed green line - 500~MeV
-    and dotted blues line - 550~MeV.
-        For the sake of comparison, predictions obtained with AV18 potential (purple dotted-dashed line).
-        Data points (filled and empty circles) are from \cite{Ying_Experiment_Deut}
-        for (30 and 100 meV)
-        and \cite{DeSanctis_Experiment_Deut} (for energy 140 MeV).}
-        \label{Diff_cross_cutoff}
-    \end{figure}
+    % \begin{figure}[h]
+    %     \begin{center}
+    %     \includegraphics[width=0.7\textwidth]{Figures_python/CROSS2_cutoff_vert.pdf}
+    %     \end{center}
+    %     \caption{Differential cross section as a function of the outgoing proton angle in the center of mass frame 
+    %     for the photon's energy is 30 MeV (top pane), 100 MeV (middle) and 140 MeV (bottom). 
+    %     The double-dotted-dashed red line presents results obtaining with 
+    %     a cutoff values $\Lambda=400$~MeV, solid black line - 450~MeV, dashed green line - 500~MeV
+    % and dotted blues line - 550~MeV.
+    %     For the sake of comparison, predictions obtained with AV18 potential (purple dotted-dashed line).
+    %     Data points (filled and empty circles) are from \cite{Ying_Experiment_Deut}
+    %     for (30 and 100 meV)
+    %     and \cite{DeSanctis_Experiment_Deut} (for energy 140 MeV).}
+    %     \label{Diff_cross_cutoff}
+    % \end{figure}
 
     
         
@@ -227,12 +253,10 @@
     %     The data are from \cite{DeSanctis_Experiment_Deut}.}
     %     \label{CROSS_140}
     % \end{figure}
-        
+    \clearpage
+
     \subsection{Polarisation observables}
     \label{tensor_results}
-
-    {\color{red} maybe  reorganize similar to cross section?}
-
 
     In this subsection I will present my predictions for 
     selected polarisation observables.
@@ -271,41 +295,80 @@
     has slightly stronger discrepancy as at the stationary point around 90$^\circ$
     we can see the difference between each of the curves, which still is small.
 
-
-    \begin{figure}[h]
-        \begin{center}
-        \includegraphics[width=0.6\textwidth]{Figures_python/T20D2_100mev.pdf}
-        \end{center}
-        \caption{Tensor analyzing power T$_{20}$ 
+    \begin{figure}[htb]
+        \centering
+        \begin{subfigure}[b]{0.46\textwidth}
+            \includegraphics[width=\textwidth]{Figures_python/T20D2_100mev.pdf}
+            \caption{T$_{20}$}
+            \label{T20_100_vert}
+        \end{subfigure}
+        \begin{subfigure}[b]{0.46\textwidth}
+            \includegraphics[width=\textwidth]{Figures_python/T21D2_100mev.pdf}
+            \caption{T$_{21}$}
+            \label{T21_100_vert}
+        \end{subfigure}
+        \caption{Tensor analyzing power T$_{20}$ (subfigure {\bf (a)})
+        and T$_{21}$ (subfigure {\bf (b)})
         as a function of the outgoing proton angle in the center of mass frame 
         for the photon's energy 100 MeV.
-        Top figure presents results obtained using potential
+        Top row presents results obtained using potential
         with different chiral orders (from LO to N$^4$LO+) with cutoff parameter $\Lambda=450$~MeV.
-        The middle pane shows truncation errors for each 
+        The middle row shows truncation errors for each 
         chiral order starting from NLO and
-        bottom figure presents a cutoff dependency (chiral potential N$^4$LO+).
-        For the sake of comparison, predictions obtained with AV18 potential are on  figures as well.}
-        \label{T20_100_vert}
+        bottom row presents a cutoff dependency (chiral potential N$^4$LO+).
+        For the sake of comparison, predictions obtained with AV18 potential are on figures as well.}
+        \label{T20_T21_100}
     \end{figure}
 
-    \begin{figure}[h]
-        \begin{center}
-        \includegraphics[width=0.7\textwidth]{Figures_python/T21D2_100mev.pdf}
-        \end{center}
-        \caption{The same as on \ref{T20_100_vert} but for the 
-        tensor analyzing power component T$_{21}$}
-        \label{T21_100_vert}
-    \end{figure}
+    % \begin{figure}[h]
+    %     \begin{center}
+    %     \includegraphics[width=0.6\textwidth]{Figures_python/T20D2_100mev.pdf}
+    %     \end{center}
+    %     \caption{Tensor analyzing power T$_{20}$ 
+    %     as a function of the outgoing proton angle in the center of mass frame 
+    %     for the photon's energy 100 MeV.
+    %     Top figure presents results obtained using potential
+    %     with different chiral orders (from LO to N$^4$LO+) with cutoff parameter $\Lambda=450$~MeV.
+    %     The middle pane shows truncation errors for each 
+    %     chiral order starting from NLO and
+    %     bottom figure presents a cutoff dependency (chiral potential N$^4$LO+).
+    %     For the sake of comparison, predictions obtained with AV18 potential are on  figures as well.}
+    %     \label{T20_100_vert}
+    % \end{figure}
+
+    % \begin{figure}[h]
+    %     \begin{center}
+    %     \includegraphics[width=0.7\textwidth]{Figures_python/T21D2_100mev.pdf}
+    %     \end{center}
+    %     \caption{The same as on \ref{T20_100_vert} but for the 
+    %     tensor analyzing power component T$_{21}$}
+    %     \label{T21_100_vert}
+    % \end{figure}
       
-
-    \begin{figure}[h]
-        \begin{center}
-        \includegraphics[width=0.7\textwidth]{Figures_python/T22D2_100mev.pdf}
-        \end{center}
-        \caption{The same as on \ref{T20_100_vert} but for the 
-        tensor analyzing power component T$_{22}$}
-        \label{T22_100_vert}
+    \begin{figure}[htb]
+        \centering
+        \begin{subfigure}[b]{0.46\textwidth}
+            \includegraphics[width=\textwidth]{Figures_python/T22D2_100mev.pdf}
+            \caption{T$_{22}$}
+            \label{T22_100_vert}
+        \end{subfigure}
+        \begin{subfigure}[b]{0.46\textwidth}
+            \includegraphics[width=\textwidth]{Figures_python/T11D2_100mev.pdf}
+            \caption{iT$_{11}$}
+            \label{T11_100_vert}
+        \end{subfigure}
+        \caption{The same as on \ref{T20_T21_100} but for polarisation observables
+        T$_{22}$ (subfigure {\bf (a)}) and iT$_{11}$ (subfigure {\bf (b)}).}
     \end{figure}
+
+    % \begin{figure}[h]
+    %     \begin{center}
+    %     \includegraphics[width=0.7\textwidth]{Figures_python/T22D2_100mev.pdf}
+    %     \end{center}
+    %     \caption{The same as on \ref{T20_100_vert} but for the 
+    %     tensor analyzing power component T$_{22}$}
+    %     \label{T22_100_vert}
+    % \end{figure}
 
     
     On the next figures, I show the predictions in a similar way as it was done
@@ -490,12 +553,12 @@
     % \end{figure}
     \begin{figure}[h]
         \centering
-        \begin{subfigure}[b]{0.48\textwidth}
+        \begin{subfigure}[b]{0.46\textwidth}
             \includegraphics[width=\textwidth]{Figures_python/AX2_30mev.pdf}
             \caption{\small E$_\gamma = 30$~MeV}
             \label{AX_30_vert}
         \end{subfigure}
-        \begin{subfigure}[b]{0.48\textwidth}
+        \begin{subfigure}[b]{0.46\textwidth}
             \includegraphics[width=\textwidth]{Figures_python/AX2_100mev.pdf}
             \caption{\small E$_\gamma = 100$~MeV}
             \label{AX_100_vert}
@@ -529,12 +592,12 @@
     
     \begin{figure}[h]
         \centering
-        \begin{subfigure}[b]{0.48\textwidth}
+        \begin{subfigure}[b]{0.46\textwidth}
             \includegraphics[width=\textwidth]{Figures_python/POLNOUT2(y)_30mev.pdf}
             \caption{\small E$_\gamma = 30$~MeV}
             \label{PY_30_vert}
         \end{subfigure}
-        \begin{subfigure}[b]{0.48\textwidth}
+        \begin{subfigure}[b]{0.46\textwidth}
             \includegraphics[width=\textwidth]{Figures_python/POLNOUT2(y)_100mev.pdf}
             \caption{\small E$_\gamma = 100$~MeV}
             \label{PY_100_vert}
@@ -567,14 +630,14 @@
             \label{CROSS_HE_EXCL_30}
         \end{figure}
 
-        \begin{figure}[h]
-            \begin{center}
-            \includegraphics[width=0.9\textwidth]{Figures_HE/CROSS_excl_40mev.pdf}
-            \end{center}
-            \caption{The same as on Fig.~\ref{CROSS_HE_EXCL_30} but 
-            for the photon energy E$_\gamma=40$~MeV}
-            \label{CROSS_HE_EXCL_40}
-        \end{figure}
+        % \begin{figure}[h]
+        %     \begin{center}
+        %     \includegraphics[width=0.9\textwidth]{Figures_HE/CROSS_excl_40mev.pdf}
+        %     \end{center}
+        %     \caption{The same as on Fig.~\ref{CROSS_HE_EXCL_30} but 
+        %     for the photon energy E$_\gamma=40$~MeV}
+        %     \label{CROSS_HE_EXCL_40}
+        % \end{figure}
 
         \begin{figure}[h]
             \begin{center}
@@ -585,14 +648,14 @@
             \label{CROSS_HE_EXCL_100}
         \end{figure}
 
-        \begin{figure}[h]
-            \begin{center}
-            \includegraphics[width=0.9\textwidth]{Figures_HE/CROSS_excl_120mev.pdf}
-            \end{center}
-            \caption{{\color{red} no lines for $\Lambda$ = 500, 550}The same as on Fig.~\ref{CROSS_HE_EXCL_30} but 
-            for the photon energy E$_\gamma=120$~MeV}
-            \label{CROSS_HE_EXCL_120}
-        \end{figure}
+        % \begin{figure}[h]
+        %     \begin{center}
+        %     \includegraphics[width=0.9\textwidth]{Figures_HE/CROSS_excl_120mev.pdf}
+        %     \end{center}
+        %     \caption{{\color{red} no lines for $\Lambda$ = 500, 550}The same as on Fig.~\ref{CROSS_HE_EXCL_30} but 
+        %     for the photon energy E$_\gamma=120$~MeV}
+        %     \label{CROSS_HE_EXCL_120}
+        % \end{figure}
 
         \begin{figure}[h]
             \begin{center}
@@ -602,13 +665,13 @@
             \label{CROSS_HE_INCL_30_60deg}
         \end{figure}
 
-        \begin{figure}[h]
-            \begin{center}
-            \includegraphics[width=0.9\textwidth]{Figures_HE/CROSS_incl_40mev_60deg.pdf}
-            \end{center}
-            \caption{Inclusive cross section...  E$_\gamma=40$~MeV, $\theta=60^\circ$}
-            \label{CROSS_HE_INCL_40_60deg}
-        \end{figure}
+        % \begin{figure}[h]
+        %     \begin{center}
+        %     \includegraphics[width=0.9\textwidth]{Figures_HE/CROSS_incl_40mev_60deg.pdf}
+        %     \end{center}
+        %     \caption{Inclusive cross section...  E$_\gamma=40$~MeV, $\theta=60^\circ$}
+        %     \label{CROSS_HE_INCL_40_60deg}
+        % \end{figure}
 
         \begin{figure}[h]
             \begin{center}
@@ -618,13 +681,13 @@
             \label{CROSS_HE_INCL_100_60deg}
         \end{figure}
 
-        \begin{figure}[h]
-            \begin{center}
-            \includegraphics[width=0.9\textwidth]{Figures_HE/CROSS_incl_120mev_60deg.pdf}
-            \end{center}
-            \caption{Inclusive cross section...  E$_\gamma=120$~MeV, $\theta=60^\circ$}
-            \label{CROSS_HE_INCL_120_60deg}
-        \end{figure}
+        % \begin{figure}[h]
+        %     \begin{center}
+        %     \includegraphics[width=0.9\textwidth]{Figures_HE/CROSS_incl_120mev_60deg.pdf}
+        %     \end{center}
+        %     \caption{Inclusive cross section...  E$_\gamma=120$~MeV, $\theta=60^\circ$}
+        %     \label{CROSS_HE_INCL_120_60deg}
+        % \end{figure}
 
 \subsection{Nd photodisintegration}
 
@@ -638,14 +701,14 @@
         \label{CROSS_nd_30}
     \end{figure}
 
-    \begin{figure}[h]
-        \begin{center}
-        \includegraphics[width=0.9\textwidth]{Figures_HE/CROSS_nd_40mev.pdf}
-        \end{center}
-        \caption{The same as on Fig.~\ref{CROSS_nd_30} but 
-        for the photon energy E$_\gamma=40$~MeV}
-        \label{CROSS_nd_40}
-    \end{figure}
+    % \begin{figure}[h]
+    %     \begin{center}
+    %     \includegraphics[width=0.9\textwidth]{Figures_HE/CROSS_nd_40mev.pdf}
+    %     \end{center}
+    %     \caption{The same as on Fig.~\ref{CROSS_nd_30} but 
+    %     for the photon energy E$_\gamma=40$~MeV}
+    %     \label{CROSS_nd_40}
+    % \end{figure}
 
     \begin{figure}[h]
         \begin{center}
@@ -656,11 +719,11 @@
         \label{CROSS_nd_100}
     \end{figure}
 
-    \begin{figure}[h]
-        \begin{center}
-        \includegraphics[width=0.9\textwidth]{Figures_HE/CROSS_nd_120mev.pdf}
-        \end{center}
-        \caption{The same as on Fig.~\ref{CROSS_nd_30} but 
-        for the photon energy E$_\gamma=120$~MeV}
-        \label{CROSS_nd_120}
-    \end{figure}
+    % \begin{figure}[h]
+    %     \begin{center}
+    %     \includegraphics[width=0.9\textwidth]{Figures_HE/CROSS_nd_120mev.pdf}
+    %     \end{center}
+    %     \caption{The same as on Fig.~\ref{CROSS_nd_30} but 
+    %     for the photon energy E$_\gamma=120$~MeV}
+    %     \label{CROSS_nd_120}
+    % \end{figure}
