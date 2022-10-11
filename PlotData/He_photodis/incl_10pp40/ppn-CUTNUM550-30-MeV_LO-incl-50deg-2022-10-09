@@ -1,0 +1,9 @@
+   3N SYSTEM INCLUSIVE  PHOTODESINTEGRATION
+        DETECTED PARTICLE: 1- PROTON
+        NOT DETECTED PARTICLES:2- PROTON  3-NEUTRON
+
+      OMEGA 0.30000E+02
+     MTTWE1,MTTWE2,MTTWE3=    1    1   -1
+     TH1LAB,PHI1LAB=    50.000     0.000
+   Unit of cross sections ... fm**2/(MeV*sr**2)
+      I       E1      CROSS           AX           AY           AZ
