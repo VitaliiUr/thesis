@@ -1,7 +1,10 @@
 \chapter{Formalism \& numerical methods}
 
+Despite the deuteron problem was solved long time ago, I will describe it briefly 
+in order to introduce the notation and formalism. For 3N case only 
+extension will be needed.
 
-In order to calculate any observable for the Deuteron photodisintegration,
+In order to calculate any observable for the deuteron photodisintegration,
 one has to find a nuclear matrix elements:
 
 \begin{equation}
@@ -27,7 +30,7 @@ two-nucleon states.
 \section{Deuteron bound state}
     \label{sec:deut_bound}
 
-    Let's find a deuteron bound state wave function $\phi_d$. The time-independent Schrodinger
+    Let's find a deuteron bound state wave function $\phi_d$. The time-independent Schr\"{o}dinger
     equation for two particles in such case will be:
 
     \begin{equation}
@@ -48,10 +51,11 @@ two-nucleon states.
         \vec{p} &=& \frac{(m_1\vec{p}_1 - m_2\vec{p}_2)}{m_1 + m_2}\\
         \vec{\mathcal{P}} &=& \vec{p}_1 + \vec{p}_2
     \end{eqnarray}
-    and $M = m_1 + m_2$ is a total mass, $\mu = \frac{m_1m_2}{M}$ is a relative mass of two nucleons.
+    and $M = m_1 + m_2$ is a total mass, $\mu = \frac{m_1m_2}{M}$ is a relative mass of two nucleons, 
+    $\vec{p_i}$ is a momentum of i-th particle.
 
-    We are working in the momentum space, so acting by the momentum operator
-    on the Eq.(\ref{shrod_bound}) one can obtain two separated equations:
+    Potential $V$ is assumed to depend on the relative degrees of freedom, so
+    \eq{shrod_bound} may be decomposed into two separated equations:
 
     \begin{eqnarray}
         &\frac{\vec{p}^2}{2\mu} \langle \vec{p} \mid \Psi_{int} \rangle +
@@ -59,11 +63,21 @@ two-nucleon states.
         \langle \pvec{p} \mid \Psi_{int} \rangle = 
         (E_d - E_{c.m.})\langle \vec{p} \mid \Psi_{int} \rangle \label{se1}\\
         &\frac{\vec{\mathcal{P}}^2}{2M} \langle \mathcal{P} \mid \Psi_{c.m.} \rangle = 
-        E_{c.m.}\langle \mathcal{P} \mid \Psi_{c.m.} \rangle \label{se2}
+        E_{c.m.}\langle \mathcal{P} \mid \Psi_{c.m.} \rangle \label{se2},
     \end{eqnarray}
+    with $\matrixel{\vec{p},\vec{\mathcal{P}}}{H_0}{\Psi_{12}} = \frac{\vec{p}^2}{2\mu} \braket{\vec{p}}{\Psi_{int}} +
+    \frac{\vec{\mathcal{P}}^2}{2M} \braket {\mathcal{P}} {\Psi_{c.m.}} $. So $\Psi_{c.m.}$ is a component 
+    of total wave function, which reflects a deuteron as a single object with momentum $\vec{\mathcal{P}}$
+    while $\Psi_{int}$ is an internal wave function describing interaction between nucleons.
+    Basis state $\ket{\vec{p}}$  obeys a completeness
+    equation:
 
-    Eq.(\ref{se1}) is basically a Schrodinger equation for one particle with mass $\mu$ 
-    and Eq.(\ref{se2}) can be regarded as a Schrodinger equation for particle with mass $M$ in 
+    \begin{equation}
+        \int d^3\vec{p} \ket{\vec{p}} \bra{\vec{p}}   = \mathbb{1}
+    \end{equation}
+
+    Eq.(\ref{se1}) is basically a Schr\"{o}dinger equation for one particle with mass $\mu$ 
+    and Eq.(\ref{se2}) can be regarded as a Schr\"{o}dinger equation for particle with mass $M$ in 
     a free motion. Assuming that deuteron is at rest ($E_{c.m.} = 0$) we can stick 
     to the Eq.(\ref{se1}) only. So that:
 
@@ -75,7 +89,8 @@ two-nucleon states.
         \label{shrod_old}
     \end{equation}
 
-    Next we move to the partial-wave representation of the momentum state in the following form:
+    Working in 3 dimensional space  is difficult (especially numerically)
+    so i introduce the partial-wave representation (PWD) of the momentum state in the following form:
 
     \begin{equation}
         \mid \vec{p} \rangle = \mid p \alpha \rangle \equiv \mid p (ls) j m_j \rangle \mid t m_t \rangle,
@@ -134,20 +149,33 @@ two-nucleon states.
         \langle \pvec{p} \mid plm_l \rangle = 
         \frac{\delta ( \abs{\pvec{p}} - p)}{p^2} Y _{l m_l}(\hat{p}^\prime),
     \end{equation}
-    where $Y _{l m_l}(\hat{p}^\prime)$ is a spherical harmonic and 'hat' means a unit vector.
+    where $Y _{l m_l}(\hat{p}^\prime)$ is a spherical harmonic and 'hat' means a unit vector in 
+    direction of $\vec{p}$:
 
-    If we exchange nucleons 1 and 2 there should be a sign change and this requirement 
-    can in mathematical form can be expressed as:
+    \begin{equation}
+        \vec{p} \equiv |\vec{p}| \hat{p} \equiv p \hat{p} 
+        \label{hat}
+    \end{equation}
+
+    Nucleons are fermions so exchanging leads to antisymmetry of the
+    wave function. In PWD it leads to the
+    requirement which
+    can be expressed as:
 
     \begin{equation}
         (-1)^{l+s+t} = -1
         \label{parity}
     \end{equation}
 
-    Taking into account Eq.(\ref{parity}), one can find only one possible case for 
-    the deuteron bound state: 2 coupled channels for l=0,2; s=1; j=1and $t = m_t = 0$. 
+    Taking into account Eq.(\ref{parity}), one can find only one possible PWD state combination for 
+    the deuteron bound state(under ... experimental evidence): 2 coupled channels for l=0,2; s=1; j=1and $t = m_t = 0$. 
     These 2 channels are usually denoted as $^3S_1$ and $^3D_1$ and
-    corresponding wave functions are $\phi_0(p)$ and $\phi_2(p)$. 
+    corresponding wave functions are $\phi_0(p)$ and $\phi_2(p)$:
+    
+    \begin{equation}
+        \phi_l(p) = \braket{pl}{\Psi_{int}} = \bra{p(l1)1m_d} \braket{00}{\Psi_{int}}; l=0,2.
+        \label{deut_waves}
+    \end{equation}
 
     So with a new basis Eq.(\ref{shrod_old}) takes a form:
 
@@ -159,8 +187,9 @@ two-nucleon states.
         E_d \phi_l(p),
         \label{integral}
     \end{equation}
-    for $l=0,2$. Assuming that one has a matrix elements for the potential 
-    $\langle plm_l \mid V \mid p^\prime l^\prime m_l^\prime  \rangle$,
+    for $l=0,2$. In case one does not have a matrix elements for the potential 
+    $\langle plm_l \mid V \mid p^\prime l^\prime m_l^\prime  \rangle$ in analytical form,
+    but only values for some grid of points, 
     there is still one complication in the Eq.(\ref{integral}) - integration.
     In order to get rid of the integral I use a Gaussian quadrature 
     method of numerical integration \cite{jacobi1826ueber}.
@@ -178,14 +207,28 @@ two-nucleon states.
         \label{integral2}
     \end{equation}
 
-    It is possible to solve this equation as an eigenvalue problem $M\Psi = E_n \Psi$ and
-    find simultaneously wave function values and binding energy $E_n$.
+    I solve this equation as an eigenvalue problem $M\Psi = E_n \Psi$ and
+    in that way
+    find simultaneously wave function values and binding energy $E_n$. 
+    The binding energy $E_n$ calculated with potentials of different chiral orders 
+    is presented on the Fig.~\ref{bind}.
+
+    \begin{figure}[h]
+        \begin{center}
+            \includegraphics[width=0.65\textwidth]{Figures_python/Binding_energy.pdf}
+        \end{center}
+        \caption{Deuteron binding energy calculated using chiral potential with different chiral orders.
+        Error bands represent a standard deviation of the calculated binding energy with respect to
+        the cutoff parameter $\Lambda$.
+        Experimental data is taken from \cite{VANDERLEUN1982261}}
+        \label{bind}
+    \end{figure}
 
 \section{2N scattering state}
 
-\subsection{The Lippman-Schwinger equation}
+\subsection{The Lippmann-Schwinger equation}
     % Let us consider a two-nucleon scattering state $\mid \Psi _f \rangle$, It fulfills
-    % a Schrodinger equation
+    % a Schr\"{o}dinger equation
 
     % \begin{equation}
     %     (H_0 + V) \mid \Psi _f \rangle = E \mid \Psi _f \rangle,
@@ -205,13 +248,14 @@ two-nucleon states.
     \begin{equation}
         H = H_0 + V,
     \end{equation}
-    where $H_0$ is a kinetic energy operator $H_0 = \frac{\vec{p}^2}{2m}$.
+    where $H_0$ is a kinetic energy operator $H_0 = \frac{\vec{p}^2}{2m}$ 
+    and $V$ is a nucleon-nucleon interaction.
     For a free particle motion, $V$ will be absent and we will denote an energy eigenstate as
     $\mid \vec{p} \rangle$ - a free particle state.
     In the case of the scattering process, the eigenstate will differ from $\mid \phi \rangle$,
     but in case of elastic scattering (which we re interested in) the energy eigenvalue $E$ should be the same.
 
-    So below I write a system of Schrodinger equations for such scattering process:
+    So these two states fulfill Schr\"{o}dinger equations for such scattering process:
 
     \begin{equation}
         \begin{cases}
@@ -221,10 +265,10 @@ two-nucleon states.
         \label{system}
     \end{equation}
 
-    I would like to find such a solution to Eq.~(\ref{system}), so that 
-    $\mid \psi \rangle \rightarrow \mid \vec{p} \rangle$ with $V \rightarrow 0$
+    We are interested in solution for Eq.~(\ref{system}), so that 
+    $\mid \psi \rangle \rightarrow \mid \vec{p} \rangle$ as $V \rightarrow 0$
     and both $\mid \psi \rangle$ and $\mid \vec{p} \rangle$ have the same energy eigenvalues E.
-    As we have scattering process, the energy spectra for both operators $H_0$ and$H_0 + V$
+    As we have scattering process, the energy spectra for both operators $H_0$ and $H_0 + V$
     are continuous. 
 
     From Eq.~(\ref{system}) follows that
@@ -233,13 +277,22 @@ two-nucleon states.
         \mid \psi \rangle = \frac{1}{E - H_0}V \mid \psi \rangle +  \mid \vec{p} \rangle,
         \label{psieq}
     \end{equation}
-    where $\mid \vec{p} \rangle$ was added artificially in order to satisfy a criterion mentioned above 
-    and following the logic from \cite{Sakurai}. In addition, it guarantees that
+    where $\mid \vec{p} \rangle$ is a solution to the
+    free-particle Schr\"{o}dinger equation
+    \begin{equation}
+        H_0 \ket{\vec{p}} =  E  \ket{\vec{p}},
+    \end{equation}
+    with same energy eigenvalue\cite{Sakurai}.
+    % was added artificially in order to satisfy a criterion mentioned above 
+    % and following the logic from . 
+    In addition, it guarantees that
      application of the operator $(E -H_0)$ to the 
     (\ref{psieq}) results in the second equation from the system (\ref{system}).
+    % Also, \eq{psieq} for $V \rightarrow 0$ becomes $\mid \psi \rangle = \mid \vec{p} \rangle$
+
 
     In order to deal with a singular operator $\frac{1}{E - H_0}$ in eq.(\ref{psieq}), the well-known
-    technique is to make such an operator slightly complex by adding small imaginary number to the denominator
+    technique is to make such an operator complex by adding small imaginary number to the denominator
     so Eq.(\ref{psieq}) becomes
     % making it  $\frac{1}{E + i\epsilon - H_0}$.
 
@@ -255,10 +308,10 @@ two-nucleon states.
     \end{equation}
 
     Solution with $G_0(E - i\epsilon)$ corresponds to the incoming spherical wave,
-    while $G_0(E - i\epsilon)$ - to the outgoing one. Since we are interested in the scattering
-    process, we will use the $(+)$ sign further.
+    while $G_0(E + i\epsilon)$ - to the outgoing one. Since we are interested in the scattering
+    process, only the $(+)$ sign survives.
     
-    Eq.~(\ref{lse}) is known as a Lippman-Schwinger equation (LSE) and using
+    Eq.~(\ref{lse}) is known as a Lippmann-Schwinger equation (LSE) and using
     the definition of the transition operator $t$:
 
     \begin{equation}
@@ -289,6 +342,17 @@ two-nucleon states.
         = V + V G_0 V + V G_0 V G_0V + ...
     \end{eqnarray}
 
+    In the partial-wave representation, LSE \eq{top2} may be written as:
+    \begin{multline}
+        \matrixel{p^\prime (l^\prime s^\prime)jt}{t(E)}{p(ls)jt} = 
+        \matrixel{p^\prime (l^\prime s)jt}{V}{p(ls)jt} + \\
+        +\sum_{l^{\prime\prime}} \int_0^\infty dp^{\prime \prime} p^{\prime \prime 2}
+        \matrixel{p^\prime (l^\prime s)jt}{V}{p^{\prime\prime}(l^{\prime\prime} s)jt} \\
+        \cross \frac{1}{E + i\epsilon - p^{\prime \prime 2}/m}
+        \matrixel{p^{\prime \prime} (l^{\prime \prime} s)jt}{t(E)}{p^{\prime\prime}(l s)jt}
+        \label{lse_pwd}
+    \end{multline}
+
     Using \eq{psi_toper} we can write \eq{main} as
     
     \begin{equation}
@@ -300,7 +364,7 @@ two-nucleon states.
     
 \section{3N bound state}
 
-    The 3N bound state is derived from a general Schrodinger for 3N system
+    The 3N bound state is derived from a general Schr\"{o}dinger for 3N system
     and its total wave function obeys the following equation:
 
     \begin{equation}
@@ -496,18 +560,8 @@ two-nucleon states.
 
 
 
-    Another uncertainty comes from the choice of the cutoff parameter's value.
-    The SMS potential is being regularized using the Gaussian form factor
-    $F(\vec{l}^2)$:
-
-    \begin{equation}
-        F(\vec{l}^2) = e^{-\frac{\vec{l}^2 + M_\pi^2}{\Lambda^2}},
-        \label{regulator}
-    \end{equation}
-    where $M_\pi$ is an effective pion mass and $\Lambda$ - is a cutoff parameter.
-    
-    The form factor from \eq{regulator}, being used together with Feynman propagator,
-    ensures that long-range part of the forces has no singularities. 
+    Another uncertainty comes from the choice of the cutoff parameter's value 
+    which was mentioned already.
 
    According to \cite{reinkrebs2018}, where the SMS potential was presented,
    4 values of the cutoff parameter $\Lambda$ are recommended: 400, 450, 500 and 550 MeV.

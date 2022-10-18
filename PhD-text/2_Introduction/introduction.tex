@@ -156,7 +156,7 @@ $\nu$.
 
 Considering so-called irreducible (the diagrams that cannot be split
 by cutting nucleon lines), Weinberg \cite{WEINBERG1990,WEINBERG1991}
-came to the identity for the powers of such diagrams\cite{Machleidt2011}:
+came to the identity for the powers of such diagrams
 
 \begin{equation}
     \nu_W = 4 - A - 2C + 2L + \sum_i \Delta_i,
@@ -169,35 +169,90 @@ where
     \label{Delta}
 \end{equation}
 
-In \ref*{powers}, $C$ is a number of pieces which are connected, $L$ - the number of loops in the graph.
-In \ref*{Delta}, $n_i$ is a number of nucleon field operators, $d_i$ - the number of insertions
+In \eq{powers}, $C$ is a number of pieces which are connected, $L$ - the number of loops in the graph.
+In \eq{Delta}, $n_i$ is a number of nucleon field operators, $d_i$ - the number of insertions
 (or derivatives) of  $M_\pi$.
 
-In \gls*{ceft} the first order is called "leading order" (LO)  and it is followed 
-by next-to-leading order (NLO), next-to-next-to-leading order (N2LO) and so on.
-At the moment, the highest order for which there is a derived term in potential
-is N4LO. Also some contributions from N5LO are included in the N4LO+ chiral order. 
+The further analysis of \eq{powers} revealed some problems which occur 
+for particular values of parameters in the equation, namely negative values of $\nu_W$ 
+are possible.
+In order to deal with that, \eq{powers} 
+was slightly modified adding $3A - 6$ to it  \cite{Machleidt2011, EPELBAUM2006_PROGRESS}:
+
+\begin{equation}
+    \nu = \nu_W + 3A  - 6 = -2 + 2A - 2C + 2L + \sum_i \Delta_i
+    \label{powers_corrected}
+\end{equation}
 
 
-As pointed above, for many-nucleon systems it is important to include not 
-only nucleon-nucleon interaction to the potential, but also a 3- and many- nucleon
-contributions. In the \gls*{ceft} 3N force contributes starting from N2LO and
-4N force is presented starting from N3LO, so there is a systematic
+In \gls*{ceft} the first order is called "leading order" (LO, $\nu=0$)  and it is followed 
+by next-to-leading order (NLO, $\nu=2$)
+\footnote{The $\nu=1$ order is completely vanished due to parity and time-reversal invariance,
+so next-to-leading order stands for the second order of expansion.},
+ next-to-next-to-leading order (N$^2$LO, $\nu=3$) and so on.
+ At each chiral order, particular interaction diagrams are described.
+ At LO there is a diagram which consists of 2 contact terms and the diagram
+ implying one-pion exchange. Both diagrams reflect only 2NF as well
+ as diagrams at NLO, where more contact terms are introduced together with two-pion 
+ exchange diagrams. Each subsequent order includes more and more sophisticated diagrams
+ describing nucleons interaction,
+ 3NF appears at N$^2$LO while 4NF contributions are firstly described at N$^3$LO.
+ So there is a systematic
 way to include all the forces from simplest diagrams at LO and gradually
-adding more and more terms. It is also beneficial in the way that 
+adding more and more terms. 
+It is also beneficial in the way that 
 one can obtain results using chiral potential at different
 orders and track which one gives larger or smaller contribution (changes in the
 final results).
+The highest order for which there is a derived term in potential
+is N$^4$LO at the moment. Nevertheless leading F-wave contact interactions from N$^5$LO are included in the N$^4$LO+ potential,
+which is regarded as a best possible potential within my work. 
+
+There are a number of another approaches within \gls*{ceft} utilized.
+The group of Piarulli is using quit similar approach, including
+the same chiral potentials with minor differences \cite{Piarulli2012,Piarulli2015}.
+
+{\color{red} Machleidt, Ekstrim, pion-less EFT, Lattice EFT(Mesissner)}
+
 
 The \gls*{ceft} may be applied both in coordinate and momentum spaces.
 Nevertheless in both cases it requires regularization which is cutting 
 low coordinate values in order to avoid infinities 
-(or high momentum values - in momentum space). The value at which
+(or high momentum values - in momentum space). 
+The SMS potential is being regularized using the Gaussian form factor
+$F(\vec{l}^2)$:
+
+\begin{equation}
+    F(\vec{l}^2) = e^{-\frac{\vec{l}^2 + M_\pi^2}{\Lambda^2}},
+    \label{regulator}
+\end{equation}
+where $M_\pi$ is an effective pion mass and $\Lambda$ - is a cutoff parameter.
+
+The form factor from \eq{regulator}, being used together with Feynman propagator,
+ensures that long-range part of the forces has no singularities. 
+
+The value at which
 the cut is applied (cut-off value) is not fixed and usually calculations
 are being performed for different cut-off values. The comparison
 of such results may reveal stronger or weaker dependance and in perfect
 case one will come up with such a potential, were the cut will
-not affect results much.
+not affect results much. On the Fif.~\ref{potential_cutoff} 
+I show values of the 2N potential $\matrixel{\vec{p}}{V}{\pvec{p}}$
+as a function on the momentum $|\vec{p}|$ with fixed value $|\pvec{p}|$=0.054[fm].
+
+
+
+\begin{figure}[htb]
+    \begin{center}
+    \includegraphics[width=0.95\textwidth]{PlotData/Deuteron/WAVEFUNC/potential_pp1.798.pdf}
+    \end{center}
+    \caption{Potential components as a function on the momentum $p$ with fixed
+    value of the momentum $p'$=1.798 [fm?].
+    }
+    \label{potential_cutoff}
+\end{figure}
+
+
 
 The potential may be transformed from coordinate to momentum space (or vice versa),
 but it is important at which frame the regularization was performed
