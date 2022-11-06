@@ -664,18 +664,29 @@
     as inaccuracy in theoretical models.
 
     \begin{figure}[h]
+        % \centering
+        % \includegraphics[width=0.5\textwidth]{Figures_De/POLNOUT2(y)_2.75mev_neuteron.pdf}
         \centering
-        \includegraphics[width=0.5\textwidth]{Figures_De/POLNOUT2(y)_2.75mev_neuteron.pdf}
+        \begin{subfigure}[b]{0.46\textwidth}
+            \includegraphics[width=\textwidth]{Figures_De/POLNOUT2(y)_2.75mev_neuteron.pdf}
+            \caption{\small E$_\gamma = 2.75$~MeV}
+            \label{Pn_30_vert}
+        \end{subfigure}
+        \begin{subfigure}[b]{0.46\textwidth}
+            \includegraphics[width=\textwidth]{Figures_De/POLNOUT2(y)_100mev_neuteron.pdf}
+            \caption{\small E$_\gamma = 100$~MeV}
+            \label{Pn_100_vert}
+        \end{subfigure}
         \caption{Neuteron polarisation $P_y(n)$ 
         as a function of the outgoing neuteron angle in the center of mass frame 
-        for the photon's energy 2.75 MeV.
-        Top figure presents results obtained using potential
+        for the photon's energy 2.75 MeV(a) and 100~MeV(b).
+        Top row presents results obtained using potential
         with different chiral orders (from LO to N$^4$LO+) with cutoff parameter $\Lambda=450$~MeV.
         The middle pane shows truncation errors for each 
         chiral order starting from NLO and
         bottom figure presents a cutoff dependency (chiral potential N$^4$LO+).
         Experimental data is from \cite{Jewell_neuteronpolarization}.}
-        \label{Pn_2p75_vert}
+        \label{Pn_2p75_100}
     \end{figure}
 
 
@@ -801,7 +812,7 @@
     \clearpage
     \section{Pion absorption from the lowes atomic orbital}
 
-    \subsection{$\pi^- + ^3$He $\rightarrow p + n + n$}
+    \subsection{Pion absorption in $^3$He}
 
     \begin{figure}[h]
         \begin{center}
@@ -809,6 +820,14 @@
         \end{center}
         \caption{}
         \label{Gamma_pnn}
+    \end{figure}
+
+    \begin{figure}[h]
+        \begin{center}
+        \includegraphics[width=0.6\textwidth]{PlotData/PION/Dalitz_maps/figures/Gamma_nd.pdf}
+        \end{center}
+        \caption{}
+        \label{Gamma_nd}
     \end{figure}
 
     \begin{figure}[h]
@@ -825,6 +844,38 @@
         \end{center}
         \caption{}
         \label{pion_map_E1E2_cutoff}
+    \end{figure}
+
+    \begin{figure}[h]
+        \begin{center}
+        \includegraphics[width=0.7\textwidth]{PlotData/PION/Dalitz_maps/figures/Dalitz_map_pnn_xy_cutofs_PWIAS.pdf}
+        \end{center}
+        \caption{}
+        \label{pion_map_xy_cutoff_PW}
+    \end{figure}
+
+    \begin{figure}[h]
+        \begin{center}
+        \includegraphics[width=0.7\textwidth]{PlotData/PION/Dalitz_maps/figures/Dalitz_map_pnn_E1E2_cutofs_PWIAS.pdf}
+        \end{center}
+        \caption{}
+        \label{pion_map_E1E2_cutoff_PW}
+    \end{figure}
+
+    \begin{figure}[h]
+        \begin{center}
+        \includegraphics[width=0.7\textwidth]{PlotData/PION/Dalitz_maps/figures/Dalitz_map_pnn_xy_cutofs_1NC.pdf}
+        \end{center}
+        \caption{}
+        \label{pion_map_xy_cutoff_1NC}
+    \end{figure}
+
+    \begin{figure}[h]
+        \begin{center}
+        \includegraphics[width=0.7\textwidth]{PlotData/PION/Dalitz_maps/figures/Dalitz_map_pnn_E1E2_cutofs_1NC.pdf}
+        \end{center}
+        \caption{}
+        \label{pion_map_E1E2_cutoff_1NC}
     \end{figure}
 
     \begin{figure}[h]
