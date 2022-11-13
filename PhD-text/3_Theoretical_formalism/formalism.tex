@@ -482,24 +482,30 @@ two-nucleon states.
     \label{sec:trunc}
 
     As it was mention above, each subsequent order of chiral
-    expansion provide us with more and more sophisticated
-    potential. Starling from the leading order (LO) and coming to next
-    N2LO, N3LO and so on we toke into account more Feynmann diagrams 
-    and in result potential is able to provide us with more precise predictions
+    expansion provides us with more and more sophisticated
+    potential which is expected to increase accuracy of data description.
+    Starting from the leading order (LO) and coming next to
+    N2LO, N3LO and so on, we take into account more Feynmann diagrams 
+    and in result potential is expected to provide us with more precise predictions
     for the regarded process and observable. But the chiral expansion (as any expansion) 
-    in principle can be continued to the infinity, improving the resulting series.
-    In practice we are limited by some number of terms, but we would like to find out
+    in principle can be continued up to the infinity, improving the resulting series.
+    In practice we are limited by a finite, rather small, number of terms 
+    and we would like to find out
     the uncertainty appearing from cutting off remaining part of the expansion.
-    This uncertainty is called a truncation error and there some ways of estimation its value
-    for the potential of each order of chiral expansion having predictions for some limited number
-    of terms \cite{Epelbaum2015_trunc, Epelbaum2014SCS, Binder2015, Epelbaum_pos}.
+    This theoretical uncertainty is called a truncation error. 
+    Various ways of estimation its value
+    have been proposed \cite{epelkrebs2015, Epelbaum2015_trunc, Binder2015, Epelbaum_pos, Miller_arxiv}.
+    Such estimation is based on predictions at lower orders.
+    It is worth adding that Bayesian analysis is also used for truncation error estimation
+    % for the potential of each order of chiral expansion having predictions for some limited number
+    % of terms \cite{epelkrebs2015, Epelbaum2015_trunc, Binder2015, Epelbaum_pos}.
 
+    We use method proposed in \cite{Binder2015}.
     Let's regard some observable $X^i(p)$ which is calculated at $i$-s order of chiral expansion 
     with expansion parameter $Q$ ($i = 0,2,3...)$\footnote{We do not have a first order of expansion
     because this term in chiral expansion is always vanished
     and NLO  corresponds to the quadratic term (number 2)}.
-    Here $p$ specifies
-    {\textcolor{red}{?????}} a momentum
+    Here $p$ specifies a momentum
     scale of the current reaction in the center of mass frame (in the case of deuteron photodisintegration it would be a
     photon's momentum).  
 
@@ -511,17 +517,18 @@ two-nucleon states.
     then chiral expansion for X can be written as:
 
     \begin{equation}
-        X = X^{(0)} + \Delta X^{(2)} + \Delta X^{(3)} + ... + \Delta X^{(i)}
+        X = X^{(0)} + \Delta X^{(2)} + \Delta X^{(3)} + ... + \Delta X^{(i)}.
         \label{trunc1}
     \end{equation}
         
-    The truncation error at order i $\delta X^{(i)}$ is estimated using actual and expected values of the observable at 
-    higher orders. In order to do that I use following expressions:
+    The truncation error at order $i$ - $\delta X^{(i)}$ - is estimated using
+    actual and expected values of the observable at 
+    higher orders as following:
 
     \begin{eqnarray}
-        \delta X^{(0)} &=& Q^2 \left| X^{(0)} \right| \label{trunc2}\\ 
+        \delta X^{(0)} &=& Q^2 \left| X^{(0)} \right| \label{trunc2},\\ 
         \delta X^{(i)} &=& \max_{2 \leq j \leq i} \left( Q^{i+1} \left| X^{(0)} \right|,
-        Q^{i+1-j} \left| \Delta X^{(j)} \right| \right) \label{trunc3} 
+        Q^{i+1-j} \left| \Delta X^{(j)} \right|. \right) \label{trunc3} 
     \end{eqnarray}
 
     Additionally, following the \cite{Binder2015} I use the actual high-order predictions 
@@ -534,10 +541,11 @@ two-nucleon states.
     and to be conservative I use additional restriction:
 
     \begin{equation}
-        \delta X^{(i)} \geq Q \delta X^{(i-1)}
+        \delta X^{(i)} \geq Q \delta X^{(i-1)}.
         \label{trunc5}
     \end{equation}
 
+    All the conditions above assume that we use the whole available information at hand.
     
     \begin{figure}[h]
         \begin{center}
@@ -549,23 +557,26 @@ two-nucleon states.
         \label{Trunc_100}
     \end{figure}
     
-    In Fig. \ref{Trunc_100} I present a total cross-section for the deuteron photodisintegration 
-    at 3 photon energie values: 30,100 and140 MeV as a dependance on the chiral order.
-    Error bands show truncation errors calculated using described above method.
-    One can see that errors are being reduced with each consecutive chiral order: for LO it is the biggest
+    In Fig. \ref{Trunc_100} I present 
+    an example of such a procedure being applied to the
+    total cross-section for the deuteron photodisintegration 
+    at three photon energie values: 30,100 and140 MeV as a function of the chiral order.
+    Error bands show truncation errors calculated using Eq.~\ref{trunc2}~-~\ref{trunc5}.
+    One can see that truncation errors are being reduced with each consecutive chiral order: for LO it is the biggest
     while for N4LO+ it is hardly visible at presented scale.
+    In each case the prediction is within the uncertainty range of lower orders.
 
 
     \subsection*{Cutoff dependency}
 
 
 
-    Another uncertainty comes from the choice of the cutoff parameter's value 
+    Another theoretical uncertainty comes from the choice of the cutoff parameter's value 
     which was mentioned already.
 
    According to \cite{reinkrebs2018}, where the SMS potential was presented,
-   4 values of the cutoff parameter $\Lambda$ are recommended: 400, 450, 500 and 550 MeV.
-   Using each of them one obtains different predictions which may differ 
+   four values of the cutoff parameter $\Lambda$ are recommended: 400, 450, 500 and 550 MeV.
+   Using each of them one obtains different predictions which off course can further differ 
    from actual (experimental) value. Therefore the choice of $\Lambda$ value
    may affect a quality of the prediction.
 
@@ -574,8 +585,9 @@ two-nucleon states.
     \begin{center}
         \includegraphics[width=0.95\textwidth]{Figures_De/TOTAL_CROSSSECTION_cutoff.pdf}
     \end{center}
-    \caption{Total cross section of the deuteron photonisintegration
-    process as a dependance on the cutoff parameter $\Lambda$ 
+    \caption{Total cross section of the deuteron photodisintegration
+    process (normalized to the maximal cross section among all $\Lambda$)
+    as a dependance on the cutoff parameter $\Lambda$ 
     for three photon energy E$_\gamma$ values: 30, 100 and 140 MeV.}
     \label{Cutoff_dep}
     \end{figure}
@@ -584,16 +596,17 @@ two-nucleon states.
     cutoff parameter $\Lambda$ is presented on the Fig.~\ref{Cutoff_dep}.
     Each subfigure shows a predictions for the total cross section as 
     a function of the cutoff parameter for the photons energies 30, 100 and 140~MeV
-    normalized be the maximum value among all $\Lambda$ 
+    normalized to the maximum value among all cross sections
+    obtained with various $\Lambda$ 
     (at the chiral order N$^4$LO+).
     As we can see,
     there is almost linear dependance with positive linearity coefficient value:
     with higher $\Lambda$ the cross section value increases as well.
     The noticeable is also the fact, that with higher photon's energy,
-    the cutoff dependance becomes stronger: fro $E_\gamma=30$~MeV
+    the cutoff dependance becomes stronger: for $E_\gamma=30$~MeV
     the maximal difference between predictions is around 0.5\% while
     for 140~MeV it increases to more than 8\%. This results are
-    generally within our beliefs that our model works better for
+    generally within our expectations that our model works better at
     smaller energies. 
 
 
