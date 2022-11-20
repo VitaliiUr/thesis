@@ -7,30 +7,36 @@
 
     In this section I will show the results of my calculation starting from the
     deuteron photodisintegration process. One of the most
-    studying observable is obviously cross section. There is
+    studying observable is obviously the cross section. There is
     a number of papers which present 
     measurement results for both differential and total cross section
-    \cite{BOSMAN1979,ARENDS1984,Skopik1974, Moreh1989, Birenbaum1985, Bernabei1986, rachek2007,Ying_Experiment_Deut, DeSanctis_Experiment_Deut} so it is convenient 
-    to prepare a theoretical predictions in order to compare 
-    it with experimental results.
+    \cite{BOSMAN1979,ARENDS1984,Skopik1974, Moreh1989, Birenbaum1985, Bernabei1986, rachek2007,Ying_Experiment_Deut, DeSanctis_Experiment_Deut} 
+    and it seems interesting to compare 
+    our predictions with experimental results.
 
-    On the Fig.~\ref{TOTAL_CROSS_small} and Fig.~\ref{TOTAL_CROSS} 
+    In Fig.~\ref{TOTAL_CROSS_small} and Fig.~\ref{TOTAL_CROSS} 
     I present predictions for the
     total cross section $\sigma_{tot}~[\mu\text{b}]$ which I obtained
     using the chiral potential at the order N$^4$LO+ and with 
     the cutoff parameter $\Lambda=450$~MeV (my best predictions).
-    Looking at Fig.~\ref{TOTAL_CROSS_small}, we can see that at low photon energies
-    (below 50 MeV) my predictions which include 2N contributions
-    using Siegert approach, describe experimental results quite well.
+    From Fig.~\ref{TOTAL_CROSS_small}, we see that at low photon energies
+    (below 50 MeV) predictions which include 2N contributions
+    via the Siegert approach, describe experimental results quite well.
     We can suppose that the difference with experimental data may come from 
     the statistical uncertainty of  the data itself, as my predictions
     are often in between the data from different sources.
     Moreover even at such low energies the 1N current is clearly not enough
     to describe this observable as dashed pink line has much lower values and
-    the difference becomes even larger with larger photon's energies. 
+    the difference becomes even larger with larger photon's energies.
+    At 5~MeV the difference between 1N predictions
+    and 1N + Siegert is 297.54~$\mu$b (10\%), increasing energy to 10 MeV
+    it is 304.28~$\mu$b (19\%) and at 20~MeV it is 229.50~$\mu$b (33\%).
+    Even with energy increasing from 5~MeV to 20~MeV -
+    the difference between predictions has changed from 10\% to 33\% and
+    from \fig{TOTAL_CROSS_small} we see that the gap is increasing even more.
 
     Having look at the higher energies (above 50~MeV, Fig.~\ref{TOTAL_CROSS})
-    we can notice that the difference with experimental data is not only 
+    we can notice that the discrepancy with experimental data is not only 
     quantitative, but also qualitative.  There is a peak around 300~MeV
     in the experimental data from \cite{Bernabei1986} which is not
     reflected in my predictions. The reason of such discrepancy 
@@ -38,8 +44,9 @@
     which I do not take into account. At higher energies their contribution
     becomes larger and here we observe a clear justification of such a lack.
     It is also confirmed by the calculations in \cite{ArenhovelPhotodisint1991}
-    where authors present predictions obtained with and without including
-    relativistic effects and such a peak appears in the latter case. 
+    where authors discuss different potentials applying to the Deuteron photodisintegration.
+    Despite authors use a simpler potentials that ours, their predictions obtained with and without including
+    relativistic effects show, that such a peak appears in the latter case. 
     
     Nevertheless my main goal is to describe deuteron photodisintegration at low energies and predictions seem to be well describing experimental data at
     $E_\gamma \lesssim 50$~MeV. The higher energies region is presented in order
@@ -49,16 +56,6 @@
     \begin{figure}[h]
         \begin{center}
         \includegraphics[width=0.75\textwidth]{Figures_De/TOTAL_CROSSSECTION_SMALL_REGION.pdf}
-        \end{center}
-        \caption{The same as on the Fig.~\ref{TOTAL_CROSS} but for the energy range 2.5 - 40 MeV.
-        }
-        \label{TOTAL_CROSS_small}
-    \end{figure}
-
-    
-    \begin{figure}[h]
-        \begin{center}
-        \includegraphics[width=0.75\textwidth]{Figures_De/TOTAL_CROSSSECTION.pdf}
         \end{center}
         \caption{Total cross section as a function of the photon's energy E$_\gamma$.
         Solid blue line presents results obtained with SN+Siegert 
@@ -70,13 +67,21 @@
         \cite{Moreh1989} (cross "X") and
         \cite{Birenbaum1985} (dimonds).
         }
+        \label{}
+    \end{figure}
+
+    
+    \begin{figure}[h]
+        \begin{center}
+        \includegraphics[width=0.75\textwidth]{Figures_De/TOTAL_CROSSSECTION.pdf}
+        \end{center}
+        \caption{The same as on the Fig.~\ref{TOTAL_CROSS} but for the energy range 2.5 - 400 MeV.
+        }
         \label{TOTAL_CROSS}
     \end{figure}
     
         
-    {\color{red} Maybe better reorganize figures, combine similar figures for different energies in one?}
-
-    Figures \ref{Diff_cross_order} - \ref{Diff_cross_cutoff} show my predictions for the differential cross section
+    Figures \ref{Diff_cross_order} - \ref{Diff_cross_err} show my predictions for the differential cross section
     $\frac{d\sigma}{d\Omega}$, where each subfigure 
     presents results obtained using different values of the photon energy:
     30, 100 and 140~MeV. 
@@ -185,6 +190,7 @@
         Data points (filled and empty circles) are from \cite{Ying_Experiment_Deut}
         for (30 and 100 meV)
         and \cite{DeSanctis_Experiment_Deut} (for 140~MeV).}
+        \label{Diff_cross_err}
     \end{figure}
 
 
