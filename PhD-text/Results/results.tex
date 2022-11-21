@@ -29,11 +29,19 @@
     to describe this observable as dashed pink line has much lower values and
     the difference becomes even larger with larger photon's energies.
     At 5~MeV the difference between 1N predictions
-    and 1N + Siegert is 297.54~$\mu$b (10\%), increasing energy to 10 MeV
-    it is 304.28~$\mu$b (19\%) and at 20~MeV it is 229.50~$\mu$b (33\%).
+    and 1N + Siegert is 297.54~$\mu$b (10.8\%), increasing energy to 10 MeV
+    it is 304.28~$\mu$b (20.4\%) and at 20~MeV it is 229.50~$\mu$b (39.2\%).
     Even with energy increasing from 5~MeV to 20~MeV -
-    the difference between predictions has changed from 10\% to 33\% and
-    from \fig{TOTAL_CROSS_small} we see that the gap is increasing even more.
+    the difference between predictions has changed from 10.8\% to 39.2\% and
+    from \fig{TOTAL_CROSS_small} we see that the gap  continues increasing even more with larger energies.
+
+    Here and later the relative difference between set of predictions ($x_1$, $x_2$, ..., $x_N$) is calculated
+    using the formula:
+
+    \begin{equation}
+        \Delta = \frac{\max(x) - \min(x)}{\frac{1}{N}\sum_{i=1}^N x_i} \cdot 100\%
+    \end{equation}
+
 
     Having look at the higher energies (above 50~MeV, Fig.~\ref{TOTAL_CROSS})
     we can notice that the discrepancy with experimental data is not only 
@@ -67,7 +75,7 @@
         \cite{Moreh1989} (cross "X") and
         \cite{Birenbaum1985} (dimonds).
         }
-        \label{}
+        \label{TOTAL_CROSS_small}
     \end{figure}
 
     
@@ -79,12 +87,32 @@
         }
         \label{TOTAL_CROSS}
     \end{figure}
+
+    \begin{figure}[h]
+        \begin{center}
+            \includegraphics[width=0.95\textwidth]{Figures_De/TOTAL_CROSSSECTION_Truncation.pdf}
+        \end{center}
+        \caption{Total cross section of the deuteron photonisintegration
+        process as a dependance on the chiral order for three photon energy E$_\gamma$ values: \SIlist[list-units = single]{30;100;140}{\mev}.
+        Error bands show an estimated truncation error at each order.}
+        \label{Trunc_100}
+    \end{figure}
+    
+    In Fig. \ref{Trunc_100} I present 
+    an example of such a procedure being applied to the
+    total cross-section for the deuteron photodisintegration 
+    at three photon energie values: \SIlist[list-units = single]{30;100;140}{\mev} as a function of the chiral order.
+    Error bands show truncation errors calculated using Eq.~\ref{trunc2}~-~\ref{trunc5}.
+    One can see that truncation errors are being reduced with each consecutive chiral order: for LO it is the biggest
+    while for N4LO+ it is hardly visible at presented scale.
+    In each case the prediction is within the uncertainty range of lower orders.
     
         
     Figures \ref{Diff_cross_order} - \ref{Diff_cross_err} show my predictions for the differential cross section
     $\frac{d\sigma}{d\Omega}$, where each subfigure 
     presents results obtained using different values of the photon energy:
-    30, 100 and 140~MeV. 
+    \SIlist[list-units = single]{30;100;140}{\mev}
+    with 2N current's contributions taken into account via Siegert theorem. 
     % They all are organized in a similar way: the left panel
     % presents predictions obtained using SMS potential at different chiral orders (from LO to N$^4$LO+)
     % with cutoff parameter $L = 450$~MeV,
@@ -93,22 +121,23 @@
     % from NLO. And the right panel shows predictions obtained with different values of the
     % cutoff parameter at the chiral order N$^4$LO+.
     Fig.~\ref{Diff_cross_order} shows the predictions obtained using 
-    different chiral orders (from LO to N$^4$LO+) and with $\Lambda=450$~MeV.
-    Comparing the best predictions (N$^4$LO+, $\Lambda=450$~MeV) for each
+    different chiral orders (from LO to N$^4$LO+) and with $\Lambda=$~\SI{450}{\mev}.
+    Comparing the best predictions (N$^4$LO+, $\Lambda=$~\SI{450}{\mev}) for each
     subfigure, we can
     conclude that the higher photon's energy is, the larger is 
     difference between the theoretical predictions and experimental 
-    measurements. At $E_\gamma = 30$~MeV (top panel) my predictions
+    measurements. At $E_\gamma = $~\SI{30}{\mev} (top panel) my predictions
     almost perfectly match the data and the difference is almost always
-    within the experimental uncertainties. Going to the energy 100~MeV (middle subfigure)
+    within the experimental uncertainties. Going to the energy \SI{100}{\mev} (middle subfigure)
     the descriptions seems not to be such good: theoretical
     predictions match the data qualitatively, but
-    the gap in the angles range ($60^{\circ} < \theta_p < 130^{\circ}$) 
-    is around 30\% ({\color{red} check the value!}).
+    the gap in the angles range ($\ang{60} < \theta_p < \ang{130}$) 
+    is around \SI{30}{\percent} ({\color{red} check the value!}).
     Looking at the bottom figure, it is even hard to say about 
     good qualitative description: the general trend of the
     angular dependance is presented, but still the predictions are 
     far from {\color{red} the ?} experimental values.
+
     Figures for each energy confirm the convergence 
     of the predictions with respect to the chiral order.
     We see that the curves at LO are far from both experimental 
@@ -117,20 +146,38 @@
     difference. With each subsequent chiral order, the 
     curves are more closer to each other and the difference
     between N$^4$LO and N$^4$LO+ is hardly visible at current scale.
-    So I can conclude that predictions are converged and 
+    The relative difference at \SI{30}{\mev} around the point of maximum 
+    ($\theta_p = \ang{80}$) is \SI{0.05}{\percent} which is \SI{0.02}{\micro \barn \per \steradian};
+    at \SI{100}{\mev} and $\theta_p = \ang{107}$ it is \SI{0.79}{\percent} (\SI{0.025}{\micro \barn \per \steradian});
+    and at \SI{140}{\mev} (same angle) it is 1.80\% - 0.043 \unit{\micro \barn \per \steradian}.
+    Having such a small differences between predictions from two highest chiral orders,
+    I can conclude that predictions are converged and 
     further chiral orders would rather not bring large contribution 
-    to the cross section values. What may be helpful
+    to the cross section values. 
+    The difference with experimental data is rather systematic 
+    and is independent on the chiral order. 
+    The relative difference between experimental data and predictions obtained with $N^4LO+$ and $\Lambda=$~\SI{450}{\mev} at \SI{30}{\mev} is less then \SI{13}{\percent}
+    and absulute difference is < \SI{3.07}{\micro \barn \per \steradian}.
+    At \SI{100}{\mev} descripancy is larger and relative difference reaches 46\% with absolute difference up to 1.39~\unit{\micro \barn \per \steradian}.
+    Coming to \SI{140}{\mev} the relative difference 
+    increases up to \SI{48.6}{\percent} and absolute - \SI{1.93}{\micro \barn \per \steradian}.
+    What may be helpful
     for a better data description is a 2N current 
     and relativistic correction, mentioned earlier.
 
+    Predictions obtained with AV18 potential (dashed-dotted purple line on the \fig{Diff_cross_order}) show that
+    it is very similar at lower energies (relative difference at \SI{30}{\mev} is \SI{0.06}{\percent}
+    at the point of maximum - \ang{80}) and with increasing energy to \SI{140}{\mev}
+    it growes to \SI{3.1}{\percent]} at same angle. 
+    It can be connected with our potential's quality loss, but AV18 can
+    be struggling with high energies as well.
+
     The Fig.~\ref{Diff_cross_truncation} 
-    presents theoretical (truncation) uncertainties and it once more
+    presents theoretical truncation uncertainties and it once more
     confirms that for the regarded nuclear reaction chiral order
     N$^4$LO+ is able to produce converged predictions: 
-    the black band is hardly visible for the $E_\gamma=30$~MeV 
+    the black band is hardly visible for the $E_\gamma=$~\SI{30}{\mev} 
     and is also quite narrow for larger energies. 
-    The difference with experimental data is rather systematic 
-    and is independent on the chiral order. 
 
     Fig.~\ref{Diff_cross_cutoff} presents a cutoff dependency
     of my predictions. The ideal case is when the dependency is so weak that
@@ -138,34 +185,50 @@
     changes. In practice the choice of this parameter can be 
     important as it makes a noticeable difference in predictions.
     
-    On the top figure the cutoff dependance is so weak,
+    On the top of \fig{Diff_cross_cutoff} the cutoff dependance is so weak,
     that, in fact, all the lines (for different $\Lambda$ values)
     overlap each other and we cannot distinguish them with the naked eye.
-    Nevertheless, with increasing photon's energy to 100 and 140~MeV 
-    (middle and bottom figures) the spread becomes larger. 
-    Although the spread is visible, it is not so large and even for 140~MeV
+    Nevertheless, with increasing photon's energy to \SIlist{100; 140}{\mev} 
+    (middle and bottom rows of \fig{Diff_cross_cutoff}) the spread becomes larger. 
+    Although the spread is visible, it is not so large and even for \SI{140}{\mev}
     it is within 12\%. 
 
     On the Fig.~\ref{Cutoff_dep} we saw that the total
     cross section for the same energies has the cutoff spread
-    around 4.5\% for 100~MeV and 8\% for 140~MeV. For 30~MeV it is below 1\%.  
+    around \SI{4.5}{\percent} for \SI{100}{\mev} and \SI{8}{\percent} for \SI{140}{\mev}. For \SI{30}{\mev} it is below  \SI{1}{\percent}.
+    
     
 
+
+
     \begin{figure}[h]
-        \begin{center}
-        \includegraphics[width=0.7\textwidth]{Figures_De/CROSS2_order_vert.pdf}
-        \end{center}
+        \centering
+        \begin{subfigure}[b]{0.46\textwidth}
+            \includegraphics[width=\textwidth]{Figures_De/CROSS2_order_vert.pdf}
+            % \caption{Truncation error bands}
+            \label{Diff_cross_order}
+        \end{subfigure}
+        \begin{subfigure}[b]{0.46\textwidth}
+            \includegraphics[width=\textwidth]{Figures_De/Diff_cross_pw_1nc.pdf}
+            % \caption{Cutoff dependance}
+            \label{Diff_cross_pw_1nc}
+        \end{subfigure}
         \caption{Differential cross section as a function of the outgoing proton angle in the center of mass frame 
-        for the photon's energy 30 MeV (top), 100 MeV (middle) and 140 MeV (bottom). Results are obtained using potential
-        with different chiral orders (from LO to N$^4$LO+) with cutoff parameter $\Lambda=450$~MeV.
-        For the sake of comparison, predictions obtained with AV18 potential are on both figures as well.
+        for the photon's energy \SI{30}{\mev} (top), \SI{100}{\mev} (middle) and \SI{140}{\mev} (bottom). Results on {\bf (a)} are obtained using potential
+        with different chiral orders (from LO to N$^4$LO+) with cutoff parameter $\Lambda=450$~MeV and 
+        2NC contributions taking via Siegert theorem.
         Data points (filled and empty circles) are from \cite{Ying_Experiment_Deut}
-        for (30 and 100 meV)
-        and \cite{DeSanctis_Experiment_Deut} (for energy 140 MeV).}
-        \label{Diff_cross_order}
+        for (\SIlist[list-units = single]{30; 100}{\mev})
+        and \cite{DeSanctis_Experiment_Deut} (for energy \SI{140}{\mev}).
+        Predictions obtained with chiral N$^4$LO+ potential and $\Lambda=\SI{450}{\mev}$ are on {\bf (b)}.
+        Blue solid line is a best predictions we have (plane-wave plus rescattering parts, 1NC + Siegert), pink dashed line shows predictions obtained with
+        single-nucleon current only (without Siegert contributions) and green dashed-dotted line
+        is a prediction with plane-wave part only, without rescattering.}
+        \label{Diff_cross_order_pw}
     \end{figure}
 
 
+        
     \begin{figure}[h]
         \centering
         \begin{subfigure}[b]{0.46\textwidth}
@@ -179,20 +242,19 @@
             \label{Diff_cross_cutoff}
         \end{subfigure}
         \caption{Differential cross section as a function of the outgoing proton angle in the center of mass frame 
-        for the photon's energy is 30 MeV (top row), 100 MeV (middle row) and 140 MeV (bottom row).
+        for the photon's energy is \SI{30}{\mev} (top row), \SI{100}{\mev} (middle row) and \SI{140}{\mev} (bottom row).
         Figure {\bf(a)} presents a truncation error bands for each energy in corresponant row. 
         Results are obtained using potential with different chiral orders (from NLO to N$^4$LO+) 
-        with cutoff parameter $\Lambda=450$~MeV.
+        with cutoff parameter $\Lambda=\SI{450}{\mev}$.
         Figure {\bf (b)} shows predictions obtained using different values of the cutoff parameter $\Lambda$
         (double-dotted-dashed red line presents results obtaining with 
-        a cutoff values $\Lambda=400$~MeV, solid black line - 450~MeV, dashed green line - 500~MeV
-        and dotted blues line - 550~MeV) and chiral potential N$^4$LO+. 
+        a cutoff values $\Lambda=\SI{400}{\mev}$, solid black line - \SI{450}{\mev}, dashed green line - \SI{500}{\mev}
+        and dotted blues line - \SI{550}{\mev}) and chiral potential N$^4$LO+. 
         Data points (filled and empty circles) are from \cite{Ying_Experiment_Deut}
-        for (30 and 100 meV)
-        and \cite{DeSanctis_Experiment_Deut} (for 140~MeV).}
+        (for \SIlist[list-units = single]{30; 100}{\mev})
+        and \cite{DeSanctis_Experiment_Deut} (for \SI{140}{\mev}).}
         \label{Diff_cross_err}
     \end{figure}
-
 
     \clearpage
 
@@ -277,7 +339,7 @@
         \caption{Tensor analyzing power T$_{20}$  {\bf (a)}
         and T$_{21}$ {\bf (b)}
         as a function of the outgoing proton angle in the center of mass frame 
-        for the photon's energy 30 MeV.
+        for the photon's energy \SI{30}{\mev}.
         Top row presents results obtained using potential
         with different chiral orders (from LO to N$^4$LO+) with cutoff parameter $\Lambda=450$~MeV.
         The middle row shows truncation errors for each 
@@ -319,7 +381,7 @@
         \caption{Tensor analyzing power T$_{20}$  {\bf (a)}
         and T$_{21}$ {\bf (b)}
         as a function of the outgoing proton angle in the center of mass frame 
-        for the photon's energy 100 MeV.
+        for the photon's energy \SI{100}{\mev}.
         Top row presents results obtained using potential
         with different chiral orders (from LO to N$^4$LO+) with cutoff parameter $\Lambda=450$~MeV.
         The middle row shows truncation errors for each 
@@ -360,7 +422,7 @@
     
     One can see that the data description is better for the predictions with Siegert contributions 
     and SN current is not able to describe experiment properly. With increasing energy 
-    (more than 100 MeV),
+    (more than \SI{100}{\mev}),
     the difference between predicted values and experimental data becomes larger
     (especially for $T_{22}$), but the model I use is not meant to be used for high energies 
     and figures are presented out of the curiosity. 
@@ -377,7 +439,7 @@
         outgoing proton angle $\theta_p$ (in the center of mass frame).
         Solid blue line is a mean value of my predictions obtained with a
         SMS potential at N$^4$LO+ chiral order and with $\Lambda$~=~450~MeV
-        at energy values from 25 to 45 MeV and
+        at energy values from \SIrange[range-phrase=\text{ to }]{25}{45}{\mev} and
         where SN current was used together with Siegert approach. 
         Pink dashed line is similar prediction but with SN only. 
         The corresponding bands show the deviation of predictions in the regarded
@@ -396,7 +458,7 @@
         \begin{center}
         \includegraphics[width=0.95\textwidth]{Figures_De/Tensor_analyzing_power_angular_E45-70.pdf}
         \end{center}
-        \caption{The same as on the Fig.~\ref*{tensor_angular_25-45} but for energy bin 45~-~70~MeV}
+        \caption{The same as on the Fig.~\ref*{tensor_angular_25-45} but for energy bin \SIrange{45}{70}{\mev}}
         \label{tensor_angular_45-70}
     \end{figure}
 
@@ -404,7 +466,7 @@
         \begin{center}
         \includegraphics[width=0.95\textwidth]{Figures_De/Tensor_analyzing_power_angular_E70-100.pdf}
         \end{center}
-        \caption{The same as on the Fig.~\ref*{tensor_angular_25-45} but for energy bin 70~-~100~MeV}
+        \caption{The same as on the Fig.~\ref*{tensor_angular_25-45} but for energy bin \SIrange{70}{100}{\mev}}
         \label{tensor_angular_70-100}
     \end{figure}        
 
@@ -412,7 +474,7 @@
         \begin{center}
         \includegraphics[width=0.95\textwidth]{Figures_De/Tensor_analyzing_power_angular_E100-140.pdf}
         \end{center}
-        \caption{The same as on the Fig.~\ref*{tensor_angular_25-45} but for energy bin 100~-~140~MeV}
+        \caption{The same as on the Fig.~\ref*{tensor_angular_25-45} but for energy bin \SIrange{100}{140}{\mev}}
         \label{tensor_angular_100-140}
     \end{figure}
         
@@ -422,7 +484,7 @@
         \begin{center}
         \includegraphics[width=0.95\textwidth]{Figures_De/Tensor_analyzing_power_angular_E140-180.pdf}
         \end{center}
-        \caption{The same as on the Fig.~\ref*{tensor_angular_25-45} but for energy bin 140~-~180~MeV}
+        \caption{The same as on the Fig.~\ref*{tensor_angular_25-45} but for energy bin \SIrange{140}{180}{\mev}}
         \label{tensor_angular_140-180}
     \end{figure}
         
@@ -431,7 +493,7 @@
         \begin{center}
         \includegraphics[width=0.95\textwidth]{Figures_De/Tensor_analyzing_power_angular_E180-230.pdf}
         \end{center}
-        \caption{The same as on the Fig.~\ref*{tensor_angular_25-45} but for energy bin 180~-~230~MeV}
+        \caption{The same as on the Fig.~\ref*{tensor_angular_25-45} but for energy bin \SIrange{180}{230}{\mev}}
         \label{tensor_angular_180-230}
     \end{figure}
 
@@ -439,7 +501,7 @@
         \begin{center}
         \includegraphics[width=0.95\textwidth]{Figures_De/Tensor_analyzing_power_angular_E230-330.pdf}
         \end{center}
-        \caption{The same as on the Fig.~\ref*{tensor_angular_25-45} but for energy bin 230~-~330~MeV}
+        \caption{The same as on the Fig.~\ref*{tensor_angular_25-45} but for energy bin \SIrange{230}{330}{\mev}}
         \label{tensor_angular_230-330}
     \end{figure}
         
@@ -592,7 +654,7 @@
         \end{subfigure}
         \caption{The photon asymmetry $\Sigma_\gamma$ 
         as a function of the outgoing proton angle in the center of mass frame 
-        for the photon's energy 30 MeV(a) and 100 MeV(b).
+        for the photon's energy \SI{30}{\mev}(a) and \SI{100}{\mev}(b).
         Top row presents results obtained using potential
         with different chiral orders (from LO to N$^4$LO+) with cutoff parameter $\Lambda=450$~MeV.
         The middle row shows truncation errors for each 
@@ -649,7 +711,7 @@
         \caption{Proton polarisation $P_y(p)$ 
         \label{PY_30_100_vert}
         as a function of the outgoing proton angle in the center of mass frame 
-        for the photon's energy 30 MeV (a) and 100 MeV (b).
+        for the photon's energy \SI{30}{\mev} (a) and \SI{100}{\mev} (b).
         Top figure presents results obtained using potential
         with different chiral orders (from LO to N$^4$LO+) with cutoff parameter $\Lambda=450$~MeV.
         The middle pane shows truncation errors for each 

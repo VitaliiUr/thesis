@@ -49,6 +49,23 @@
   repstopdf --gsopt=-dCompatibilityLevel=1.5 #1 \OutputFile}
 %\usepackage[style=apa]{biblatex}
 \maxdeadcycles=200
+
+\usepackage{siunitx}
+\sisetup{
+  range-phrase= \text{ -- },
+  range-units=single,
+  % per-mode=power
+  per-mode=fraction
+}
+
+\DeclareSIUnit\mm{\milli\metre}
+\DeclareSIUnit\cm{\centi\metre}
+\DeclareSIUnit\ms{\milli\second}
+\DeclareSIUnit\um{\micro\metre}
+\DeclareSIUnit\ns{\nano\second}
+\DeclareSIUnit\mev{\mega\electronvolt}
+\DeclareSIUnit\kev{\kilo\electronvolt}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Enter the date that You want on the cover here:   %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
