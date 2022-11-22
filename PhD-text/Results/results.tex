@@ -236,7 +236,7 @@
         Data points (filled and empty circles) are from \cite{Ying_Experiment_Deut}
         for $E_\gamma=\SIlist[list-units = single]{30; 100}{\mev}$
         and \cite{DeSanctis_Experiment_Deut} for $E_\gamma=\SI{140}{\mev}$.
-        {\bf (b)} Predictions obtained with chiral N$^4$LO+ potential and $\Lambda=\SI{450}{\mev}$ are on {\bf (b)}.
+        {\bf (b)} Predictions obtained with chiral N$^4$LO+ potential and $\Lambda=\SI{450}{\mev}$.
         Blue solid line is a best predictions we have (plane-wave plus rescattering parts, 1NC + Siegert), pink dashed line shows predictions obtained with
         single-nucleon current only (without Siegert contributions) and green dashed-dotted line
         is a prediction with plane-wave part only - without rescattering.
@@ -272,16 +272,14 @@
         for the differential cross section $\frac{d^2\sigma}{d\Omega}$
         as a function of the outgoing proton's momentum polar angle $\theta_p$ in the center of mass frame 
         for the photon's energy is \SI{30}{\mev} (top row), \SI{100}{\mev} (middle row) and \SI{140}{\mev} (bottom row).
-        Figure {\bf(a)} presents the truncation error bands for each energy in a corresponding row. 
+        {\bf(a)} The truncation error bands for each energy in a corresponding row. 
         Results are obtained using potential with different chiral orders (from NLO to N$^4$LO+) 
         with cutoff parameter $\Lambda=\SI{450}{\mev}$ and 2NC contributions taking via Siegert approach.
-        Figure {\bf (b)} shows predictions obtained using different values of the cutoff parameter $\Lambda$
+        {\bf (b)} Predictions obtained using different values of the cutoff parameter $\Lambda$
         (double-dotted-dashed red line presents results obtaining with 
         a cutoff values $\Lambda=\SI{400}{\mev}$, solid black line - \SI{450}{\mev}, dashed green line - \SI{500}{\mev}
         and dotted blues line - \SI{550}{\mev}) and the chiral potential N$^4$LO+. 
-        Data points (filled and empty circles) are from \cite{Ying_Experiment_Deut}
-        for $E_\gamma=\SIlist[list-units = single]{30; 100}{\mev}$
-        and from \cite{DeSanctis_Experiment_Deut} for $E_\gamma=\SI{140}{\mev}$.}
+        Data points are the same as in \fig{Diff_cross_order}}
         \label{Diff_cross_err}
     \end{figure}
 
@@ -315,12 +313,19 @@
 
     All the polarisation observables presented here, show a good convergence 
     upon a chiral order as it is hard to distinguish the predictions
-    from each subsequent order starting from the N$^2$LO. 
+    from each subsequent order starting from the N$^2$LO.
+    The relative width of N$^4$LO+ truncation band 
+    for T$_{20}$, T$_{21}$ and T$_{22}$
+    are \SIlist{0.06; 0.05; 0.19}{\percent} respectively (at $\theta_p=$ \ang{90}, \ang{60} and \ang{90} respectively).
     The slowest convergence is observed for $iT_{11}$ (Fig.~\ref{T11_30_vert})
     where we can stll recognize N$^2$LO band.
+    Still it has only a \SI{0.2}{\percent}
+    width of N$^4$LO+ truncation band at $\theta_p = \ang{20}$ (maximum point).
     The cutoff dependency for all regarded observables is weak and 
     predictions for each value of the $\Lambda$ are hardly separable 
-    with the naked eye. 
+    with the naked eye.
+    The relative spread of cutoff predictions at the same angles as above 
+    are \SIlist{0.87; 0.94; 3.42; 0.68}{\percent} respectively for T$_{20}$, T$_{21}$, T$_{22}$ and $i\text{T}_{11}$ respectively.
 
 
     Predictions for the photon's energy $E_\gamma = 100$~MeV
@@ -339,15 +344,26 @@
     
     Looking at the predictions for the deuteron tensor analyzing power,
     we can conclude that cutoff dependence is generally weak
-    and the choice of $\Lambda$ does not affect predictions much.
-    In the case of dependance on the chiral order, we can
+    and the choice of $\Lambda$ does not affect predictions much:
+    the relative spread among all cutoffs for T$_{20}$ is \SI{2.28}{\percent}
+    around the point of maximum ($\theta_p = \ang{90}$).
+    For other components of the tensor analyzing power spread is:
+    T$_{21}$ - \SI{0.5}{\percent} at $\theta_p = \ang{60}$;
+    T$_{22}$ - \SI{4.1}{\percent} at $\theta_p = \ang{90}$;
+    $i$T$_{11}$ - \SI{11.4}{\percent} at $\theta_p = \ang{20}$. We see that $i$T$_{11}$ has much larger spread in the maximum point and is more sensitive to the cutoff choice.
+
+    In the case of the chiral order convergence, we can
     also see that predictions are mostly converged after N$^2$LO or N$^3$LO.
-    One exception here is $iT_{11}$ which seem to be more sensitive
-    to the choice of cutoff parameter and to the chiral order.
-    This observable can be usefull for the investigation of global 
-    convergence with respect to the chiral order and
-    can indicate some problems in the model used for the
-    deuteron photodisintegration.
+    The relative width of N$^4$LO+ truncation band 
+    for T$_{20}$, T$_{21}$ and T$_{22}$
+    are \SIlist{0.7; 0.7; 0.04}{\percent} respectively (at the same angles as the spread was shown above).
+    One exception here is also a $i\text{T}_{11}$ for which this width is much larger - \SI{6.8}{\percent} at $\theta_p = \ang{20}$.
+    The truncation uncertainty is much lower then one,
+    connected to the choice of cutoff parameter.
+    $i\text{T}_{11}$ seem to be more sensitive both
+    to the choice of cutoff parameter and to the chiral order. Even for this observable cutoff spread is almost twice larger than truncation error's band.
+    Standing out of other tensor components, $i\text{T}_{11}$ can be usefull for the investigation of global 
+    convergence  with respect to the chiral order and cutoff dependance of the model.
     Of course, we can also confirm once more that 
     our model is less accurate at higher energies which is reflected
     in a stronger cutoff dependance and slower chiral convergence.
@@ -437,27 +453,26 @@
         \label{T22_T11_100}
     \end{figure}
 
+    In \fig{tensor_pw_1nc} together with best prediction at $\text{E}_\gamma = \SI{30}{\mev}$ (N$^4$LO+, $\Lambda=\SI{450}{\mev}$, Siegert theorem),
+    I show predictions obtained with 1NC only and with plane-wave contribution without rescattering part.
+    In case of deuteron's tensor analyzing power components, the contribution of rescattering part is not that 
+    big for T$_{20}$, T$_{21}$ and T$_{22}$ (up to \SI{20}{\percent} in extremum points). Nevertheless, for
+    $i$T$_{11}$ we see that PW part equals to zero. It may be connected with some features of this particular
+    components, such that plane-wave part cancels out.
+    The 2NC component taken into account via Siegert theorem has a dominant contribution here. We see that 
+    1NC predictions are absolutely away from the Full predictions and in case of $i$T$_{11}$
+    does not even reflect total prediction qualitatively.
+
     \begin{figure}[h]
         \begin{center}
         \includegraphics[width=0.9\textwidth]{Figures_De/TensorPowers_pw_1nc.pdf}
         \end{center}
-        \caption{Tensor analyzing powers T$_{20}$, T$_{21}$ and T$_{22}$ as a functions of the
-        outgoing proton angle $\theta_p$ (in the center of mass frame).
-        Solid blue line is a mean value of my predictions obtained with a
-        \gls*{sms} potential at N$^4$LO+ chiral order and with $\Lambda$~=~450~MeV
-        at energy values from \SIrange[range-phrase=\text{ to }]{25}{45}{\mev} and
-        where SN current was used together with Siegert approach. 
-        Pink dashed line is similar prediction but with SN only. 
-        The corresponding bands show the deviation of predictions in the regarded
-        energy region.
-        % Filled bands show maximal spread of my predictions obtained with a 
-        % \gls*{sms} potential at N$^4$LO+ chiral order and with $\Lambda$~=~450~MeV
-        % for the energy span from 25 to 45 MeV. Blue bands correspond to the
-        % case where SN current was used together with Siegert approach and 
-        % pink bands - to the SN currentonly. 
-        Filled circles are experimental data
-        from \cite{rachek2007} for the analogous energy span.}
-        \label{tensor_angular_25-45}
+        \caption{Tensor analyzing power components T$_{20}$, T$_{21}$, T$_{22}$ and $i$T$_{11}$ as a functions of the
+        outgoing proton angle $\theta_p$ (in the center of mass frame) at $\text{E}_\gamma = \SI{30}{\mev}$. Similarly to \fig{Diff_cross_pw_1nc} predictions obtained with chiral N$^4$LO+ potential and $\Lambda=\SI{450}{\mev}$ are presented for each component.
+        Blue solid line is a best predictions we have (plane-wave plus rescattering parts, 1NC + Siegert), pink dashed line shows predictions obtained with
+        single-nucleon current only (without Siegert contributions) and green dashed-dotted line
+        is a prediction with plane-wave part only - without rescattering.}
+        \label{tensor_pw_1nc}
     \end{figure}
 
 
@@ -790,7 +805,7 @@
         \begin{subfigure}[b]{0.46\textwidth}
             \includegraphics[width=\textwidth]{Figures_De/POLNOUT2(y)_2.75mev_neuteron.pdf}
             \caption{\small E$_\gamma = 2.75$~MeV}
-            \label{Pn_30_vert}
+            \label{Pn_2p75_vert}
         \end{subfigure}
         \begin{subfigure}[b]{0.46\textwidth}
             \includegraphics[width=\textwidth]{Figures_De/POLNOUT2(y)_100mev_neuteron.pdf}
