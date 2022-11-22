@@ -567,7 +567,7 @@ two-nucleon states.
     Another theoretical uncertainty comes from the choice of the cutoff parameter's value 
     which was mentioned already.
 
-   According to \cite{reinkrebs2018}, where the \gls*{sms} potential was presented,
+   According to \cite{reinkrebs2018}, where the \gls{sms} potential was presented,
    four values of the cutoff parameter $\Lambda$ are recommended: 400, 450, 500 and 550 MeV.
    Using each of them one obtains different predictions which off course can further differ 
    from actual (experimental) value. Therefore the choice of $\Lambda$ value
@@ -593,8 +593,23 @@ two-nucleon states.
 
 
 
+    \subsection*{Other uncertainies}
 
+    There are a plenty possibilities were uncertainties may appear. 
+    Taking into account that all the results include calculations,
+    we can come up with a lot of places were numerical methods with limited 
+    precision come into the scene. First of all we have a potential which 
+    is being defined on some grid of points. So the choice of grid affect
+    a final results' precision. The same grid is also used for numerical integration
+    (e.g. in \eq{integral2}) where the final integral is also dependant on the points.
+    Usually, we use a grid ...{\textcolor{red} values}
 
+    In addition our approach is based on the partial wave decomposition which
+    supposes that limited numer of partial waves are included 
+    (usually for 2N scattering we use$J^{max}=4$ which corresponds to 18 partial waves).
+
+    Finally every computer calculations include limited machine precision which
+    can be noticeable for a complex calculations. 
 
 
 
