@@ -23,7 +23,6 @@
 \usepackage{enumitem}
 \usepackage{hyperref}
 \usepackage{textcomp}
-\usepackage{hyperref}
 \usepackage{geometry}
 \usepackage{fancyhdr}
 \def\afterpreface{\newpage
@@ -49,6 +48,23 @@
   repstopdf --gsopt=-dCompatibilityLevel=1.5 #1 \OutputFile}
 %\usepackage[style=apa]{biblatex}
 \maxdeadcycles=200
+
+\usepackage{siunitx}
+\sisetup{
+  range-phrase= \text{ -- },
+  range-units=single,
+  % per-mode=power
+  per-mode=fraction
+}
+
+\DeclareSIUnit\mm{\milli\metre}
+\DeclareSIUnit\cm{\centi\metre}
+\DeclareSIUnit\ms{\milli\second}
+\DeclareSIUnit\um{\micro\metre}
+\DeclareSIUnit\ns{\nano\second}
+\DeclareSIUnit\mev{\mega\electronvolt}
+\DeclareSIUnit\kev{\kilo\electronvolt}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Enter the date that You want on the cover here:   %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -91,10 +107,14 @@
   % acronyms
  \usepackage[acronym, automake]{glossaries-extra}
 \setabbreviationstyle[acronym]{long-short}
+\glsdisablehyper
 
 \newacronym{qcd}{QCD}{Quantum chromodynamics}
 \newacronym{ceft}{$\chi$EFT}{Chiral Effective Field Theory}
 \newacronym{eft}{EFT}{effective field theory}
+\newacronym{sms}{SMS}{semilocal momentum-space regularized}
+\newacronym{scs}{SCS}{semilocal coordinate-space regularized}
+\newacronym{av18}{AV18}{Argonne V18}
 \makeglossaries
 
 
