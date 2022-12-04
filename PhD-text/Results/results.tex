@@ -57,7 +57,7 @@
     relativistic effects show, that such a peak appears in the latter case. 
     
     Nevertheless my main goal is to describe deuteron photodisintegration at low energies and predictions seem to be well describing experimental data at
-    $E_\gamma \lesssim 50$~MeV. The higher energies region is presented in order
+    $E_\gamma \lesssim \SI{50}{\mev}$. The higher energies region is presented in order
     to investigate how far the predictions are from experimental results and 
     what can be improved in the future (e.g. include relativistic part). 
     
@@ -328,7 +328,7 @@
     are \SIlist{0.87; 0.94; 3.42; 0.68}{\percent} respectively for T$_{20}$, T$_{21}$, T$_{22}$ and $i\text{T}_{11}$ respectively.
 
 
-    Predictions for the photon's energy $E_\gamma = 100$~MeV
+    Predictions for the photon's energy $E_\gamma = \SI{100}{\mev}$
     (Figs. \ref{T20_T21_100} and \ref{T22_T11_100}) preserve similar
     trends for each obserable. 
     Generally, predictions are being converged starting
@@ -710,12 +710,12 @@
         \centering
         \begin{subfigure}[b]{0.46\textwidth}
             \includegraphics[width=\textwidth]{Figures_De/AX2_20mev.pdf}
-            \caption{\small E$_\gamma = 20$~MeV}
+            \caption{\small E$_\gamma = \SI{20}{\mev}$}
             \label{AX_20_vert}
         \end{subfigure}
         \begin{subfigure}[b]{0.46\textwidth}
             \includegraphics[width=\textwidth]{Figures_De/AX2_60mev.pdf}
-            \caption{\small E$_\gamma = 60$~MeV}
+            \caption{\small E$_\gamma = \SI{60}{\mev}$}
             \label{AX_60_vert}
         \end{subfigure}
         \caption{The photon asymmetry $\Sigma_\gamma$ 
@@ -858,10 +858,11 @@
             energy E$_\gamma=\SI{30}{\mev}$ for the kinematic configuration
             $\theta_1 = \ang{15}$, $\phi_1 = \ang{0}$,
             $\theta_2 = \ang{15}$, $\phi_2 = \ang{180}$.
-            The left figure presents results obtained using potential
-            with different chiral orders (from LO to N$^4$LO+) with
+            The left figure presents truncation error bands obtained using potential
+            with different chiral orders (from NLO to N$^4$LO+) with
             cutoff parameter $\Lambda=\SI{450}{\mev}$.
-            The right figure presents a cutoff dependency (chiral potential N$^4$LO+).}
+            The right figure presents a cutoff dependency (chiral potential N$^4$LO+).
+            Results are obtained with two-nucleon force only.}
             \label{CROSS_HE_EXCL_30}
         \end{figure}
 
@@ -877,73 +878,104 @@
 
         \begin{figure}[h]
             \begin{center}
-                \includegraphics[width=0.9\textwidth]{Figures_HE/CROSS_excl_100mev_75_75_75_105.pdf}
+                \includegraphics[width=0.9\textwidth]{Figures_HE/CROSS_excl_trunc_100mev_75_75_75_105_2NF.pdf}
                 \end{center}
-                \caption{The five-fold differential cross section for the photon 
-                energy E$_\gamma=100$~MeV.
-                The left figure presents results obtained using potential
-                with different chiral orders (from LO to N$^4$LO+) with cutoff parameter $\Lambda=\SI{450}{\mev}$.
-                The right figure presents a cutoff dependency (chiral potential N$^4$LO+).}
+                \caption{The same as on the \fig{CROSS_HE_EXCL_100} but for the different kinematic
+                configuration.}
                 \label{CROSS_HE_EXCL_75_75_75_105}
         \end{figure}
 
         \begin{figure}[h]
             \begin{center}
-                \includegraphics[width=0.9\textwidth]{Figures_HE/CROSS_excl_100mev_15_105_15_75.pdf}
+                \includegraphics[width=0.9\textwidth]{Figures_HE/CROSS_excl_trunc_100mev_75_75_75_105_3NF.pdf}
                 \end{center}
-                \caption{The five-fold differential cross section for the photon 
-                energy E$_\gamma=100$~MeV.
-                The left figure presents results obtained using potential
-                with different chiral orders (from LO to N$^4$LO+) with cutoff parameter $\Lambda=\SI{450}{\mev}$.
-                The right figure presents a cutoff dependency (chiral potential N$^4$LO+).}
+                \caption{The same as on the \fig{CROSS_HE_EXCL_75_75_75_105} but with three-nucleon force.}
+                \label{CROSS_HE_EXCL_75_75_75_105_3NF}
+        \end{figure}
+
+        \begin{figure}[h]
+            \begin{center}
+                \includegraphics[width=0.9\textwidth]{Figures_HE/CROSS_excl_trunc_100mev_15_105_15_75_2NF.pdf}
+                \end{center}
+                \caption{The same as on the \fig{CROSS_HE_EXCL_75_75_75_105} but for the different kinematic
+                configuration.}
                 \label{CROSS_HE_EXCL_15_105_15_75}
         \end{figure}
 
         \begin{figure}[h]
             \begin{center}
-                \includegraphics[width=0.9\textwidth]{Figures_HE/CROSS_excl_100mev_45_75_45_105.pdf}
+                \includegraphics[width=0.9\textwidth]{Figures_HE/CROSS_excl_trunc_100mev_15_105_15_75_3NF.pdf}
                 \end{center}
-                \caption{The five-fold differential cross section for the photon 
-                energy E$_\gamma=100$~MeV.
-                The left figure presents results obtained using potential
-                with different chiral orders (from LO to N$^4$LO+) with cutoff parameter $\Lambda=\SI{450}{\mev}$.
-                The right figure presents a cutoff dependency (chiral potential N$^4$LO+).}
+                \caption{The same as on the \fig{CROSS_HE_EXCL_15_105_15_75} but but with three-nucleon force.}
+                \label{CROSS_HE_EXCL_15_105_15_75_3NF}
+        \end{figure}
+
+
+
+
+        \begin{figure}[h]
+            \begin{center}
+                \includegraphics[width=0.9\textwidth]{Figures_HE/CROSS_excl_trunc_100mev_45_75_45_105_2NF.pdf}
+                \end{center}
+                \caption{The same as on the \fig{CROSS_HE_EXCL_15_105_15_75} but for the different kinematic
+                configuration.}
                 \label{CROSS_HE_EXCL_45_75_45_105}
         \end{figure}
 
+
         \begin{figure}[h]
             \begin{center}
-                \includegraphics[width=0.9\textwidth]{Figures_HE/CROSS_excl_100mev_165_15_15_165.pdf}
+                \includegraphics[width=0.9\textwidth]{Figures_HE/CROSS_excl_trunc_100mev_45_75_45_105_3NF.pdf}
                 \end{center}
-                \caption{The five-fold differential cross section for the photon 
-                energy E$_\gamma=100$~MeV.
-                The left figure presents results obtained using potential
-                with different chiral orders (from LO to N$^4$LO+) with cutoff parameter $\Lambda=\SI{450}{\mev}$.
-                The right figure presents a cutoff dependency (chiral potential N$^4$LO+).}
+                \caption{The same as on the \fig{CROSS_HE_EXCL_45_75_45_105} but but with three-nucleon force.}
+                \label{CROSS_HE_EXCL_45_75_45_105_3NF}
+        \end{figure}
+
+        \begin{figure}[h]
+            \begin{center}
+                \includegraphics[width=0.9\textwidth]{Figures_HE/CROSS_excl_trunc_100mev_165_15_15_165_2NF.pdf}
+                \end{center}
+                \caption{The same as on the \fig{CROSS_HE_EXCL_45_75_45_105} but for the different kinematic
+                configuration.}
                 \label{CROSS_HE_EXCL_165_15_15_165}
         \end{figure}
 
+        \begin{figure}[h]
+            \begin{center}
+                \includegraphics[width=0.9\textwidth]{Figures_HE/CROSS_excl_trunc_100mev_165_15_15_165_3NF.pdf}
+                \end{center}
+                \caption{The same as on the \fig{CROSS_HE_EXCL_165_15_15_165} but but with three-nucleon force.}
+                \label{CROSS_HE_EXCL_165_15_15_165_3NF}
+        \end{figure}
+
 
 
         \begin{figure}[h]
             \begin{center}
-            \includegraphics[width=0.9\textwidth]{Figures_HE/CROSS_incl_30mev_all.pdf}
+            \includegraphics[width=0.8\textwidth]{Figures_HE/CROSS_incl_trunc_30mev_all.pdf}
             \end{center}
-            \caption{Inclusive cross section. E$_\gamma$=30~MeV}
+            \caption{The semi-inclusive differential cross section $\frac{d^3\sigma}{d\Omega_p d\text{E}_p}$
+            at E$_\gamma = \SI{30}{\mev}$ as a function of outgoing proton's energy E$_p$. Each row represent 
+            predictions for different values of the outgoing proton's angle $\theta_p$: 
+            \ang{10}, \ang{50}, \ang{90}, \ang{130} and \ang{170}. Each column has similar 
+            lines and bands definitions as it was for exclusive cross section.  
+            Predictions have been obtained without 3NF.}
+            \label{CROSS_HE_INCL_30MEV_2NF}
         \end{figure}
 
         \begin{figure}[h]
             \begin{center}
-            \includegraphics[width=0.9\textwidth]{Figures_HE/CROSS_incl_100mev_all.pdf}
+            \includegraphics[width=0.8\textwidth]{Figures_HE/CROSS_incl_trunc_100mev_all.pdf}
             \end{center}
-            \caption{Inclusive cross section. E$_\gamma$=100~MeV}
+            \caption{The same as on \fig{CROSS_HE_INCL_30MEV_2NF} but for E$_\gamma = \SI{100}{\mev}$}
+            \label{CROSS_HE_INCL_100MEV_2NF}
         \end{figure}
 
 
 \clearpage
 
 
-\subsection{Nd photodisintegration}
+\subsection{n-D photodisintegration}
 
 \begin{figure}[h]
     \begin{center}
@@ -951,7 +983,7 @@
         \end{center}
         \caption{Differential cross section for the d-$\gamma$ 
         two-body photodisintegraion of $^3$He as a function of the d$\gamma$ angle.
-        The initial photon energy $E_\gamma=30$~MeV.}
+        The initial photon energy $E_\gamma=\SI{30}{\mev}$.}
         \label{CROSS_nd_30}
     \end{figure}
 
@@ -961,7 +993,7 @@
         \includegraphics[width=0.9\textwidth]{Figures_HE/CROSS_nd_100mev.pdf}
         \end{center}
         \caption{The same as on Fig.~\ref{CROSS_nd_30} but 
-        for the photon energy E$_\gamma=100$~MeV}
+        for the photon energy E$_\gamma=\SI{100}{\mev}$}
         \label{CROSS_nd_100}
     \end{figure}
 
