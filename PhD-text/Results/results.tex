@@ -1067,11 +1067,30 @@
 
     \subsection{Pion absorption in $^3$He}
 
+    in \fig{Gamma_pnn} and \ref{Gamma_nd} the pion absorption rates are presented as a functions
+    of the chiral order with different values of the cutoff parameter
+    (for $\pi^- + ^3He \rightarrow p + n + n$ and $\pi^- + ^3He \rightarrow n + d$ reactions, respectively).
+    Both figures show that with fixed chiral order the arrangement of values with respect of the cutoff parameter
+    remains the same, namely with increasing $\Lambda$, absorption rate decreases. The only exception in both cases 
+    appears at N$^3$LO where prediction with $\Lambda = \SI{550}{\mev}$ goes above other predictions.
+    At the next order, N$^4$LO, it corrects to the normal arrangement.
+    This behavior may be connected to the 3NF used for the calculation and in order to check that I show
+    a similar figure for a proton radius $r_p$ in \fig{proton_rad} calculated with 
+    and without 3NF (left and right panels respectively). Results obtained with 3NF show
+    similar deviation at N$^3$LO while data obtained without 3NF does not have that.
+    Nevertheless, the spread of predictions with respect to the cutoff values is much smaller
+    with 3NF and deviation seems to be not crucial as total difference is very small.
+
+
+
+
     \begin{figure}[h]
         \begin{center}
         \includegraphics[width=0.6\textwidth]{PlotData/PION/Dalitz_maps/figures/Gamma_pnn.pdf}
         \end{center}
-        \caption{}
+        \caption{Absorption rate for $\pi^- + ^3He \rightarrow p + n + n$ reaction as a function
+        of the chiral order with different values of the cutoff parameter $\Lambda$.
+        Predictions were obtained with 3NF.}
         \label{Gamma_pnn}
     \end{figure}
 
@@ -1079,8 +1098,18 @@
         \begin{center}
         \includegraphics[width=0.6\textwidth]{PlotData/PION/Dalitz_maps/figures/Gamma_nd.pdf}
         \end{center}
-        \caption{}
+        \caption{The same as in \fig{Gamma_pnn}, but for $\pi^- + ^3He \rightarrow n + d$ reaction.}
         \label{Gamma_nd}
+    \end{figure}
+
+    \begin{figure}[h]
+        \begin{center}
+        \includegraphics[width=0.99\textwidth]{PlotData/PION/Dalitz_maps/figures/proton_radius_mt31_3NF.pdf}
+        \end{center}
+        \caption{\tmp{check mt3} Proton radius $r_p$ as a function of the chiral order calculated with
+        different values of the cutoff parameter $\Lambda$. The radius was calculated with 2NF and 3NF (left panel)
+        and with 2NF only (right panel).}
+        \label{proton_rad}
     \end{figure}
 
     \begin{figure}[h]
