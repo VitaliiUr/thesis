@@ -1113,7 +1113,26 @@
         \label{proton_rad}
     \end{figure}
 
-    In Figs.~\ref{pion_map_xy_cutoff} and \ref{pion_map_E1E2_cutoff} I show 
+    In Figs.~\ref{pion_map_E1E2_cutoff} and \ref{pion_map_xy_cutoff} I show 
+    intensity plots for the double differential absorption rates
+    $d^2 \Gamma_{pnn}/dE_1dE_2$ for the $\pi^- + ^3He \rightarrow p + n + n$
+    process as functions of the nucleons energies (first nucleon is proton) and 
+    of \tmp{correct naming} Dalitz coordinates($x$ and $y$) respectively.
+
+    In \fig{pion_map_xy_cutoff} coordinates $x$ and $y$ are defined as:
+
+    \begin{align}
+        x &= 3 (E_1 + 2E_2 - E)/E, \nonumber\\
+        y &= (3E_1 - E)/E,
+        \label{dalitz_xy}
+    \end{align}
+    taking the region where $r^2 \equiv x^2 + y^2 \leq 1$.
+
+    Each of two figures consists of four panels representing predictions obtained with different 
+    values of the cutoff parameter $\Lambda$. The difference between predictions which can be 
+    noticed with the naked eye - is that area of the central region (corresponding to smallest values)
+    becomes larger with increasing $\Lambda$. It coheres to what we saw on \fig{Gamma_pnn}
+    where total absorption rate was inversly correlated with cutoff parameter. 
     
         \begin{figure}[h]
             \begin{center}
@@ -1136,6 +1155,12 @@
         $d^2 \Gamma_{pnn}/dxdy$.}
         \label{pion_map_xy_cutoff}
     \end{figure}
+
+    Next I show similar colormaps but for the predictions obtained with plane wave component only (without rescattering part)
+    in Figs.~\ref{pion_map_E1E2_cutoff_PW} and \ref{pion_map_xy_cutoff_PW}. Presented plots show that
+    the difference of predictions obtained without rescattering part with full is very large. Predicted values 
+    are few times larger and the distribution is completely different. It obviously tells us that
+    one has to take into account rescattering pat in order to obtain relevant results.   
 
     \begin{figure}[h]
         \begin{center}
@@ -1162,34 +1187,47 @@
 
     \begin{figure}[h]
         \begin{center}
-        \includegraphics[width=0.7\textwidth]{PlotData/PION/Dalitz_maps/figures/Dalitz_map_pnn_xy_cutofs_1NC.pdf}
+        \includegraphics[width=0.7\textwidth]{PlotData/PION/Dalitz_maps/figures/Dalitz_map_pnn_E1E2_cutofs_1NC.pdf}
         \end{center}
-        \caption{}
-        \label{pion_map_xy_cutoff_1NC}
+        \caption{Intensity plots for the double differential absorption rates
+        $d^2 \Gamma_{pnn}/dE_1dE_2$ for the $\pi^- + ^3He \rightarrow p + n + n$
+        process, obtained using the SMS potential at N$^4$LO+
+        with SN current only (without 2N).
+        All other contributions are the same as in \fig{pion_map_E1E2_cutoff}: PWIAS+RESC and 2NF+3NF.
+        Each panel present predictions obtained with different values of the cutoff parameter $\Lambda$:
+        from \SI{400}{\mev} (upper left) to \SI{550}{\mev} (lower right). Nucleon 1 is a proton.}
+        \label{pion_map_E1E2_cutoff_1NC}
     \end{figure}
 
     \begin{figure}[h]
         \begin{center}
-        \includegraphics[width=0.7\textwidth]{PlotData/PION/Dalitz_maps/figures/Dalitz_map_pnn_E1E2_cutofs_1NC.pdf}
+        \includegraphics[width=0.7\textwidth]{PlotData/PION/Dalitz_maps/figures/Dalitz_map_pnn_xy_cutofs_1NC.pdf}
         \end{center}
-        \caption{}
-        \label{pion_map_E1E2_cutoff_1NC}
+        \caption{The same as in \fig{pion_map_E1E2_cutoff_1NC} but for the double differential absorption rates
+        $d^2 \Gamma_{pnn}/dxdy$.}
+        \label{pion_map_xy_cutoff_1NC}
+    \end{figure}
+    
+    \begin{figure}[h]
+        \begin{center}
+            \includegraphics[width=0.7\textwidth]{PlotData/PION/Dalitz_maps/figures/Dalitz_map_pnn_E1E2_orders.pdf}
+        \end{center}
+        \caption{Intensity plots for the double differential absorption rates
+        $d^2 \Gamma_{pnn}/dE_1dE_2$ for the $\pi^- + ^3He \rightarrow p + n + n$
+        process, obtained using the SMS potential at N$^4$LO+
+        with all contributions possible: plane wave + rescattering, SN + 2N, 2NF+3NF.
+        Each panel present predictions obtained with different chiral orders:
+        from N$^2$LO (upper left) to N$^4$LO+ (lower right). Nucleon 1 is a proton.}
+        \label{pion_map_E1E2_order}
     \end{figure}
 
     \begin{figure}[h]
         \begin{center}
         \includegraphics[width=0.7\textwidth]{PlotData/PION/Dalitz_maps/figures/Dalitz_map_pnn_xy_orders.pdf}
         \end{center}
-        \caption{}
+        \caption{The same as in \fig{pion_map_E1E2_order} but for the double differential absorption rates
+        $d^2 \Gamma_{pnn}/dxdy$.}
         \label{pion_map_xy_order}
-    \end{figure}
-
-    \begin{figure}[h]
-        \begin{center}
-        \includegraphics[width=0.7\textwidth]{PlotData/PION/Dalitz_maps/figures/Dalitz_map_pnn_E1E2_orders.pdf}
-        \end{center}
-        \caption{}
-        \label{pion_map_E1E2_order}
     \end{figure}
 
     \begin{figure}[h]
