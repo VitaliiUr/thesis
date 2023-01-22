@@ -114,12 +114,30 @@ describing strong interactions, but, at the moment,
 it is not applicable at low energies ($Q^2 \lesssim 1 GeV^2$).
 In our situation various approaches are coming into the scene.
 The most advanced are 
-chiral effective theory, lattice calculation and others \cite{IOFFE2006232, BEANElaticce, Machleidt2011}..
+chiral effective theory, lattice calculation and others \cite{IOFFE2006232}, \cite{BEANElaticce}, \cite{Machleidt2011}.
 
 Starting the study of three- (and more) nucleon systems it was found that 
 strong 2N force is not enough to describe
 the system and 3N force was introduced. The first applications of such
 a force showed that it brings sufficient contribution and cannot be ignored \cite{GLOCKLE1982343}.
+Contribution of the 3NF can be examined comparing binding energies of light nuclei calculated
+with and without this part with respect to experimental values.  
+For example, binding energy for $^3$H calculated with \gls{av18} potential
+without 3NF gives $E_b(^3\mathrm{H}) = \SI{-7.628}{\mev}$ \cite{NoggaAV18}. There are different
+models that might add a 3NF contribution to \gls{av18} (or other potential). 
+Using the Tucson-Melbourne(TM) model \cite{Tucson-Melbourne}   results
+in $E_b(^3\mathrm{H}) = \SI{-8.478}{\mev}$ and Urbana IX \cite{Urbana3NF} 3NF provide us with 
+$E_b(^3\mathrm{H}) = \SI{-8.484}{\mev}$. 
+Looking at the experimental value $E_b(^3\mathrm{H}) = \SI{-8.482}{\mev}$,
+it is clear that 3NF contribution makes prediction much closer to the measurement.
+The same situation is with other atoms: the 2NF binding energy for $^3$He (calculated with \gls{av18})
+is $E_b(^3\mathrm{He}) = \SI{-6.917}{\mev}$, TM contribution makes it $E_b(^3\mathrm{He}) = \SI{-7.706}{\mev}$,
+Urbana IX - $E_b(^3\mathrm{He}) = \SI{-7.739}{\mev}$, while experimental value
+is $E_b(^3\mathrm{He}) = \SI{-7.718}{\mev}$.
+Once more we can see the importance of 3NF contribution on the $\alpha$-particle's ($^4\mathrm{He}$) binding energy:
+pure \gls{av18} gives $E_b(^4\mathrm{He}) = \SI{-24.25}{\mev}$, \gls{av18} + TN - \SI{-28.84}{\mev}, \gls{av18} + Urbana IX - \SI{-28.50}{\mev} and experimental value
+is \SI{-28.30}{\mev}.
+
 Whereas the first applications included only early simplified "realistic" 3N potential, the latter
 investigations, based on more advanced models, only confirmed this statements \cite{StoksPhysRevC49, WIRINGAPhysRevC51}.
 It was also used to construct four-nucleon (4N) bound state \cite{NoggaPhysRevLett}.
@@ -175,10 +193,10 @@ $\Lambda_\chi \sim \SI{0.7}{\gev}$ - chiral symmetry breaking scale.
 The ratio between these two scales $Q/\Lambda_\chi$
 is being used as an expansion parameter in  \gls{ceft} with power
 $\nu$: $\left(Q/\Lambda_\chi\right)^\nu$.
-\footnote{Note that excat values of some parameters are still under discussion \cite{}. We follow here approach described by E.Epelbaum and collaborators, see e.g. \cite{}}
+\footnote{Note that excat values of some parameters are still under discussion \cite{Epelbaum2004}. We follow here approach described by E.Epelbaum and collaborators, see e.g. \cite{reinkrebs2018}}
 
 Possibility of deriving nuclear potential is an important feature of \gls{ceft}.
-The potential, as occures in an Lagrangian, is a perturbaton expression of the same parameter $Q/\Lambda_\chi$.
+The potential, as occurs in an Lagrangian, is a perturbation expression of the same parameter $Q/\Lambda_\chi$.
 Considering so-called irreducible diagrams (which cannot be split
 by cutting nucleon lines), Weinberg \cite{WEINBERG1990,WEINBERG1991}
 came to the expression for the powers $\nu_W$ of such diagrams
@@ -187,7 +205,7 @@ came to the expression for the powers $\nu_W$ of such diagrams
     \nu_W = 4 - A - 2C + 2L + \sum_i \Delta_i,
     \label{powers}
 \end{equation}
-where $i$ specifies a type of nuclear interaction \tmp{whatever it means \cite{WEINBERG1991}} and
+where $i$ specifies a vertex number and
 
 \begin{equation}
     \Delta_i \equiv d_i + \frac{n_i}{2} - 2.
@@ -222,7 +240,7 @@ so next-to-leading order stands for the second order of expansion.},
  as diagrams at NLO, where more contact terms are introduced together with two-pion 
  exchange topologies. Each subsequent order includes more and more sophisticated diagrams
  describing nucleons interaction
- via multiple  pion exchanges and varios \tmp{contour/central?} verteces.
+ via multiple  pion exchanges and various contact verteces.
  3NF appears at N$^2$LO while 4NF contributions are occuring at N$^3$LO.
  This establishes for the first time a systematic
 way to include all the forces from the simplest diagrams at LO and gradually
@@ -232,10 +250,36 @@ one can obtain results using chiral potential at different
 orders and track which one gives larger or smaller contribution to the final prediction.
 The highest order for which there is a derived term in potential
 is N$^4$LO at the moment. Nevertheless leading F-wave contact interactions from N$^5$LO are included in the N$^4$LO+ potential,
-which is regarded as a best possible potential ($\chi^2/datum \sim 1$ \cite{epelbaum_frontiers}).
+which is currently regarded as a best possible potential within the model.
+The progression of the chiral orders is reflected in a $\chi^2/datum$.
+Leading order has only $\chi^2/datum = 73$ (with neutron-proton data with $E_lab = 0-100 \unit{\mev}$).
+Each subsequent order has better and better results: NLO has $\chi^2/datum = 2.2$, N$^2$LO - $\chi^2/datum = 2.2$
+and the final N$^4$LO+ has $\chi^2/datum = 1.08$ \cite{reinkrebs2018}.
+Similar progression is observed for larger energies, e.g for $E_lab = 0-300 \unit{\mev}$)
+$\chi^2/datum$ is 75, 14, 4.2, 2.01, 1.16 and 1.06 at LO, NLO, N$^2$LO, N$^3$LO, N$^4$LO and N$^4$LO+ respectively.
+The proton-proton data description has similar trend, so $\chi^2/datum$ is 1380, 91, 41, 3.43, 1.67, 1.00 
+for the same energy bin and chiral orders. At N$^4$LO+ $\chi^2/datum$ for proton-proton data
+stands similar value (close to 1) as for neutron-proton, but the convergence comes a bit later and 
+leading order has way worse description.
 In my work I will use chiral potentials from LO to N$^4$LO+.
 
+\begin{figure}[h]
+    \begin{center}
+    \includegraphics[width=0.6\textwidth]{Figures/chiral.png}
+    \end{center}
+    \caption{\tmp{get quality figure from \cite{Entem2017}}}
+    \label{proton_rad}
+\end{figure}
+
 The general scheme outlined above was developed mainly by the Bochum-Bonn and Moscow-Idaho groups.
+Both groups have similar approaches and were independently and almost simultaneously
+developing own chiral potentials. In 1998 Epelbaum and colleagues from Bochum-Bonn group 
+presented a first version of their chiral potential \cite{EPELBAOUM1998107, epelbaum2000two}.
+Developing a more and more sophisticated versions with higher chiral orders, authors presented
+N$^3$LO potential in 2005 \cite{epelbaum2005two} resulting with most advanced chiral potential at the moment - 
+N$^4$LO+ \cite{reinkrebs2018}.
+On the other side of the planet, in Idaho, the group from Moscow was also developing 
+a chiral potential. Teir results from 2003 \cite{Entem2003}, following with later investigations \cite{Machleidt2005, Machleidt2010, Entem2017}.
 
 There are a number of another approaches within \gls{ceft} utilized.
 The group of Piarulli is using quite similar approach, including
