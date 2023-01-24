@@ -1,19 +1,26 @@
 \chapter{Formalism \& numerical methods}
 
 Despite the deuteron problem was solved long time ago, I will describe it briefly 
-in order to introduce the notation and formalism. For 3N case only 
+in order to introduce the notation and formalism. 
+With that, for more complex 3N case only slight 
 extension will be needed.
 
 In order to calculate any observable for the deuteron photodisintegration,
 one has to find a nuclear matrix elements:
 
+% \begin{equation}
+%     N^\mu = \langle \Psi_f \vec{P_f} \mid \frac{1}{e}J^\mu(0) \mid \Psi_i \vec{P_i} \rangle =
+%     \langle p' (l's')j'm_j't'm_t' \vec{P_f} \mid J^\mu \mid \phi_d m_d \vec{P}_i \rangle, 
+%     \label{main}
+% \end{equation}
 \begin{equation}
-    N^\mu = \langle \Psi_f \vec{P_f} \mid \frac{1}{e}J^\mu(0) \mid \Psi_i \vec{P_i} \rangle =
-    \langle p' (l's')j'm_j't'm_t' \vec{P_f} \mid J^\mu \mid \phi_d m_d \vec{P}_i \rangle, 
+    N^\mu = \langle \Psi_{final} \mid J^\mu \mid \Psi_{internal} \rangle, 
     \label{main}
 \end{equation}
-where $J^\mu$ is a four-vector current operator which acts between initial and final 
+with $\Psi_{internal}  = \Psi_{deuteron}$
+and $J^\mu$ is a four-vector current operator which acts between initial and final 
 two-nucleon states. 
+
 
 % $\vec{P_i}$($\vec{P_f}$) is an initial (final) total 2N m\vec{p}omentum.
 
@@ -30,11 +37,12 @@ two-nucleon states.
 \section{Deuteron bound state}
     \label{sec:deut_bound}
 
-    Let's find a deuteron bound state wave function $\phi_d$. The time-independent Schr\"{o}dinger
-    equation for two particles in such case will be:
+    Let's find a deuteron bound state wave function $\ket{\phi_d}$. 
+    The time-independent Schr\"{o}dinger
+    equation for two particles exposes as:
 
     \begin{equation}
-        (H_0 + V) \mid \psi_{12} \rangle  = E_d \mid \psi_{12} \rangle,
+        (H_0 + V) \ket{\phi_d}  = E_d \ket{\phi_d},
         \label{shrod_bound}
     \end{equation}
     with a kinetic energy $H_0$ and potential $V$. 
@@ -59,13 +67,12 @@ two-nucleon states.
 
     \begin{eqnarray}
         &\frac{\vec{p}^2}{2\mu} \langle \vec{p} \mid \Psi_{int} \rangle +
-        \int d \pvec{p} \langle \vec{p} \mid V \mid \pvec{p} \rangle
-        \langle \pvec{p} \mid \Psi_{int} \rangle = 
+        \langle \vec{p} \mid V \mid \Psi_{int} \rangle = 
         (E_d - E_{c.m.})\langle \vec{p} \mid \Psi_{int} \rangle \label{se1}\\
         &\frac{\vec{\mathcal{P}}^2}{2M} \langle \mathcal{P} \mid \Psi_{c.m.} \rangle = 
         E_{c.m.}\langle \mathcal{P} \mid \Psi_{c.m.} \rangle \label{se2},
     \end{eqnarray}
-    with $\matrixel{\vec{p},\vec{\mathcal{P}}}{H_0}{\Psi_{12}} = \frac{\vec{p}^2}{2\mu} \braket{\vec{p}}{\Psi_{int}} +
+    with $\matrixel{\vec{p},\vec{\mathcal{P}}}{H_0}{\phi_d} = \frac{\vec{p}^2}{2\mu} \braket{\vec{p}}{\Psi_{int}} +
     \frac{\vec{\mathcal{P}}^2}{2M} \braket {\mathcal{P}} {\Psi_{c.m.}} $. So $\Psi_{c.m.}$ is a component 
     of total wave function, which reflects a deuteron as a single object with momentum $\vec{\mathcal{P}}$
     while $\Psi_{int}$ is an internal wave function describing interaction between nucleons.
@@ -74,12 +81,14 @@ two-nucleon states.
 
     \begin{equation}
         \int d^3\vec{p} \ket{\vec{p}} \bra{\vec{p}}   = \mathbb{1}
+        \label{completness}
     \end{equation}
 
-    Eq.(\ref{se1}) is basically a Schr\"{o}dinger equation for one particle with mass $\mu$ 
+    Eq.(\ref{se1}) is basically a Schr\"{o}dinger equation for one particle with mass $\mu$
+    in potential $V$ 
     and Eq.(\ref{se2}) can be regarded as a Schr\"{o}dinger equation for particle with mass $M$ in 
     a free motion. Assuming that deuteron is at rest ($E_{c.m.} = 0$) we can stick 
-    to the Eq.(\ref{se1}) only. So that:
+    to the Eq.(\ref{se1}) only. Using completeness relation \ref{completness} we get:
 
     \begin{equation}
         \frac{\vec{p}^2}{2\mu} \langle \vec{p} \mid \Psi_{int} \rangle +
@@ -90,38 +99,40 @@ two-nucleon states.
     \end{equation}
 
     Working in 3 dimensional space  is difficult (especially numerically)
-    so i introduce the partial-wave representation (PWD) of the momentum state in the following form:
+    so I follow a standard path and introduce the partial-wave representation (PWD) 
+    of the momentum state, adding spin and isospin degrees of freedom in the following form:
 
     \begin{equation}
-        \mid \vec{p} \rangle = \mid p \alpha \rangle \equiv \mid p (ls) j m_j \rangle \mid t m_t \rangle,
+        \ket{p \alpha} \equiv \ket{p (ls) j m_j}  \ket{t m_t},
         \label{pwmain}
     \end{equation}
-    where we introduce quantum numbers l, s ,j ,t as orbital angular momentum, total spin,
-    total angular momentum and total isospin respectively. $m_j$ and $m_t$ are isospin
-    and spin projections.
+    where quantum numbers l, s, j, t are orbital angular momentum, total spin,
+    total angular momentum and total isospin respectively. $m_j$ and $m_t$ are 
+    total angular isospin momentum and isospin projections, respectively.
 
 
-    Yet one can introduce simpler states than it is in (\ref{pwmain}).
+    States $\ket{p (ls) j m_j}$ can be further decomposed to 
+    simpler states than it is in (\ref{pwmain}), separating spin part as 
     
     \begin{equation}
-        \mid p (ls) j m_j \rangle = \sum_{m_l} c(lsj;m_l, m_j\!-\!m_l, m_j) \mid p l m_l \rangle
-        \mid s~m_j\!-\!m_l \rangle
+        \ket{p (ls) j m_j} = \sum_{m_l} c(lsj;m_l, m_j\!-\!m_l, m_j) \ket{p l m_l}
+        \ket{s~m_j\!-\!m_l}.
         \label{full_decomp}
     \end{equation}
 
-    Also we can decompose spin and isospin states as follows:
+    Spin(isospin) states can be represented via single-nucleon spin(isospin) states:
 
     \begin{equation}
-        \mid s m_s \rangle = \sum_{m_1} c(\frac{1}{2}\frac{1}{2}s;m_1, m_s\!-\!m_1, m_s)
-        \mid \frac{1}{2} m_1 \rangle
-        \mid \frac{1}{2} m_s\!-\!m_1 \rangle
+        \ket{s m_s} = \sum_{m_1} c(\frac{1}{2}\frac{1}{2}s;m_1, m_s\!-\!m_1, m_s)
+        \ket{\frac{1}{2} m_1}
+        \ket{\frac{1}{2} m_s\!-\!m_1},
         \label{spin_decomp}
     \end{equation}
 
     \begin{equation}
-        \mid t m_t \rangle = \sum_{\nu_1} c(\frac{1}{2}\frac{1}{2}t;\nu_1, m_t\!-\!\nu_1, m_t)
-        \mid \frac{1}{2} \nu_1 \rangle
-        \mid \frac{1}{2} m_t\!-\!\nu_1 \rangle
+        \ket{t m_t} = \sum_{\nu_1} c(\frac{1}{2}\frac{1}{2}t;\nu_1, m_t\!-\!\nu_1, m_t)
+        \ket{\frac{1}{2} \nu_1}
+        \ket{\frac{1}{2} m_t\!-\!\nu_1}.
         \label{isospin_decomp}
     \end{equation}
 
