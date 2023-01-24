@@ -130,12 +130,15 @@ in $E_b(^3\mathrm{H}) = \SI{-8.478}{\mev}$ and Urbana IX \cite{Urbana3NF} 3NF pr
 $E_b(^3\mathrm{H}) = \SI{-8.484}{\mev}$. 
 Looking at the experimental value $E_b(^3\mathrm{H}) = \SI{-8.482}{\mev}$,
 it is clear that 3NF contribution makes prediction much closer to the measurement.
-The same situation is with other atoms: the 2NF binding energy for $^3$He (calculated with \gls{av18})
+Nevertheless the Urbana IX 3NF in this case was fited by the experimental value for 
+$^3\mathrm{H}$ so there is no surprise in good agreement.
+On can check the binding energy for  other atoms, which were not used for fitting. 
+The 2NF binding energy for $^3$He (calculated with \gls{av18})
 is $E_b(^3\mathrm{He}) = \SI{-6.917}{\mev}$, TM contribution makes it $E_b(^3\mathrm{He}) = \SI{-7.706}{\mev}$,
 Urbana IX - $E_b(^3\mathrm{He}) = \SI{-7.739}{\mev}$, while experimental value
 is $E_b(^3\mathrm{He}) = \SI{-7.718}{\mev}$.
 Once more we can see the importance of 3NF contribution on the $\alpha$-particle's ($^4\mathrm{He}$) binding energy:
-pure \gls{av18} gives $E_b(^4\mathrm{He}) = \SI{-24.25}{\mev}$, \gls{av18} + TN - \SI{-28.84}{\mev}, \gls{av18} + Urbana IX - \SI{-28.50}{\mev} and experimental value
+pure \gls{av18} gives $E_b(^4\mathrm{He}) = \SI{-24.25}{\mev}$, \gls{av18} + TM - \SI{-28.84}{\mev}, \gls{av18} + Urbana IX - \SI{-28.50}{\mev} and experimental value
 is \SI{-28.30}{\mev}.
 
 Whereas the first applications included only early simplified "realistic" 3N potential, the latter
@@ -161,7 +164,7 @@ or semi-phenomenological approaches. It allows them to combine
 theoretical knowledge about processes and experimental data.
 
 One of such models, which was used in current thesis is the Argonne V18 (AV18) \cite{AV18Wiringa}.
-In order to construct NN force, authors combine
+In order to construct \gls{nn} force, authors combine
 % analytical electromagnetic and 
 one-pion-exchange parts
 with phenomenological one and supplement them by electromagnetic corrections.
@@ -252,10 +255,10 @@ The highest order for which there is a derived term in potential
 is N$^4$LO at the moment. Nevertheless leading F-wave contact interactions from N$^5$LO are included in the N$^4$LO+ potential,
 which is currently regarded as a best possible potential within the model.
 The progression of the chiral orders is reflected in a $\chi^2/datum$.
-Leading order has only $\chi^2/datum = 73$ (with neutron-proton data with $E_lab = 0-100 \unit{\mev}$).
+Leading order has only $\chi^2/datum = 73$ (with neutron-proton data with $E_{lab} = 0-100 \unit{\mev}$).
 Each subsequent order has better and better results: NLO has $\chi^2/datum = 2.2$, N$^2$LO - $\chi^2/datum = 2.2$
 and the final N$^4$LO+ has $\chi^2/datum = 1.08$ \cite{reinkrebs2018}.
-Similar progression is observed for larger energies, e.g for $E_lab = 0-300 \unit{\mev}$)
+Similar progression is observed for larger energies, e.g for $E_{lab} = 0-300 \unit{\mev}$)
 $\chi^2/datum$ is 75, 14, 4.2, 2.01, 1.16 and 1.06 at LO, NLO, N$^2$LO, N$^3$LO, N$^4$LO and N$^4$LO+ respectively.
 The proton-proton data description has similar trend, so $\chi^2/datum$ is 1380, 91, 41, 3.43, 1.67, 1.00 
 for the same energy bin and chiral orders. At N$^4$LO+ $\chi^2/datum$ for proton-proton data
@@ -267,19 +270,24 @@ In my work I will use chiral potentials from LO to N$^4$LO+.
     \begin{center}
     \includegraphics[width=0.6\textwidth]{Figures/chiral.png}
     \end{center}
-    \caption{\tmp{get quality figure from \cite{Entem2017}}}
+    \caption{\tmp{Make own diagrams, e.g. with JaxoDraw or PyFeyn \cite{Entem2017}}}
     \label{proton_rad}
 \end{figure}
 
 The general scheme outlined above was developed mainly by the Bochum-Bonn and Moscow-Idaho groups.
 Both groups have similar approaches and were independently and almost simultaneously
 developing own chiral potentials. In 1998 Epelbaum and colleagues from Bochum-Bonn group 
-presented a first version of their chiral potential \cite{EPELBAOUM1998107, epelbaum2000two}.
+presented a first version of their \gls{nn} chiral potential \cite{EPELBAOUM1998107, epelbaum2000two}.
 Developing a more and more sophisticated versions with higher chiral orders, authors presented
-N$^3$LO potential in 2005 \cite{epelbaum2005two} resulting with most advanced chiral potential at the moment - 
-N$^4$LO+ \cite{reinkrebs2018}.
-On the other side of the planet, in Idaho, the group from Moscow was also developing 
-a chiral potential. Teir results from 2003 \cite{Entem2003}, following with later investigations \cite{Machleidt2005, Machleidt2010, Entem2017}.
+N$^3$LO potential in 2005 \cite{epelbaum2005two} which included a 3NF contributions.
+Authors were further developng their model, taking into account more Feynmann diagrams
+coming to a higher chiral orders. Another problem Bochum-Bonn goup faced with was a potential regularization. An important point was when authors started using a semi-local regularisation 
+in the coordinate space (\gls{scs} potential) \cite{Epelbaum2014SCS} and later similar regularisation, but in the momentum space, resulting in a most advanced chiral potential at the moment up to  
+N$^4$LO+ chiral order \cite{reinkrebs2018} (the \gls{sms} potential).
+
+On the other side of the planet, in Idaho, Machleidt and his group from Moscow were also developing 
+a chiral potential. Their results from 2003 \cite{Entem2003}, following with later investigations \cite{Machleidt2005, Machleidt2010, Entem2017} were introducing very similar to Bochum-Bonn
+model with minor technical differences.
 
 There are a number of another approaches within \gls{ceft} utilized.
 The group of Piarulli is using quite similar approach, including
@@ -289,30 +297,59 @@ the same chiral potentials with minor differences \cite{Piarulli2012,Piarulli201
 
 
 Technically the chiral potential may be derived both in coordinate and momentum spaces.
-Nevertheless in both cases it requires regularizationcuts 
+Nevertheless in both cases it requires regularization which cuts 
 low coordinate values in order to avoid infinities 
 (or high momentum values - in momentum space). 
-The \gls{sms} potential is being regularized in its pion propagators
-in the momentum space using the Gaussian form factor
-$F(\vec{l}^2)$:
+The \gls{sms} potential is being regularized semilocally. 
+It means that  in its pion propagators both local and nonlocal regularizations
+are being applied for different parts of the potential.
+In \cite{Entem2003, epelbaum2005two} and later in \cite{Entem2017, Epelbaum2014SCS} the non-local regularisator was applied to both short- and long-range parts of the potential. 
+This regularization is applied directly to the potential matrix elements 
+in the coordinate space:
+
+\begin{equation}
+    V_\pi(\vec{r}) \rightarrow V_{\pi,R} (\vec{r}) = V_\pi (\vec{r}) \left(1 - \exp(-r^2/R^2 )\right),
+    \label{scs_regulator} 
+\end{equation}
+where the cutoff R was chosen in the range of R = 0.8, ..., 1.2 \unit{fm}.
+
+In the current work the potential from \cite{reinkrebs2018} is mainly regarded. In this motential,
+regularization is being applied in the momentum space:
+
+\begin{equation}
+    V_\pi(\pvec{p}, \vec{p}) \rightarrow V_{\Lambda} (\pvec{p}, \vec{p}) = 
+    V_\pi (\pvec{p}, \vec{p}) 
+    \exp\left[-(p^\prime/\Lambda)^{2n} -(p/\Lambda)^{2n} \right],
+    \label{sms_regulator} 
+\end{equation}
+with $\Lambda = \frac{2}{R}$ and $n$ being adjusted with respect to the considered chiral order.
+
+The other part of regularization, local, is applied to the propagator operator, during the derivation of potential. Namely, the Gaussian form factor $F(\vec{l}^2)$ is being used
+:
+
+\begin{equation}
+    \int_{-\infty}^{\infty} \frac{\rho(\mu^2)}{\vec{l}^2 + \mu^2} d\mu^2 \rightarrow 
+    \frac{F(\vec{l}^2)}{\vec{l}^2 + \mu^2}
+\end{equation}
+with
 
 \begin{equation}
     F(\vec{l}^2) = e^{-\frac{\vec{l}^2 + M_\pi^2}{\Lambda^2}},
     \label{regulator}
 \end{equation}
-where $M_\pi$ is an effective pion mass and $\Lambda$ - is a cutoff parameter.
-
+where $M_\pi$ is an effective pion mass and $\Lambda$ - is a cutoff parameter and $l$ is a four-momentum of the exchanged pion.
 The form factor from \eq{regulator}, being used together with Feynman propagator,
 ensures that long-range part of the forces has no singularities. 
 
-The value at which
-the cut is applied (cut-off value) is not fixed and usually calculations
-are being performed for different cut-off values. The comparison
+The cut-off parameter $\Lambda$ is not fixed and usually calculations
+are being performed with different values. The comparison
 of such results may reveal stronger or weaker dependance and in perfect
-case one will come up with such a potential, were the cut will
-not affect results much. In \fig{potential_cutoff} 
-I show values of the 2N potential $\matrixel{\vec{p}}{V}{\pvec{p}}$
-as a function on the momentum $|\vec{p}|$ with fixed value $|\pvec{p}|$=0.054[fm].
+case, which is expected at $\nu >> 1$, one will come up with such a potential, were the cut will
+not affect results at all. One of aims of my thesis is to test how big cut-off dependency
+of predictions is
+observed for currently available forces. In \fig{potential_cutoff} 
+I show values of the matrix elements for 2N potential $\matrixel{\vec{p}}{V}{\pvec{p}}$
+as a function on the momentum $|\vec{p}|$ with fixed value $|\pvec{p}|$=\SI{0.054}{fm^{-1}}.
 
 
 
@@ -321,7 +358,7 @@ as a function on the momentum $|\vec{p}|$ with fixed value $|\pvec{p}|$=0.054[fm
     \includegraphics[width=0.95\textwidth]{PlotData/Deuteron/WAVEFUNC/potential_pp1.798.pdf}
     \end{center}
     \caption{Potential components as a function on the momentum $p$ with fixed
-    value of the momentum $p'$=1.798 [fm?].
+    value of the momentum $p'=\SI{1.798}{fm^{-1}}$.
     }
     \label{potential_cutoff}
 \end{figure}
@@ -331,9 +368,11 @@ as a function on the momentum $|\vec{p}|$ with fixed value $|\pvec{p}|$=0.054[fm
 The potential may be transformed from coordinate to momentum space (or vice versa),
 but it is important at which frame the regularization was performed
 and what was a regularization function. That's why there are different 
-versions of chiral potential. One is \gls{scs} potential \cite{Epelbaum2014SCS}
+versions of chiral potential. One is the \gls{scs} potential \cite{Epelbaum2014SCS}
 and another one is similar, but with regularization applied in momentum space (\gls{sms} potential) \cite{reinkrebs2018}.
 
+YEt another regularisation function  is used by R.~Machleidt, D.R.~Entem and A.~Nogga, 
+when regulating matrix elements of the potential in momentum space with non-local regulator only.
 
 \subsection*{Currents}
  
