@@ -154,37 +154,51 @@ two-nucleon states.
     \end{equation}
 
 
-    These states also fulfill a relation
+    Projection of $\bra{\pvec{p}}$ states to $\ket{plm_l}$ leads to
 
     \begin{equation}
-        \langle \pvec{p} \mid plm_l \rangle = 
+        \braket{\pvec{p}}{plm_l} = 
         \frac{\delta ( \abs{\pvec{p}} - p)}{p^2} Y _{l m_l}(\hat{p}^\prime),
     \end{equation}
-    where $Y _{l m_l}(\hat{p}^\prime)$ is a spherical harmonic and 'hat' means a unit vector in 
+    where $Y _{l m_l}(\hat{p}^\prime)$ is a spherical harmonic and 'hat' denotes a unit vector in 
     direction of $\vec{p}$:
 
     \begin{equation}
-        \vec{p} \equiv |\vec{p}| \hat{p} \equiv p \hat{p} 
+        \vec{p} \equiv |\vec{p}| \hat{p} \equiv p \hat{p}. 
         \label{hat}
     \end{equation}
 
-    Nucleons are fermions so exchanging leads to antisymmetry of the
-    wave function. In PWD it leads to the
-    requirement which
-    can be expressed as:
+    Nucleons are fermions so exchanging them leads to antisymmetry of the
+    wave function. In PWD it results in additional requirement on quantum numbers which
+    is:
 
     \begin{equation}
-        (-1)^{l+s+t} = -1
+        (-1)^{l+s+t} = -1.
         \label{parity}
     \end{equation}
 
-    Taking into account Eq.(\ref{parity}), one can find only one possible PWD state combination for 
-    the deuteron bound state(under ... experimental evidence): 2 coupled channels for l=0,2; s=1; j=1and $t = m_t = 0$. 
-    These 2 channels are usually denoted as $^3S_1$ and $^3D_1$ and
-    corresponding wave functions are $\phi_0(p)$ and $\phi_2(p)$:
+    In general, nuclear NN force conserves spin and parity so
+
+    \begin{equation}
+        \matrixel*{p^\prime\alpha^\prime}{V}{p\alpha} = \delta_{jj'}\delta_{mm'}\delta_{tt'}\delta_{m_tm_{t'}}
+        \delta_{ss'}V^{sjtm_t}_{ll'}(p',p)
+        \label{conservation}
+    \end{equation}
+    which introduces restrictions for particular sets of quantum numbers. The channels, where $l \neq l'$
+    are coupled and for the deuteron bound state 
+    one can find only one possible PWD state combination:
+    two coupled channels 
+    which are commonly denoted as $^3S_1$ and $^3D_1$ (the naming stands for $^{2s+1}l_j$). They correspond 
+    to $l=0$ and $l=2$ respectively (with $s = j = 1$ and $t = m_t = 0$). 
+    We will call wave functions for these channels as $\phi_l(p)$ with $l=0,2$, such that:
+
+    % Taking into account Eq.(\ref{parity}), one can find only one possible PWD state combination for 
+    % the deuteron bound state(under ... experimental evidence): 2 coupled channels for l=0,2; s=1; j=1 and $t = m_t = 0$. 
+    % These 2 channels are usually denoted as $^3S_1$ and $^3D_1$ and
+    % corresponding wave functions are $\phi_0(p)$ and $\phi_2(p)$:
     
     \begin{equation}
-        \phi_l(p) = \braket{pl}{\Psi_{int}} = \bra{p(l1)1m_d} \braket{00}{\Psi_{int}}; l=0,2.
+        \phi_l(p) = \bra{p (ls) j m_j}\braket{t m_t}{\Psi_{int}} = \bra{p(l1)1m_d} \braket{00}{\Psi_{int}}; l=0,2.
         \label{deut_waves}
     \end{equation}
 
@@ -193,35 +207,40 @@ two-nucleon states.
     \begin{equation}
         \frac{\vec{p}^2}{2\mu} \phi_l(p) +
         \sum_{l^\prime =0,2} \int d p^\prime p^{\prime 2} 
-        \langle plm_l \mid V \mid p^\prime l^\prime m_l^\prime  \rangle
-        \phi_{l^\prime}(p) = 
+        \bra{p(l1)1m_d} \matrixel{00}{V}{00} \ket{p^\prime(l^\prime1)1m_d}
+        % \langle plm_l \mid V \mid p^\prime l^\prime m_l^\prime  \rangle
+        \phi_{l^\prime}(p^\prime) = 
         E_d \phi_l(p),
         \label{integral}
     \end{equation}
     for $l=0,2$. In case one does not have a matrix elements for the potential 
     $\langle plm_l \mid V \mid p^\prime l^\prime m_l^\prime  \rangle$ in analytical form,
     but only values for some grid of points, 
-    there is still one complication in the Eq.(\ref{integral}) - integration.
+    there is still one complication in the Eq.(\ref{integral}) - integration, which has to be discretized.
     In order to get rid of the integral I use a Gaussian quadrature 
     method of numerical integration \cite{jacobi1826ueber}.
     It allows to replace an integral by the weighted sum:
         $\int_a^b f(x)dx = \sum_{i=1}^n \omega_i f(x_i)$
-    In current work I used 72 points in the interval from $0$ to $50 fm$. 
-    Using this method, Eq.(\ref{shrod_old}) becomes  
+    In current work I used $N=72$ points in the interval from $0$ to \SI{50}{fm^{-1}}. 
+    Using this method, Eq.(\ref{integral}) becomes  
 
     
     \begin{equation}
-        \frac{\vec{p}^2}{2\mu} \phi_l(p) +
-        \sum_{l^\prime =0,2}\sum_{j =0}^N  \omega_j p^{\prime 2}_j \langle p_jlm_l \mid V \mid p^\prime_j l^\prime m_l^\prime  \rangle
-        \phi_{l^\prime}(p) = 
-        E_d \phi_l(p),
+        \frac{p_i^2}{2\mu} \phi_l(p_i) +
+        \sum_{l^\prime =0,2}\sum_{j =0}^{N_P}  \omega_j p^{2}_j 
+        \bra{p_i(l1)1m_d} \matrixel{00}{V}{00} \ket{p_j(l^\prime1)1m_d}
+        % \langle p_jlm_l \mid V \mid p^\prime_j l^\prime m_l^\prime  \rangle
+        \phi_{l^\prime}(p_j) = 
+        E_d \phi_l(p_i).
         \label{integral2}
     \end{equation}
 
-    I solve this equation as an eigenvalue problem $M\Psi = E_n \Psi$ and
+    In practical computations, the same grid points $p_i$ and $p_j$ are used in order
+    optimize computational time. 
+    I solve this equation as an eigenvalue problem $M\Psi = E_d \Psi$ and
     in that way
-    find simultaneously wave function values and binding energy $E_n$. 
-    The binding energy $E_n$ calculated with potentials of different chiral orders 
+    find simultaneously wave function values in grid of $p$ points and binding energy $E_d$. 
+    The binding energy $E_d$ calculated with potentials of different chiral orders 
     is presented on the Fig.~\ref{bind}.
 
     \begin{figure}[h]
@@ -254,19 +273,22 @@ two-nucleon states.
     % \end{equation}
 
     Let us start from the time-independent formulation of the scattering process.
-    In such a case Hamiltonian will be:
+    In such a case Hamiltonian is:
 
     \begin{equation}
         H = H_0 + V,
     \end{equation}
-    where $H_0$ is a kinetic energy operator $H_0 = \frac{\vec{p}^2}{2m}$ 
+    where again $H_0$ is a kinetic energy operator $H_0 = \frac{\vec{p}^2}{2m}$ 
     and $V$ is a nucleon-nucleon interaction.
     For a free particle motion, $V$ will be absent and we will denote an energy eigenstate as
-    $\mid \vec{p} \rangle$ - a free particle state.
-    In the case of the scattering process, the eigenstate will differ from $\mid \phi \rangle$,
-    but in case of elastic scattering (which we re interested in) the energy eigenvalue $E$ should be the same.
+    $\mid \vec{p}_0 \rangle$ - a free particle state.
+    The scattering state $\ket{\psi}$ fulfills similar Schr\"{o}dinger equation as 
+    $\mid \vec{p}_0 \rangle$, with the same energy eigenvalue, but with potential presented:
+    
+    % , the eigenstate will differ from $\ket{\phi_l}$,
+    % but in case of elastic scattering (which we are interested in) the energy eigenvalue $E$ should be the same.
 
-    So these two states fulfill Schr\"{o}dinger equations for such scattering process:
+    % So these two states fulfill Schr\"{o}dinger equations for such scattering process:
 
     \begin{equation}
         \begin{cases}
@@ -288,21 +310,22 @@ two-nucleon states.
         \mid \psi \rangle = \frac{1}{E - H_0}V \mid \psi \rangle +  \mid \vec{p} \rangle,
         \label{psieq}
     \end{equation}
-    where $\mid \vec{p} \rangle$ is a solution to the
-    free-particle Schr\"{o}dinger equation
-    \begin{equation}
-        H_0 \ket{\vec{p}} =  E  \ket{\vec{p}},
-    \end{equation}
-    with same energy eigenvalue\cite{Sakurai}.
+    % where $\mid \vec{p} \rangle$ is a solution to the
+    % free-particle Schr\"{o}dinger equation
+    % \begin{equation}
+    %     H_0 \ket{\vec{p}} =  E  \ket{\vec{p}},
+    % \end{equation}
+    % with same energy eigenvalue\cite{Sakurai}.
     % was added artificially in order to satisfy a criterion mentioned above 
     % and following the logic from . 
-    In addition, it guarantees that
+    % In addition, it 
+    which guarantees that
      application of the operator $(E -H_0)$ to the 
     (\ref{psieq}) results in the second equation from the system (\ref{system}).
     % Also, \eq{psieq} for $V \rightarrow 0$ becomes $\mid \psi \rangle = \mid \vec{p} \rangle$
 
 
-    In order to deal with a singular operator $\frac{1}{E - H_0}$ in eq.(\ref{psieq}), the well-known
+    In order to deal with a singular operator $\frac{1}{E - H_0}$ in \eq{psieq}, the well-known
     technique is to make such an operator complex by adding small imaginary number to the denominator
     so Eq.(\ref{psieq}) becomes
     % making it  $\frac{1}{E + i\epsilon - H_0}$.
@@ -322,8 +345,8 @@ two-nucleon states.
     while $G_0(E + i\epsilon)$ - to the outgoing one. Since we are interested in the scattering
     process, only the $(+)$ sign survives.
     
-    Eq.~(\ref{lse}) is known as a Lippmann-Schwinger equation (LSE) and using
-    the definition of the transition operator $t$:
+    Eq.~(\ref{lse}) is known as the Lippmann-Schwinger equation (LSE) and
+    defining the transition operator $t$:
 
     \begin{equation}
         t \ket{\vec{p}} = V \ket{\psi}
@@ -332,7 +355,7 @@ two-nucleon states.
     we can rewrite it as 
 
     \begin{equation}
-        \ket{\psi} = (1 + G_0(E + i\epsilon)V t)  \ket {\vec{p}}
+        \ket{\psi} = (1 + G_0(E + i\epsilon) t)  \ket {\vec{p}}
         \label{psi_toper}
     \end{equation}
 
@@ -345,29 +368,42 @@ two-nucleon states.
         \label{top2}
     \end{eqnarray}
 
-    Getting rid of the initial state $\ket{\vec{p}}$ in the \eq{top2} we can get a LSE
+    Getting rid off the initial state $\ket{\vec{p}}$ in the \eq{top2} we can get a LSE
     for the transition operator in the iterative form:
 
     \begin{eqnarray}
-        t = V + V G_0V t = \nonumber\\
-        = V + V G_0 V + V G_0 V G_0V + ...
+        t = V + V G_0 t = \nonumber\\
+        = V + V G_0 V + V G_0 V G_0V + ...,
     \end{eqnarray}
+    which constitutes an infinite series of subsequent NN interactions and free propagator of nucleons.
 
-    In the partial-wave representation, LSE \eq{top2} may be written as:
+    In the partial-wave representation, LSE \eq{top2} expresses as:
+    \begin{multline}
+        \bra{p^\prime (l^\prime s^\prime)j'm_{j'}}\matrixel{t' m_{t'}}{t(E)}{t m_t}\ket{p (l s)jm_{j}} = 
+        \bra{p^\prime (l^\prime s^\prime)j'm_{j'}}\matrixel{t' m_{t'}}{V}{t m_t}\ket{p (l s)jm_{j}} + \\
+        +\sum_{\alpha^{\prime\prime}} \int_0^\infty dp^{\prime \prime} p^{\prime \prime 2}
+        \bra{p^\prime (l^\prime s^\prime)j'm_{j'}}\matrixel{t' m_{t'}}{V}
+        {t'' m_{t''}}\ket{p'' (l'' s'')j''m_{j''}} \\
+        \cross \frac{1}{E + i\epsilon - p^{\prime \prime 2}/m}
+        \bra{p'' (l'' s'')j''m_{j''}}\matrixel{t'' m_{t''}}{t(E)}{t m_t}\ket{p (l s)jm_{j}},
+        \label{lse_pwd}
+    \end{multline}
+    which after using symmetries of potential matrix elements reduces to
+    
     \begin{multline}
         \matrixel{p^\prime (l^\prime s^\prime)jt}{t(E)}{p(ls)jt} = 
         \matrixel{p^\prime (l^\prime s)jt}{V}{p(ls)jt} + \\
         +\sum_{l^{\prime\prime}} \int_0^\infty dp^{\prime \prime} p^{\prime \prime 2}
         \matrixel{p^\prime (l^\prime s)jt}{V}{p^{\prime\prime}(l^{\prime\prime} s)jt} \\
         \cross \frac{1}{E + i\epsilon - p^{\prime \prime 2}/m}
-        \matrixel{p^{\prime \prime} (l^{\prime \prime} s)jt}{t(E)}{p^{\prime\prime}(l s)jt}
-        \label{lse_pwd}
+        \matrixel{p^{\prime \prime} (l^{\prime \prime} s)jt}{t(E)}{p(l s)jt}.      
+        \label{lse_pwd_reduced}
     \end{multline}
 
     Using \eq{psi_toper} we can write \eq{main} as
     
     \begin{equation}
-        N^\mu = \bra{\phi m_p m_n} (1 + G_0(E + i\epsilon)V t) \frac{1}{e}J^\mu(0) \mid \Psi_i \vec{P_i} \rangle
+        N^\mu = \bra{\phi m_p m_n} (1 + G_0(E + i\epsilon) t) \frac{1}{e}J^\mu(0) \mid \Psi_i \vec{P_i} \rangle
         \label{main_top}
     \end{equation}
 
@@ -375,35 +411,34 @@ two-nucleon states.
     
 \section{3N bound state}
 
-    The 3N bound state is derived from a general Schr\"{o}dinger for 3N system
+    The 3N bound state is described by the Schr\"{o}dinger equation for 3N system
     and its total wave function obeys the following equation:
 
     \begin{equation}
-        \ket{\Psi_i} = G_0(E+i\epsilon)\sum_{j=1}^3 (V_j + V_4^j) \ket{\Psi_i},
+        \ket{\Psi} = G_0(E+i\epsilon)\sum_{j=1}^3 (V_j + V_4^j) \ket{\Psi},
         \label{psi3_total}
     \end{equation}
     where $G_0$ is a free propagator from \eq{g0}, $V_j$ - is a two-body potential
-    acting between nucleons $k$ and $l$ (j, k and l - are the numbers of each nucleon)
-    and $V_4^j$ is a component of three-body potential $V_4 = \sum_{j=1}^3 V_4^j$.
+    acting between nucleons $k$ and $l$ (j, k and l - numerate nucleons, $j,k,l \in {1,2,3}$ and $j \neq k \neq l$)
+    and $V_4^j$ is a component of three-body potential $V_4 = \sum_{j=1}^3 V_4^j$
+    symmetrical under exchange of nucleons $k$ and $l$,
     E - is a binding energy.
 
     \eq{psi3_total} can be split into 3 independent equations for
     so-called Faddeev components $\ket{\psi_j}$
 
     \begin{equation}
-        \ket{\Psi_i} = \sum_{j=1}^3 \ket{\psi_j}.
+        \ket{\Psi} = \sum_{j=1}^3 \ket{\psi_j},
         \label{faddeev_comps}
     \end{equation}
-
-    Using \eq{faddeev_comps} one can decompose \eq{psi3_total} into 
-    separate equations for each Faddeev component:
+    which fulfills separately
 
     \begin{equation}
-        \ket{\psi_j} = G_0(E+i\epsilon)(V_j + V_4^j) \ket{\Psi_i},
+        \ket{\psi_j} = G_0(E+i\epsilon)(V_j + V_4^j) \ket{\Psi}.
         \label{psi3_component}
     \end{equation}
 
-    Next I introduce a permutation operator P, which is a combination
+    Next, I introduce a permutation operator P, which is a combination
     of operators $P_{jk}$:
     
     \begin{equation}
@@ -412,59 +447,37 @@ two-nucleon states.
     \end{equation}
 
     The operator component $P_{jk}$ acting on the state interchange the momenta and  
-    quantum numbers of the nucleon number $j$ and$k$.
+    quantum numbers of the nucleons $j$ and $k$.
 
-    Using \eq{permutation} and \eq{faddeev_comps},
-    one can rewrite \eq{psi3_component} in the following form:
+    Using definitions \ref{permutation} and \ref{faddeev_comps},
+    one can rewrite \eq{psi3_component} as:
 
     \begin{equation}
-        \ket{\psi_j} = G_0(E+i\epsilon)t_j P \ket{\psi_i} + 
-        (1 + G_0(E+i\epsilon)t_j)G_0(E+i\epsilon)V_4^j(1+P)\ket{\psi_i},        
+        \ket{\psi_j} = G_0(E+i\epsilon)t_j P \ket{\psi_j} + 
+        (1 + G_0(E+i\epsilon)t_j)G_0(E+i\epsilon)V_4^j(1+P)\ket{\psi_j},
+        \label{fadeed_lse}
     \end{equation}
     where $t_j$ is a two-body t-operator which obeys \eq{top2} for corresponding 
     two-body potential $V_j$.
 
+The partial wave representation of the \eq{fadeed_lse} is obtained using
+following states:
 
+\begin{equation}
+    \ket{p,q,\alpha_{J,M_J}} = \ket{p,q,(ls)j, (\lambda, \frac{1}{2})I(jI)JM;(t\frac{1}{2})TM_T}_1,
+    \label{3N_PW}
+\end{equation}
+where index 1 states the choice of the Jakobi momenta, such that $p$ is a relative momentum of the nucleons 2 and 3.
+Values l, s and j are quantum numbers in the two-body subsystem consisted of nucleons 2 and 3. $\lambda$ is the 
+orbital angular momentum of the first particle which spin is $\frac{1}{2}$ and total angular momentum $I$.
+$J$ and $M_J$ are the total angular momentum of the 3N system and its projection on the z-axis respectively.
+$y$ is a total isospin of the 2-3 subsystem whereas $T$ and $MT$ are the total isospin of the 3N system and its projection on the z-axis.  
 
+Using \eq{3N_PW} we can write a partial-wave representation of the \eq{fadeed_lse}:
 
-
-\section{Photodisintegration transition amplitude for Nd state}
-\label{nd_state}
-
-    Analogously to the bound state, one can express a nucleon-deuteron
-    scattering state
-    using a permutation operator \eq{permutation}.
-
-    \begin{equation}
-        \ket{\Psi^{(-)}}^{Nd} = \frac{1}{\sqrt{3}}(1+P)\ket{\Psi^{(-)}_1}^{Nd}    
-    \end{equation}
-
-    A scattering state $\ket{\Psi^{(-)}_1}^{Nd}$ can be expressed
-    in terms of asymptotic state $\ket{\Phi^{Nd}_1}$, where particles
-    2 and 3 form a deuteron and the third particle (number 1) is a nucleon
-    which propagates freely with relativemomentum $\vec{q}_0$ with 
-    respect to the deuteron:
-
-    \begin{eqnarray}
-        \ket{\Psi^{(-)}_1}^{Nd} &\equiv& \lim_{\epsilon \rightarrow 0} 
-        i \epsilon G(E_{Nd} - i\epsilon)\ket{\Phi^{Nd}_1}\\
-        \ket{\Phi^{Nd}_1} &\equiv& \ket{\Phi_{d(2,3)}}\ket{\vec{q}_0},
-    \end{eqnarray}
-    where $\ket{\Phi_{d(2,3)}}$ is a deuteron wave function and 
-    $\ket{\vec{q}_0}$ - a free particle state. $E_{Nd}$
-    is a total energy of the 3N system:
-
-    \begin{equation}
-        E_{Nd} = E_d + \frac{3 |\vec{q}_0|^2}{4m},
-    \end{equation}
-    where $E_d$ is a deuteron binding energy and m - nucleon mass. 
-
-    The full propagator $G(E_{Nd})$ in this case takes a form:
-    
-    \begin{equation}
-        G(z)= \frac{1}{z - (H_0 + \sum_{i=1}^4V_i)}
-    \end{equation}
-
+\begin{equation}
+    eq3.15 (Skibinski~thesis)
+\end{equation}
 
 \section{3N scattering state}
 
@@ -483,6 +496,46 @@ two-nucleon states.
         \ket{\vec{p}(kl)\vec{q}(j)}\\
         E_{3N} &=& \frac{|\vec{p}|^2}{m} + \frac{3 |\vec{q}|^2}{4m},
     \end{eqnarray}
+
+
+
+
+\section{Photodisintegration transition amplitude for Nd state}
+\label{nd_state}
+
+    Analogously to the bound state, one can express a nucleon-deuteron
+    scattering state
+    using a permutation operator \eq{permutation}.
+
+    \begin{equation}
+        \ket{\Psi^{(-)}}^{Nd} = \frac{1}{\sqrt{3}}(1+P)\ket{\Psi^{(-)}_1}^{Nd}    
+    \end{equation}
+
+    Further a scattering state $\ket{\Psi^{(-)}_1}^{Nd}$ can be expressed
+    in terms of asymptotic state $\ket{\Phi^{Nd}_1}$, in which particles
+    2 and 3 form a deuteron and the third particle (nucleon 1)
+     propagates freely with a relative momentum $\vec{q}_0$ with 
+    respect to the deuteron:
+
+    \begin{eqnarray}
+        \ket{\Psi^{(-)}_1}^{Nd} &\equiv& \lim_{\epsilon \rightarrow 0} 
+        i \epsilon G(E_{Nd} - i\epsilon)\ket{\Phi^{Nd}_1}\\
+        \ket{\Phi^{Nd}_1} &\equiv& \ket{\Phi_{d(2,3)}}\ket{\vec{q}_0},
+    \end{eqnarray}
+    where $\ket{\Phi_{d(2,3)}}$ is a deuteron wave function and 
+    $\ket{\vec{q}_0}$ - a free particle state. $E_{Nd}$
+    is a total energy of the 3N system:
+
+    \begin{equation}
+        E_{Nd} = E_d + \frac{3 |\vec{q}_0|^2}{4m},
+    \end{equation}
+    where $E_d$ is the deuteron binding energy and m denotes nucleon mass. 
+
+    The full propagator $G(E_{Nd})$ in this case takes a form:
+    
+    \begin{equation}
+        G(z)= \frac{1}{z - (H_0 + \sum_{i=1}^4V_i)}
+    \end{equation}
 
 
     \section{Nuclear electromagnetic current}
