@@ -473,11 +473,25 @@ orbital angular momentum of the first particle which spin is $\frac{1}{2}$ and t
 $J$ and $M_J$ are the total angular momentum of the 3N system and its projection on the z-axis respectively.
 $y$ is a total isospin of the 2-3 subsystem whereas $T$ and $MT$ are the total isospin of the 3N system and its projection on the z-axis.  
 
-Using \eq{3N_PW} we can write a partial-wave representation of the \eq{fadeed_lse}:
+Using states defined in \eq{3N_PW}, we can write a partial-wave representation of the \eq{fadeed_lse}:
+\begin{equation}
+    \begin{aligned}
+        \left\langle p, q, \alpha_{J, M_J}\right. & \left|\psi_i\right\rangle=\frac{1}{E-\frac{p^2}{m}-\frac{3 q^2}{4 m}+i \epsilon}[ \\
+        & \sum_{\alpha^{\prime}, \alpha^{\prime \prime}} \int_0^{\infty} d q^{\prime \prime} q^{\prime \prime 2} \int_{-1}^1 d x t_{\alpha, \alpha^{\prime}}^{+}\left(p, \pi_1\left(q, q^{\prime \prime}, x\right), E-\frac{3 q}{4 m}\right) \\
+        * & \frac{\tilde{G}_{\alpha^{\prime}, \alpha^{\prime \prime}}\left(q^{\prime}, q^{\prime \prime}, x\right)}{\pi_1^{l^{\prime}} \pi_2^{l^{\prime \prime}}}\left\langle\pi_2, q^{\prime \prime}, \alpha_{J^{\prime \prime}, M_{J^{\prime \prime}}^{\prime \prime}} \mid \psi_i\right\rangle \\
+        +\quad & \sum_{\alpha^{\prime \prime}} \int_0^{\infty} d p^{\prime \prime} p^{\prime \prime 2} \int_0^{\infty} d q^{\prime \prime} q^{\prime \prime 2} V_{\alpha, \alpha^{\prime \prime}}^4\left(p, q, p^{\prime \prime}, q^{\prime \prime}\right)\left\langle p^{\prime \prime}, q^{\prime \prime}, \alpha_{J^{\prime \prime}, M_{J^{\prime \prime}}^{\prime \prime}} \mid \psi_i\right\rangle \\
+        +\quad & \sum_{\alpha^{\prime}, \alpha^{\prime \prime}} \int_0^{\infty} d q^{\prime} q^{\prime 2} \int_0^{\infty} d q^{\prime \prime} q^{\prime \prime \prime} \int_{-1}^1 d x V_{\alpha, \alpha^{\prime}}^4\left(p, q, \pi_1\left(q^{\prime}, q^{\prime \prime}, x\right), q^{\prime}\right) \\
+        +\quad & \frac{\tilde{G}_{\alpha^{\prime}, \alpha^{\prime \prime}}\left(q^{\prime}, q^{\prime \prime}, x\right)}{\pi_1^{l^{\prime}} \pi_2^{l^{\prime \prime}}}\left\langle\pi_2, q^{\prime \prime}, \alpha_{J^{\prime \prime}, M_{J^{\prime \prime}}^{\prime \prime}} \mid \psi_i\right\rangle\\
+        & +\sum_{\alpha^{\prime}, \alpha^{\prime \prime}} \int_0^{\infty} d p^{\prime} p^{\prime 2} \int_0^{\infty} d p^{\prime \prime} p^{\prime \prime 2} \int_0^{\infty} d q^{\prime \prime} q^{\prime \prime 2} t_{\alpha, \alpha^{\prime}}^{+}\left(p, p^{\prime}, E-\frac{3 q^2}{4 m}\right) \frac{1}{E-\frac{p^{\prime 2}}{m}-\frac{3 q^2}{4 m}+i \epsilon} \\ & \text { * } \quad V_{\alpha^{\prime}, \alpha^{\prime \prime}}^4\left(p^{\prime}, q, p^{\prime \prime}, q^{\prime \prime}\right)\left\langle p^{\prime \prime}, q^{\prime \prime}, \alpha_{J^{\prime \prime}, M_{J^{\prime \prime}}}^{\prime \prime} \mid \psi_i\right\rangle \\ & +\sum_{\alpha^{\prime}, \alpha^{\prime \prime}, \alpha^{\prime \prime \prime}} \int_0^{\infty} d p^{\prime} p^{\prime 2} \int_0^{\infty} d q^{\prime \prime} q^{\prime \prime 2} \int_0^{\infty} d q^{\prime} q^{\prime 2} \int_{-1}^1 d x t_{\alpha, \alpha^{\prime}}^{+}\left(p, p^{\prime}, E-\frac{3 q^2}{4 m}\right) \\ & \text { * } \frac{1}{E-\frac{p^{\prime 2}}{m}-\frac{3 q^2}{4 m}+i \epsilon} V_{\alpha^{\prime}, \alpha^{\prime \prime \prime}}^4\left(p^{\prime}, q, \pi_1\left(q^{\prime}, q^{\prime \prime}, x\right), q^{\prime}\right) \\ & \left.* \quad \frac{\tilde{G}_{\alpha^{\prime \prime \prime}, \alpha^{\prime \prime}}\left(q^{\prime}, q^{\prime \prime}, x\right)}{\pi_1^{l^{\prime \prime \prime}} \pi_2^{l^{\prime \prime}}}\left\langle\pi_2, q^{\prime \prime}, \alpha_{J^{\prime \prime}, M_{J^{\prime \prime}}}^{\prime \prime} \mid \psi_i\right\rangle\right] \text {, } \\ & 
+    \end{aligned}
+\end{equation}
+
+where
 
 \begin{equation}
-    eq3.15 (Skibinski~thesis)
+    V_{\alpha, \alpha^{\prime}}^4\left(p, q, p^{\prime}, q^{\prime}\right) \equiv\left\langle p, q, \alpha_{J, M_J}\left|V_4^{(1)}\right| p^{\prime}, q^{\prime}, \alpha_{J^{\prime}, M_{J^{\prime}}}^{\prime}\right\rangle
 \end{equation}
+    
 
 \section{3N scattering state}
 
@@ -545,35 +559,33 @@ Using \eq{3N_PW} we can write a partial-wave representation of the \eq{fadeed_ls
     \subsection*{Truncation error}
     \label{sec:trunc}
 
-    As it was mention above, each subsequent order of chiral
+    As it was mentioned above, each subsequent order of the chiral
     expansion provides us with more and more sophisticated
     potential which is expected to increase accuracy of data description.
     Starting from the leading order (LO) and coming next to
-    N2LO, N3LO and so on, we take into account more Feynmann diagrams 
+    N2LO, N3LO etc., we take into account more topologies (equivalents of Feynmann diagrams) 
     and in result potential is expected to provide us with more precise predictions
-    for the regarded process and observable. But the chiral expansion (as any expansion) 
+    for the regarded process and observables. However, the chiral expansion (as any expansion) 
     in principle can be continued up to the infinity, improving the resulting series.
-    In practice we are limited by a finite, rather small, number of terms 
+    In practice we are limited to a finite, rather small, order 
     and we would like to find out
     the uncertainty appearing from cutting off remaining part of the expansion.
-    This theoretical uncertainty is called a truncation error. 
-    Various ways of estimation its value
+    That type of theoretical uncertainty is called a truncation error. 
+    Various methods to estimate its value
     have been proposed \cite{epelkrebs2015, Epelbaum2015_trunc, Binder2015, Epelbaum_pos, Miller_arxiv}.
-    Such estimation is based on predictions at lower orders.
+    Typically predictions at lower orders serve as input information to get truncation error at given order.
     It is worth adding that Bayesian analysis is also used for truncation error estimation
-    % for the potential of each order of chiral expansion having predictions for some limited number
-    % of terms \cite{epelkrebs2015, Epelbaum2015_trunc, Binder2015, Epelbaum_pos}.
 
-    We use method proposed in \cite{Binder2015}.
-    Let's regard some observable $X^i(p)$ which is calculated at $i$-s order of chiral expansion 
+    We use the method proposed in \cite{Binder2015} which was shown to be equivalent to Bayesian approach.
+    Let's regard some prediction $X^i(p)$ for observable $x$ which is calculated at $i$-s order of chiral expansion 
     with expansion parameter $Q$ ($i = 0,2,3...)$\footnote{We do not have a first order of expansion
     because this term in chiral expansion is always vanished
     and NLO  corresponds to the quadratic term (number 2)}.
     Here $p$ specifies a momentum
-    scale of the current reaction in the center of mass frame (in the case of deuteron photodisintegration it would be a
+    scale of the current reaction in the center of mass frame (in the case of photodisintegration it would be a
     photon's momentum).  
 
-    If I define a difference between observable at each subsequent orders as:
+    If we define a difference between observable at each subsequent orders as:
 
     \begin{equation}
         \Delta X^{(2)} = |X^{(2)} - X^{(0)}|, \Delta X^{(i>2)} = |X^{(i)} - X^{(i-1)}|,
@@ -585,7 +597,7 @@ Using \eq{3N_PW} we can write a partial-wave representation of the \eq{fadeed_ls
         \label{trunc1}
     \end{equation}
         
-    The truncation error at order $i$ - $\delta X^{(i)}$ - is estimated using
+    The truncation error at $i$-th order, $\delta X^{(i)}$, is estimated using
     actual and expected values of the observable at 
     higher orders as following:
 
@@ -595,8 +607,8 @@ Using \eq{3N_PW} we can write a partial-wave representation of the \eq{fadeed_ls
         Q^{i+1-j} \left| \Delta X^{(j)} \right|. \right) \label{trunc3} 
     \end{eqnarray}
 
-    Additionally, following the \cite{Binder2015} I use the actual high-order predictions 
-    in order to specify uncertainties so that:
+    Additionally, following the \cite{Binder2015} I use also the actual high-order predictions 
+    (if known) in order to specify uncertainties so that:
 
     \begin{equation}
         \delta X^{(i)} \geq \max_{j,k} (|X^{j \geq i} - X^{k \geq i}|)
@@ -610,7 +622,7 @@ Using \eq{3N_PW} we can write a partial-wave representation of the \eq{fadeed_ls
     \end{equation}
 
     All the conditions above assume that we use the whole available information at hand.
-    
+    In \cite{Melendez_BayesTrunc} \tmp{????} it was shown that such method is equivalent to Bayesian approach of \cite{Melendez_BayesTrunc}.
 
 
     \subsection*{Cutoff dependency}
@@ -629,7 +641,7 @@ Using \eq{3N_PW} we can write a partial-wave representation of the \eq{fadeed_ls
         \end{figure}
 
     Another theoretical uncertainty comes from the choice of the cutoff parameter's value 
-    which was mentioned already.
+    of regulator described in chapter \tmp{??????? put link}.
 
    According to \cite{reinkrebs2018}, where the \gls{sms} potential was presented,
    four values of the cutoff parameter $\Lambda$ are recommended: 400, 450, 500 and 550 MeV.
