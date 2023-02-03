@@ -643,49 +643,89 @@ where
     Another theoretical uncertainty comes from the choice of the cutoff parameter's value 
     of regulator described in chapter \tmp{??????? put link}.
 
-   According to \cite{reinkrebs2018}, where the \gls{sms} potential was presented,
-   four values of the cutoff parameter $\Lambda$ are recommended: 400, 450, 500 and 550 MeV.
-   Using each of them one obtains different predictions which off course can further differ 
+    The free parameters of \gls{sms} potential have been obtained from data for 
+    % According to \cite{reinkrebs2018}, where the \gls{sms} potential was presented,
+   four values of the cutoff parameter $\Lambda$:
+   \SIlist[list-units = single]{400;450;500;550}{\mev} \cite{reinkrebs2018}.
+   Using each of whese values, one obtains different predictions which off course can further differ 
    from actual (experimental) value. Therefore the choice of $\Lambda$ value
    may affect a quality of the prediction.
 
-
-    Comparison of predictions obtained with different values of the 
-    cutoff parameter $\Lambda$ is presented on the Fig.~\ref{Cutoff_dep}.
+    To study that I also use the same four values of the $\Lambda$ parameter,
+    obtaining in that way four predictions each time.
+    That is exemplified in \fig{Cutoff_dep}  for the deuteron photodisintegration cross section for the
+    photon's energy $E_\gamma = \SIlist{30;100;140}{\mev}$.
+    The \gls{sms} model at N$^4$LO+ is used.
+    % Comparison of predictions obtained with different values of the 
+    % cutoff parameter $\Lambda$ is presented on the Fig.~\ref{Cutoff_dep}.
     Each subfigure shows a predictions for the total cross section as 
-    a function of the cutoff parameter for the photons energies 30, 100 and 140~MeV
+    a function of the cutoff parameter,
     normalized to the maximum value among all cross sections
-    obtained with various $\Lambda$ 
-    (at the chiral order N$^4$LO+).
-    As we can see,
+    obtained with various $\Lambda$.
+    As we can see, for that observable
     there is almost linear dependance with positive linearity coefficient value:
     with higher $\Lambda$ the cross section value increases as well.
-    The noticeable is also the fact, that with higher photon's energy,
-    the cutoff dependance becomes stronger: for $E_\gamma=30$~MeV
-    the maximal difference between predictions is around 0.5\% while
-    for 140~MeV it increases to more than 8\%. This results are
+    Note that with higher photon's energy,
+    the cutoff dependance becomes stronger: for $E_\gamma=\SI{30}{\mev}$
+    the maximal difference between predictions is around \SI{0.5}{\percent} while
+    for \SI{140}{\mev} it increases to more than \SI{8}{\percent}. This results are
     generally within our expectations that our model works better at
-    smaller energies. 
+    smaller energies
+    and is less sensitive to the $\Lambda$ value. LEt us remind that $\Lambda$ 
+    governs the behavior of the potential at small internucleon distances and only higher energy transfer probes that distances. 
 
 
 
-    \subsection*{Other uncertainies}
+    \subsection*{Other theoretical uncertainies}
 
-    There are a plenty possibilities were uncertainties may appear. 
-    Taking into account that all the results include calculations,
-    we can come up with a lot of places were numerical methods with limited 
-    precision come into the scene. First of all we have a potential which 
-    is being defined on some grid of points. So the choice of grid affect
-    a final results' precision. The same grid is also used for numerical integration
-    (e.g. in \eq{integral2}) where the final integral is also dependant on the points.
-    Usually, we use a grid ...{\textcolor{red} values}
+    There are obviously more sources of theoretical uncertainties. 
+    Our model has a number of either intrinsic limitations in precision or 
+    some simplifications which may be improved with further developments of the model.
+    
+    \paragraph{Nuclear currents}
+    At the moment we have only a single nucleon 
+    current consistent with the model available. In most cases it is not enough 
+    to proper describe regarded processes which will be confirmed in Chapter~\ref{chap:results}.
+    We deal with this problem applying the Siegert theorem which allows to include
+    some contribution from the 2N current, which is still not complete.
 
-    In addition our approach is based on the partial wave decomposition which
+    \paragraph{Nonrelativistic approach}
+    All the results presented here does not include relativistic corrections.
+    At the lower energies the relativistic contribution might not be crucial,
+    but at the region with higher energy we may see a lack of precision.
+    This well be also confirmed and discussed regarding the total cross section
+    for the deuteron photodisintegration \fig{TOTAL_CROSS}.
+    
+    \paragraph{Uncertainties in the potential free parameters}
+    \tmp{????}
+
+    \paragraph{Uncertainties from the numerical method}
+    All the results include numerical calculations,
+    so we can come up with a lot of places were numerical methods with limited 
+    precision come into the scene. 
+    Our approach is based on the partial wave decomposition which
     supposes that limited numer of partial waves are included 
-    (usually for 2N scattering we use$J^{max}=4$ which corresponds to 18 partial waves).
+    (usually for 2N scattering we use $j^{max}=4$ which corresponds to 18 partial waves).
+    For 3N calculations we use $J^{max}=5$ which corresponds to 40 partial waves.
+    In addition, we with some 
+    grid of points which is used for the calculation of potential, wave function, numerical integration etc. 
+    The choice of grid affect
+    a final results' precision. 
+    % The same grid is also used for numerical integration
+    % (e.g. in \eq{integral2}) where the final integral is also dependant on the points.
+    Usually, we use a grid {\tmp{ of ... values}} which was proven to make resulting
+    uncertainty small.
 
-    Finally every computer calculations include limited machine precision which
-    can be noticeable for a complex calculations. 
+    \paragraph{Model choice}
+    We focus on the \gls{sms} potential, but using another model of interaction 
+    leads to different predictions. That difference is also a theoretical uncertainty thus
+    we use predictions obtained with AV18 model in order to compare these predictions.  
+
+    \paragraph{Machine precision}
+    Finally every computer calculations include limited numerical machine precision which
+    can be noticeable for a complex calculations. We perform our calculation via CPU machine 
+    were particular choice of the processor and memory card may lead to numerical uncertainty.
+    Nevertheless this uncertainty is much smaller then other discussed above. 
 
 
 

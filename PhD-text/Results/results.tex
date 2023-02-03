@@ -1,9 +1,19 @@
-\chapter{Results}
+\chapter{Results}\label{chap:results}
+
+    In this chapter I will show results of my calculations. I start from the deuteron photodisintegraion process
+    (Section~\ref{sec:de_results}),
+    presenting predictions and discussing the cross (subsection~\ref{sec:cross_results}) 
+    and polarization observables  (subsection~\ref{sec:polarisation_results}).Next, in 
+    Section~\ref{sec:hel_results} I will present my predictions of the observables
+    for $^3$He photodisintegration.
+    \tmp{...}
+    Finaly in Section~\ref{sec:pion_results} I will discuss results of the calculations
+    for pion absorption from the lowest atomic orbital.
 
 \section{Deuteron photodisintegraion}
-
+\label{sec:de_results}
     \subsection{Cross section}
-    \label{cross_results}
+    \label{sec:cross_results}
 
     In this section I will show the results of my calculation starting from the
     deuteron photodisintegration process. One of the most
@@ -17,37 +27,46 @@
     In Fig.~\ref{TOTAL_CROSS_small} and Fig.~\ref{TOTAL_CROSS} 
     I present predictions for the
     total cross section $\sigma_{tot}~[\mu\text{b}]$ which I obtained
-    using the chiral potential at the order N$^4$LO+ and with 
-    the cutoff parameter $\Lambda=\SI{450}{\mev}$ (my best predictions).
+    using the chiral \gls{sms} potential at the N$^4$LO+ order and with 
+    the cutoff parameter $\Lambda=\SI{450}{\mev}$.
     From Fig.~\ref{TOTAL_CROSS_small}, we see that at low photon energies
     (below 50 MeV) predictions which include 2N contributions
+    to the electromagnetic current
     via the Siegert approach, describe experimental results quite well.
     We can suppose that the difference with experimental data may come from 
     the statistical uncertainty of  the data itself, as my predictions
-    are often in between the data from different sources.
-    Moreover even at such low energies the 1N current is clearly not enough
-    to describe this observable as dashed pink line has much lower values and
-    the difference becomes even larger with larger photon's energies.
+    are often in between the data from different experiments.
+    Moreover, even at such low energies the 1N current is clearly not enough
+    to describe cross section - dashed pink line has much lower values and
+    the difference becomes even larger with increasing photon energies.
     At 5~MeV the difference between 1N predictions
     and 1N + Siegert is 297.54~$\mu$b (10.8\%), increasing energy to 10 MeV
     it is 304.28~$\mu$b (20.4\%) and at 20~MeV it is 229.50~$\mu$b (39.2\%).
-    Even with energy increasing from 5~MeV to 20~MeV -
-    the difference between predictions has changed from 10.8\% to 39.2\% and
-    from \fig{TOTAL_CROSS_small} we see that the gap  continues increasing even more with larger energies.
+    % Even with energy increasing from 5~MeV to 20~MeV -
+    % the difference between predictions has changed from 10.8\% to 39.2\% and
+    From \fig{TOTAL_CROSS_small} we see that the gap between these predictions
+     continues increasing even more with larger energies.
+    This tells us that Siegert approach works quite well as no additional 2N contributions are taken into account.
+    The cross section predictions corrected via Siegert 2N contribution  reproduce 
+    experimental data to some extend.
 
     Here and later the relative difference between set of predictions ($x_1$, $x_2$, ..., $x_N$) is calculated
     using the formula:
 
     \begin{equation}
-        \Delta = \frac{\max(x) - \min(x)}{\frac{1}{N}\sum_{i=1}^N x_i} \cdot 100\%
+        \Delta = \frac{\max(x) - \min(x)}{\frac{1}{N}\sum_{i=1}^N x_i} \cdot 100\%,
     \end{equation}
+    so in the specific case of comparison the date with 1N current and "1N + Siegert" we
+    calculate relative difference as 
+    $\Delta = \frac{|\sigma^{1N+Siegert} - \sigma^{1N}|}{0.5(\sigma^{1N+Siegert} + \sigma^{1N})}$.
 
 
-    Having look at the higher energies (above 50~MeV, Fig.~\ref{TOTAL_CROSS})
+    At the higher energies (above $E_\gamma=\SI{50}{\mev}$, Fig.~\ref{TOTAL_CROSS})
     we can notice that the discrepancy with experimental data is not only 
-    quantitative, but also qualitative.  There is a peak around 300~MeV
-    in the experimental data from \cite{Bernabei1986} which is not
-    reflected in my predictions. The reason of such discrepancy 
+    quantitative, but also qualitative.  
+    This starts already above $E_\gamma=\SI{50}{\mev}$ and is especially pronounced at peak around \SI{300}{\mev}
+    seen in the experimental data from \cite{Bernabei1986} which is not
+    reflected in predictions. The reason of such discrepancy 
     is most likely coming from the relativistic effects
     which I do not take into account. At higher energies their contribution
     becomes larger and here we observe a clear justification of such a lack.
@@ -286,7 +305,7 @@
     \clearpage
 
     \subsection{Polarisation observables}
-    \label{tensor_results}
+    \label{sec:polarisation_results}
 
     In this subsection I will present my predictions for 
     selected polarisation observables.
@@ -837,6 +856,7 @@
 \clearpage
 
 \section{Helium photodisintegration}
+\label{sec:hel_results}
 
 \subsection{3N photodisintegration}
 
@@ -1063,7 +1083,9 @@
     \end{figure}
 
     \clearpage
-    \section{Pion absorption from the lowes atomic orbital}
+
+\section{Pion absorption from the lowest atomic orbital}
+\label{sec:pion_results}
 
     \subsection{Pion absorption in $^3$He}
 
