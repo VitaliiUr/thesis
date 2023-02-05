@@ -55,12 +55,16 @@
 
     \begin{equation}
         \Delta = \frac{\max(x) - \min(x)}{\frac{1}{N}\sum_{i=1}^N x_i} \cdot 100\%,
+        \label{eq:relative_diff}
     \end{equation}
     so in the specific case of comparison the date with 1N current and "1N + Siegert" we
     calculate relative difference as 
     $\Delta = \frac{|\sigma^{1N+Siegert} - \sigma^{1N}|}{0.5(\sigma^{1N+Siegert} + \sigma^{1N})}$.
 
-
+    While my main goal is to describe deuteron photodisintegration at low energies, 
+    where predictions seem to be well describing experimental data at
+    $E_\gamma \lesssim \SI{50}{\mev}$, it is also interesting to check how 
+    present theory works at higher energies.
     At the higher energies (above $E_\gamma=\SI{50}{\mev}$, Fig.~\ref{TOTAL_CROSS})
     we can notice that the discrepancy with experimental data is not only 
     quantitative, but also qualitative.  
@@ -68,31 +72,32 @@
     seen in the experimental data from \cite{Bernabei1986} which is not
     reflected in predictions. The reason of such discrepancy 
     is most likely coming from the relativistic effects
-    which I do not take into account. At higher energies their contribution
-    becomes larger and here we observe a clear justification of such a lack.
+    which we do not take into account within this work.
     It is also confirmed by the calculations in \cite{ArenhovelPhotodisint1991}
-    where authors discuss different potentials applying to the Deuteron photodisintegration.
-    Despite authors use a simpler potentials that ours, their predictions obtained with and without including
-    relativistic effects show, that such a peak appears in the latter case. 
+    where authors discuss different potentials applying to the deuteron photodisintegration.
+    Despite authors use a much simpler potentials that used in this thesis, their predictions obtained with including
+    some relativistic effects show, that such a peak appears in predictions. 
     
-    Nevertheless my main goal is to describe deuteron photodisintegration at low energies and predictions seem to be well describing experimental data at
-    $E_\gamma \lesssim \SI{50}{\mev}$. The higher energies region is presented in order
+    
+     The higher energies region is presented in order
     to investigate how far the predictions are from experimental results and 
-    what can be improved in the future (e.g. include relativistic part). 
+    what should be improved in the future (e.g. include relativistic part). 
     
     \begin{figure}[h]
         \begin{center}
         \includegraphics[width=0.75\textwidth]{Figures_De/TOTAL_CROSSSECTION_SMALL_REGION.pdf}
         \end{center}
-        \caption{Total cross section as a function of the photon's energy E$_\gamma$.
+        \caption{Total cross section $\sigma_{tot}$ for the deuteron photodisintegration process
+        as a function of the photon's energy E$_\gamma$.
         Solid blue line presents results obtained with SN+Siegert 
-        and dashed pink line - with only SN current.
+        and dashed pink line - predictions based on the SN current.
+        In both cases the \gls{sms} N$^4$LO+ $\Lambda=\SI{450}{\mev}$ force is used.
         The experimental data are from \cite{Bernabei1986} (black filled circles),
         \cite{BOSMAN1979} (empty circles),
-        \cite{ARENDS1984} (squares),
+        % \cite{ARENDS1984} (squares),
         \cite{Skopik1974} (triangles),
-        \cite{Moreh1989} (cross "X") and
-        \cite{Birenbaum1985} (dimonds).
+        \cite{Moreh1989} (bold cross "X") and
+        \cite{Birenbaum1985} (diamonds).
         }
         \label{TOTAL_CROSS_small}
     \end{figure}
@@ -102,7 +107,9 @@
         \begin{center}
         \includegraphics[width=0.75\textwidth]{Figures_De/TOTAL_CROSSSECTION.pdf}
         \end{center}
-        \caption{The same as on the Fig.~\ref{TOTAL_CROSS} but for the energy range 2.5 - 400 MeV.
+        \caption{The same as in \fig{TOTAL_CROSS} but for the energy range 2.5 - 400 MeV.
+        The experimental data are the same plus data above $E_\gamma=\SI{200}{\mev}$ from
+        \cite{ARENDS1984} (crosses).
         }
         \label{TOTAL_CROSS}
     \end{figure}
@@ -117,21 +124,30 @@
         \label{Trunc_100}
     \end{figure}
     
-    In Fig. \ref{Trunc_100} I present 
-    an example of such a procedure being applied to the
+    In Fig. \ref{Trunc_100} I present the
     total cross-section for the deuteron photodisintegration 
-    at three photon energie values: \SIlist[list-units = single]{30;100;140}{\mev} as a function of the chiral order.
+    at three photon energy values: \SIlist[list-units = single]{30;100;140}{\mev} as a function of the chiral order.
     Error bands show truncation errors calculated using Eq.~\ref{trunc2}~-~\ref{trunc5}.
-    One can see that truncation errors are being reduced with each consecutive chiral order: for LO it is the biggest
-    while for N4LO+ it is hardly visible at presented scale.
-    In each case the prediction is within the uncertainty range of lower orders.
-    
+    One can see that truncation errors are being reduced with each consecutive chiral order. 
+    At LO it is the biggest: \SI{29.46}{\percent} at $E_\gamma = \SI{30}{\mev}$,
+    \SI{29.46}{\percent} at $E_\gamma = \SI{100}{\mev}$ and
+    \SI{41.82}{\percent} at $E_\gamma = \SI{140}{\mev}$.
+    At N4LO+ it is hardly visible at presented scale and amounts up to 
+    \SI{1.3}{\percent} for each energy.
+    For each energy the prediction is within the uncertainty range of lower orders.
+    We see that at lower energy $\sigma_{tot}$ already at NLO reaches valve which remains
+    practically unchanged at higher orders.
+    Contrary, at two higher energies, contributions from higher orders are necessary to obtain 
+    stable predictions 
+
         
-    Figures \ref{Diff_cross_order} - \ref{Diff_cross_err} show my predictions for the differential cross section
-    $\frac{d\sigma}{d\Omega}$, where each subfigure 
-    presents results obtained using different values of the photon energy:
-    \SIlist[list-units = single]{30;100;140}{\mev}
-    with 2N current's contributions taken into account via Siegert theorem. 
+    Figures \ref{Diff_cross_order_pw} and \ref{Diff_cross_err} show my predictions 
+    for the differential cross section
+    $\frac{d\sigma}{d\Omega}$.
+    In both figures the top, middle and bottom row shows predictions at 
+    $E_\gamma = \SIlist[list-units = single]{30;100;140}{\mev}$, respectively.
+    with 2N current's contributions taken into account via Siegert theorem.
+    If not stated otherwise I use th \gls{sms} N$^4$LO+ potential.
     % They all are organized in a similar way: the left panel
     % presents predictions obtained using \gls*{sms} potential at different chiral orders (from LO to N$^4$LO+)
     % with cutoff parameter $L = \SI{450}{\mev}$,
@@ -139,39 +155,43 @@
     % for each chiral order starting
     % from NLO. And the right panel shows predictions obtained with different values of the
     % cutoff parameter at the chiral order N$^4$LO+.
-    Fig.~\ref{Diff_cross_order} shows the predictions obtained using 
-    different chiral orders (from LO to N$^4$LO+) and with $\Lambda=$~\SI{450}{\mev}.
-    Comparing the best predictions (N$^4$LO+, $\Lambda=$~\SI{450}{\mev}) for each
-    subfigure, we can
+    The left column of \fig{Diff_cross_order_pw} shows the predictions obtained at 
+    different chiral orders (from LO to N$^4$LO+) and with $\Lambda=\SI{450}{\mev}$.
+    Looking at the best predictions (N$^4$LO+, $\Lambda=$~\SI{450}{\mev}) for each
+    energy, I
     conclude that the higher photon's energy is, the larger is 
     difference between the theoretical predictions and experimental 
-    measurements. At $E_\gamma = $~\SI{30}{\mev} (top panel) my predictions
+    data. At $E_\gamma = \SI{30}{\mev}$ (top panel) my predictions
     almost perfectly match the data and the difference is almost always
-    within the experimental uncertainties. Going to the energy \SI{100}{\mev} (middle subfigure)
-    the descriptions seems not to be such good: theoretical
-    predictions match the data qualitatively, but
-    the gap in the angles range ($\ang{60} < \theta_p < \ang{130}$) 
-    is around \SI{30}{\percent} ({\color{red} check the value!}).
-    Looking at the bottom figure, it is even hard to say about 
+    within the experimental uncertainties. 
+    Moving to  $E_\gamma=\SI{100}{\mev}$ (middle row)
+    the description of the data is deteriorating: theoretical
+    predictions still match the data qualitatively, but
+    the gap for proton emission angle $\theta_p$ in range ($\ang{60} < \theta_p < \ang{130}$) 
+    is up to \SI{32}{\percent} (of the predicted value) and relative difference is up to
+    \SI{7}{\percent} (calculated with \eq{eq:relative_diff}).
+    At the highest energy(bottom figure), it is even hard to say about 
     good qualitative description: the general trend of the
-    angular dependance is presented, but still the predictions are 
-    far from {\color{red} the ?} experimental values.
+    angular dependance is presented, but the predictions are 
+    far from the experimental points.
+    We observe improvements introduced by each subsequent chiral order, but 
+    stabilization shows that some ingredients are missing.
 
-    Figures for each energy confirm the convergence 
+    Obtained results at each energy confirm the convergence 
     of the predictions with respect to the chiral order.
-    We see that the curves at LO are far from both experimental 
+    We see that the cross section at LO is far from both experimental 
     data and the best potential's predictions (N$^4$LO+) and
-    the higher is photon's energy, the larger is this
+    the higher photon's energy, the larger is this
     difference. With each subsequent chiral order, the 
     curves are more closer to each other and the difference
-    between N$^4$LO and N$^4$LO+ is hardly visible at current scale.
-    The relative difference at \SI{30}{\mev} around the point of maximum 
+    between N$^4$LO and N$^4$LO+ is hardly visible at scale used in \fig{Trunc_100}.
+    The relative difference between these two predictions at $E_\gamma=\SI{30}{\mev}$ around the point of maximum 
     ($\theta_p = \ang{80}$) is \SI{0.05}{\percent} which is \SI{0.02}{\micro \barn \per \steradian};
     at \SI{100}{\mev} and $\theta_p = \ang{107}$ it is \SI{0.79}{\percent} (\SI{0.025}{\micro \barn \per \steradian});
-    and at \SI{140}{\mev} (same angle) it is 1.80\% - 0.043 \unit{\micro \barn \per \steradian}.
+    and at \SI{140}{\mev} (same angle) it is \SI{1.8}{\percent} (\SI{0.043}{\micro \barn \per \steradian}).
     Having such a small differences between predictions from two highest chiral orders,
     I can conclude that predictions are converged and 
-    further chiral orders would rather not bring large contribution 
+    using NN potential at subsequent chiral orders would rather not bring large contribution 
     to the cross section values. 
     The difference with experimental data is rather systematic 
     and is independent on the chiral order. 
@@ -624,7 +644,7 @@
     to describe data quantitatively for $T_{22}$, but the growth is presented there. 
 
     Similar situation is on the Figures \ref{tensor_energy_24-48} and \ref{tensor_energy_70-102}
-    where I show an energy dependance of Deuteron analyzing power components for 
+    where I show an energy dependance of deuteron analyzing power components for 
     specific angular ranges (following the data from \cite{rachek2007}).
     Predictions for $T_{20}$ are able to reflect the experimental results,
     while for $T_{21}$ and $T_{22}$ predictions are reasonable (quantitative-wise) 
