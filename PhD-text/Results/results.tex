@@ -274,28 +274,32 @@
     \begin{figure}[h]
         \centering
         \begin{subfigure}[t]{0.46\textwidth}
-            \includegraphics[width=\textwidth]{Figures_De/CROSS2_order_vert.pdf}
             \caption{}
+            \includegraphics[width=\textwidth]{Figures_De/CROSS2_order_vert.pdf}
             \label{Diff_cross_order}
         \end{subfigure}
         \begin{subfigure}[t]{0.46\textwidth}
-            \includegraphics[width=\textwidth]{Figures_De/Diff_cross_pw_1nc.pdf}
             \caption{}
+            \includegraphics[width=\textwidth]{Figures_De/Diff_cross_pw_1nc.pdf}
             \label{Diff_cross_pw_1nc}
         \end{subfigure}
-        \caption{Differential cross section as a function of the outgoing proton angle in the center of mass frame 
-        for the photon's energy \SI{30}{\mev} (top), \SI{100}{\mev} (middle) and \SI{140}{\mev} (bottom).
-        {\bf (a)} Results obtained using \gls*{sms} potential
+        \caption{Differential cross section $\frac{d^2\sigma}{d\Omega}$
+        as a function of the outgoing proton momentum polar angle $\theta_p$ in the center of mass frame 
+        for the photon energy \SI{30}{\mev} (top), \SI{100}{\mev} (middle) and \SI{140}{\mev} (bottom).
+        {\bf (a)} Results obtained using the \gls{sms} potential
         at different chiral orders (from LO to N$^4$LO+) with the cutoff parameter $\Lambda=\SI{450}{\mev}$ and 
-        2NC contributions taking via Siegert theorem.
-        For the sake of comparison, predictions obtained with the \gls*{av18} potential are on both figures as well.
+        2NC contributions taking via the Siegert theorem.
+        For the sake of comparison, predictions obtained with the \gls*{av18} potential are shown
+        by dashed-dotted purple line.
         Data points (filled and empty circles) are from \cite{Ying_Experiment_Deut}
         for $E_\gamma=\SIlist[list-units = single]{30; 100}{\mev}$
         and \cite{DeSanctis_Experiment_Deut} for $E_\gamma=\SI{140}{\mev}$.
-        {\bf (b)} Predictions obtained with chiral N$^4$LO+ potential and $\Lambda=\SI{450}{\mev}$.
-        Blue solid line is a best predictions we have (plane-wave plus rescattering parts, 1NC + Siegert), pink dashed line shows predictions obtained with
-        single-nucleon current only (without Siegert contributions) and green dashed-dotted line
-        is a prediction with plane-wave part only - without rescattering.
+        {\bf (b)} Predictions obtained with the chiral N$^4$LO+ potential and $\Lambda=\SI{450}{\mev}$
+        with various models of nuclear current(1N and 2N) and scattering state.
+        The blue solid curve is plane-wave plus rescattering parts, 1NC + Siegert(the same as N$^4$LO+ line in (a)).
+        THe pink dashed curve shows predictions obtained with
+        the single-nucleon current only (without applying the Siegert theorem) and the green dashed-dotted
+        curve represents predictions with the full current(1N + Siegert) but plane-wave part only.
         }
         % Results in {\bf (a)} are obtained using \gls*{sms} potential
         % at different chiral orders (from LO to N$^4$LO+) with the cutoff parameter $\Lambda=\SI{450}{\mev}$ and 
@@ -315,26 +319,27 @@
     \begin{figure}[h]
         \centering
         \begin{subfigure}[t]{0.46\textwidth}
+            \caption{Truncation error bands.}
             \includegraphics[width=\textwidth]{Figures_De/CROSS2_truncation_vert.pdf}
-            \caption{ Truncation error bands.}
             \label{Diff_cross_truncation}
         \end{subfigure}
         \begin{subfigure}[t]{0.46\textwidth}
+            \caption{Cutoff dependance.}
             \includegraphics[width=\textwidth]{Figures_De/CROSS2_cutoff_vert.pdf}
-            \caption{Cutoff dependance  of predictions.}
             \label{Diff_cross_cutoff}
         \end{subfigure}
         \caption{Theoretical uncertainies 
         for the differential cross section $\frac{d^2\sigma}{d\Omega}$
         as a function of the outgoing proton's momentum polar angle $\theta_p$ in the center of mass frame 
-        for the photon's energy is \SI{30}{\mev} (top row), \SI{100}{\mev} (middle row) and \SI{140}{\mev} (bottom row).
+        for the photon energy is \SI{30}{\mev} (top row), \SI{100}{\mev} (middle row) and \SI{140}{\mev} (bottom row).
         {\bf(a)} The truncation error bands for each energy in a corresponding row. 
-        Results are obtained using potential with different chiral orders (from NLO to N$^4$LO+) 
-        with cutoff parameter $\Lambda=\SI{450}{\mev}$ and 2NC contributions taking via Siegert approach.
-        {\bf (b)} Predictions obtained using different values of the cutoff parameter $\Lambda$
-        (double-dotted-dashed red line presents results obtaining with 
-        a cutoff values $\Lambda=\SI{400}{\mev}$, solid black line - \SI{450}{\mev}, dashed green line - \SI{500}{\mev}
-        and dotted blues line - \SI{550}{\mev}) and the chiral potential N$^4$LO+. 
+        Results are obtained using the \gls{sms} potential at different chiral orders (from NLO to N$^4$LO+) 
+        with the cutoff parameter $\Lambda=\SI{450}{\mev}$ and 2NC contributions taking via the Siegert approach.
+        {\bf (b)} Predictions obtained using different values of the cutoff parameter $\Lambda$.
+        The double-dotted-dashed red curve, the solid black line, the dashed green line
+        and the dotted blue line represent predictions obtained 
+        with $\Lambda=\SIlist[list-units = single]{400;450;500;550}{\mev}$ respectively
+        and the chiral potential N$^4$LO+. 
         Data points are the same as in \fig{Diff_cross_order}}
         \label{Diff_cross_err}
     \end{figure}
