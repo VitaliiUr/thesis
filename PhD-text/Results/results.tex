@@ -858,9 +858,9 @@
         \end{center}
         \caption{The photon asymmetry $\Sigma_\gamma$ 
         as a function of the photon energy  
-        with fixed outgoing proton angle $\theta_p=90^\circ$.
+        at the fixed outgoing proton's momentum polar angle $\theta_p=90^\circ$.
         Each curve corresponds to the particular value of the cutoff parameter
-        and chiral potential used here is \gls{n4lo+}.
+        and chiral potential used here is the \gls{n4lo+} one.
         Filled circles are experimental data from \cite{delbianco_1981},
         empty circles - from \cite{depascale_asymmetry}.}
         \label{asymmetry_90deg}
@@ -896,14 +896,16 @@
         \end{subfigure}
         \caption{Proton polarisation $P_y(p)$ 
         \label{PY_30_100_vert}
-        as a function of the outgoing proton angle in the center of mass frame 
-        for the photon energy \SI{30}{\mev} (a) and \SI{100}{\mev} (b).
-        Top figure presents results obtained using potential
-        with different chiral orders (from LO to \gls{n4lo+}) with cutoff parameter $\Lambda=\SI{450}{\mev}$.
-        The middle pane shows truncation errors for each 
-        chiral order starting from NLO and
-        bottom figure presents a cutoff dependency (chiral potential \gls{n4lo+}).
-        For the sake of comparison, predictions obtained with \gls*{av18} potential are on  figures as well.}
+        as a function of the outgoing proton's momentum polar angle in the center of mass frame 
+        with the photon energy \SI{30}{\mev} (a) and \SI{100}{\mev} (b).
+        Top figures present results obtained using potential
+        with different chiral orders (from \gls{lo} to \gls{n4lo+}) with cutoff parameter $\Lambda=\SI{450}{\mev}$.
+        The middle panel show truncation errors for each 
+        chiral order starting from \gls{nlo} and
+        bottom figures present a cutoff dependency for predictions
+        based on the \gls{sms} \gls{n4lo+} potential.
+        For the sake of comparison, predictions obtained with the \gls*{av18} potential 
+        are shown as well.}
     \end{figure}
 
 
@@ -950,15 +952,9 @@
             \includegraphics[width=\textwidth]{Figures_De/POLNOUT2(y)_100mev_neuteron.pdf}
             \label{Pn_100_vert}
         \end{subfigure}
-        \caption{Neuteron polarisation $P_y(n)$ 
-        as a function of the outgoing neuteron angle in the center of mass frame 
-        for the photon energy 2.75 MeV(a) and \SI{100}{\mev}(b).
-        Top row presents results obtained using potential
-        with different chiral orders (from LO to \gls{n4lo+}) with cutoff parameter $\Lambda=\SI{450}{\mev}$.
-        The middle pane shows truncation errors for each 
-        chiral order starting from NLO and
-        bottom figure presents a cutoff dependency (chiral potential \gls{n4lo+}).
-        Experimental data is from \cite{Jewell_neuteronpolarization} (empty circles)
+        \caption{The same as in \fig{PY_30_100_vert} but for the neuteron polarisation
+        $P_y(n)$ and at photon energies \SI{2.75}{\mev} {\bf (a)} and \SI{100}{\mev} {\bf (b)}.
+        Data are from \cite{Jewell_neuteronpolarization} (empty circles)
         and \cite{CAMERON_neuteronpolarization} (filled circles).}
         \label{Pn_2p75_100}
     \end{figure}
@@ -971,15 +967,15 @@
 
 \subsection{3N photodisintegration}
 
-    In this section I will demonstrate predictions
-    for observables from $^3\text{He} \rightarrow p + p + n$ process.
+    In this section I will discuss results
+    for $^3\text{He} \rightarrow p + p + n$ process.
     
     In the \fig{CROSS_HE_EXCL_30} I demonstrate a differential cross section 
-    $\frac{d^5\sigma}{d\Omega_1d\Omega_2}$ as a function of the S curve position.
+    $\frac{d^5\sigma}{d\Omega_1d\Omega_2dS}$ as a function of the S arc length.
     The photon energy is  E$_\gamma=\SI{30}{\mev}$ and the kinematic configuration
     $\theta_1 = \ang{15}$, $\phi_1 = \ang{0}$,
     $\theta_2 = \ang{15}$, $\phi_2 = \ang{180}$; predictions have been obtained without 3NF.
-    We see that only NLO and \gls{n2lo} introduce relatively large truncation error.
+    We see that only \gls{nlo} and \gls{n2lo} introduce relatively large truncation error.
     The maximal width of a band for NLO is \SI{37.6}{\percent} at $S=\SI{10}{\mev}$,
     for \gls{n2lo} it is \SI{12.4}{\percent} at the same point and it is gradually decreasing
     coming to \SI{0.13}{\percent} at \gls{n4lo+}.
@@ -996,9 +992,9 @@
             $\theta_1 = \ang{15}$, $\phi_1 = \ang{0}$,
             $\theta_2 = \ang{15}$, $\phi_2 = \ang{180}$.
             The left figure presents truncation error bands obtained using potential
-            with different chiral orders (from NLO to \gls{n4lo+}) with
+            with chiral orders from \gls{nlo} to \gls{n4lo+}, and with
             cutoff parameter $\Lambda=\SI{450}{\mev}$.
-            The right figure presents a cutoff dependency (chiral potential \gls{n4lo+}).
+            The right figure presents a cutoff dependency at \gls{n4lo+}.
             Results are obtained with two-nucleon force only.}
             \label{CROSS_HE_EXCL_30}
         \end{figure}
@@ -1009,81 +1005,71 @@
     decreasing to \SI{2.2}{\percent} at \gls{n4lo+} which is around 3 times larger than
     it was in predictions with E$_\gamma=\SI{30}{\mev}$.
     The cutoff spread also becomes larger with increasing energy value: \SI{9.0}{\percent}
-    at the same (maximum) point which is also $\sim$3 times larger than the one we observed
-    for lower energy.
+    at the same (maximum) point which is also $\sim 3$ times bigger than the one we observed
+    for the lower energy.
 
         \begin{figure}[h]
             \begin{center}
             \includegraphics[width=0.9\textwidth]{Figures_HE/CROSS_excl_trunc_100mev.pdf}
             \end{center}
-            \caption{The same as on Fig.~\ref{CROSS_HE_EXCL_30} but 
+            \caption{The same as in \fig{CROSS_HE_EXCL_30} but 
             for the photon energy E$_\gamma=100$~MeV}
             \label{CROSS_HE_EXCL_100}
         \end{figure}
 
-    Next I come to other angular configurations for E$_\gamma=\SI{100}{\mev}$, starting with 
+    Reults for other angular configurations at 
     $\theta_1 = \ang{75}$, $\phi_1 = \ang{75}$,
-    $\theta_2 = \ang{75}$, $\phi_2 = \ang{105}$
-    demonstrated on \fig{CROSS_HE_EXCL_75_75_75_105}.
-    Similar predictions but with 3NF contribution is presented on \fig{CROSS_HE_EXCL_75_75_75_105_3NF}.
+    $\theta_2 = \ang{75}$, $\phi_2 = \ang{105}$ are
+    demonstrated in \fig{CROSS_HE_EXCL_75_75_75_105}.
+    The top row shows results obtained with 2NF only, while predictions obtained with 3NF are shown
+    on the bottom row.
     It seems that 3NF does not change much the convergence with respect to the chiral order:
     truncation error band at the point of maximum $S=\SI{35}{\mev}$ (\gls{n4lo+})
-    is \SI{1.11}{\percent} and \SI{1.16}{\percent} with and without 3NF respectively.
-    So it is almost the same, meaning that 3NF contribution does not affect chiral order
-    convergence much.
+    is \SI{1.11}{\percent} and \SI{1.16}{\percent} with and without 3NF, respectively.
+    So it is almost the same, meaning that 3NF contribution arising starting from \gls{n2lo} order
+    does not affect chiral order convergence much.
 
-    The cutoff dependence, in turn, is affected by 3NF presence. Predictions with 2NF only have
-    \SI{13.7}{\percent} spread at the same maximum point, while predictions with 3NF
-    have  \SI{1.23}{\percent}, so the difference is tremendous.
+    The cutoff dependence, in turn, is affected by the 3NF presence. Predictions with 2NF only have
+    \SI{13.7}{\percent} spread at the same maximum point $S=\SI{35}{\mev}$, while predictions with 3NF
+    have only \SI{1.23}{\percent} relative spread, so the difference is tremendous.
 
         \begin{figure}[h]
             \begin{center}
-                \includegraphics[width=0.9\textwidth]{Figures_HE/CROSS_excl_trunc_100mev_75_75_75_105_2NF.pdf}
+                \includegraphics[width=0.9\textwidth]{Figures_HE/CROSS_excl_trunc_100mev_75_75_75_105_2NF_3NF.pdf}
                 \end{center}
-                \caption{The same as In the \fig{CROSS_HE_EXCL_100} but for the different kinematic
-                configuration.}
+                \caption{The same as in the \fig{CROSS_HE_EXCL_100} but for the different kinematic
+                configuration
+                $\theta_1 = \ang{75}$, $\phi_1 = \ang{75}$,
+                $\theta_2 = \ang{75}$, $\phi_2 = \ang{105}$.
+                Results obtained with 2NF are presented on the top row. The same, but
+                with 3NF is presented on the bottom row (starting from \gls{n2lo} - where 3NF appears.)}
                 \label{CROSS_HE_EXCL_75_75_75_105}
         \end{figure}
 
-        \begin{figure}[h]
-            \begin{center}
-                \includegraphics[width=0.9\textwidth]{Figures_HE/CROSS_excl_trunc_100mev_75_75_75_105_3NF.pdf}
-                \end{center}
-                \caption{The same as In the \fig{CROSS_HE_EXCL_75_75_75_105} but with three-nucleon force.}
-                \label{CROSS_HE_EXCL_75_75_75_105_3NF}
-        \end{figure}
 
-    Similar trends present in other configurations, demonstrated for the comparison:
-    Figs.\ref{CROSS_HE_EXCL_15_105_15_75} and \ref{CROSS_HE_EXCL_15_105_15_75_3NF},
-    Figs.\ref{CROSS_HE_EXCL_45_75_45_105} and \ref{CROSS_HE_EXCL_45_75_45_105_3NF},
-    Figs.\ref{CROSS_HE_EXCL_165_15_15_165} and \ref{CROSS_HE_EXCL_165_15_15_165_3NF}.
+    Similar trends are present also in other configurations, demonstrated for the comparison:
+    Figs.\ref{CROSS_HE_EXCL_15_105_15_75},
+    Figs.\ref{CROSS_HE_EXCL_45_75_45_105} and
+    Figs.\ref{CROSS_HE_EXCL_165_15_15_165}.
 
     
         \begin{figure}[h]
             \begin{center}
-                \includegraphics[width=0.9\textwidth]{Figures_HE/CROSS_excl_trunc_100mev_15_105_15_75_2NF.pdf}
+                \includegraphics[width=0.9\textwidth]{Figures_HE/CROSS_excl_trunc_100mev_15_105_15_75_2NF_3NF.pdf}
                 \end{center}
-                \caption{The same as In the \fig{CROSS_HE_EXCL_75_75_75_105} but for the different kinematic
+                \caption{The same as in the \fig{CROSS_HE_EXCL_75_75_75_105} but for the different kinematic
                 configuration.}
                 \label{CROSS_HE_EXCL_15_105_15_75}
         \end{figure}
 
-        \begin{figure}[h]
-            \begin{center}
-                \includegraphics[width=0.9\textwidth]{Figures_HE/CROSS_excl_trunc_100mev_15_105_15_75_3NF.pdf}
-                \end{center}
-                \caption{The same as In the \fig{CROSS_HE_EXCL_15_105_15_75} but but with three-nucleon force.}
-                \label{CROSS_HE_EXCL_15_105_15_75_3NF}
-        \end{figure}
-
 
 
 
         \begin{figure}[h]
             \begin{center}
-                \includegraphics[width=0.9\textwidth]{Figures_HE/CROSS_excl_trunc_100mev_45_75_45_105_2NF.pdf}
+                \includegraphics[width=0.9\textwidth]{Figures_HE/CROSS_excl_trunc_100mev_45_75_45_105_2NF_3NF.pdf}
                 \end{center}
-                \caption{The same as In the \fig{CROSS_HE_EXCL_15_105_15_75} but for the different kinematic
+                \caption{The same as in the \fig{CROSS_HE_EXCL_15_105_15_75} but for the different kinematic
                 configuration.}
                 \label{CROSS_HE_EXCL_45_75_45_105}
         \end{figure}
@@ -1091,28 +1077,13 @@
 
         \begin{figure}[h]
             \begin{center}
-                \includegraphics[width=0.9\textwidth]{Figures_HE/CROSS_excl_trunc_100mev_45_75_45_105_3NF.pdf}
+                \includegraphics[width=0.9\textwidth]{Figures_HE/CROSS_excl_trunc_100mev_165_15_15_165_2NF_3NF.pdf}
                 \end{center}
-                \caption{The same as In the \fig{CROSS_HE_EXCL_45_75_45_105} but but with three-nucleon force.}
-                \label{CROSS_HE_EXCL_45_75_45_105_3NF}
-        \end{figure}
-
-        \begin{figure}[h]
-            \begin{center}
-                \includegraphics[width=0.9\textwidth]{Figures_HE/CROSS_excl_trunc_100mev_165_15_15_165_2NF.pdf}
-                \end{center}
-                \caption{The same as In the \fig{CROSS_HE_EXCL_45_75_45_105} but for the different kinematic
+                \caption{The same as in the \fig{CROSS_HE_EXCL_45_75_45_105} but for the different kinematic
                 configuration.}
                 \label{CROSS_HE_EXCL_165_15_15_165}
         \end{figure}
 
-        \begin{figure}[h]
-            \begin{center}
-                \includegraphics[width=0.9\textwidth]{Figures_HE/CROSS_excl_trunc_100mev_165_15_15_165_3NF.pdf}
-                \end{center}
-                \caption{The same as In the \fig{CROSS_HE_EXCL_165_15_15_165} but but with three-nucleon force.}
-                \label{CROSS_HE_EXCL_165_15_15_165_3NF}
-        \end{figure}
 
         The semi-inclusive differential cross section $\frac{d^3\sigma}{d\Omega_p d\text{E}_p}$
         as a function of the outgoing protons energy $E_p$ is demonstrated on the
@@ -1139,11 +1110,11 @@
             \includegraphics[width=0.8\textwidth]{Figures_HE/CROSS_incl_trunc_30mev_all.pdf}
             \end{center}
             \caption{The semi-inclusive differential cross section $\frac{d^3\sigma}{d\Omega_p d\text{E}_p}$
-            at E$_\gamma = \SI{30}{\mev}$ as a function of outgoing proton's energy E$_p$. Each row represent 
-            predictions for different values of the outgoing proton's angle $\theta_p$: 
+            at E$_\gamma = \SI{30}{\mev}$ as a function of outgoing proton energy E$_p$. Each row represents 
+            predictions for different values of the outgoing proton's momentum polar angle $\theta_p$: 
             \ang{10}, \ang{50}, \ang{90}, \ang{130} and \ang{170}. Each column has similar 
-            lines and bands definitions as it was for exclusive cross section.  
-            Predictions have been obtained without 3NF.}
+            curves and bands definitions as it was for exclusive cross section in \fig{CROSS_HE_EXCL_30}.  
+            Predictions have been obtained with the \gls{sms} NN potential but neglecting 3NF.}
             \label{CROSS_HE_INCL_30MEV_2NF}
         \end{figure}
 
@@ -1151,7 +1122,7 @@
             \begin{center}
             \includegraphics[width=0.8\textwidth]{Figures_HE/CROSS_incl_trunc_100mev_all.pdf}
             \end{center}
-            \caption{The same as on \fig{CROSS_HE_INCL_30MEV_2NF} but for E$_\gamma = \SI{100}{\mev}$}
+            \caption{The same as in \fig{CROSS_HE_INCL_30MEV_2NF} but for E$_\gamma = \SI{100}{\mev}$}
             \label{CROSS_HE_INCL_100MEV_2NF}
         \end{figure}
 
@@ -1159,9 +1130,9 @@
 \clearpage
 
 
-\subsection{D-n photodisintegration}
+\subsection{D-p photodisintegration}
 
-    The differential cross section $d\sigma/d\Omega_d$ for the $^3He + \gamma \rightarrow d + n$ reaction
+    The differential cross section $d\sigma/d\Omega_d$ for the $^3He + \gamma \rightarrow d + p$ reaction
     is presented In the \fig{CROSS_nd_30} (for the photon energy $\text{E}_\gamma = \SI{30}{\mev}$)
     and In the \fig{CROSS_nd_100} (for the photon energy $\text{E}_\gamma = \SI{100}{\mev}$).
     We see that both truncation and cutoff uncertainties are larger with increasing photon energy.
@@ -1177,7 +1148,7 @@
     \begin{center}
         \includegraphics[width=0.9\textwidth]{Figures_HE/CROSS_nd_trunc_30mev.pdf}
         \end{center}
-        \caption{Differential cross section for the d-$n$ 
+        \caption{Differential cross section for the D-$p$ 
         two-body photodisintegraion of $^3$He as a function of the d$\gamma$ angle.
         The initial photon energy $\text{E}_\gamma=\SI{30}{\mev}$.}
         \label{CROSS_nd_30}
@@ -1264,7 +1235,7 @@
     Each of two figures consists of four panels representing predictions obtained with different 
     values of the cutoff parameter $\Lambda$. The difference between predictions which can be 
     noticed with the naked eye - is that area of the central region (corresponding to smallest values)
-    becomes larger with increasing $\Lambda$. It coheres to what we saw on \fig{Gamma_pnn}
+    becomes larger with increasing $\Lambda$. It coheres to what we saw in \fig{Gamma_pnn}
     where total absorption rate was inversly correlated with cutoff parameter. The dominant contribution
     comes from the region with lowest proton energy values of $E_1 \rightarrow 0$ where both neutrons have similar large values.
     This is a situation when proton is a spectator while both neutrons share all energy
