@@ -1274,7 +1274,7 @@
     are few times larger and the distribution is completely different.
     The FSI(nn) region is not presented here in a sense that there is no peak with respect to other 
     values. The QFS region is, on the contrary, 
-    It obviously tells us that one has to take into account rescattering pat in order to obtain relevant results.   
+    which obviously tells us that one has to take into account rescattering pat in order to obtain relevant results.   
 
     \begin{figure}[h]
         \begin{center}
@@ -1299,6 +1299,15 @@
         \label{pion_map_xy_cutoff_PW}
     \end{figure}
 
+    Results obtained with Plane wave plus recattering part and with single nucleon current only
+    are presented in Figs.~\ref{pion_map_E1E2_cutoff_1NC} and \ref{pion_map_xy_cutoff_1NC}.
+    As previously, each panel in figures presents predictions obtained with different values of the cutoff parameter $\Lambda$.
+    In contrast to the configurations shown above, the change of the cutoff value has larger impact here:
+    we see that there is a different pattern in each panel. I does not change dramatically, but 
+    two peaks inside the figure become more or less clear. On the other hand, the distribution of 
+    the absorption rate is very different from the one, obtained with more complete components setup 
+    (Figs.~\ref{pion_map_E1E2_cutoff} and \ref{pion_map_xy_cutoff}).
+
     \begin{figure}[h]
         \begin{center}
         \includegraphics[width=0.7\textwidth]{PlotData/PION/Dalitz_maps/figures/Dalitz_map_pnn_E1E2_cutofs_1NC.pdf}
@@ -1321,6 +1330,12 @@
         $d^2 \Gamma_{pnn}/dxdy$.}
         \label{pion_map_xy_cutoff_1NC}
     \end{figure}
+
+    Figs.~\ref{pion_map_E1E2_order} and \ref{pion_map_xy_order} show prediction obtained using similar configuration
+    as in Figs.~\ref{pion_map_E1E2_cutoff} and \ref{pion_map_xy_cutoff}, but each panel includes
+    predictions obtained with different chiral orders of the \gls{sms} potential.
+    We see that predictions are not sensitive to the chiral order and even \gls{n2lo} predictions
+    are pretty much similar to ones obtained with the most advanced \gls{n4lo} potential. 
     
     \begin{figure}[h]
         \begin{center}
@@ -1330,8 +1345,9 @@
         $d^2 \Gamma_{pnn}/dE_1dE_2$ for the $\pi^- + ^3He \rightarrow p + n + n$
         process, obtained using the SMS potential at \gls{n4lo+}
         with all contributions possible: plane wave + rescattering, SN + 2N, 2NF+3NF.
-        Each panel present predictions obtained with different chiral orders:
-        from \gls{n2lo} (upper left) to \gls{n4lo+} (lower right). Nucleon 1 is a proton.}
+        Each panel present predictions obtained with different chiral orders of the \gls{sms} potential:
+        from \gls{n2lo} (upper left) to \gls{n4lo+} (lower right) and with $\Lambda = \SI{450}{\mev}$.
+        Nucleon 1 is a proton.}
         \label{pion_map_E1E2_order}
     \end{figure}
 
@@ -1348,7 +1364,18 @@
         \begin{center}
         \includegraphics[width=0.9\textwidth]{PlotData/PION/Dalitz_maps/figures/3HE_dGdEp.pdf}
         \end{center}
-        \caption{}
+        \caption{Differential absorption rate $d\Gamma_{pnn} /d\text{E}_p$ 
+        as a function of the proton energy E$_p$ for the 
+        $\pi^- + 3\text{He} \rightarrow p + n + n$ process.
+        Left panel shows results obtained with \gls{n2lo} (green dashed line),
+        \gls{n3lo} (blue dotted line), \gls{n4lo} (red dashed-double-dotted line)
+        and \gls{n4lo+} (black solid line) chiral orders, and with $\Lambda = \SI{450}{\mev}$.
+        The right panel includes results obtained with the \gls{n4lo+} \gls{sms} potential
+        with different values of the $\Lambda$: \SI{400}{\mev} (red dashed-double-dotted line),
+        $\Lambda$: \SI{450}{\mev} (black solid line),
+        $\Lambda$: \SI{500}{\mev} (green dashed line line) and
+        $\Lambda$: \SI{550}{\mev} (blue dotted line).
+        All predictions were obtained with "FULL-(SN+2N)-(2NF+3NF)" setup.}
         \label{pion_GdEp}
     \end{figure}
 
@@ -1356,7 +1383,8 @@
         \begin{center}
         \includegraphics[width=0.9\textwidth]{PlotData/PION/Dalitz_maps/figures/3HE_dGdEn.pdf}
         \end{center}
-        \caption{}
+        \caption{The same as in \fig{pion_GdEp} but for the differential absorption rate $d\Gamma_{pnn} /d\text{E}_n$
+        as a function of the neuteron energy E$_n$.}
         \label{pion_dGdEn}
     \end{figure}
 
@@ -1364,7 +1392,8 @@
         \begin{center}
         \includegraphics[width=0.9\textwidth]{PlotData/PION/Dalitz_maps/figures/3HE_dGdr.pdf}
         \end{center}
-        \caption{}
+        \caption{The same as in \fig{pion_GdEp} but for the differential absorption rate $d\Gamma_{pnn} /dr$
+        as a function of the parameter $r$ of the Dalitz coordinates: $r = \sqrt{x^2 + y^2}$.}
         \label{pion_dGdEr}
     \end{figure}
 
@@ -1372,7 +1401,8 @@
         \begin{center}
         \includegraphics[width=0.9\textwidth]{PlotData/PION/Dalitz_maps/figures/3HE_dGdphi.pdf}
         \end{center}
-        \caption{}
+        \caption{The same as in \fig{pion_dGdEr} but for the differential absorption rate $d\Gamma_{pnn} /d\phi$
+        as a function of the azimuthal angle $\phi$ of the Dalitz coordinates: $\phi = \arctan \frac{y}{x}$.}
         \label{pion_dGdphi}
     \end{figure}
 
