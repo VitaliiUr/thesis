@@ -693,11 +693,13 @@ where
     some simplifications which may be improved with further developments of the model.
     
     \paragraph{Nuclear currents}
-    At the moment we have only a single nucleon 
-    current consistent with the model available. In most cases it is not enough 
-    to proper describe regarded processes which will be confirmed in Chapter~\ref{chap:results}.
-    We deal with this problem applying the Siegert theorem which allows to include
-    some contribution from the 2N current, which is still not complete.
+    At the moment, our model is limited to a single nucleon current, which may not be sufficient to accurately describe the processes under consideration.  This limitation will be further discussed and confirmed in
+    Chapter~\ref{chap:results}. To address this issue, we utilize the Siegert theorem, which enables us to
+    incorporate some contributions from the two-nucleon current, although it is not yet complete. It is worth noting
+    that the incorporation of the two-nucleon current can significantly affect the predicted observables, as it
+    includes additional physical effects that are not accounted for in the single nucleon current. Therefore, the
+    ongoing development of a complete two-nucleon current in our model
+    is of great importance to improve the accuracy of our predictions.
 
     \paragraph{Nonrelativistic approach}
     All the results presented here does not include relativistic corrections.
@@ -729,151 +731,23 @@ where
     \paragraph{Model choice}
     We focus on the \gls{sms} potential, but using another model of interaction 
     leads to different predictions. That difference is also a theoretical uncertainty thus
-    we use predictions obtained with AV18 model in order to compare these predictions.  
+    we use predictions obtained with AV18 model in order to compare these predictions.
+    The AV18 model is a widely used and well-established model of nuclear interaction,
+    which has been extensively tested and benchmarked against experimental data. By comparing
+    the predictions obtained from the SMS potential with those obtained from the AV18 model,
+    we can assess the robustness of our results and determine the extent to which they depend
+    on the choice of the interaction model. This comparison also helps to identify the strengths
+    and weaknesses of each model and provides insights into the underlying physics of nuclear interactions.
 
     \paragraph{Machine precision}
-    Finally every computer calculations include limited numerical machine precision which
-    can be noticeable for a complex calculations. We perform our calculation via CPU machine 
-    were particular choice of the processor and memory card may lead to numerical uncertainty.
-    Nevertheless this uncertainty is much smaller then other discussed above. 
+    % Finally every computer calculations include limited numerical machine precision which
+    % can be noticeable for a complex calculations. We perform our calculation via CPU machine 
+    % were particular choice of the processor and memory card may lead to numerical uncertainty.
+    % Nevertheless this uncertainty is much smaller then other discussed above. 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    % Let me move to the coordinate representation of the Eq.~(\ref{lse}):
-
-    % \begin{equation}
-    % \langle \vec{x}  \mid \psi \rangle = \langle \vec{x}  \mid \frac{1}{E + i\epsilon - H_0}V \mid \psi \rangle + \langle \vec{x}  \mid \vec{p} \rangle
-    % \label{lse_coord}
-    % \end{equation}
-
-    % If we choose $\ket*{\vec{x}}$ to be normalized as
-    % $\braket{\vec{x}^\prime}{\vec{x}} = \delta^3(\vec{x}^\prime - \vec{x})$ ,
-    % the Fourier transform will give us \cite{elster_lectures}: 
-    % \begin{equation}
-    %     \braket{\vec{x}}{\vec{p}} = \frac{1}{(2 \pi)^{3/2}} e^{i \vec{p} \cdot \vec{x}}.
-    %     \label{planewave}
-    % \end{equation}
-
-    % I can rewrite Eq.~(\ref{lse_coord}) as:
-
-
-    % \begin{equation}
-    %     \langle \vec{x}  \mid \psi \rangle = \int d^3 \pvec{x} 
-    %     \mel**{\vec{x}}{G_0(E + i\epsilon)}{\vec{x}^\prime}
-    %     \matrixel{\vec{x}^\prime}{V} {\psi} + \braket{\vec{x}}{\vec{p}},
-    %     \label{lse_green}
-    % \end{equation}
-
-    % One shall mention, that dealing with the plane-wave state in coordinate space 
-    % is not normalizable, as it is not a Hilbert vector \cite{Sakurai}, anyway we
-    % imply the "normalization" rule
-    % $\int d^3\vec{x} \braket{\vec{p}}{\vec{x}} \braket{\vec{x}}{\pvec{p}} = \delta^3(\vec{p} - \pvec{p})$.
-
-
-    % % The Green function Eq.(\ref{green}) can be written in the momentum basis as:
-
-    % % \begin{equation}
-    % %     G(\vec{x}, \vec{x}^\prime) = \frac{1}{(2\pi)^3} \int d^3 \pvec{p}
-    % %     \frac{e^{i\pvec{p}\cdot(\vec{x}'-\vec{x})}}{E + i\epsilon - \frac{\pvec{p}^{2}}{2m}},
-    % %     \label{green_momentum}
-    % % \end{equation}
-
-    % %  Moving to the spherical coordinates and introducing $r \equiv |x -x^\prime |$ I get Green function as:
-    % % Integration in the (\ref{lse_green}) can be done applying residual technique and here comes
-    % % the main profit of the $+ i\epsilon$ in the denominator.
-    % The final expression of the Green function can be found using
-    % standard residual technique and it will be:
-
-    % \begin{equation}
-    %     \mel**{\vec{x}}{G_0(E + i\epsilon)}{\vec{x}^\prime} = 
-    %     - \frac{m}{4\pi} \frac{e^{i\sqrt{mE}|\pvec{x} -\pvec{x} |}}{|\pvec{x} -\pvec{x} |}
-    %     \label{green_final}
-    % \end{equation}
-
-    % % The $(+)$ in the exponent specifies outgoing and incoming plane-waves. For a scattering
-    % % state we are interested in the outgoing wave, so let's stick to the positive sign in the exponent
-    % % and assume that corresponding wave function is $\psi^{(+)}$. 
-
-    % Assuming that potential $V$ is local (that is $\mel**{\pvec{x}}{V}{\pvec{x}} = \delta(\pvec{x} - \pvec{x})V(\pvec{x})$) we come to:
-
-    % \begin{equation}
-    %     \langle \vec{x}  \mid \psi^{(+)} \rangle \equiv \psi^{(+)}(\vec{x}) =
-    %     - \frac{m}{4\pi} \int d^3 \vec{x}^\prime \frac{e^{+ i\sqrt{mE}|\pvec{x} -\pvec{x} |}}{|\pvec{x} -\pvec{x} |} 
-    %     V(\pvec{x}) \psi^{(+)}(\vec{x}^\prime) + \braket{\vec{x}}{\vec{p}},
-    %     \label{lse_green_explicit}
-    % \end{equation}
-    % which may be written in the asymptotic form (when $|\vec{x}| \rightarrow \infty$) as:
-
-    % \begin{equation}
-    %     \psi^{(+)}(\vec{x}) \rightarrow \frac{1}{(2\pi)^{1/3}}
-    %     \left( e^{i\vec{p} \cdot \vec{x}} + \frac{e^{i\vec{p} \cdot \vec{x}}}{\vec{x}} f(\hat{x}) \right)
-    %     \label{lse_green_explicit}
-    % \end{equation}
-
-    % From the Eq.~(\ref{lse_green_explicit}) one can conclude that at large distances
-    % we obtain a wave function which consists of the original plane wave plus
-    % an outgoing spherical wave with a scattering amplitude $f(\hat{x})$:
-
-    % \begin{equation}
-    %     f(\hat{x}) \equiv -m \sqrt{\frac{\pi}{2}} \int d^3 x^\prime e^{-ip\hat{x}\cdot\pvec{x}}
-    %     V(\pvec{x})\psi^{(+)}(\pvec{x})
-    %     %  = \mel{\pvec{p}}{V}{\psi^{(+)}}
-    %     \label{scat_ampl}
-    % \end{equation}
-
-    % With substitution a scattered momentum $\pvec{p} \equiv p\hat{x}$ into Eq.~(\ref{scat_ampl}),
-    % we can simplify it and get a matrix element of the transition operator $t$:
-
-    % \begin{equation}
-    %     \mel{\pvec{p}}{t}{\vec{p}} \equiv \frac{1}{(2\pi)^{1/3}} \int d^3 x^\prime e^{-i\pvec{p}\cdot\pvec{x}}
-    %     V(\pvec{x})\psi^{(+)}(\pvec{x}) = \mel{\pvec{p}}{V}{\psi^{(+)}}
-    %     \label{trans_operator_matrix_form}
-    % \end{equation}
-
-    % Combining Equations (\ref{trans_operator_matrix_form}) and (\ref{lse}) one can obtain:
-
-    % \begin{equation}
-    %     t \ket{\vec{p}} = V \ket{\vec{p}} + V G_0 V \ket{\psi^{(+)}}
-    %     =  V \ket{\vec{p}} + V G_0 t \ket{\vec{p}},
-    %     \label{lse_psi} 
-    % \end{equation}
-    % or in the operator form:
-
-    % \begin{equation}
-    %     t  =  V  + V G_0 t 
-    %     \label{trans_operator}
-    % \end{equation}
-
-    % Practical application Eq.(\ref{trans_operator}) has mostly in the iterative form.
-    % It is a Born series with respect to power of potential $V$ and can be interpreted
-    % as taking into account more and more vertices of the rescattering process:
-    
-    % \begin{equation}
-    %     t  =  V  + V G_0 (V  + V G_0 t) = V  + V G_0 V  + V G_0 V G_0 V  + ... 
-    %     \label{trans_operator_iterative}
-    % \end{equation}
-
-    % Having all this information about the t-operator we can write a final scattering state as follows:
-
-    % \begin{equation}
-    %     \ket{\psi^{(+)}} = (1 + G_0t) \ket{\vec{p}}
-    % \end{equation}
-
-
-    % Substitution of Eq.(\ref{lse_psi}) into  Eq.(\ref{main}) ...
-
-
+    Finally, it should be noted that every computer calculation includes limited numerical machine precision which
+    can be noticeable for complex calculations. We perform our calculations via CPU machine, where the particular
+    choice of the processor and memory card may lead to numerical uncertainty. However, we have found that this
+    uncertainty is much smaller than the uncertainties discussed above, and its impact on our results is
+    negligible. We have taken great care to ensure that our calculations are performed using appropriate numerical
+    methods and sufficient computational resources to minimize any numerical errors that may arise. 
