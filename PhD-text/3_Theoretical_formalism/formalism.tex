@@ -506,7 +506,7 @@ where
 \section{3N scattering state}
 
     As in Sec.~\ref{nd_state}, one can
-    write an equation for the 3-nucleone scattering state:
+    write an equation for the 3-nucleon scattering state:
 
     \begin{equation}
         \ket{\Psi^{(-)}}^{3N} = \frac{1}{\sqrt{3}}\ket{\Psi^{(-)}_j}^{3N}    
@@ -521,6 +521,32 @@ where
         E_{3N} &=& \frac{|\vec{p}|^2}{m} + \frac{3 |\vec{q}|^2}{4m},
     \end{eqnarray}
 
+    Taking into account antysymmetrized Faddeev components
+
+    \begin{equation}
+        \left|F_i^0\right\rangle \equiv G_0\left(V_i+V_4^{(i)}\right)(1+P)\left|\Psi_i^{(-)}\right\rangle^{3 N}
+        \label{faddeev_3n}
+    \end{equation}
+    we can obtain a 3N scattering wave function as:
+
+    \begin{equation}
+        \begin{aligned}
+            \left|\Psi^{(-)}\right\rangle^{3 N} & =\frac{1}{\sqrt{3}}\left(\sum_{i=1}^3\left|\Phi_i^{3 N}\right\rangle+G_0\left(V_1+V_2+V_3+V_4\right) \sum_{i=1}^3\left|\Psi_i^{(-)}\right\rangle^{3 N}\right) \\
+            & =\frac{1}{\sqrt{3}}\left(\sum_{i=1}^3\left|\Phi_i^{3 N}\right\rangle+\sum_{i=1}^3\left|F_i^0\right\rangle\right) \\
+            & =\frac{1}{\sqrt{3}}(1+P)\left(\left|\Phi_1^{3 N}\right\rangle+\left|F_1^0\right\rangle\right) .
+        \end{aligned}
+        \label{3n_scat_psi}
+    \end{equation}
+
+    In this case nuclear matrix element is:
+
+    \begin{equation}
+        \begin{aligned}
+            N_\mu^{3 N} & =\frac{1}{\sqrt{3}}\left\langle\Phi_1^{3 N}\left|(1+P) j_\mu\right| \Psi_i\right\rangle+\frac{1}{\sqrt{3}}\left\langle\Phi_1^{3 N}\left|t_1^{+} G_0^{+}(1+P) j_\mu\right| \Psi_i\right\rangle \\
+            & +\frac{1}{\sqrt{3}}\left\langle\Phi_1^{3 N}\left|t_1^{+} G_0^{+} P\right| U_\mu\right\rangle+\frac{1}{\sqrt{3}}\left\langle\Phi_1^{3 N}|P| U_\mu\right\rangle.
+            \end{aligned}
+        \label{3n_matrix}
+    \end{equation}
 
 
 
@@ -563,8 +589,28 @@ where
 
 
     \section{Nuclear electromagnetic current}
+    
+    The electromagnetic current operator for a few-nucleon system has both one- and many-body contributions, which
+    can be denoted as $j_\mu^1$, $j_\mu^2$, and $j_\mu^3$, respectively. The leading one-body contribution,
+    $j_\mu^1$, represents the photon's interaction with a single nucleon. The many-body contributions are known as
+    meson exchange currents (MEC), which arise due to the meson-exchange picture of the nucleon-nucleon (NN)
+    interaction. The photon can couple to mesons exchanged between two nucleons, leading to two-body contributions to
+    the nuclear current.
+
+    The necessity of introducing the MEC arises from the continuity equation, which requires the inclusion of
+    two-body interactions in the Hamiltonian. The momentum and isospin-dependent terms in $V$ require the
+    introduction of two-body MEC. Similarly, the inclusion of the three-body force into the Hamiltonian requires the
+    existence of three-body contributions to the nuclear current. However, the effects of the three-body MEC are
+    likely negligible in the low-energy region. Therefore, we will only consider one- and two-body currents.
+
+    The nuclear one-body current is constructed based on the electromagnetic current for a Dirac particle. To account
+    for the extended structure of nucleons, form factors are introduced. Since we use nonrelativistic wave functions,
+    we need to use nonrelativistic currents.
+
+
 
 \section{Theoretical uncertainties}
+
     
     \subsection*{Truncation error}
     \label{sec:trunc}
