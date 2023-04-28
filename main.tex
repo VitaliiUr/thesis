@@ -108,13 +108,14 @@
   % acronyms
  \usepackage[acronym, automake]{glossaries-extra}
 \setabbreviationstyle[acronym]{long-short}
+\setabbreviationstyle[short]{short}
 \glsdisablehyper
 
 \newacronym{qcd}{QCD}{Quantum chromodynamics}
 \newacronym{ceft}{$\chi$EFT}{Chiral Effective Field Theory}
 \newacronym{eft}{EFT}{effective field theory}
-\newacronym{sms}{SMS}{semilocal momentum-space regularized}
-\newacronym{scs}{SCS}{semilocal coordinate-space regularized}
+\newacronym{sms}{SMS}{semilocal momentum-space regularized potential}
+\newacronym[category={short}]{scs}{SCS}{semilocal coordinate-space regularized}
 \newacronym{av18}{AV18}{Argonne V18}
 \newacronym{nn}{NN}{nucleon-nucleon}
 \newacronym{cm}{CM}{centre of the mass}
@@ -123,7 +124,7 @@
 \newacronym{n2lo}{N$^2$LO}{next-to-next-to-leading order}
 \newacronym{n3lo}{N$^3$LO}{next-to-next-to-next-to-leading order}
 \newacronym{n4lo}{N$^4$LO}{next-to-next-to-next-to-next-to-leading order}
-\newacronym{n4lo+}{N$^4$LO$^+$}{next-to-next-to-next-to-next-to-leading order plus contributions from following order}
+\newacronym[category={short}]{n4lo+}{N$^4$LO$^+$}{next-to-next-to-next-to-next-to-leading order plus contributions from following order}
 \makeglossaries
 
 \providecommand{\tmp}[1]

@@ -77,34 +77,39 @@ The study of light nuclei and their reactions has been serving as an easy way to
 the forces between them for decades. A convenient way to proceed may be to study the interaction of a nucleus with
 other nuclei, particles, or electromagnetic probes such as electrons, photons, muons, pions, neutrinos, and hyperons.
 In most cases, the study of elastic or inelastic scattering is possible. This can be done either theoretically or by
-performing relevant experiments to test if the theory works. It should be taken into account that interactions may be
-caused by different forces and therefore described in different ways, including strong, weak, or electromagnetic
+performing relevant experiments to test if the theory works. It should be taken into account that nuclear 
+interactions may be
+caused by different fundamental forces and therefore described in different ways, including strong, weak, or electromagnetic
 interactions. This depends on the type of particle being scattered and the target of the reaction.
+Of course gravitational force also is in the game but due to the weekness can be omitted in the nuclear physics. 
 
 In the past many experimental efforts have been undertaken and
 experimentalists have been interested in electromagnetic reactions in light nuclei for decades.
-There are experimental data from the second half of 20th century (e.g. \cite{Skopik1974}, \cite{Liuexp68}, \cite{Kose1969MeasurementsOT}, \cite{Kamae}) which are still 
+There are experimental data from the second half of 20th century 
+(e.g. \cite{Skopik1974, Liuexp68, Kose1969MeasurementsOT, Kamae}) which are still 
 useful for comparing theoretical predictions with experimental measurements.    
 There are several facilities that provide sources of gamma rays (both low- and high-energy)
 and other particles that have been operating for decades and still enable experiments to be conducted.
-Other groups and collaborations include TUNL \cite{TUNL}, MAMI \cite{MAMI}, 
-NIKHEF \cite{NIKHEF}, HI$\gamma$S \cite{TONCHEV2005170} and others.
-To accurately describe nuclear reactions, multiple components must be considered.
-The most important are nucleon interactions and nuclear current.
+Let us mention here some facilities as TUNL with HI$\gamma$S \cite{TUNL, TONCHEV2005170}, MAMI \cite{MAMI}, 
+NIKHEF \cite{NIKHEF} and others.
 
-Different forces may act on
-the participants.
+To accurately describe nuclear reactions, multiple components of the Hamiltonian must be considered.
+The most important are nucleon interactions and nuclear currents.
+First of all, various nuclear forces may act on
+the particles.
+
 The strong nuclear force acts inside the nuclei and, among others, bound neutrons 
 and protons together. The description of strong interactions is extremely
-difficult as it deals not only with the nucleons, but with their constituents: quarks
+difficult as it deals not only with the nucleons themselves, but also with their constituents: quarks
 and gluons. \gls{qcd} is a modern theory
 describing strong interactions, but, at the moment,
 it is not applicable at low energies ($Q^2 \lesssim 1 GeV^2$).
-In our situation various approaches are emerging.
+In such situation various approaches are emerging.
 The most advanced are the
-chiral effective theory, lattice calculation and others \cite{IOFFE2006232}, \cite{BEANElaticce}, \cite{Machleidt2011}.
+chiral effective theory and lattice calculation \cite{IOFFE2006232, BEANElaticce, Machleidt2011}.
+In this work we will use results of the first approach.
 
-Starting the study of three- (and more) nucleon systems, it was found that
+Study of three- (and more) nucleon systems showed that
 the strong 2N force is not enough to describe
 the system, and a 3N force was introduced. The first applications of such
 a force showed that it brings a
@@ -113,13 +118,13 @@ The contribution of the 3NF can be examined by
 comparing binding energies of light nuclei calculated with
 and without this part with respect to experimental values.
 
-For example, the binding energy for $^3$H calculated with the \gls{av18} potential without 3NF gives
+For example, the binding energy for $^3$H calculated with the \gls{av18} potential without 3NF amounts to
 $E_b(^3\mathrm{H}) = \SI{-7.628}{\mev}$ \cite{NoggaAV18}. There are different models that might add a 3NF
 contribution to \gls{av18} (or other potentials). Using the Tucson-Melbourne (TM) model \cite{Tucson-Melbourne}
 results in $E_b(^3\mathrm{H}) = \SI{-8.478}{\mev}$, and Urbana IX \cite{Urbana3NF} 3NF provides us with
 $E_b(^3\mathrm{H}) = \SI{-8.484}{\mev}$. Looking at the experimental value $E_b(^3\mathrm{H}) = \SI{-8.482}{\mev}$,
-it is clear that the 3NF contribution makes the prediction much closer to the measurement. Nevertheless, the UrbanaIX
-3NF in this case was fitted by the experimental value for $^3\mathrm{H}$, so there is no surprise in good agreement.
+it is clear that the 3NF contribution makes the prediction much closer to the measurement. Nevertheless, parameters of the UrbanaIX
+3NF in this case were fitted to the experimental value for $^3\mathrm{H}$, so there is no surprise in good agreement.
 
 One can check the binding energy for other atoms, which were not used for fitting. The 2NF binding energy for $^3$He
 (calculated with \gls{av18}) is $E_b(^3\mathrm{He}) = \SI{-6.917}{\mev}$. TM contribution makes it
@@ -130,8 +135,9 @@ $E_b(^4\mathrm{He}) = \SI{-24.25}{\mev}$, \gls{av18} + TM gives \SI{-28.84}{\mev
 \SI{-28.50}{\mev}, and the experimental value is \SI{-28.30}{\mev}.
 
 Whereas the first applications included only early simplified "realistic" 3N potential, the latter
-investigations, based on more advanced models, only confirmed this statements \cite{StoksPhysRevC49, AV18Wiringa}.
-It was also used to construct four-nucleon (4N) bound state \cite{NoggaPhysRevLett}.
+investigations, based on more advanced models, fully confirmed this statements \cite{StoksPhysRevC49, AV18Wiringa}.
+Within new models the four-nucleon (4N) bound state was constructed to compare description of
+$^3\mathrm{He}$ \cite{NoggaPhysRevLett}.
 
 Electromagnetic force appears between charged particles like protons, electrons or pions.
 Also, the force is transferred between charged particles and a photon, so 
@@ -172,9 +178,10 @@ essential component of the overall understanding of nuclear physics and the beha
 
 In order to model the nuclear potential, physicists often use phenomenological
 or semi-phenomenological approaches. It allows them to combine
-theoretical knowledge about processes and experimental data.
+theoretical knowledge about processes and experimental findings.
 
-One of such models, which was used in current thesis is the Argonne V18 (AV18) \cite{AV18Wiringa}.
+Among many of such models, the Argonne V18 (AV18) \cite{AV18Wiringa} force is one of most
+advanced and therefore is used in current thesis.
 In order to construct \gls{nn} force, authors combine
 % analytical electromagnetic and 
 one-pion-exchange parts
@@ -200,8 +207,8 @@ The use of \gls{ceft} allows for the calculation of nuclear properties
 and reactions in a model-independent way, making it possible to
 quantify the uncertainties associated with the calculation. One of the
 key features of \gls{ceft} is that it allows for the construction of
-a nuclear potential, which can then be used to solve the Schr"odinger
-equation to obtain bound state properties. The accuracy of the
+a nuclear potential, which can then be used in relevant formalisms, e.g. to solve the Schr"odinger
+equation and to obtain bound state properties. The accuracy of the
 potential can be systematically improved by including higher-order
 terms in the chiral expansion, which leads to a better description of
 experimental data.
@@ -229,7 +236,7 @@ experimental data.
 % scale, which is around \SI{1}{\giga\electronvolt}.
 In the \gls{ceft} there are two natural scales: so-called soft scale $Q \sim M_\pi$  -
 the mass of pion and the hard scale -
-$\Lambda_\chi \sim \SI{0.7}{\gev}$ - chiral symmetry breaking scale.
+$\Lambda_\chi \sim \SI{0.7}{\gev}$ - the chiral symmetry breaking scale.
 The ratio between these two scales $Q/\Lambda_\chi$
 is being used as an expansion parameter in  \gls{ceft} with power
 $\nu$: $\left(Q/\Lambda_\chi\right)^\nu$.
@@ -252,9 +259,9 @@ where $i$ specifies a vertex number and
     \label{Delta}
 \end{equation}
 
-In \eq{powers}, $C$ is a number of pieces which are connected, $L$ - the number of loops in the graph
+In \eq{powers} $C$ is a number of pieces which are connected, $L$ - the number of loops in the graph
 and $A$ is a number of nucleons in the diagram.
-In \eq{Delta}, $n_i$ is a number of nucleon field operators, $d_i$ - the number of insertions
+In \eq{Delta} $n_i$ is a number of nucleon field operators and $d_i$ - the number of insertions
 (or derivatives) of  $M_\pi$.
 
 The further analysis of \eq{powers} revealed some problems which occur 
@@ -268,35 +275,37 @@ was slightly modified adding $3A - 6$ to it  \cite{Machleidt2011, EPELBAUM2006_P
     \label{powers_corrected}
 \end{equation}
 
-
+That convention is widely used and we will also stick to it.
 In \gls{ceft} the first order, "leading order" (LO, $\nu=0$) is followed 
 by next-to-leading order (NLO, $\nu=2$)
-\footnote{The $\nu=1$ order is completely vanished due to parity and time-reversal invariance,
-so next-to-leading order stands for the second order of expansion.},
+\footnote{The contributions to the potential at order $\nu=1$ completely vanish due to parity and time-reversal invariance,
+so the next-to-leading order stands for the second order of expansion.},
  next-to-next-to-leading order (\gls{n2lo}, $\nu=3$) and so on.
  At each chiral order, new interaction diagrams complete the potential.
- At LO there is a diagram which consists of 2 contact terms and the diagram
- implying one-pion exchange. Both diagrams reflect only 2NF as well
- as diagrams at NLO, where more contact terms are introduced together with two-pion 
+ There are also two diagrams at \gls{lo}. One is a diagram which consists of 2 contact terms and the other one
+ is one-pion exchange, see \fig{chiral_diagrams}. Both diagrams reflect only 2NF.
+ The same is for diagrams at \gls{nlo}, where more contact terms occure together with two-pion 
  exchange topologies. Each subsequent order includes more and more sophisticated diagrams
  describing nucleons interaction
  via multiple  pion exchanges and various contact verteces.
- 3NF appears at \gls{n2lo} while 4NF contributions are occuring at \gls{n3lo}.
- This establishes for the first time a systematic
+ 3NF appears for the first time at \gls{n2lo} while 4NF contributions are occuring from \gls{n3lo}.
+ This scheme establishes for the first time a systematic
 way to include all the forces from the simplest diagrams at LO and gradually
 adding more and more terms. 
 It is also beneficial in the way that 
 one can obtain results using chiral potential at different
-orders and track which one gives larger or smaller contribution to the final prediction.
-The highest order for which there is a derived term in potential
-is \gls{n4lo} at the moment. Nevertheless leading F-wave contact interactions from N$^5$LO are included in the \gls{n4lo+} potential,
-which is currently regarded as a best possible potential within the model.
+orders and track which one gives large or small contribution to the final prediction.
+At the moment, \gls{n4lo} is the highest order at which 2N interaction has been derived.
+Nevertheless leading F-wave contact interactions from N$^5$LO have been combined with \gls{n4lo} force
+leading to the \gls{n4lo+} potential,
+which is currently regarded as a best available potential on the market.
 The progression of the chiral orders is reflected in a $\chi^2/datum$.
-Leading order has only $\chi^2/datum = 73$ (with neutron-proton data with $E_{lab} = 0-100 \unit{\mev}$).
-Each subsequent order has better and better results: NLO has $\chi^2/datum = 2.2$, \gls{n2lo} - $\chi^2/datum = 2.2$
-and the final \gls{n4lo+} has $\chi^2/datum = 1.08$ \cite{reinkrebs2018}.
-Similar progression is observed for larger energies, e.g for $E_{lab} = 0-300 \unit{\mev}$)
-$\chi^2/datum$ is 75, 14, 4.2, 2.01, 1.16 and 1.06 at LO, NLO, \gls{n2lo}, \gls{n3lo}, \gls{n4lo} and \gls{n4lo+} respectively.
+Leading order results in $\chi^2/datum = 73$ (with neutron-proton data with $E_{lab} = 0-100 \unit{\mev}$).
+Each subsequent order has better and better results: \gls{nlo} gives $\chi^2/datum = 2.2$, \gls{n2lo} - $\chi^2/datum = 2.2$
+and the final \gls{n4lo+} leads to $\chi^2/datum = 1.08$ \cite{reinkrebs2018}.
+Similar progress is observed for wider energy range, e.g for $E_{lab} = 0-300 \unit{\mev}$
+$\chi^2/datum$ is 75, 14, 4.2, 2.01, 1.16 and 1.06
+at LO, NLO, \gls{n2lo}, \gls{n3lo}, \gls{n4lo} and \gls{n4lo+}, respectively.
 The proton-proton data description has similar trend, so $\chi^2/datum$ is 1380, 91, 41, 3.43, 1.67, 1.00 
 for the same energy bin and chiral orders. At \gls{n4lo+} $\chi^2/datum$ for proton-proton data
 stands similar value (close to 1) as for neutron-proton, but the convergence comes a bit later and 
@@ -308,7 +317,7 @@ In my work I will use chiral potentials from LO to \gls{n4lo+}.
     \includegraphics[width=0.6\textwidth]{Figures/chiral.png}
     \end{center}
     \caption{\tmp{Make own diagrams, e.g. with JaxoDraw or PyFeyn \cite{Entem2017}}}
-    \label{proton_rad}
+    \label{chiral_diagrams}
 \end{figure}
 
 The Argonne V18 potential \cite{AV18Wiringa}, mentioned earlier, has 18 free parameters,
@@ -318,17 +327,22 @@ has not only a theoretical but also a practical advantage in the studies of the 
 
 The general scheme outlined above was developed mainly by the Bochum-Bonn and Moscow-Idaho groups.
 Both groups have similar approaches and were independently and almost simultaneously
-developing own chiral potentials. In 1998 Epelbaum and colleagues from Bochum-Bonn group 
+developing their models. In 1998 Epelbaum and collaborators from the Bochum-Bonn group 
 presented a first version of their \gls{nn} chiral potential \cite{EPELBAOUM1998107, epelbaum2000two}.
 Developing a more and more sophisticated versions with higher chiral orders, authors presented
 \gls{n3lo} potential in 2005 \cite{epelbaum2005two} which included a 3NF contributions.
-Authors were further developng their model, taking into account more Feynmann diagrams
-coming to a higher chiral orders. Another problem Bochum-Bonn goup faced with was a potential regularization. An important point was when authors started using a semi-local regularisation 
-in the coordinate space (\gls{scs} potential) \cite{Epelbaum2014SCS} and later similar regularisation, but in the momentum space, resulting in a most advanced chiral potential at the moment up to  
-\gls{n4lo+} chiral order \cite{reinkrebs2018} (the \gls{sms} potential).
+They were further developing their chiral model, taking into account more Feynmann diagrams
+coming to a higher chiral orders.
+At some moment Bochum-Bonn goup faced with a problem of potential regularization\cite{skibiki_wita}.
+\tmp{Solving it was an important point and autors...}
+An important point was when authors started using a semi-local regularisation 
+in the coordinate space. The correspondant potential is called  the \gls{scs} potential
+(semi-local regularisation in the coordinate space)\cite{Epelbaum2014SCS}. Later similar regularisation,
+but done in momentum space was introduced, resulting in the most advanced chiral potential at the moment up to  
+\gls{n4lo+} chiral order \cite{reinkrebs2018}: the \gls{sms}. It is developed up to \gls{n4lo+} at the moment.
 
-On the other side of the planet, in Idaho, Machleidt and his group from Moscow were also developing 
-a chiral potential. Their results from 2003 \cite{Entem2003}, following with later investigations \cite{Machleidt2005, Machleidt2010, Entem2017} were introducing very similar to Bochum-Bonn
+On the other side of the planet, in Idaho, Machleidt and his group from Moscow(Idaho) were also developing 
+a chiral interaction. Their results from 2003 \cite{Entem2003}, following with later investigations \cite{Machleidt2005, Machleidt2010, Entem2017} were introducing very similar to Bochum-Bonn
 model with minor technical differences.
 
 There are a number of another approaches within \gls{ceft} utilized.
