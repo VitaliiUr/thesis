@@ -14,12 +14,13 @@ one has to find a nuclear matrix elements:
 %     \label{main}
 % \end{equation}
 \begin{equation}
-    N^\mu = \langle \Psi_{final} \mid J^\mu \mid \Psi_{internal} \rangle, 
+    N^\mu = \langle \Psi_{final} \mid J^\mu \mid \Psi_{initial} \rangle, 
     \label{main}
 \end{equation}
-with $\Psi_{internal}  = \Psi_{deuteron}$
-and $J^\mu$ is a four-vector current operator which acts between initial and final 
-two-nucleon states. 
+with two-nucleon wave function of the initial state $\Psi_{initial}  = \Psi_{deuteron}$;
+two-nucleon wave function of the final scattering state $\Psi_{final}$ 
+and a four-vector current operator $J^\mu$ which acts between initial and final 
+two-nucleon states. In following I describe how to get that quantities.
 
 
 % $\vec{P_i}$($\vec{P_f}$) is an initial (final) total 2N m\vec{p}omentum.
@@ -39,7 +40,7 @@ two-nucleon states.
 
     Let's find a deuteron bound state wave function $\ket{\phi_d}$. 
     The time-independent Schr\"{o}dinger
-    equation for two particles exposes as:
+    equation for two particles expresses as:
 
     \begin{equation}
         (H_0 + V) \ket{\phi_d}  = E_d \ket{\phi_d},
@@ -59,21 +60,21 @@ two-nucleon states.
         \vec{p} &=& \frac{(m_1\vec{p}_1 - m_2\vec{p}_2)}{m_1 + m_2}\\
         \vec{\mathcal{P}} &=& \vec{p}_1 + \vec{p}_2
     \end{eqnarray}
-    and $M = m_1 + m_2$ is a total mass, $\mu = \frac{m_1m_2}{M}$ is a relative mass of two nucleons, 
+    $M = m_1 + m_2$ is a total mass, $\mu = \frac{m_1m_2}{M}$ is a relative mass of two nucleons and 
     $\vec{p_i}$ is a momentum of i-th particle.
 
-    Potential $V$ is assumed to depend on the relative degrees of freedom, so
+    Potential $V$ is assumed to depend on the relative degrees of freedom only, so
     \eq{shrod_bound} may be decomposed into two separated equations:
 
     \begin{eqnarray}
         &\frac{\vec{p}^2}{2\mu} \langle \vec{p} \mid \Psi_{int} \rangle +
         \langle \vec{p} \mid V \mid \Psi_{int} \rangle = 
-        (E_d - E_{c.m.})\langle \vec{p} \mid \Psi_{int} \rangle \label{se1}\\
-        &\frac{\vec{\mathcal{P}}^2}{2M} \langle \mathcal{P} \mid \Psi_{c.m.} \rangle = 
-        E_{c.m.}\langle \mathcal{P} \mid \Psi_{c.m.} \rangle \label{se2},
+        (E_d - E)\langle \vec{p} \mid \Psi_{int} \rangle \label{se1}\\
+        &\frac{\vec{\mathcal{P}}^2}{2M} \langle \mathcal{P} \mid \Psi \rangle = 
+        E\langle \mathcal{P} \mid \Psi \rangle \label{se2},
     \end{eqnarray}
     with $\matrixel{\vec{p},\vec{\mathcal{P}}}{H_0}{\phi_d} = \frac{\vec{p}^2}{2\mu} \braket{\vec{p}}{\Psi_{int}} +
-    \frac{\vec{\mathcal{P}}^2}{2M} \braket {\mathcal{P}} {\Psi_{c.m.}} $. So $\Psi_{c.m.}$ is a component 
+    \frac{\vec{\mathcal{P}}^2}{2M} \braket {\mathcal{P}} {\Psi} $. So $\Psi$ is a component 
     of total wave function, which reflects a deuteron as a single object with momentum $\vec{\mathcal{P}}$
     while $\Psi_{int}$ is an internal wave function describing interaction between nucleons.
     Basis state $\ket{\vec{p}}$  obeys a completeness
@@ -99,7 +100,7 @@ two-nucleon states.
     \end{equation}
 
     Working in 3 dimensional space  is difficult (especially numerically)
-    so I follow a standard path and introduce the partial-wave representation (PWD) 
+    so I follow a standard path and introduce the partial-wave decomposed representation (PWD) 
     of the momentum state, adding spin and isospin degrees of freedom in the following form:
 
     \begin{equation}
@@ -108,11 +109,11 @@ two-nucleon states.
     \end{equation}
     where quantum numbers l, s, j, t are orbital angular momentum, total spin,
     total angular momentum and total isospin respectively. $m_j$ and $m_t$ are 
-    total angular isospin momentum and isospin projections, respectively.
+    total angular momentum and isospin projections, respectively.
 
 
     States $\ket{p (ls) j m_j}$ can be further decomposed to 
-    simpler states than it is in (\ref{pwmain}), separating spin part as 
+    the main basis states than it is in (\ref{pwmain}), separating spin part as 
     
     \begin{equation}
         \ket{p (ls) j m_j} = \sum_{m_l} c(lsj;m_l, m_j\!-\!m_l, m_j) \ket{p l m_l}
@@ -120,7 +121,7 @@ two-nucleon states.
         \label{full_decomp}
     \end{equation}
 
-    Spin(isospin) states can be represented via single-nucleon spin(isospin) states:
+    Spin(isospin) states can be further represented via single-nucleon spin(isospin) states:
 
     \begin{equation}
         \ket{s m_s} = \sum_{m_1} c(\frac{1}{2}\frac{1}{2}s;m_1, m_s\!-\!m_1, m_s)
@@ -139,9 +140,9 @@ two-nucleon states.
     In Eqs.(\ref{full_decomp}) -(\ref{isospin_decomp}),  $c(...)$ are Clebsh-Gordon coefficients.
     Nucleons are spin $\frac{1}{2}$ particles, and also we treat proton and neutron as 
     the same particle in different 
-    isospin states, so that isospin is $\nu_1 = \frac{1}{2}$ for proton and $\nu_1 = -\frac{1}{2}$ for neutron.
+    isospin states, so that isospin $\nu_1 = \frac{1}{2}$ stands for proton and $\nu_1 = -\frac{1}{2}$ for neutron.
 
-    The states $\mid p l m_l \rangle$ from Eq.(\ref{full_decomp}) are orthogonal, so that
+    The states $\mid p l m_l \rangle$ from Eq.(\ref{full_decomp}) are orthogonal
     
     \begin{equation}
         \langle p^\prime l^\prime m_l^\prime \mid p l m_l \rangle = 
@@ -160,8 +161,8 @@ two-nucleon states.
         \braket{\pvec{p}}{plm_l} = 
         \frac{\delta ( \abs{\pvec{p}} - p)}{p^2} Y _{l m_l}(\hat{p}^\prime),
     \end{equation}
-    where $Y _{l m_l}(\hat{p}^\prime)$ is a spherical harmonic and 'hat' denotes a unit vector in 
-    direction of $\vec{p}$:
+    where $Y _{l m_l}(\hat{p}^\prime)$ is a spherical harmonic and 'hat' denotes a unit vector $\hat{X}$ in 
+    direction of $\vec{X}$. So for the momentum vector:
 
     \begin{equation}
         \vec{p} \equiv |\vec{p}| \hat{p} \equiv p \hat{p}. 
@@ -169,7 +170,7 @@ two-nucleon states.
     \end{equation}
 
     Nucleons are fermions so exchanging them leads to antisymmetry of the
-    wave function. In PWD it results in additional requirement on quantum numbers which
+    wave function. In PWD it results in additional requirement on allowed quantum numbers which
     is:
 
     \begin{equation}
@@ -177,14 +178,16 @@ two-nucleon states.
         \label{parity}
     \end{equation}
 
-    In general, nuclear NN force conserves spin and parity so
+    In general, nuclear NN force conserves spin, parity and charge so
 
     \begin{equation}
         \matrixel*{p^\prime\alpha^\prime}{V}{p\alpha} = \delta_{jj'}\delta_{mm'}\delta_{tt'}\delta_{m_tm_{t'}}
-        \delta_{ss'}V^{sjtm_t}_{ll'}(p',p)
+        \delta_{ss'}V^{sjtm_t}_{l'l}(p',p)
         \label{conservation}
     \end{equation}
-    which introduces restrictions for particular sets of quantum numbers. The channels, where $l \neq l'$
+    which introduces restrictions for particular sets of quantum numbers.
+    Strong interaction allows for change of the orbital angular momenta $l = j \pm 1,~l'=j'\pm1$.
+    The channels, where $l \neq l'$
     are coupled and for the deuteron bound state 
     one can find only one possible PWD state combination:
     two coupled channels 
@@ -202,7 +205,7 @@ two-nucleon states.
         \label{deut_waves}
     \end{equation}
 
-    So with a new basis Eq.(\ref{shrod_old}) takes a form:
+    In that new basis Eq.(\ref{shrod_old}) takes a form of two coupled equations:
 
     \begin{equation}
         \frac{\vec{p}^2}{2\mu} \phi_l(p) +
@@ -215,7 +218,7 @@ two-nucleon states.
     \end{equation}
     for $l=0,2$. In case one does not have a matrix elements for the potential 
     $\langle plm_l \mid V \mid p^\prime l^\prime m_l^\prime  \rangle$ in analytical form,
-    but only values for some grid of points, 
+    but only numerical values for some grid of points, 
     there is still one complication in the Eq.(\ref{integral}) - integration, which has to be discretized.
     In order to get rid of the integral I use a Gaussian quadrature 
     method of numerical integration \cite{jacobi1826ueber}.
@@ -241,26 +244,33 @@ two-nucleon states.
     in that way
     find simultaneously wave function values in grid of $p$ points and binding energy $E_d$. 
     The binding energy $E_d$ calculated with potentials of different chiral orders 
-    is presented on the Fig.~\ref{bind}.
+    is presented in Fig.~\ref{bind}.
 
     \begin{figure}[h]
         \begin{center}
             \includegraphics[width=0.65\textwidth]{Figures_De/Binding_energy.pdf}
         \end{center}
-        \caption{Deuteron binding energy calculated using chiral potential with different chiral orders
-        as a mean value over all cutoffs.
+        \caption{Deuteron binding energy calculated using the chiral \gls{sms} potential
+        at different chiral orders as a mean value over all cutoffs.
         Error bands represent a spread the calculated binding energy with respect to
         the cutoff parameter $\Lambda$ (minimal and maximal values).
         Experimental data is taken from \cite{VANDERLEUN1982261}}
         \label{bind}
     \end{figure}
 
+    An example of such wave functions is demonstrated in \fig{wave_func}. The left pane demonstrate
+    a wave function for $l=0$ - $^3S_1$ while the right one - for $l=2$ - $^3D_1$. Both 
+    plots consist of the curves for different cutoff values and using the chiral \gls{sms} potential at \gls{n4lo+}.
+    The small deviation between lines show that cutoff dependency is rather weak at this stage
+    and further discrepancies connected to the value of $\Lambda$ may appear in other components.  
 
     \begin{figure}[h]
         \begin{center}
             \includegraphics[width=0.85\textwidth]{Figures_De/Wave_function_cutoff.pdf}
         \end{center}
-        \caption{Wave function $\phi_l$ for l=0 ($3S_1$ partial wave) - left figure and l=2 ($3D_1$) - right figure.}
+        \caption{Wave function $\phi_l$ for l=0 ($^3S_1$ partial wave)(left) and l=2 ($^3D_1$) (right).
+        Each curve shows results obtained with different values of the cutoff parameter $\Lambda$, 
+        results have been obtained using the chiral \gls{sms} potential at \gls{n4lo+}.}
         \label{wave_func}
     \end{figure}
 
@@ -290,8 +300,8 @@ two-nucleon states.
     \end{equation}
     where again $H_0$ is a kinetic energy operator $H_0 = \frac{\vec{p}^2}{2m}$ 
     and $V$ is a nucleon-nucleon interaction.
-    For a free particle motion, $V$ will be absent and we will denote an energy eigenstate as
-    $\mid \vec{p}_0 \rangle$ - a free particle state.
+    For a free particle motion, $V$ will be absent and we will denote a corresponding energy eigenstate as
+    a free particle state $\mid \vec{p}_0 \rangle$.
     The scattering state $\ket{\psi}$ fulfills similar Schr\"{o}dinger equation as 
     $\mid \vec{p}_0 \rangle$, with the same energy eigenvalue, but with potential presented:
     
@@ -331,7 +341,7 @@ two-nucleon states.
     % In addition, it 
     which guarantees that
      application of the operator $(E -H_0)$ to the 
-    (\ref{psieq}) results in the second equation from the system (\ref{system}).
+    (\ref{psieq}) results in the second equation from the set (\ref{system}).
     % Also, \eq{psieq} for $V \rightarrow 0$ becomes $\mid \psi \rangle = \mid \vec{p} \rangle$
 
 
@@ -347,16 +357,16 @@ two-nucleon states.
     where $G_0$ is a free propagator:
 
     \begin{equation}
-        G_0(z) = \frac{1}{z - H_0}
+        G_0(z) = \frac{1}{z - H_0}.
         \label{g0}
     \end{equation}
 
     Solution with $G_0(E - i\epsilon)$ corresponds to the incoming spherical wave,
-    while $G_0(E + i\epsilon)$ - to the outgoing one. Since we are interested in the scattering
-    process, only the $(+)$ sign survives.
+    while $G_0(E + i\epsilon)$ - to the outgoing one. Since we are interested in the final scattering
+    state, only the $(+)$ sign survives.
     
-    Eq.~(\ref{lse}) is known as the Lippmann-Schwinger equation (LSE) and
-    defining the transition operator $t$:
+    Eq.~(\ref{lse}) is known as the Lippmann-Schwinger equation (LSE).
+    Defining the transition operator $t$:
 
     \begin{equation}
         t \ket{\vec{p}} = V \ket{\psi}
@@ -378,16 +388,16 @@ two-nucleon states.
         \label{top2}
     \end{eqnarray}
 
-    Getting rid off the initial state $\ket{\vec{p}}$ in the \eq{top2} we can get a LSE
+    Getting rid off the initial state $\ket{\vec{p}}$ in the \eq{top2} we can get the LSE
     for the transition operator in the iterative form:
 
     \begin{eqnarray}
         t = V + V G_0 t = \nonumber\\
         = V + V G_0 V + V G_0 V G_0V + ...,
     \end{eqnarray}
-    which constitutes an infinite series of subsequent NN interactions and free propagator of nucleons.
+    which constitutes an infinite series of subsequent NN interactions and free propagators of nucleons.
 
-    In the partial-wave representation, LSE \eq{top2} expresses as:
+    In the partial-wave representation, the LSE \eq{top2} expresses as:
     \begin{multline}
         \bra{p^\prime (l^\prime s^\prime)j'm_{j'}}\matrixel{t' m_{t'}}{t(E)}{t m_t}\ket{p (l s)jm_{j}} = 
         \bra{p^\prime (l^\prime s^\prime)j'm_{j'}}\matrixel{t' m_{t'}}{V}{t m_t}\ket{p (l s)jm_{j}} + \\
@@ -398,7 +408,7 @@ two-nucleon states.
         \bra{p'' (l'' s'')j''m_{j''}}\matrixel{t'' m_{t''}}{t(E)}{t m_t}\ket{p (l s)jm_{j}},
         \label{lse_pwd}
     \end{multline}
-    which after using symmetries of potential matrix elements reduces to
+    which after using symmetries of potential matrix elements (\ref{conservation}) reduces to
     
     \begin{multline}
         \matrixel{p^\prime (l^\prime s^\prime)jt}{t(E)}{p(ls)jt} = 
@@ -410,7 +420,10 @@ two-nucleon states.
         \label{lse_pwd_reduced}
     \end{multline}
 
-    Using \eq{psi_toper} we can write \eq{main} as
+    I solve \eq{lse_pwd_reduced} numerically, which again requires discretisation
+    and therefor leads to set of linear equations.
+    Finally, using \eq{psi_toper} and denoting the momentum state of two nucleons
+    with spin projections $m_p$ and $m_n$ as $\bra{\phi m_p m_n}$, we can write \eq{main} as
     
     \begin{equation}
         N^\mu = \bra{\phi m_p m_n} (1 + G_0(E + i\epsilon) t) \frac{1}{e}J^\mu(0) \mid \Psi_i \vec{P_i} \rangle
