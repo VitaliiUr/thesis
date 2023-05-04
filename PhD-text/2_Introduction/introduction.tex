@@ -474,3 +474,34 @@ A third type of nuclear current is the three-body current, which describes the i
 
 The use of nuclear currents in scattering experiments is essential for understanding the structure of the nucleus and the interactions between its constituent nucleons. Advances in theoretical and experimental techniques have allowed for more precise measurements of these currents and have provided insights into the fundamental properties of the nucleus.
 
+The central element of the formalism is the nuclear part, denoted by $\mathcal{N}^\lambda$, which is given by the matrix element of the nuclear weak-current operator $j_w^\lambda$ between the initial and final nuclear states. The single nucleon current operator, which is derived based on symmetry requirements is \cite{Golak2014}:
+\begin{equation}
+    \begin{aligned}
+        \left\langle\frac{1}{2} m^{\prime}\right| & \left\langle\mathbf{p}^{\prime}\left|j_w^\lambda(1)\right| \mathbf{p}\right\rangle\left|\frac{1}{2} m\right\rangle \\
+        = & \bar{u}\left(\mathbf{p}^{\prime}, m^{\prime}\right)\left[\left(g_1^V-2 M g_2^V\right) \gamma^\lambda+g_2^V\left(p+p^{\prime}\right)^\lambda\right. \\
+        & \left.+g_1^A \gamma^\lambda \gamma^5+g_2^A\left(p-p^{\prime}\right)^\lambda \gamma^5\right] \tau_{-} u(\mathbf{p}, m),
+    \end{aligned}
+    \label{maincurr}
+\end{equation}
+which contains weak form factors $g_1^V, g_2^V, g_1^A$, and $g_2^A$, that are functions of the momentum-transfer squared $\left(p^{\prime}-p\right)^2$.
+The difference between the proton mass $M_p$ and neutron mass $M_n$ is negligible so we can introduce the average "nucleon mass" $M \equiv \frac{1}{2}\left(M_p+M_n\right)$.
+The isospin lowering operator is $\tau_{-}=\left(\tau_x-i \tau_y\right) / 2$ in the isospin formalism. 
+The nonrelativistic reduction of \eq{maincurr} results in the following forms of the time and space components of $j_w^\lambda(1)$
+The zero-component is
+\begin{equation}
+    \left\langle\mathbf{p}^{\prime}\left|j_{\mathrm{NR}}^0(1)\right| \mathbf{p}\right\rangle=\left(g_1^V+g_1^A \frac{\sigma \cdot\left(\mathbf{p}+\mathbf{p}^{\prime}\right)}{2 M}\right) \tau_{-}
+\end{equation}
+and space (vector) component
+\begin{equation}
+    \begin{aligned}
+    \left\langle\mathbf{p}^{\prime}\left|\mathbf{j}_{\mathrm{NR}}(1)\right| \mathbf{p}\right\rangle= & {\left[g_1^V \frac{\mathbf{p}+\mathbf{p}^{\prime}}{2 M}-\frac{1}{2 M}\left(g_1^V-2 M g_2^V\right) i \sigma \times\left(\mathbf{p}-\mathbf{p}^{\prime}\right)\right.} \\
+    & \left.+g_1^A \sigma+g_2^A\left(\mathbf{p}-\mathbf{p}^{\prime}\right) \frac{\boldsymbol{\sigma} \cdot\left(\mathbf{p}-\mathbf{p}^{\prime}\right)}{2 M}\right] \tau_{-}
+    \end{aligned}    
+\end{equation}
+where $\sigma$ is a vector of Pauli spin operators. Here we have kept only terms up to $1 / M$.
+
+The two-nucleon current contribution is partially taken into account via Siegert approach \cite{GolakKamad2000_ExplDescr, Golak2005}.
+In order to do that we break down the single nucleon current matrix elements into multipole components and apply common formulas \cite{Golak2005}
+to represent some of the electric multipoles using the Coulomb multipoles, which arise from the single nucleon charge density operator.
+This is acceptable because, in low-energy situations, contributions from many nucleons to the nuclear charge density are typically insignificant.
+We then obtain the rest of the electric multipoles and all of the magnetic multipoles exclusively from the single nucleon current operators.
