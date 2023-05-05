@@ -202,7 +202,7 @@ which are the degrees of freedom that become relevant at low energies.
 
 The chiral Lagrangian is the starting point for the development of
 the \gls{ceft}, which has become one of the
-most advanced approaches to low-energy nuclear physics.
+most advanced approaches to low-energy nuclear physics \cite{EpelHam2008}.
 The use of \gls{ceft} allows for the calculation of nuclear properties
 and reactions in a model-independent way, making it possible to
 quantify the uncertainties associated with the calculation. One of the
@@ -333,7 +333,7 @@ Developing a more and more sophisticated versions with higher chiral orders, aut
 \gls{n3lo} potential in 2005 \cite{epelbaum2005two} which included a 3NF contributions.
 They were further developing their chiral model, taking into account more Feynmann diagrams
 coming to a higher chiral orders.
-At some moment Bochum-Bonn goup faced with a problem of potential regularisation\cite{skibiki_wita}.
+At some moment Bochum-Bonn goup faced with a problem of potential regularisation\cite{skibinski_3H, Witala_2014}.
 \tmp{Solving it was an important point and autors...}
 An important point was when authors started using a semi-local regularisation 
 in the coordinate space. The correspondant potential is called  the \gls{scs} potential
@@ -353,14 +353,16 @@ the same chiral potentials with minor differences \cite{Piarulli2012,Piarulli201
 
 There are several other approaches within the framework of \gls{ceft}
 that have been utilized in nuclear physics.
-One of them is the work of Ekström et al. who developed a chiral
+One of them is the work of Ekström and collaborators who developed a chiral
 effective theory for nuclear forces and currents that includes both
-nucleon and pion degrees of freedom \cite{?}. Their approach
+nucleon and pion degrees of freedom \cite{ekstrom_2015, Tews_2020}. Their approach
 is based on a power counting scheme that separates long-range and
 short-range contributions and allows for systematic improvements in the
-calculations. Another approach is the pionless effective field
+calculations.
+
+Another approach is the pionless effective field
 theory, which neglects the pion degrees of freedom and
-focuses on the interactions between nucleons only \cite{?}.
+focuses on the interactions between nucleons only\cite{?}.
 
 Another important approach is the lattice effective field theory (LEFT), which
 is based on lattice QCD simulations of the strong
@@ -433,11 +435,10 @@ of predictions is
 observed for the best currently available forces (\gls{scs} and \gls{sms}). 
 To inspect the potential cutoff dependancy, in \fig{potential_cutoff} 
 I show values of the matrix elements for 2N $\matrixel{p}{V}{p^\prime}$ potential $^3S_1-^3D_1$
-as a function on the momentum $|\vec{p}|$ with fixed value $|\pvec{p}|$=\SI{0.054}{fm^{-1}}.\footnote{
-    Please note, that relatively strong dependancy of specific matrix element of the potential
-    is not always leading to a strong dependancy of observables, as 
-    observables comprise \tmp{unclear from correction}
-}
+as a function on the momentum $|\vec{p}|$ with fixed value $|\pvec{p}|$=\SI{0.054}{fm^{-1}}.
+Please note, that relatively strong dependancy of specific matrix element of the potential
+is not always leading to a strong dependancy of observables, as 
+observables comprise contributions from many matrix elements.
 
 
 
@@ -445,8 +446,11 @@ as a function on the momentum $|\vec{p}|$ with fixed value $|\pvec{p}|$=\SI{0.05
     \begin{center}
     \includegraphics[width=0.95\textwidth]{PlotData/Deuteron/WAVEFUNC/potential_pp1.798.pdf}
     \end{center}
-    \caption{Potential components in case of coupled partial waves $3S_1 - 3D_1$ as a function on the momentum $p$ with fixed
-    value of the momentum $p'=\SI{1.798}{fm^{-1}}$. \tmp{correct labels}
+    \caption{Matrix elements $\matrixel{p}{V}{p^\prime}$ of the potential in
+    coupled partial waves $^3S_1 - ^3D_1$ as a function on the momentum $p$ with fixed
+    value of the momentum $p'=\SI{1.798}{fm^{-1}}$. Potential element $V_{ll'}$
+    is taken between two states with angular momenta  $l$ and $l'$ where $l=0$
+    stands  for $^3S_1$ state and $l=2$ - for $^3D_1$. 
     }
     \label{potential_cutoff}
 \end{figure}
