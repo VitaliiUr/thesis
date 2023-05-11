@@ -524,7 +524,11 @@ where
     \begin{equation}
         \ket{\Psi^{(-)}}^{3N} = \frac{1}{\sqrt{3}}\ket{\Psi^{(-)}_j}^{3N}    
     \end{equation}
-    with a set of corresponding equations for $\ket{\Psi^{(-)}_j}^{3N}$
+    where scattering state $\ket{\Psi^{(-)}_j}^{3N}$ is derived from an
+    asymptotic state $\ket{\Phi^{3N}_j}$ describing a free motion
+    of particles $k$ and $l$ with relative momentum $\vec{p}$. In this case
+    particle $j$ is moving with momentum $\vec{q}$ relatively to the 
+    center of mass $(k-l)$.
 
     \begin{eqnarray}
         \ket{\Psi^{(-)}_j}^{3N}  &\equiv& \lim_{\epsilon \rightarrow 0}
@@ -556,9 +560,19 @@ where
     \begin{equation}
         \begin{aligned}
             N_\mu^{3 N} & =\frac{1}{\sqrt{3}}\left\langle\Phi_1^{3 N}\left|(1+P) j_\mu\right| \Psi_i\right\rangle+\frac{1}{\sqrt{3}}\left\langle\Phi_1^{3 N}\left|t_1^{+} G_0^{+}(1+P) j_\mu\right| \Psi_i\right\rangle \\
-            & +\frac{1}{\sqrt{3}}\left\langle\Phi_1^{3 N}\left|t_1^{+} G_0^{+} P\right| U_\mu\right\rangle+\frac{1}{\sqrt{3}}\left\langle\Phi_1^{3 N}|P| U_\mu\right\rangle.
+            & +\frac{1}{\sqrt{3}}\left\langle\Phi_1^{3 N}\left|t_1^{+} G_0^{+} P\right| U_\mu\right\rangle+\frac{1}{\sqrt{3}}\left\langle\Phi_1^{3 N}|P| U_\mu\right\rangle,
             \end{aligned}
         \label{3n_matrix}
+    \end{equation}
+    where $ U_\mu$ fulfills the
+    following equation:
+
+    \begin{equation}
+        \begin{aligned}
+            \left|U_\mu\right\rangle & =\left[t_1^{+} G_0^{+}+\frac{1}{2}(1+P) V_4^{(1)} G_0^{+}\left(1+t_1^{+} G_0^{+}\right)\right](1+P) j_\mu\left|\Psi_i\right\rangle \\
+            & +\left[t_1^{+} G_0^{+} P+\frac{1}{2}(1+P) V_4^{(1)} G_0^{+}\left(1+t_1^{+} G_0^{+}\right) P\right]\left|U_\mu\right\rangle
+            \end{aligned}
+        \label{u_mu}
     \end{equation}
 
 
@@ -619,6 +633,64 @@ where
     The nuclear one-body current is constructed based on the electromagnetic current for a Dirac particle. To account
     for the extended structure of nucleons, form factors are introduced. Since we use nonrelativistic wave functions,
     we need to use nonrelativistic currents.
+
+
+    \section{Pion absorption}
+
+    The matrix element of the SN pion absorption operator $\rho(1)$ in momentum-space for nucleon 1 relies on the
+    nucleon's incoming momentum (${\bf p}$) and outgoing momentum (${\bf p}^{, \prime}$) \cite{BERNARD_1995}:
+
+    \begin{eqnarray}
+        \matrixel{{\bf p}^{\, \prime}} 
+        {\rho(1)} {{\bf p}} = 
+        - \frac{g_A M_\pi}{\sqrt{2} F_\pi } \,
+            \frac{ \left( {\bf p}^{\, \prime} +  {\bf p} \right) \cdot {\bm \sigma}_1 } { 2 M } \, 
+            ({\bm \tau}_{1})_- \, ,
+    \label{rho1}
+    \end{eqnarray}
+    where the values of the nucleon axial vector coupling, pion decay constant, and negative pion mass are $g_A =$ 1.29, 
+    $F_\pi = \SI{92.4}{\mev}$, and $M_\pi = \SI{139.57}{\mev \per \clight\squared}$, respectively. $\rho (1)$ operates in the spin
+    and isospin spaces and involves the Pauli spin (isospin) operator ${\bf \sigma}_1$ ($\tau_1$) for nucleon 1 and the isospin lowering operator
+    $({\bm \tau}_{1})_- \equiv(({\bm \tau}_1)_x -{\rm i} ({\bm \tau}_1)_y)/2$.
+    The accuracy level of our \gls{lo} absorption operator is not sensitive to 
+    the small difference between the
+    proton mass $M_p$ and neutron mass $M_n$, and therefore we use the average 
+    "nucleon mass" $M \equiv \frac12 \left( M_p + M_n , \right)$.
+
+
+
+    The 2N part of $ \rho$ at LO has the form \cite{Lensky2006}
+    \begin{eqnarray}
+    \matrixel{
+        {\bf p}_1^{\, \prime}\,
+        {\bf p}_2^{\, \prime}
+        } 
+    {\rho(1,2)}
+    {
+        {\bf p}_1 \, 
+        {\bf p}_2 \, 
+        } = 
+        \left(
+        v( k_2 )  {\bf k}_2 \cdot {\bm \sigma}_2 \, - \, 
+        v( k_1 )  {\bf k}_1 \cdot {\bm \sigma}_1 \,
+        \right) \, \nonumber \\ \times \,
+        \frac{i}{\sqrt{2}} \, 
+        \left[ 
+            \left( {\bm \tau}_1 \times {\bm \tau}_2 \, \right)_x 
+            - i \left( {\bm \tau}_1 \times {\bm \tau}_2 \, \right)_y \,
+        \right] \,,
+    \label{rho12}
+    \end{eqnarray}
+    where 
+    $ {\bf k}_1 = {\bf p}_1^{\, \prime} - {\bf p}_1 $,
+    $ {\bf k}_2 = {\bf p}_2^{\, \prime} - {\bf p}_2 $
+    and the formfactor $v(k)$ reads 
+    \begin{eqnarray}
+    v (k) = \frac 1{ \left( 2 \pi \, \right)^3 } \,
+            \frac{g_A M_\pi}{4 F_\pi^3 } \,
+        \frac1{M_\pi^2 + k^2 } \, .
+    \label{vk}
+    \end{eqnarray}
 
 
 
