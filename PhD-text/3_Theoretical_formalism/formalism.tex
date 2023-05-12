@@ -760,7 +760,7 @@ where
     $ M^\prime_{^3{\rm He}}  = \frac { M_{^3{\rm He}} M_{\pi^-} } { M_{^3{\rm He}} + M_{\pi^-} }$
     is now the reduced mass of the $\pi^- - {^3{\rm He}}$ system.
 
-    3N breakup is calculated in a similar way and the total absorption rate for $\pi^- + {^3{\rm He}} \rightarrow p + n + n $ reaction is
+    3N breakup is calculated in a similar way and the total absorption rate for $\pi^- + {^3{\rm He}} \rightarrow p + n + n $ reaction is defined as follows
 
     \begin{eqnarray}
         \Gamma_{pnn} = 
@@ -779,7 +779,8 @@ where
     \label{gpnn}
     \end{eqnarray}
 
-    It is calculated in a similar way for $\pi^- + {^3{\rm H}} \rightarrow n + n + n $
+    The total absorption rate for $\pi^- + {^3{\rm H}} \rightarrow n + n + n $
+    is calculated in a similar way
     and reads
 
     \begin{eqnarray}
@@ -801,6 +802,39 @@ where
     \label{gnnn}
     \end{eqnarray}
 
+    In the Results section we also demonstrate predictions of the differential absorption rates.
+    One of the domains is $(E_1, E_2)$, in such case the differential absorption rate
+     $ {d^2\Gamma_{pnn} }/ \left( {d E_1 \, d E_2} \right) $ is defined as 
+    \begin{eqnarray}
+        \frac{d^2\Gamma_{pnn} }{ {d E_1 \, d E_2}  }\, = \,
+                    {\cal R} \, 
+                    \frac { 64\, \pi^2 \, \left( \alpha \, M^\prime_{^3{\rm He}} \, \right)^3 \, c\, M^3 } { 3 M_{\pi^-}   } \,
+            \nonumber \\
+            \times \,
+            \frac12 \, 
+            \sum\limits_{m_1, m_2, m_3, m_{^3{\rm He}}} 
+            \left| 
+            N_{pnn} (m_1, m_2, m_3, m_{^3{\rm He}} \, ) \, 
+            \right|^2  \, ,   % with \rho(1) + \rho(2) + \rho(3) + ...
+    \label{gpnn.4}
+    \end{eqnarray}
+    where 
+    $ -1 \le \frac{E - 2 E_1 - 2 E_2 }{ 2 \sqrt{ E_1 \, E_2} } \le 1 $.
+
+    We can also calculate differential absorption rate with 
+    respect to the dimensionless variables $x$ and $y$ introduced in
+    a commonly used way \cite{Gotta1995}
+
+    \begin{eqnarray}
+        x & = & \sqrt{3} \, ( E_1 + 2 E_2 - E ) / E \, , \nonumber \\
+        y & = &  ( 3 E_1 - E ) / E \, ,
+    \label{xy}
+    \end{eqnarray}
+    which are restricted to the disk $ r^2 \equiv x^2 + y^2 \le 1 $
+    One can evaluate 
+    $ {d^2\Gamma_{pnn} }/ \left( {d x \, d y} \right) $
+    or (using polar coordinates)
+    $ {d^2\Gamma_{pnn} }/ \left( {d r \, d \phi} \right)$.
 
 \section{Theoretical uncertainties}
 
