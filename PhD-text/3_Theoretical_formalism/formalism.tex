@@ -692,6 +692,114 @@ where
     \label{vk}
     \end{eqnarray}
 
+    In case of the pion absorption process we follow a standard procedure
+    including pratial wave states for both 2N and 3N induced nucleus.
+    An important difference between these two cases is that
+    after introducing partial wave states, the transition operator is acting between
+    different states. For 2N this is 
+    $ \matrixel{\, {\bf p} + \frac12{\bf P}_f } 
+    {\rho (1) }{ {\bf p} - \frac12{\bf P}_f + {\bf P}_i \, }$
+    while for 3N case
+    $\matrixel {\, {\bf q} + \frac13{\bf P}_f}  
+    {\rho(1)} {{\bf q} - \frac23{\bf P}_f + {\bf P}_i \,}$.
+
+    For the $\pi^- + {^2{\rm H}} \rightarrow n + n $ reaction,
+    the nuclear matrix element for the transition operator is given by:
+    \begin{eqnarray}
+        N_{nn} (m_1, m_2, m_d \, ) \ = \
+   ^{(-)}\matrixel{ {\bf p}_0 \, m_{1} \, m_2 \ {\bf P}_f=0 } 
+   {\rho } {\phi_d \, m_d \ {\bf P}_i=0 \, },
+   \label{nnn1}
+   \end{eqnarray}
+   where $ \ket{  {\bf p}_0 \, m_{1} \, m_2 \ {\bf P}_f=0  }^{(-)}  $ denotes the 2N scattering state (see \cite{Golak2018}).
+
+   The total absorption rate for this matrix would be:
+
+   \begin{eqnarray}
+        &&\Gamma_{nn} = 
+    \frac{ \left( \alpha \, M^\prime_d \, \right)^3 \, c \, M_n \, p_0 }{ 2 M_{\pi^-} }
+        \int d {\bf\hat p}_0 \,
+        \frac13 \, 
+        \sum\limits_{m_1, m_2, m_d} 
+        \left| 
+        N_{nn} (m_1, m_2, m_d \, ) \, 
+        \right|^2  \, .
+    \label{gnn1}
+    \end{eqnarray} 
+
+    The next regarded reaction includes $^3{\rm He}$ and 
+    more precisely is $\pi^- + {^3{\rm He}} \rightarrow n + d $. The most important part for 
+    obtaining predictions for this reeaction is calculating
+    the matrix element
+    of the 3N transition operator $\rho_{3N}$:
+
+    \begin{eqnarray}  
+        N_{nd} (m_n, m_d , m_{^3{\rm He}}  \, )  \, \equiv \, 
+        {}^{(-)}\matrixel{\Psi_{nd}  \, 
+            m_n \, m_d \,
+            {\bf P}_f=0 
+            } {\rho_{3N} }
+        {\Psi_{^3{\rm He}} \, m_{^3{\rm He}} \, {\bf P}_i=0 \, },
+        \label{nnd}
+    \end{eqnarray}
+    acting between the initial $^3$He and the final 3N scattering state. Given \eq{nnd}m the total absorption 
+    rate may be obtained from the following:
+
+    \begin{equation}
+        \Gamma_{nd} = 
+     {\cal R} \, \frac{ 16 \, \left( \alpha^3 \, M^\prime_{^3{\rm He}} \, \right)^3  \, c \, M q_0 }{ 9 M_{\pi^-}  }
+          \int d {\bf\hat q}_0 \,
+          \frac12 \, 
+         \sum\limits_{m_n, m_d, m_{^3{\rm He}}} 
+         \left| 
+         N_{nd} (m_n, m_d, m_{^3{\rm He}} \, ) \, 
+         \right|^2  \, ,  % with \rho(1) + \rho(2) + \rho(3) + ...
+    \label{gnd}
+    \end{equation}  
+    where
+    $ M^\prime_{^3{\rm He}}  = \frac { M_{^3{\rm He}} M_{\pi^-} } { M_{^3{\rm He}} + M_{\pi^-} }$
+    is now the reduced mass of the $\pi^- - {^3{\rm He}}$ system.
+
+    3N breakup is calculated in a similar way and the total absorption rate for $\pi^- + {^3{\rm He}} \rightarrow p + n + n $ reaction is
+
+    \begin{eqnarray}
+        \Gamma_{pnn} = 
+       {\cal R} \, \frac{ 16 \, \left( \alpha\, M^\prime_{^3{\rm He}} \, \right)^3 \, c\, M}{ 9 M_{\pi^-} }
+          \int d {\bf\hat q} \,
+          \int\limits_{0}^{2 \pi} d \phi_{p} \,
+              \int\limits_{0}^{\pi} d \theta_{p} \sin \theta_{p} \, \nonumber \\
+              \times 
+              \int\limits_0^{p_{max}} \, dp p^2  \,
+          \sqrt{\frac43 \left( M E_{pq} - p^2  \right)} \,
+          \frac12 \, 
+         \sum\limits_{m_1, m_2, m_3, m_{^3{\rm He}}} 
+         \left| 
+         N_{pnn} (m_1, m_2, m_3, m_{^3{\rm He}} \, ) \, 
+         \right|^2  \, .   % with \rho(1) + \rho(2) + \rho(3) + ...
+    \label{gpnn}
+    \end{eqnarray}
+
+    It is calculated in a similar way for $\pi^- + {^3{\rm H}} \rightarrow n + n + n $
+    and reads
+
+    \begin{eqnarray}
+        \Gamma_{nnn} = 
+    \frac { 2\, \left( \alpha \, M^\prime_{^3{\rm H}} \, \right)^3 \, c \, M}
+    { 27 M_{\pi^-}  }
+            \int d {\bf\hat q} \,
+            \int\limits_{0}^{2 \pi} d \phi_{p} \, 
+            \int\limits_{0}^{\pi} d \theta_{p} \sin \theta_{p} \, 
+            \nonumber \\
+            \times 
+            \int\limits_0^{p_{max}} \, dp p^2  \,
+            \sqrt{\frac43 \left( M E_{pq} - p^2  \right)} \,
+            \frac12 \, 
+            \sum\limits_{m_1, m_2, m_3, m_{^3{\rm H}}} 
+            \left| 
+            N_{nnn} (m_1, m_2, m_3, m_{^3{\rm He}} \, ) \, 
+            \right|^2  \, .
+    \label{gnnn}
+    \end{eqnarray}
 
 
 \section{Theoretical uncertainties}
