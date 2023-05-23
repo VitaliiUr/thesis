@@ -518,25 +518,37 @@ where
 
 \section{3N scattering state}
 
-    As in Sec.~\ref{nd_state}, one can
-    write an equation for the 3-nucleon scattering state:
-
-    \begin{equation}
-        \ket{\Psi^{(-)}}^{3N} = \frac{1}{\sqrt{3}}\ket{\Psi^{(-)}_j}^{3N}    
-    \end{equation}
-    where scattering state $\ket{\Psi^{(-)}_j}^{3N}$ is derived from an
-    asymptotic state $\ket{\Phi^{3N}_j}$ describing a free motion
+    Let us
+    write an asymptotic state $\ket{\Phi^{3N}_j}$ describing a free motion
     of particles $k$ and $l$ with relative momentum $\vec{p}$. In this case
     particle $j$ is moving with momentum $\vec{q}$ relatively to the 
-    center of mass $(k-l)$.
+    center of mass $(k-l)$:
+    
+    \begin{eqnarray}
+        \ket{\Phi^{3N}_j} &\equiv& \frac{1}{\sqrt{2}}(1 - P_{kl})
+        \ket{\vec{p}(kl)\vec{q}(j)}\\
+        E_{3N} &=& \frac{|\vec{p}|^2}{m} + \frac{3 |\vec{q}|^2}{4m}.
+    \end{eqnarray}
+    
+    Using a free propagator $G(E_{3N} - i\epsilon)$ we can come up with
+    a the 3-nucleon scattering state
+
+    \begin{equation}
+        \ket{\Psi^{(-)}}^{3N} = \frac{1}{\sqrt{3}}\ket{\Psi^{(-)}_j}^{3N},  
+    \end{equation}
+    where scattering state $\ket{\Psi^{(-)}_j}^{3N}$ is defined as 
 
     \begin{eqnarray}
         \ket{\Psi^{(-)}_j}^{3N}  &\equiv& \lim_{\epsilon \rightarrow 0}
-        i \epsilon G(E_{3N} - i\epsilon)\ket{\Phi^{3N}_j}\\
-        \ket{\Phi^{3N}_j} &\equiv& \frac{1}{\sqrt{2}}(1 - P_{kl})
-        \ket{\vec{p}(kl)\vec{q}(j)}\\
-        E_{3N} &=& \frac{|\vec{p}|^2}{m} + \frac{3 |\vec{q}|^2}{4m},
+        i \epsilon G(E_{3N} - i\epsilon)\ket{\Phi^{3N}_j}.
     \end{eqnarray}
+
+    In this case the state $\ket{\Phi^{3N}_j}$ is fulfilling an equation \cite{Glockle1983}
+
+    \begin{equation}
+        \left|\Psi_i^{(-)}\right\rangle^{3 N}=\left|\Phi_i^{3 N}\right\rangle+
+        G_0\left(V_1+V_2+V_3+V_4\right)\left|\Psi_i^{(-)}\right\rangle^{3 N}.
+    \end{equation}
 
     Taking into account antysymmetrized Faddeev components
 
@@ -617,22 +629,41 @@ where
 
     \section{Nuclear electromagnetic current}
     
-    The electromagnetic current operator for a few-nucleon system has both one- and many-body contributions, which
-    can be denoted as $j_\mu^1$, $j_\mu^2$, and $j_\mu^3$, respectively. The leading one-body contribution,
-    $j_\mu^1$, represents the photon's interaction with a single nucleon. The many-body contributions are known as
-    meson exchange currents (MEC), which arise due to the meson-exchange picture of the nucleon-nucleon (NN)
-    interaction. The photon can couple to mesons exchanged between two nucleons, leading to two-body contributions to
-    the nuclear current.
+    The use of nuclear currents in scattering experiments is essential for understanding the structure of the nucleus and the interactions between its constituent nucleons. Advances in theoretical and experimental techniques have allowed for more precise measurements of these currents and have provided insights into the fundamental properties of the nucleus.
 
-    The necessity of introducing the MEC arises from the continuity equation, which requires the inclusion of
-    two-body interactions in the Hamiltonian. The momentum and isospin-dependent terms in $V$ require the
-    introduction of two-body MEC. Similarly, the inclusion of the three-body force into the Hamiltonian requires the
-    existence of three-body contributions to the nuclear current. However, the effects of the three-body MEC are
-    likely negligible in the low-energy region. Therefore, we will only consider one- and two-body currents.
 
-    The nuclear one-body current is constructed based on the electromagnetic current for a Dirac particle. To account
-    for the extended structure of nucleons, form factors are introduced. Since we use nonrelativistic wave functions,
-    we need to use nonrelativistic currents.
+    The central element of the formalism is the nuclear part, denoted by $\mathcal{N}^\lambda$, which is given by the matrix element of the nuclear weak-current operator $j_w^\lambda$ between the initial and final nuclear states. The single nucleon current operator, which is derived based on symmetry requirements is \cite{Golak2014}:
+    \begin{equation}
+        \begin{aligned}
+            \left\langle\frac{1}{2} m^{\prime}\right| & \left\langle\mathbf{p}^{\prime}\left|j_w^\lambda(1)\right| \mathbf{p}\right\rangle\left|\frac{1}{2} m\right\rangle \\
+            = & \bar{u}\left(\mathbf{p}^{\prime}, m^{\prime}\right)\left[\left(g_1^V-2 M g_2^V\right) \gamma^\lambda+g_2^V\left(p+p^{\prime}\right)^\lambda\right. \\
+            & \left.+g_1^A \gamma^\lambda \gamma^5+g_2^A\left(p-p^{\prime}\right)^\lambda \gamma^5\right] \tau_{-} u(\mathbf{p}, m),
+        \end{aligned}
+        \label{maincurr}
+    \end{equation}
+    which contains weak form factors $g_1^V, g_2^V, g_1^A$, and $g_2^A$, that are functions of the momentum-transfer squared $\left(p^{\prime}-p\right)^2$.
+    The difference between the proton mass $M_p$ and neutron mass $M_n$ is negligible so we can introduce the average "nucleon mass" $M \equiv \frac{1}{2}\left(M_p+M_n\right)$.
+    The isospin lowering operator is $\tau_{-}=\left(\tau_x-i \tau_y\right) / 2$ in the isospin formalism. 
+    The nonrelativistic reduction of \eq{maincurr} results in the following forms of the time and space components of $j_w^\lambda(1)$
+    The zero-component is
+    \begin{equation}
+        \left\langle\mathbf{p}^{\prime}\left|j_{\mathrm{NR}}^0(1)\right| \mathbf{p}\right\rangle=\left(g_1^V+g_1^A \frac{\sigma \cdot\left(\mathbf{p}+\mathbf{p}^{\prime}\right)}{2 M}\right) \tau_{-}
+    \end{equation}
+    and space (vector) component
+    \begin{equation}
+        \begin{aligned}
+        \left\langle\mathbf{p}^{\prime}\left|\mathbf{j}_{\mathrm{NR}}(1)\right| \mathbf{p}\right\rangle= & {\left[g_1^V \frac{\mathbf{p}+\mathbf{p}^{\prime}}{2 M}-\frac{1}{2 M}\left(g_1^V-2 M g_2^V\right) i \sigma \times\left(\mathbf{p}-\mathbf{p}^{\prime}\right)\right.} \\
+        & \left.+g_1^A \sigma+g_2^A\left(\mathbf{p}-\mathbf{p}^{\prime}\right) \frac{\boldsymbol{\sigma} \cdot\left(\mathbf{p}-\mathbf{p}^{\prime}\right)}{2 M}\right] \tau_{-}
+        \end{aligned}    
+    \end{equation}
+    where $\sigma$ is a vector of Pauli spin operators. Here we have kept only terms up to $1 / M$.
+
+    The two-nucleon current contribution is partially taken into account via Siegert approach \cite{GolakKamad2000_ExplDescr, Golak2005}.
+    In order to do that we break down the single nucleon current matrix elements into multipole components and apply common formulas \cite{Golak2005}
+    to represent some of the electric multipoles using the Coulomb multipoles, which arise from the single nucleon charge density operator.
+    This is acceptable because, in low-energy situations, contributions from many nucleons to the nuclear charge density are typically insignificant.
+    We then obtain the rest of the electric multipoles and all of the magnetic multipoles exclusively from the single nucleon current operators.
+
 
 
     \section{Pion absorption}
