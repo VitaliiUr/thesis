@@ -138,13 +138,14 @@ Whereas the first applications included only early simplified "realistic" 3N pot
 investigations, based on more advanced models, fully confirmed this statements \cite{StoksPhysRevC49, AV18Wiringa}.
 Within new models the four-nucleon (4N) bound state was constructed to compare description of
 $^3\mathrm{He}$ \cite{NoggaPhysRevLett}.
+Broader discussion of nuclear forces used in this thesis is given below.
 
 Electromagnetic force appears between charged particles like protons, electrons or pions.
 Also, the force is transferred between charged particles and a photon, so 
 in photon- and electron- scatterings on the nuclei an electromagnetic
 force is necessary component of a description.
 
-Arenh"{o}vel's study \cite{ArenhovelPhotodisint1991} used different theoretical models, including a nonrelativistic potential model,
+Arenh\"{o}vel's study \cite{ArenhovelPhotodisint1991} used different theoretical models, including a nonrelativistic potential model,
 a relativistic impulse approximation, and a relativistic meson-exchange model, to describe the deuteron photodisintegration process.
 These models were used to calculate the differential cross section, which describes the probability
 of the process occurring at different scattering angles and photon energies.
@@ -155,14 +156,32 @@ the best agreement with the data. This model includes the exchange of virtual me
 between the interacting particles, which accounts for
 the strong and electromagnetic forces between them.
 
-Overall, Arenh"{o}vel's study demonstrated the importance of including both strong
+Overall, Arenh\"{o}vel's study demonstrated the importance of including both strong
 and electromagnetic forces in a description of the deuteron photodisintegration process,
 and highlighted the need for accurate theoretical models to interpret experimental data.
 
-% Arenh\"{o}vel \cite{ArenhovelPhotodisint1991} 
+% Arenh\\"{o}vel \cite{ArenhovelPhotodisint1991} 
 % studied electromagnetic process - deuteron photodisintegration,
 % applying different approaches and comparing the results with
 % experimental data.
+
+
+The electromagnetic current operator for a few-nucleon system has both one- and many-body contributions, which
+can be denoted as $j_\mu^1$, $j_\mu^2$, and $j_\mu^3$, respectively. The leading one-body contribution,
+$j_\mu^1$, represents the photon's interaction with a single nucleon. The many-body contributions are known as
+meson exchange currents (MEC), which arise due to the meson-exchange picture of the nucleon-nucleon (NN)
+interaction. The photon can couple to mesons exchanged between two nucleons, leading to two-body contributions to
+the nuclear current.
+
+The necessity of introducing the MEC arises from the continuity equation, which requires the inclusion of
+two-body interactions in the Hamiltonian. The momentum and isospin-dependent terms in $V$ require the
+introduction of two-body MEC. Similarly, the inclusion of the three-body force into the Hamiltonian requires the
+existence of three-body contributions to the nuclear current. However, the effects of the three-body MEC are
+likely negligible in the low-energy region. Therefore, we will only consider one- and two-body currents.
+
+The nuclear one-body current is constructed based on the electromagnetic current for a Dirac particle. To account
+for the extended structure of nucleons, form factors are introduced. Since we use nonrelativistic wave functions,
+we need to use nonrelativistic currents. The currents used in the thesis are described in Sec.~\ref{sec_current}.
 
 The weak force is of great importance in the study of nuclear processes. One of the main roles of the weak force is to mediate beta decay,
 which is a process in which a neutron in a nucleus is converted into a proton, emitting an electron and an antineutrino. This process plays
@@ -347,13 +366,17 @@ investigations \cite{Machleidt2005, Machleidt2010, Entem2017} were introducing v
 to the one from the Bochum-Bonn
 group with minor technical differences.
 
-There are a number of another approaches within \gls{ceft} utilized.
-The group of M.Piarulli is using quite similar approach, including
-the same chiral potentials with minor differences \cite{Piarulli2012,Piarulli2015}.
-
+% There are a number of another approaches within \gls{ceft} utilized.
 There are several other approaches within the framework of \gls{ceft}
 that have been utilized in nuclear physics.
-One of them is the work of Ekström and collaborators who developed a chiral
+The group of M.Piarulli is using quite similar approach, based on
+the same chiral potentials but including explicitly 
+$\Delta$-isobar intermadiate states 
+up to the third chiral order and taking into account
+sophisticated electromagnetic corrections \cite{Piarulli2012,Piarulli2015}.
+
+
+Ekström and collaborators developed a chiral
 effective theory for nuclear forces and currents that includes both
 nucleon and pion degrees of freedom \cite{ekstrom_2015, Tews_2020}. Their approach
 is based on a power counting scheme that separates long-range and
@@ -361,21 +384,31 @@ short-range contributions and allows for systematic improvements in the
 calculations.
 
 Another approach is the pionless effective field
-theory, which neglects the pion degrees of freedom and
-focuses on the interactions between nucleons only\cite{?}.
+theory, which integrates out pions and
+focuses on the various types of contact
+interactions between nucleons \cite{hammer_review}.
+Obtained potential has a very simple form, but cannot be applied
+to higher energies since pions start playing an important role
+there.
 
-Another important approach is the lattice effective field theory (LEFT), which
-is based on lattice QCD simulations of the strong
+Another important approach is the Lattice Effective Field Theory (LEFT), which
+is based on the Lattice QCD simulations of the strong
 interaction. Meissner and collaborators have developed a chiral effective
 theory for nuclear forces based on the results of lattice QCD
-calculations \cite{?}. This approach has the advantage of being able
+calculations \cite{Lande2019}. This approach has the advantage of being able
 to calculate the nuclear force directly from first
 principles, without the need for phenomenological input. However, it is limited
 to small systems and low energies due to the computational
-resources required for lattice QCD calculations.
+resources required for calculations.
+Up to now, the relatively simple two-nucleon scattering problem
+and few-nucleon bound state
+have been solved within the LEFT and more complex systems are
+still under attack. 
+For more details please refer to
+\cite{Lande2019}.
 
 
-{\color{red} Machleidt, Ekstr\"om, pion-less EFT, Lattice EFT(Mesissner), Girlanda, Piarulli}
+% {\color{red} Machleidt, Ekstr\"om, pion-less EFT, Lattice EFT(Mesissner), Girlanda, Piarulli}
 
 
 Technically, the chiral potential may be derived both in coordinate and momentum spaces.
@@ -468,24 +501,8 @@ when regulating matrix elements of the potential in momentum space with non-loca
 That is a main reason of the observed differences between predictions based on Epelbaum's
 and Machleidt's models. 
 
-\subsection*{Currents}
+% \subsection*{Currents}
  
-The electromagnetic current operator for a few-nucleon system has both one- and many-body contributions, which
-can be denoted as $j_\mu^1$, $j_\mu^2$, and $j_\mu^3$, respectively. The leading one-body contribution,
-$j_\mu^1$, represents the photon's interaction with a single nucleon. The many-body contributions are known as
-meson exchange currents (MEC), which arise due to the meson-exchange picture of the nucleon-nucleon (NN)
-interaction. The photon can couple to mesons exchanged between two nucleons, leading to two-body contributions to
-the nuclear current.
-
-The necessity of introducing the MEC arises from the continuity equation, which requires the inclusion of
-two-body interactions in the Hamiltonian. The momentum and isospin-dependent terms in $V$ require the
-introduction of two-body MEC. Similarly, the inclusion of the three-body force into the Hamiltonian requires the
-existence of three-body contributions to the nuclear current. However, the effects of the three-body MEC are
-likely negligible in the low-energy region. Therefore, we will only consider one- and two-body currents.
-
-The nuclear one-body current is constructed based on the electromagnetic current for a Dirac particle. To account
-for the extended structure of nucleons, form factors are introduced. Since we use nonrelativistic wave functions,
-we need to use nonrelativistic currents.
 
 % There are several types of nuclear currents used for studying scattering processes. One of the most common types is the one-body current, which describes the motion of individual nucleons within the nucleus. This type of current can be further divided into two categories: the convection current and the spin current. The convection current is associated with the motion of the center of mass of the nucleus, while the spin current is associated with the intrinsic spin of the nucleons.
 
