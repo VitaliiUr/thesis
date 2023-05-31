@@ -351,16 +351,26 @@
 
     In this subsection I will present my predictions for 
     selected polarisation observables.
-    I start with deuteron vector $i\text{T}_{11}$ and tensor $\text{T}_{20}$, $\text{T}_{21}$ and $\text{T}_{22}$ analyzing power,
-    which are defined as \cite{ArenhovelPhotodisint1991}:
+    I start with deuteron vector $i\text{T}_{11}$ and tensor $\text{T}_{20}$, $\text{T}_{21}$ and $\text{T}_{22}$.
+    TDeuteron tensor analyzing powers can be calculated via cross section as it is defined in \cite{rachek2007}:
     
     \begin{eqnarray}
-        i\text{T}_{11} (\theta) &=& -2 \frac{\Im V_{11}}{V_{00}},\\
-        \text{T}_{2i} (\theta) &=& \frac{(2 - \delta_{i0}) \Re V_{2i}}{V_{00}}, i=0,1,2,
+        % \begin{aligned}
+            \frac{d \sigma}{d \Omega}= \frac{d \sigma_0}{d \Omega}\left\{1-\sqrt{3 / 4} P_z \sin \theta_H \sin \phi_H T_{11}\right.
+            +\sqrt{1 / 2} P_{z z}\left[\left(3 / 2 \cos ^2 \theta_H-1 / 2\right) T_{20}\right. - \nonumber \\
+            -\sqrt{3 / 8} \sin 2 \theta_H \cos \phi_H T_{21} 
+            \left.\left.+\sqrt{3 / 8} \sin ^2 \theta_H \cos 2 \phi_H T_{22}\right]\right\},
+        % \end{aligned}
     \end{eqnarray}
-    where $V_{ij}$ is \tmp{??? all derivation?}.
+    where $\sigma_0$ is the unpolarized cross section, $P_z$ ($P_{zz}$)
+    the vector (tensor) target polarization, $\theta_H$ - the angle
+    between polarization axis and photon momentum,
+    and $\phi_H$ - is the angle between the polarization plane 
+    (containing the polarization axis and momentum of the photon),
+    and the reaction plane (containing momenta of the proton
+    and neutron).
 
-    in the Figures \ref{T20_T21_30} (a, b) and \ref{T22_T11_30}(a,b)
+    In the Figures \ref{T20_T21_30} (a, b) and \ref{T22_T11_30}(a,b)
     I show my predictions at $\text{E}_\gamma = \SI{30}{\mev}$, for the
     $\text{T}_{20}$, $\text{T}_{21}$, $\text{T}_{22}$  and $i\text{T}_{11}$ respectively as functions 
     of the outgoing proton angle $\theta_p$ in the \gls{cm} frame. Each of them

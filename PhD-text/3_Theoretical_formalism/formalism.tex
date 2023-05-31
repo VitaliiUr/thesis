@@ -631,34 +631,78 @@ where
     \section{Nuclear electromagnetic current}
     \label{sec_current}
     
-    The use of nuclear currents in scattering experiments is essential for understanding the structure of the nucleus and the interactions between its constituent nucleons. Advances in theoretical and experimental techniques have allowed for more precise measurements of these currents and have provided insights into the fundamental properties of the nucleus.
+    The use of nuclear currents in scattering experiments is essential for understanding the structure of the nucleus and
+    the interactions between its constituent nucleons. Advances in theoretical and experimental techniques have allowed
+    for more precise measurements of these currents and have provided insights into
+    the fundamental properties of the nucleus.
 
+    In the Hamiltonian framework, the nucleons are constrained to lie on the mass shell. The conventional current of a
+    single nucleon at the spacetime point zero, denoted as $J_1^\mu(0)$, is computed between the initial nucleon momentum
+    $p \equiv\left(p_0=\sqrt{M_N^2+\vec{p}^2}, \vec{p}\right)$
+    and the final momentum
+    $p^{\prime} \equiv\left(p_0^{\prime}=\sqrt{M_N^2+\vec{p}^{\prime 2}}, \vec{p}^{\prime}\right)$. This computation yields the following expression:
 
-    The central element of the formalism is the nuclear part, denoted by $\mathcal{N}^\lambda$, which is given by the matrix element of the nuclear weak-current operator $j_w^\lambda$ between the initial and final nuclear states. The single nucleon current operator, which is derived based on symmetry requirements is \cite{Golak2014}:
     \begin{equation}
         \begin{aligned}
-            \left\langle\frac{1}{2} m^{\prime}\right| & \left\langle\mathbf{p}^{\prime}\left|j_w^\lambda(1)\right| \mathbf{p}\right\rangle\left|\frac{1}{2} m\right\rangle \\
-            = & \bar{u}\left(\mathbf{p}^{\prime}, m^{\prime}\right)\left[\left(g_1^V-2 M g_2^V\right) \gamma^\lambda+g_2^V\left(p+p^{\prime}\right)^\lambda\right. \\
-            & \left.+g_1^A \gamma^\lambda \gamma^5+g_2^A\left(p-p^{\prime}\right)^\lambda \gamma^5\right] \tau_{-} u(\mathbf{p}, m),
+        \left\langle\vec{p}^{\prime}\left|\frac{1}{e} J_1^\mu(0)\right| \vec{p}\right\rangle & =\bar{u}\left(\vec{p}^{\prime} s^{\prime}\right)\left(\gamma^\mu F_1+i \sigma^{\mu \nu}\left(p^{\prime}-p\right)_\nu F_2\right) u(\vec{p} s) \\
+        & =\bar{u}\left(\vec{p}^{\prime} s^{\prime}\right)\left(G_M \gamma^\mu-F_2\left(p^{\prime}+p\right)^\mu\right) u(\overrightarrow{p s}) .
         \end{aligned}
-        \label{maincurr}
+        \label{current_general}       
     \end{equation}
-    which contains weak form factors $g_1^V, g_2^V, g_1^A$, and $g_2^A$, that are functions of the momentum-transfer squared $\left(p^{\prime}-p\right)^2$.
-    The difference between the proton mass $M_p$ and neutron mass $M_n$ is negligible so we can introduce the average "nucleon mass" $M \equiv \frac{1}{2}\left(M_p+M_n\right)$.
-    The isospin lowering operator is $\tau_{-}=\left(\tau_x-i \tau_y\right) / 2$ in the isospin formalism. 
-    The nonrelativistic reduction of \eq{maincurr} results in the following forms of the time and space components of $j_w^\lambda(1)$
-    The zero-component is
+    
+    In the above equations, the symbols $u$ represent Dirac spinors, $F_1\left(\left(p^{\prime}-p\right)^2\right)$ and $F_2\left(\left(p^{\prime}-p\right)^2\right)$ correspond to the Dirac and Pauli form factors of the nucleon, respectively, and $G_M \equiv F_1+2 M_N F_2$ denotes the magnetic form factor of the nucleon. The proton charge $e$ is extracted from the matrix element. In this thesis, only the nonrelativistic limit of \eq{current_general} is considered, which leads to well-known expressions for the operators for convection and spin currents:
+
+
     \begin{equation}
-        \left\langle\mathbf{p}^{\prime}\left|j_{\mathrm{NR}}^0(1)\right| \mathbf{p}\right\rangle=\left(g_1^V+g_1^A \frac{\sigma \cdot\left(\mathbf{p}+\mathbf{p}^{\prime}\right)}{2 M}\right) \tau_{-}
+        \begin{array}{r}
+            \left\langle\vec{p}^{\prime}\left|\frac{1}{e} J_1^0(0)\right| \vec{p}\right\rangle=\left(G_E^p \Pi^p+G_E^n \Pi^n\right), \\
+            \left\langle\vec{p}^{\prime}\left|\frac{1}{e} \vec{J}_1(0)\right| \vec{p}\right\rangle=\frac{\vec{p}+\vec{p}^{\prime}}{2 M_N}\left(G_E^p \Pi^p+G_E^n \Pi^n\right)+\frac{i}{2 M_N}\left(G_M^p \Pi^p+G_M^n \Pi^n\right) \vec{\sigma} \times\left(\vec{p}^{\prime}-\vec{p}\right) .
+        \end{array}
     \end{equation}
-    and space (vector) component
+
+    The electric form factor, denoted as $G_E$, is defined as $G_E \equiv F_1+\frac{\left(p^{\prime}-p\right)^2}{2 M_N} F_2$. It represents the neutron (n) and proton (p) form factors. These form factors, $G_E$ and $G_M$, are normalized according to the following conditions:
+
     \begin{equation}
         \begin{aligned}
-        \left\langle\mathbf{p}^{\prime}\left|\mathbf{j}_{\mathrm{NR}}(1)\right| \mathbf{p}\right\rangle= & {\left[g_1^V \frac{\mathbf{p}+\mathbf{p}^{\prime}}{2 M}-\frac{1}{2 M}\left(g_1^V-2 M g_2^V\right) i \sigma \times\left(\mathbf{p}-\mathbf{p}^{\prime}\right)\right.} \\
-        & \left.+g_1^A \sigma+g_2^A\left(\mathbf{p}-\mathbf{p}^{\prime}\right) \frac{\boldsymbol{\sigma} \cdot\left(\mathbf{p}-\mathbf{p}^{\prime}\right)}{2 M}\right] \tau_{-}
-        \end{aligned}    
+        G_E^n(0) & =0 \\
+        G_E^p(0) & =1 \\
+        G_M^n(0) & =-1.913 \\
+        G_M^p(0) & =2.793
+        \end{aligned}
     \end{equation}
-    where $\sigma$ is a vector of Pauli spin operators. Here we have kept only terms up to $1 / M$.
+
+    These values correspond to nucleons with point-like characteristics. While all the form factors depend on the squared
+    four-momentum transfer $\left(p^{\prime}-p\right)^2$, in the nonrelativistic regime, it is common to use the squared
+    three-momentum transfer $-\left(\vec{p}^{\prime}-\vec{p}\right)^2$ or even set it to zero for interactions involving
+    real photons. Numerous authors have investigated the properties of electromagnetic nucleon form factors through
+    theoretical and experimental approaches, as discussed in \cite{Arrington_2007, JOURDAN1999513c}.
+    $\Pi^p$ ($\Pi^n$) is a proton (neuteron) isospin projection operator.
+
+    % The central element of the formalism is the nuclear part, denoted by $\mathcal{N}^\lambda$, which is given by the matrix element of the nuclear weak-current operator $j_w^\lambda$ between the initial and final nuclear states. The single nucleon current operator, which is derived based on symmetry requirements is \cite{Golak2014}:
+    % \begin{equation}
+    %     \begin{aligned}
+    %         \left\langle\frac{1}{2} m^{\prime}\right| & \left\langle\mathbf{p}^{\prime}\left|j_w^\lambda(1)\right| \mathbf{p}\right\rangle\left|\frac{1}{2} m\right\rangle \\
+    %         = & \bar{u}\left(\mathbf{p}^{\prime}, m^{\prime}\right)\left[\left(g_1^V-2 M g_2^V\right) \gamma^\lambda+g_2^V\left(p+p^{\prime}\right)^\lambda\right. \\
+    %         & \left.+g_1^A \gamma^\lambda \gamma^5+g_2^A\left(p-p^{\prime}\right)^\lambda \gamma^5\right] \tau_{-} u(\mathbf{p}, m),
+    %     \end{aligned}
+    %     \label{maincurr}
+    % \end{equation}
+    % which contains weak form factors $g_1^V, g_2^V, g_1^A$, and $g_2^A$, that are functions of the momentum-transfer squared $\left(p^{\prime}-p\right)^2$.
+    % The difference between the proton mass $M_p$ and neutron mass $M_n$ is negligible so we can introduce the average "nucleon mass" $M \equiv \frac{1}{2}\left(M_p+M_n\right)$.
+    % The isospin lowering operator is $\tau_{-}=\left(\tau_x-i \tau_y\right) / 2$ in the isospin formalism. 
+    % The nonrelativistic reduction of \eq{maincurr} results in the following forms of the time and space components of $j_w^\lambda(1)$
+    % The zero-component is
+    % \begin{equation}
+    %     \left\langle\mathbf{p}^{\prime}\left|j_{\mathrm{NR}}^0(1)\right| \mathbf{p}\right\rangle=\left(g_1^V+g_1^A \frac{\sigma \cdot\left(\mathbf{p}+\mathbf{p}^{\prime}\right)}{2 M}\right) \tau_{-}
+    % \end{equation}
+    % and space (vector) component
+    % \begin{equation}
+    %     \begin{aligned}
+    %     \left\langle\mathbf{p}^{\prime}\left|\mathbf{j}_{\mathrm{NR}}(1)\right| \mathbf{p}\right\rangle= & {\left[g_1^V \frac{\mathbf{p}+\mathbf{p}^{\prime}}{2 M}-\frac{1}{2 M}\left(g_1^V-2 M g_2^V\right) i \sigma \times\left(\mathbf{p}-\mathbf{p}^{\prime}\right)\right.} \\
+    %     & \left.+g_1^A \sigma+g_2^A\left(\mathbf{p}-\mathbf{p}^{\prime}\right) \frac{\boldsymbol{\sigma} \cdot\left(\mathbf{p}-\mathbf{p}^{\prime}\right)}{2 M}\right] \tau_{-}
+    %     \end{aligned}    
+    % \end{equation}
+    % where $\sigma$ is a vector of Pauli spin operators. Here we have kept only terms up to $1 / M$.
 
     The two-nucleon current contribution is partially taken into account via Siegert approach \cite{GolakKamad2000_ExplDescr, Golak2005}.
     In order to do that we break down the single nucleon current matrix elements into multipole components and apply common formulas \cite{Golak2005}
