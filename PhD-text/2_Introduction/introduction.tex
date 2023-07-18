@@ -75,26 +75,28 @@
 
 The study of light nuclei and their reactions has been serving as an easy way to investigate particles in nuclei and
 the forces between them for decades. A convenient way to proceed may be to study the interaction of a nucleus with
-other nuclei, particles, or electromagnetic probes such as electrons, photons, muons, pions, neutrinos, and hyperons.
-In most cases, the study of elastic or inelastic scattering is possible. This can be done either theoretically or by
+other nuclei, particles, or electroweak probes such as electrons, photons, muons, pions, neutrinos, and hyperons.
+In most cases, study of elastic or inelastic scattering is possible. This can be done either theoretically or by
 performing relevant experiments to test if the theory works. It should be taken into account that nuclear 
 interactions may be
-caused by different fundamental forces and therefore described in different ways, including strong, weak, or electromagnetic
-interactions. This depends on the type of particle being scattered and the target of the reaction.
-Of course gravitational force also is in the game but due to the weekness can be omitted in the nuclear physics. 
+caused by different fundamental forces, including strong, weak, or electromagnetic
+interactions. This depends on the type of particle being scattered and the target of the reaction
+and requires different theoretical approaches.
+Of course gravitational force is also in the game but due to its weekness it is 
+usually omitted in the nuclear physics. 
 
 In the past many experimental efforts have been undertaken and
-experimentalists have been interested in electromagnetic reactions in light nuclei for decades.
+experimentalists have been interested in electromagnetic reactions involving light nuclei for decades.
 There are experimental data from the second half of 20th century 
 (e.g. \cite{Skopik1974, Liuexp68, Kose1969MeasurementsOT, Kamae}) which are still 
 useful for comparing theoretical predictions with experimental measurements.    
-There are several facilities that provide sources of gamma rays (both low- and high-energy)
+There are several facilities providing sources of gamma rays (both low- and high-energy)
 and other particles that have been operating for decades and still enable experiments to be conducted.
-Let us mention here some facilities as TUNL with HI$\gamma$S \cite{TUNL, TONCHEV2005170}, MAMI \cite{MAMI}, 
-NIKHEF \cite{NIKHEF} and others.
+Let us mention here such facilities as TUNL with HI$\gamma$S \cite{TUNL, TONCHEV2005170}, MAMI \cite{MAMI}. 
+% NIKHEF \cite{NIKHEF} and others.
 
-To accurately describe nuclear reactions, multiple components of the Hamiltonian must be considered.
-The most important are nucleon interactions and nuclear currents.
+To accurately describe nuclear reactions, two important components of the Hamiltonian must be considered.
+They are nuclear interactions and nuclear currents.
 First of all, various nuclear forces may act on
 the particles.
 
@@ -103,65 +105,85 @@ and protons together. The description of strong interactions is extremely
 difficult as it deals not only with the nucleons themselves, but also with their constituents: quarks
 and gluons. \gls{qcd} is a modern theory
 describing strong interactions, but, at the moment,
-it is not applicable at low energies ($Q^2 \lesssim 1 GeV^2$).
+it is not applicable at low energies (e.a. at $Q^2 \lesssim 1 GeV^2$).
 In such situation various approaches are emerging.
 The most advanced are the
 chiral effective theory and lattice calculation \cite{IOFFE2006232, BEANElaticce, Machleidt2011}.
-In this work we will use results of the first approach.
+In this work we will use results of the first approach
+and corresponding model is described in Sec.~\ref{sec:formalism}.
 
 Study of three- (and more) nucleon systems showed that
-the strong 2N force is not enough to describe
-the system, and a 3N force was introduced. The first applications of such
+the strong \gls{2n} force is not efficient in describing
+$N>2$ systems, thus a 3N force was introduced. The first applications of such
 a force showed that it brings a
-sufficient contribution and cannot be ignored \cite{GLOCKLE1982343}.
+sizable contribution to observables and cannot be ignored \cite{GLOCKLE1982343}.
 The contribution of the 3NF can be examined by
 comparing binding energies of light nuclei calculated with
-and without this part with respect to experimental values.
+and without this part of Hamiltonian with respect to experimental values.
 
-For example, the binding energy for $^3$H calculated with the \gls{av18} potential without 3NF amounts to
+For example, the binding energy for $^3$H calculated with the \gls{av18} \gls{2n} potential 
+without 3NF amounts to
 $E_b(^3\mathrm{H}) = \SI{-7.628}{\mev}$ \cite{NoggaAV18}. There are different models that might add a 3NF
 contribution to \gls{av18} (or other potentials). Using the Tucson-Melbourne (TM) model \cite{Tucson-Melbourne}
 results in $E_b(^3\mathrm{H}) = \SI{-8.478}{\mev}$, and Urbana IX \cite{Urbana3NF} 3NF provides us with
 $E_b(^3\mathrm{H}) = \SI{-8.484}{\mev}$. Looking at the experimental value $E_b(^3\mathrm{H}) = \SI{-8.482}{\mev}$,
-it is clear that the 3NF contribution makes the prediction much closer to the measurement. Nevertheless, parameters of the UrbanaIX
-3NF in this case were fitted to the experimental value for $^3\mathrm{H}$, so there is no surprise in good agreement.
+it is clear that the 3NF contribution makes the prediction much closer to the measurement.
+Nevertheless, the parameters of the UrbanaIX
+3NF were fitted to the experimental value for $^3\mathrm{H}$, so there is no surprise in good agreement.
 
-One can check the binding energy for other atoms, which were not used for fitting. The 2NF binding energy for $^3$He
+However one can also check the binding energy for other nuclei, which were not used for the fitting.
+The 2NF binding energy for $^3$He
 (calculated with \gls{av18}) is $E_b(^3\mathrm{He}) = \SI{-6.917}{\mev}$. TM contribution makes it
 $E_b(^3\mathrm{He}) = \SI{-7.706}{\mev}$, Urbana IX gives $E_b(^3\mathrm{He}) = \SI{-7.739}{\mev}$, while the
-experimental value is $E_b(^3\mathrm{He}) = \SI{-7.718}{\mev}$. Once more, we can see the importance of 3NF
-contribution on the $\alpha$-particle's ($^4\mathrm{He}$) binding energy: pure \gls{av18} gives
-$E_b(^4\mathrm{He}) = \SI{-24.25}{\mev}$, \gls{av18} + TM gives \SI{-28.84}{\mev}, \gls{av18} + Urbana IX gives
-\SI{-28.50}{\mev}, and the experimental value is \SI{-28.30}{\mev}.
+experimental value is $E_b(^3\mathrm{He}) = \SI{-7.718}{\mev}$. One can see the importance of 3NF
+contribution also for the $\alpha$-particle's ($^4\mathrm{He}$) binding energy:
+\gls{av18} alone gives
+$E_b(^4\mathrm{He}) = \SI{-24.25}{\mev}$, while \gls{av18} + TM leads to \SI{-28.84}{\mev},
+\gls{av18} + Urbana IX delivers $E_b(^4\mathrm{He}) = \SI{-28.50}{\mev}$,
+and the experimental value is \SI{-28.30}{\mev}\cite{NoggaAV18}.
 
 Whereas the first applications included only early simplified "realistic" 3N potential, the latter
 investigations, based on more advanced models, fully confirmed this statements \cite{StoksPhysRevC49, AV18Wiringa}.
-Within new models the four-nucleon (4N) bound state was constructed to compare description of
-$^3\mathrm{He}$ \cite{NoggaPhysRevLett}.
+Within new models the four-nucleon (4N) interaction was constructed to improve description of
+$^4\mathrm{He}$ \cite{NoggaPhysRevLett}.
 Broader discussion of nuclear forces used in this thesis is given below.
 
 Electromagnetic force appears between charged particles like protons, electrons or pions.
-Also, the force is transferred between charged particles and a photon, so 
-in photon- and electron- scatterings on the nuclei an electromagnetic
-force is necessary component of a description.
+That force acts also between charged particles and photons, so 
+in photon- and electron- scatterings on the nuclei 
+it is a necessary component of a description.
+However, electromagneticinteraction between particles manifests only at very 
+low energies or for specific kinematic configurations with two
+photons having approximately equal momenta.
+Thus it rather is being skipped in lowes-order analysis.
 
-Arenh\"{o}vel in his works
-\cite{ArenhovelPhotodisint1991, Wilbois1993, ArenhovelLeid1995, ArenhovelLeid1998, Arenhvel2004} 
-and especially in the large review  \cite{ArenhovelPhotodisint1991} 
-showed a different theoretical models applied to the deuteron photodisintegration.
+The main conribution of electromagnetic interaction 
+to disintegration processes in hand is due to the current's operator
+describing photon-nucleon vertex.
+The structure of the electromagnetic current have been investigated
+in many works by numerous groups \cite{Carlson1997} but it was 
+H.~Arenh\"{o}vel who performed study of nuclear electromagnetic
+current in few-nucleon sector.
+His long-term research, reviewed in \cite{ArenhovelPhotodisint1991}
+% in his works
+% \cite{Wilbois1993, ArenhovelLeid1995, ArenhovelLeid1998, Arenhvel2004} 
+demonstrated various theoretical models applied to the deuteron photodisintegration.
 He analyzed among others a nonrelativistic potential model,
 a relativistic impulse approximation, and a relativistic meson-exchange model.
-These models were used to calculate the differential cross section, which describes the probability
-of the process occurring at different scattering angles and photon energies.
+These models were used to calculate the differential cross section and various
+polarization observables, which describe the probability
+of the process occurring at different scattering angles, photon energies spin directions etc.
 
 The calculated cross sections were then compared to experimental data, and it was
 found that the relativistic meson-exchange model provided
-the best agreement with the data. This model includes the exchange of virtual mesons
+the best agreement with the data at photon's energies up to $E_\gamma = \sim\SI{100}{\mev}$.
+At higher energies agreement is presented but is getting worse.
+This model includes the exchange of virtual mesons
 between the interacting particles, which accounts for
 the strong and electromagnetic forces between them.
 
-Overall, Arenh\"{o}vel demonstrated the importance of including both strong
-and electromagnetic forces in a description of the deuteron photodisintegration process,
+Overall, Arenh\"{o}vel demonstrated the importance of including both strong interaction
+and electromagnetic current operator in a description of the deuteron photodisintegration process,
 and highlighted the need for accurate theoretical models to interpret experimental data.
 
 % Arenh\\"{o}vel \cite{ArenhovelPhotodisint1991} 
@@ -187,7 +209,7 @@ The nuclear one-body current is constructed based on the electromagnetic current
 for the extended structure of nucleons, form factors are introduced. Since we use nonrelativistic wave functions,
 we need to use nonrelativistic currents. The currents used in the thesis are described in Sec.~\ref{sec_current}.
 
-The weak force is of great importance in the study of nuclear processes. One of the main roles of the weak force is to mediate beta decay,
+The weak force is of great importance in the study of nuclear processes. One of the main roles of the weak force is to mediate \tmp{check correction} beta decay,
 which is a process in which a neutron in a nucleus is converted into a proton, emitting an electron and an antineutrino. This process plays
 a crucial role in the formation of elements in the universe, as it allows for the conversion of neutron-rich isotopes into more stable,
 proton-rich isotopes. Additionally, the weak force plays a role in neutrino interactions with matter, which are of great interest in both
@@ -357,7 +379,10 @@ Developing a more and more sophisticated versions with higher chiral orders, aut
 They were further developing their chiral model, taking into account more Feynmann diagrams
 coming to a higher chiral orders.
 At some moment Bochum-Bonn goup faced with a problem of potential regularisation\cite{skibinski_3H, Witala_2014}.
-\tmp{Solving it was an important point and autors...}
+Solving it was an important point and autors
+where struggling with finding an appropriate
+regularization method to handle the divergences that arise in the \gls{ceft} calculations.
+Different techniques were applied such as the cutoff regularization and the regulator function methods.
 An important point was when authors started using a semi-local regularisation 
 in the coordinate space. The correspondant potential is called  the \gls{scs} potential
 (semi-local regularisation in the coordinate space)\cite{Epelbaum2014SCS}. Later similar regularisation,
