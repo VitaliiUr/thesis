@@ -216,25 +216,26 @@ proton-rich isotopes. Additionally, the weak force plays a role in neutrino inte
 astrophysics and particle physics. In nuclear physics, weak interactions can also play a role in the decay of unstable nuclei, the
 production of neutrinos in nuclear reactions, and the scattering of neutrinos off nuclei. The study of weak interactions is therefore an
 essential component of the overall understanding of nuclear physics and the behavior of matter on the subatomic scale.
-
+However, in the thesis we stick up with electromagnetic processes.
 
 
 \subsection*{Models of strong interaction used in the thesis}
 
 In order to model the nuclear potential, physicists often use phenomenological
 or semi-phenomenological approaches. It allows them to combine
-theoretical knowledge about processes and experimental findings.
+theoretical knowledge about the studied processes and experimental findings.
 
-Among many of such models, the Argonne V18 (AV18) \cite{AV18Wiringa} force is one of most
+\tmp{?more}
+Among many of such models, the \gls{av18} \cite{AV18Wiringa} force is one of most
 advanced and therefore is used in current thesis.
-In order to construct \gls{nn} force, authors combine
+In order to construct the \gls{nn} force, authors combine
 % analytical electromagnetic and 
-one-pion-exchange parts
+one-pion-exchange part
 with phenomenological one and supplement them by electromagnetic corrections.
 Free parameters were fitted to
 the Nijmegen partial-wave analysis of $pp$ and $np$ data \cite{NijmegenPhysRevC.48.792}. 
-Authors showed, that AV18 potential delivers good results
-in the description of nucleon scattering data ($\chi ^2/data = 1.08$ for around \num{4000} $pp$ and $np$ scattering datasets) 
+Authors showed, that the \gls{av18} potential delivers good 
+description of nucleon scattering data ($\chi ^2/data = 1.08$ for around \num{4000} $pp$ and $np$ scattering datasets) 
 as well as deuteron properties (estimated binding energy is \SI{2.2247(35)}{\mev} vs experimental \SI{ 2.224 575(9)}{\mev}).
 
 Weinberg's idea of using chiral symmetry to describe nuclear interactions at low
@@ -248,12 +249,13 @@ which are the degrees of freedom that become relevant at low energies.
 The chiral Lagrangian is the starting point for the development of
 the \gls{ceft}, which has become one of the
 most advanced approaches to low-energy nuclear physics \cite{EpelHam2008}.
-The use of \gls{ceft} allows for the calculation of nuclear properties
-and reactions in a model-independent way, making it possible to
+The use of the \gls{ceft} allows (at least in theory) for the calculation of nuclear properties
+and reactions in a model-independent way.
+It is also possible to
 quantify the uncertainties associated with the calculation. One of the
-key features of \gls{ceft} is that it allows for the construction of
-a nuclear potential, which can then be used in relevant formalisms, e.g. to solve the Schr"odinger
-equation and to obtain bound state properties. The accuracy of the
+key features of the \gls{ceft} is that it allows for the construction of
+a nuclear potential, which can then be used in relevant formalisms, e.g. to solve the Schr\"odinger
+equation and to obtain bound and scattering states properties. The accuracy of the
 potential can be systematically improved by including higher-order
 terms in the chiral expansion, which leads to a better description of
 experimental data.
@@ -285,10 +287,10 @@ $\Lambda_\chi \sim \SI{0.7}{\gev}$ - the chiral symmetry breaking scale.
 The ratio between these two scales $Q/\Lambda_\chi$
 is being used as an expansion parameter in  \gls{ceft} with power
 $\nu$: $\left(Q/\Lambda_\chi\right)^\nu$.
-\footnote{Note that exact values of some parameters are still under discussion \cite{Epelbaum2004}. We follow here approach described by E.Epelbaum and collaborators, see e.g. \cite{reinkrebs2018}}
+\footnote{Note that exact values of some parameters are still under discussion \cite{Epelbaum2004}. We follow here approach proposed by E.Epelbaum and collaborators, see e.g. \cite{reinkrebs2018}}
 
 Possibility of deriving nuclear potential is an important feature of \gls{ceft}.
-The potential, as occurs in an Lagrangian, is a perturbation expression of the same parameter $Q/\Lambda_\chi$.
+The potential, as occurs in Lagrangian, is a perturbation expression of the same parameter $Q/\Lambda_\chi$.
 Considering so-called irreducible diagrams (which cannot be split
 by cutting nucleon lines), Weinberg \cite{WEINBERG1990,WEINBERG1991}
 came to the expression for the powers $\nu_W$ of such diagrams
@@ -313,49 +315,53 @@ The further analysis of \eq{powers} revealed some problems which occur
 for particular values of parameters in the equation, namely negative values of $\nu_W$ 
 are possible while the order has to take integer values from 0 to infinity.
 In order to deal with that, \eq{powers} 
-was slightly modified adding $3A - 6$ to it  \cite{Machleidt2011, EPELBAUM2006_PROGRESS}:
+was slightly modified by adding $3A - 6$ to it  \cite{Machleidt2011, EPELBAUM2006_PROGRESS}:
 
 \begin{equation}
-    \nu = \nu_W + 3A  - 6 = -2 + 2A - 2C + 2L + \sum_i \Delta_i
+    \nu = \nu_W + 3A  - 6 = -2 + 2A - 2C + 2L + \sum_i \Delta_i.
     \label{powers_corrected}
 \end{equation}
 
-That convention is widely used and we will also stick to it.
-In \gls{ceft} the first order, "leading order" (LO, $\nu=0$) is followed 
-by next-to-leading order (NLO, $\nu=2$)
+That convention above is widely used and we will also stick to it as well.
+
+In \gls{ceft} the first order, "leading order" ($\nu=0$) is followed 
+by the next-to-leading order ($\nu=2$)
 \footnote{The contributions to the potential at order $\nu=1$ completely vanish due to parity and time-reversal invariance,
-so the next-to-leading order stands for the second order of expansion.},
- next-to-next-to-leading order (\gls{n2lo}, $\nu=3$) and so on.
+so the next-to-leading order stands for the second order ($\nu=0$) of expansion.},
+ the next-to-next-to-leading order ($\nu=3$) and so on.
  At each chiral order, new interaction diagrams complete the potential.
- There are also two diagrams at \gls{lo}. One is a diagram which consists of 2 contact terms and the other one
- is one-pion exchange, see \fig{chiral_diagrams}. Both diagrams reflect only 2NF.
+ There are only two diagrams at \gls{lo}: one is a contact term
+ and the other one
+ is a one-pion exchange, see \fig{chiral_diagrams}. Both diagrams reflect only 2NF.
  The same is for diagrams at \gls{nlo}, where more contact terms occure together with two-pion 
  exchange topologies. Each subsequent order includes more and more sophisticated diagrams
  describing nucleons interaction
  via multiple  pion exchanges and various contact verteces.
- 3NF appears for the first time at \gls{n2lo} while 4NF contributions are occuring from \gls{n3lo}.
+ 3NF appears for the first time at \gls{n2lo}
+ while 4NF contributions start from \gls{n3lo}.
  This scheme establishes for the first time a systematic
-way to include all the forces from the simplest diagrams at LO and gradually
+way to include all the contributions to a strong nuclear force
+ starting from the simplest diagrams at LO and gradually
 adding more and more terms. 
 It is also beneficial in the way that 
 one can obtain results using chiral potential at different
 orders and track which one gives large or small contribution to the final prediction.
-At the moment, \gls{n4lo} is the highest order at which 2N interaction has been derived.
+At the moment, \gls{n4lo} is the highest order at which 2N interaction has been completely derived.
 Nevertheless leading F-wave contact interactions from N$^5$LO have been combined with \gls{n4lo} force
 leading to the \gls{n4lo+} potential,
 which is currently regarded as a best available potential on the market.
-The progression of the chiral orders is reflected in a $\chi^2/datum$.
-Leading order results in $\chi^2/datum = 73$ (with neutron-proton data with $E_{lab} = 0-100 \unit{\mev}$).
-Each subsequent order has better and better results: \gls{nlo} gives $\chi^2/datum = 2.2$, \gls{n2lo} - $\chi^2/datum = 2.2$
-and the final \gls{n4lo+} leads to $\chi^2/datum = 1.08$ \cite{reinkrebs2018}.
+The progression of the chiral orders is reflected in a $\chi^2/data$.
+Leading order results in $\chi^2/data = 73$ (with neutron-proton data with $E_{lab} = 0-100 \unit{\mev}$).
+Each subsequent order has better and better results: \gls{nlo} gives $\chi^2/data = 2.2$, \gls{n2lo} - $\chi^2/data = 2.2$
+and the highest, \gls{n4lo+}, leads to $\chi^2/data = 1.08$ \cite{reinkrebs2018}.
 Similar progress is observed for wider energy range, e.g for $E_{lab} = 0-300 \unit{\mev}$
-$\chi^2/datum$ is 75, 14, 4.2, 2.01, 1.16 and 1.06
+$\chi^2/data$ is 75, 14, 4.2, 2.01, 1.16 and 1.06
 at LO, NLO, \gls{n2lo}, \gls{n3lo}, \gls{n4lo} and \gls{n4lo+}, respectively.
-The proton-proton data description has similar trend, so $\chi^2/datum$ is 1380, 91, 41, 3.43, 1.67, 1.00 
-for the same energy bin and chiral orders. At \gls{n4lo+} $\chi^2/datum$ for proton-proton data
+The proton-proton data description has similar trend, so $\chi^2/data$ is 1380, 91, 41, 3.43, 1.67, 1.00 
+for the same energy bin and chiral orders. At \gls{n4lo+} $\chi^2/data$ for proton-proton data
 stands similar value (close to 1) as for neutron-proton, but the convergence comes a bit later and 
 leading order has way worse description.
-In my work I will use chiral potentials from LO to \gls{n4lo+}.
+In my work I will use chiral potentials from \gls{lo} up to \gls{n4lo+}.
 
 \begin{figure}[h]
     \begin{center}
@@ -365,10 +371,10 @@ In my work I will use chiral potentials from LO to \gls{n4lo+}.
     \label{chiral_diagrams}
 \end{figure}
 
-The Argonne V18 potential \cite{AV18Wiringa}, mentioned earlier, has 18 free parameters,
-while \gls{ceft} NN potential at \gls{n4lo} \cite{Machleidt2011} has only three low-energy constants (LECs) fitted to deuteron properties.
+The Argonne V18 potential \cite{AV18Wiringa}, mentioned earlier, has 40 adjustable parameters,
+while \gls{ceft} NN potential at \gls{n4lo} \cite{Machleidt2011} has only three\tmp{???} low-energy constants (LECs) fitted to deuteron properties.
 The reduction of the number of free parameters of the \gls{ceft}-based potentials
-has not only a theoretical but also a practical advantage in the studies of the many-body nuclear systems.
+has not only a theoretical but also a practical advantage in the studies of nuclear systems.
 
 The general scheme outlined above was developed mainly by the Bochum-Bonn and Moscow-Idaho groups.
 Both groups have similar approaches and were independently and almost simultaneously
