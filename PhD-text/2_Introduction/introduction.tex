@@ -385,38 +385,50 @@ Developing a more and more sophisticated versions with higher chiral orders, aut
 They were further developing their chiral model, taking into account more Feynmann diagrams
 coming to a higher chiral orders.
 At some moment Bochum-Bonn goup faced with a problem of potential regularisation\cite{skibinski_3H, Witala_2014}.
-Solving it was an important point and autors
+Solving it was an important step and autors
 where struggling with finding an appropriate
 regularization method to handle the divergences that arise in the \gls{ceft} calculations.
 Different techniques were applied such as the cutoff regularization and the regulator function methods.
 An important point was when authors started using a semi-local regularisation 
 in the coordinate space. The correspondant potential is called  the \gls{scs} potential
-(semi-local regularisation in the coordinate space)\cite{Epelbaum2014SCS}. Later similar regularisation,
+(semi-local regularisation in the coordinate space)\cite{Epelbaum2014SCS}, see below in Sec{\temp{??}}.
+Later similar regularisation,
 but done in momentum space was introduced, resulting in the most advanced chiral potential at the moment up to  
 \gls{n4lo+} chiral order \cite{reinkrebs2018}: the \gls{sms}. It is developed up to \gls{n4lo+} at the moment.
 
 On the other side of the planet, in Idaho, Machleidt and his group from Moscow(Idaho) were also developing 
 a chiral interaction. Their results from 2003 \cite{Entem2003}, following with later 
-investigations \cite{Machleidt2005, Machleidt2010, Entem2017} were introducing very similar model
+investigations \cite{Machleidt2005, Machleidt2010, Entem2017} introduced very similar model
 to the one from the Bochum-Bonn
 group with minor technical differences.
 
+
+There are a number of another attempts to construct the nuclear
+potential from the \gls{ceft}.
 % There are a number of another approaches within \gls{ceft} utilized.
-There are several other approaches within the framework of \gls{ceft}
-that have been utilized in nuclear physics.
-The group of M.Piarulli is using quite similar approach, based on
+% There are several other approaches within the framework of \gls{ceft}
+% that have been utilized in nuclear physics.
+M.Piarulli et al \cite{Piarulli2012,Piarulli2015} contributed
+to quite similar approach, based on
 the same chiral potentials but including explicitly 
 $\Delta$-isobar intermadiate states 
 up to the third chiral order and taking into account
-sophisticated electromagnetic corrections \cite{Piarulli2012,Piarulli2015}.
+sophisticated electromagnetic corrections.
 
-
-Ekström and collaborators developed a chiral
-effective theory for nuclear forces and currents that includes both
-nucleon and pion degrees of freedom \cite{ekstrom_2015, Tews_2020}. Their approach
-is based on a power counting scheme that separates long-range and
-short-range contributions and allows for systematic improvements in the
-calculations.
+Other groups try to improve already derived forces.
+Let us mention here works by A.~Ekstr\"om and
+collaborators \cite{ekstrom_2015, Tews_2020} who,
+by using sophisticated fitting methods combined with
+statistical analysis, proposed so-called optimised interaction
+V$_\text{opt}$ which was proved to provide a good description
+of atom properties for radii and calcium without
+using 3NF.
+% Ekström and collaborators developed a chiral
+% effective theory for nuclear forces and currents that includes both
+% nucleon and pion degrees of freedom \cite{ekstrom_2015, Tews_2020}. Their approach
+% is based on a power counting scheme that separates long-range and
+% short-range contributions and allows for systematic improvements in the
+% calculations.
 
 Another approach is the pionless effective field
 theory, which integrates out pions and
@@ -426,13 +438,13 @@ Obtained potential has a very simple form, but cannot be applied
 to higher energies since pions start playing an important role
 there.
 
-Another important approach is the Lattice Effective Field Theory (LEFT), which
+Yet another promising approach is the Lattice Effective Field Theory (LEFT), which
 is based on the Lattice QCD simulations of the strong
-interaction. Meissner and collaborators have developed a chiral effective
+interaction. Mei\ss{}ner and collaborators have developed a chiral effective
 theory for nuclear forces based on the results of lattice QCD
 calculations \cite{Lande2019}. This approach has the advantage of being able
-to calculate the nuclear force directly from first
-principles, without the need for phenomenological input. However, it is limited
+to predict the nuclear force directly from the first
+principles, without the need for phenomenological input. However, currently it is limited
 to small systems and low energies due to the computational
 resources required for calculations.
 Up to now, the relatively simple two-nucleon scattering problem
@@ -447,15 +459,19 @@ For more details please refer to
 
 
 Technically, the chiral potential may be derived both in coordinate and momentum spaces.
-Nevertheless in both cases it requires regularisation which cuts 
-low coordinate values in order to avoid infinities 
-or high momentum values. 
+Nevertheless in both cases it requires regularisation which 
+improves potential behavior at small distances or at high momenta,
+which allows to avoid infinities. 
+% cuts 
+% low coordinate values in order to avoid infinities 
+% or high momentum values. 
 The \gls{sms} potential is being regularized semilocally. 
 It means that  local or nonlocal regularisations
 are being applied for different parts of the potential.
 % and later in \cite{Entem2017, Epelbaum2014SCS}
-In \cite{Entem2003, epelbaum2005two} the non-local regularizer was applied to both short- and long-range parts
- of the potential where in the next \cite{Entem2017, Epelbaum2014SCS} potential
+In \cite{Entem2003, epelbaum2005two} the non-local regulation scheme 
+was applied to both short- and long-range parts
+ of the potential while in the next model \cite{Entem2017, Epelbaum2014SCS}
  it affected only a short range part. 
 This regularisation is applied directly to the potential matrix elements 
 in the coordinate space:
@@ -474,7 +490,7 @@ or in the momentum space
 \end{equation}
 where the cutoff R was chosen in the range of R = 0.8, ..., 1.2 \unit{fm},
 $\Lambda = \frac{2}{R}$ and $n$ being adjusted with respect to the considered chiral order.
-For specific case of \gls{sms} force $\Lambda = \SIrange[range-phrase=-]{400}{550}{\mev}$ and $n=3$.
+For specific case of the \gls{sms} force $\Lambda = \SIrange[range-phrase=-]{400}{550}{\mev}$ and $n=3$.
 
 The other way of regularisation, the local one, is applied to the propagator operator,
 already during the derivation of potential. Namely, the Gaussian form factor $F(\vec{l}^2)$ is being used
@@ -490,18 +506,19 @@ with
     F(\vec{l}^2) = e^{-\frac{\vec{l}^2 + M_\pi^2}{\Lambda^2}},
     \label{regulator}
 \end{equation}
-$M_\pi$ is an effective pion mass and $\Lambda$ - a cutoff parameter and $l$ is a four-momentum of the exchanged pion.
+$M_\pi$ is an effective pion mass, $\Lambda$ - a cutoff parameter and $l$ is a four-momentum of the exchanged pion.
+\tmp{Further $\mu$ is a ...}
 The form factor (\ref{regulator}), being used together with Feynman propagator,
 ensures that long-range part of the forces has no singularities. 
 
 The cut-off parameter $\Lambda$ is not fixed and usually calculations
-are being performed with different values. The comparison
+are being performed for its different values. The comparison
 of such results may reveal stronger or weaker dependance and in a perfect
 case, which is expected at $\nu >> 1$, one will come up with such a potential, were the cut will
 not affect results at all. One of aims of my thesis is to test how big cut-off dependency
 of predictions is
 observed for the best currently available forces (\gls{scs} and \gls{sms}). 
-To inspect the potential cutoff dependancy, in \fig{potential_cutoff} 
+To illustrate a cutoff dependancy of the potential, in \fig{potential_cutoff} 
 I show values of the matrix elements for 2N $\matrixel{p}{V}{p^\prime}$ potential $^3S_1-^3D_1$
 as a function on the momentum $|\vec{p}|$ with fixed value $|\pvec{p}|$=\SI{0.054}{fm^{-1}}.
 Please note, that relatively strong dependancy of specific matrix element of the potential
