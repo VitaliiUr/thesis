@@ -574,12 +574,13 @@
         and T$_{21}$ {\bf (b)}
         as a function of the outgoing proton angle $\theta_p$ in the center of mass frame 
         for the photon energy E$_\gamma=\SI{100}{\mev}$.
-        Top row presents results obtained using potential
-        with different chiral orders (from \gls{lo} to \gls{n4lo+}) with cut-off parameter $\Lambda=\SI{450}{\mev}$.
+        Top row presents results obtained using the \gls{sms} potential
+        at different chiral orders (from \gls{lo} to \gls{n4lo+}) with the cut-off parameter $\Lambda=\SI{450}{\mev}$.
         The middle row shows truncation errors for each 
         chiral order starting from \gls{nlo} and the
         bottom row presents a cut-off dependence at \gls{n4lo+}.
-        For the sake of comparison, predictions obtained with the \gls{av18} potential are given as well.}
+        For the sake of comparison, predictions obtained with the \gls{av18} potential are given as well.
+        For all predictions 1NC+Siegert model is used.}
         \label{T20_T21_100}
     \end{figure}
 
@@ -596,7 +597,9 @@
             \label{T11_100_vert}
         \end{subfigure}
         \caption{The same as in \fig{T20_T21_100} but for the deuteron tensor analyzing power
-        T$_{22}$ (subfigures {\bf (a)}) and deuteron vector analyzing power $i\text{T}_{11}$ (subfigures {\bf (b)}).}
+        T$_{22}$ (left column {\bf (a)}) and
+        the deuteron vector analyzing power $i\text{T}_{11}$
+        (right column {\bf (b)}).}
         \label{T22_T11_100}
     \end{figure}
 
@@ -619,14 +622,14 @@
         \includegraphics[width=0.9\textwidth]{Figures_De/TensorPowers_pw_1nc.pdf}
         \end{center}
         \caption{The deuteron tensor analyzing powers T$_{20}$, T$_{21}$, T$_{22}$ and 
-        the vector analyzing power $i\text{T}_{11}$ as a function of the
+        the deuteron vector analyzing power $i\text{T}_{11}$ as a function of the
         outgoing proton angle $\theta_p$ in the \gls{cm} frame at $\text{E}_\gamma = \SI{30}{\mev}$.
         Similarly to \fig{Diff_cross_pw_1nc} predictions obtained with chiral \gls{n4lo+} potential
-        and $\Lambda=\SI{450}{\mev}$ are presented for three models.
+        and $\Lambda=\SI{450}{\mev}$ are presented for three theoretical models.
         Blue solid line is the most complete prediction we have (plane-wave plus rescattering parts, 1NC + Siegert), pink dashed line shows predictions obtained with
-        single-nucleon current only (without Siegert contributions) and green dashed-dotted line
+        single-nucleon current only (1NC) - without the Siegert contributions and green dashed-dotted line
         is a prediction in which we neglect the rescattering part
-        and stick to the plane-wave part only.}
+        and stick to the plane-wave part only but keeping the Siegert contributions.}
         \label{tensor_pw_1nc}
     \end{figure}
 
@@ -649,7 +652,7 @@
         \begin{center}
         \includegraphics[width=0.9\textwidth]{Figures_De/TensorPowers_100mev_pw_1nc.pdf}
         \end{center}
-        \caption{The same as in \fig{tensor_pw_1nc} but for E$_\gamma=\SI{100}{\mev}$}
+        \caption{The same as in \fig{tensor_pw_1nc} but for E$_\gamma=\SI{100}{\mev}$.}
         \label{tensor_pw_1nc_100mev}
     \end{figure}
 
@@ -698,11 +701,11 @@
         \end{center}
         \caption{Tensor analyzing powers T$_{20}$, T$_{21}$ and T$_{22}$ as a function of the
         outgoing proton angle $\theta_p$ in the \gls{cm} frame.
-        Solid blue line is a mean value of my predictions obtained 
+        The solid blue line is a mean value of my predictions obtained 
         at energy values from \SIrange[range-phrase=\text{ to }]{25}{45}{\mev} with the
         \gls{sms} potential at \gls{n4lo+} chiral order and with $\Lambda$~=~450~MeV
          and with SN current used together with the Siegert approach. 
-        Pink dashed line is similar prediction but with SN only. 
+        The pink dashed line is similar prediction but with the SN only. 
         The corresponding bands show the limits of predictions in the regarded
         energy region.
         % Filled bands show maximal spread of my predictions obtained with a 
@@ -711,7 +714,7 @@
         % case where SN current was used together with Siegert approach and 
         % pink bands - to the SN currentonly. 
         Filled circles are experimental data
-        from \cite{rachek2007} for the same energy span.}
+        from \cite{rachek2007} for the same energy range.}
         \label{tensor_angular_25-45}
     \end{figure}
 
@@ -818,13 +821,15 @@
         \begin{center}
         \includegraphics[width=0.9\textwidth]{Figures_De/T20_T22_vs_en.pdf}
         \end{center}
-        \caption{The tensor analyzing powers T$_{20}$ and T$_{22}$ as a function of the photon energy E$_\gamma$
+        \caption{\tmp{make cutof dependance vs energy}
+        The tensor analyzing powers T$_{20}$ (left) and T$_{22}$ (right) as
+        a function of the photon energy E$_\gamma$
         at fixed outgoing proton angle $\theta_p = \ang{88}$ in the center of mass frame.
         My predictions (blue solid line) are obtained with the \gls{sms} potential at the chiral order \gls{n4lo+},
         with the cut-off parameter $\Lambda = \SI{450}{\mev}$ and with 2NC contributions included via the Siegert theorem.
         The dashed pink curve shows predictions obtained with the same interaction, but without 2NC contributions.
         The dashed-dotted brown curve presents theoretical results from \cite{Schmitt1989}.
-        Experimental data is taken from \cite{rachek2007} (filled circles)
+        Experimental data are taken from \cite{rachek2007} (filled circles)
         and \cite{mishev1993} (empty circles).}
         \label{T20_vs_en}
     \end{figure}
@@ -833,17 +838,19 @@
         \begin{center}
         \includegraphics[width=0.95\textwidth]{Figures_De/TensorPower_Th24-48.pdf}
         \end{center}
-        \caption{The tensor analyzing powers T$_{20}$, T$_{21}$ and T$_{22}$ as a function of the
-        photon energy within the outgoing proton momentum polar angle $\theta_p$ range $\ang{24} - \ang{48}$
-        in the center of mass frame.
-        The solid blue curve is a mean value of my predictions at energy values from 25 to \SI{45}{\mev} obtained with
+        \caption{The averaged tensor analyzing powers T$_{20}$ (left),
+        T$_{21}$ (middle) and T$_{22}$ (right) as a function of the
+        photon energy for the outgoing proton momentum polar angle $\theta_p$
+        in range $\ang{24} - \ang{48}$ in the center of mass frame.
+        The solid blue curve is a mean value of my predictions at energy values ranges
+        from 25 to \SI{45}{\mev}, obtained with
         the \gls{sms} potential at \gls{n4lo+} chiral order and with $\Lambda=\SI{450}{\mev}$
         and with SN current used together with the Siegert approach. 
         The pink dashed curve represents similar predictions but with
-        nuclear current reduced to th SN current only. 
+        the nuclear current reduced to the SN current only. 
         The corresponding bands show predictions at border energies 25 and \SI{45}{\mev}.
         The filled circles are experimental data
-        from \cite{rachek2007} for the same energy span.}
+        from \cite{rachek2007} for the same energy range.}
         \label{tensor_energy_24-48}
     \end{figure}
 
@@ -993,12 +1000,13 @@
         with different chiral orders (from \gls{lo} to \gls{n4lo+}) with cut-off parameter $\Lambda=\SI{450}{\mev}$.
         The middle panel show truncation errors for each 
         chiral order starting from \gls{nlo} and
-        bottom figures present a cut-off dependence for predictions
+        bottom figures present a cut-off dependence of predictions
         based on the \gls{sms} \gls{n4lo+} potential.
         For the sake of comparison, predictions obtained with the \gls*{av18} potential 
         are shown as well.}
     \end{figure}
 
+    \tmp{TODO: PW, 1NC and Siegert for proton polarization.}
 
     Predictions for the neutron polarization at the energies \SI{2.75}{\mev} and \SI{100}{\mev} are shown in the
     \fig{Pn_2p75_100}. The choice of energy is conditioned by the availability of experimental data,
