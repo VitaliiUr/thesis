@@ -1,7 +1,7 @@
 \chapter{Formalism \& numerical methods}
 \label{sec:formalism}
 
-Despite the deuteron problem was solved long time ago, I will describe it briefly 
+Despite the fact that the deuteron problem was solved long time ago, I will describe it briefly 
 in order to introduce the notation and formalism. 
 With that, for more complex 3N case only slight 
 extension will be needed.
@@ -10,7 +10,7 @@ In order to calculate any observable for the deuteron photodisintegration,
 one has to find a nuclear matrix elements:
 
 % \begin{equation}
-%     N^\mu = \langle \Psi_f \vec{P_f} \mid \frac{1}{e}J^\mu(0) \mid \Psi_i \vec{P_i} \rangle =
+%     N^\mu = \langle \Psi_f \vec{P_f} \mid J^\mu(0) \mid \Psi_i \vec{P_i} \rangle =
 %     \langle p' (l's')j'm_j't'm_t' \vec{P_f} \mid J^\mu \mid \phi_d m_d \vec{P}_i \rangle, 
 %     \label{main}
 % \end{equation}
@@ -18,7 +18,8 @@ one has to find a nuclear matrix elements:
     N^\mu = \langle \Psi_{final} \mid J^\mu \mid \Psi_{initial} \rangle, 
     \label{main}
 \end{equation}
-with two-nucleon wave function of the initial state $\Psi_{initial}  = \Psi_{deuteron}$;
+with two-nucleon wave function of the initial state $\Psi_,
+ie. including two- and three- nucleon interaction,{initial}  = \Psi_{deuteron}$;
 two-nucleon wave function of the final scattering state $\Psi_{final}$ 
 and a four-vector current operator $J^\mu$ which acts between initial and final 
 two-nucleon states. In following I describe how to get that quantities.
@@ -55,13 +56,13 @@ two-nucleon states. In following I describe how to get that quantities.
         H_0 = \frac{\vec{p}_1^2}{2m_1} + \frac{\vec{p}_2^2}{2m_2} = 
         \frac{\vec{p}^2}{2\mu} + \frac{\vec{\mathcal{P}}^2}{2M}, 
     \end{equation}
-    where relative and total momenta are defined as follows:
+    where the relative and total momenta are defined as follows:
 
     \begin{eqnarray}
-        \vec{p} &=& \frac{(m_1\vec{p}_1 - m_2\vec{p}_2)}{m_1 + m_2}\\
-        \vec{\mathcal{P}} &=& \vec{p}_1 + \vec{p}_2
+        \vec{p} &=& \frac{(m_1\vec{p}_1 - m_2\vec{p}_2)}{m_1 + m_2},\\
+        \vec{\mathcal{P}} &=& \vec{p}_1 + \vec{p}_2,
     \end{eqnarray}
-    $M = m_1 + m_2$ is a total mass, $\mu = \frac{m_1m_2}{M}$ is a relative mass of two nucleons and 
+    where $M = m_1 + m_2$ is a total mass, $\mu = \frac{m_1m_2}{M}$ is a reduced mass of two nucleons and 
     $\vec{p_i}$ is a momentum of i-th particle.
 
     Potential $V$ is assumed to depend on the relative degrees of freedom only, so
@@ -82,15 +83,15 @@ two-nucleon states. In following I describe how to get that quantities.
     equation:
 
     \begin{equation}
-        \int d^3\vec{p} \ket{\vec{p}} \bra{\vec{p}}   = \mathbb{1}
+        \int d^3\vec{p} \ket{\vec{p}} \bra{\vec{p}}   = \mathbb{1}.
         \label{completness}
     \end{equation}
 
-    Eq.(\ref{se1}) is basically a Schr\"{o}dinger equation for one particle with mass $\mu$
+    \eq{se1} is basically the Schr\"{o}dinger equation for a single particle with mass $\mu$
     in potential $V$ 
-    and Eq.(\ref{se2}) can be regarded as a Schr\"{o}dinger equation for particle with mass $M$ in 
-    a free motion. Assuming that deuteron is at rest ($E_{c.m.} = 0$) we can stick 
-    to the Eq.(\ref{se1}) only. Using completeness relation \ref{completness} we get:
+    and \eq{se2} can be regarded as a Schr\"{o}dinger equation for particle with mass $M$ in 
+    a free motion. Assuming that deuteron is at rest ($E = 0$) we can stick 
+    to the Eq.(\ref{se1}) only. Using completeness relation (\ref{completness}) we get:
 
     \begin{equation}
         \frac{\vec{p}^2}{2\mu} \langle \vec{p} \mid \Psi_{int} \rangle +
@@ -100,7 +101,7 @@ two-nucleon states. In following I describe how to get that quantities.
         \label{shrod_old}
     \end{equation}
 
-    Working in 3 dimensional space  is difficult (especially numerically)
+    Working in 3 dimensional space  is difficult, especially numerically,
     so I follow a standard path and introduce the partial-wave decomposed representation (PWD) 
     of the momentum state, adding spin and isospin degrees of freedom in the following form:
 
@@ -114,7 +115,7 @@ two-nucleon states. In following I describe how to get that quantities.
 
 
     States $\ket{p (ls) j m_j}$ can be further decomposed to 
-    the main basis states than it is in (\ref{pwmain}), separating spin part as 
+    the more basic states than it is in (\ref{pwmain}), separating spin part as 
     
     \begin{equation}
         \ket{p (ls) j m_j} = \sum_{m_l} c(lsj;m_l, m_j\!-\!m_l, m_j) \ket{p l m_l}
@@ -139,9 +140,9 @@ two-nucleon states. In following I describe how to get that quantities.
     \end{equation}
 
     In Eqs.(\ref{full_decomp}) -(\ref{isospin_decomp}),  $c(...)$ are Clebsh-Gordon coefficients.
-    Nucleons are spin $\frac{1}{2}$ particles, and also we treat proton and neutron as 
+    Nucleons are spin $\frac{1}{2}$ particles, and we also treat proton and neutron as 
     the same particle in different 
-    isospin states, so that isospin $\nu_1 = \frac{1}{2}$ stands for proton and $\nu_1 = -\frac{1}{2}$ for neutron.
+    isospin states, using convention in which isospin $\nu_1 = \frac{1}{2}$ stands for proton and $\nu_1 = -\frac{1}{2}$ is for neutron.
 
     The states $\mid p l m_l \rangle$ from Eq.(\ref{full_decomp}) are orthogonal
     
@@ -149,7 +150,7 @@ two-nucleon states. In following I describe how to get that quantities.
         \langle p^\prime l^\prime m_l^\prime \mid p l m_l \rangle = 
         \frac{\delta(p - p^\prime)}{p^2} \delta_{ll^\prime}\delta_{m_l m_l^\prime}
     \end{equation}
-    and also satisfy the completeness relation:
+    and satisfy the completeness relation:
 
     \begin{equation}
         \sum_{l=0}^\infty \sum_{m_l=-l}^l \int dp p^2 \mid plm_l \rangle \langle plm_l \mid = \mathbb{1}
@@ -163,7 +164,7 @@ two-nucleon states. In following I describe how to get that quantities.
         \frac{\delta ( \abs{\pvec{p}} - p)}{p^2} Y _{l m_l}(\hat{p}^\prime),
     \end{equation}
     where $Y _{l m_l}(\hat{p}^\prime)$ is a spherical harmonic and 'hat' denotes a unit vector $\hat{X}$ in 
-    direction of $\vec{X}$. So for the momentum vector:
+    direction of $\vec{X}$. Thus for the momentum vector:
 
     \begin{equation}
         \vec{p} \equiv |\vec{p}| \hat{p} \equiv p \hat{p}. 
@@ -186,11 +187,11 @@ two-nucleon states. In following I describe how to get that quantities.
         \delta_{ss'}V^{sjtm_t}_{l'l}(p',p)
         \label{conservation}
     \end{equation}
-    which introduces restrictions for particular sets of quantum numbers.
+    which introduces restrictions for particular sets of quantum numbers and $\alpha$.
     Strong interaction allows for change of the orbital angular momenta $l = j \pm 1,~l'=j'\pm1$.
-    The channels, where $l \neq l'$
-    are coupled and for the deuteron bound state 
-    one can find only one possible PWD state combination:
+    The channels, in which  $l \neq l'$ is allowed,
+    are calld a coupled channels and for the deuteron bound state 
+    one can find only one such PWD state combination:
     two coupled channels 
     which are commonly denoted as $^3S_1$ and $^3D_1$ (the naming stands for $^{2s+1}l_j$). They correspond 
     to $l=0$ and $l=2$ respectively (with $s = j = 1$ and $t = m_t = 0$). 
@@ -219,11 +220,11 @@ two-nucleon states. In following I describe how to get that quantities.
     \end{equation}
     for $l=0,2$. In case one does not have a matrix elements for the potential 
     $\langle plm_l \mid V \mid p^\prime l^\prime m_l^\prime  \rangle$ in analytical form,
-    but only numerical values for some grid of points, 
+    but only numerical values for some grid of points are given, 
     there is still one complication in the Eq.(\ref{integral}) - integration, which has to be discretized.
     In order to get rid of the integral I use a Gaussian quadrature 
     method of numerical integration \cite{jacobi1826ueber}.
-    It allows to replace an integral by the weighted sum:
+    It allows me to replace an integral by the weighted sum:
         $\int_a^b f(x)dx = \sum_{i=1}^n \omega_i f(x_i)$
     In current work I used $N=72$ points in the interval from $0$ to \SI{50}{fm^{-1}}. 
     Using this method, Eq.(\ref{integral}) becomes  
@@ -243,8 +244,8 @@ two-nucleon states. In following I describe how to get that quantities.
     optimize computational time. 
     I solve this equation as an eigenvalue problem $M\Psi = E_d \Psi$ and
     in that way
-    find simultaneously wave function values in grid of $p$ points and binding energy $E_d$. 
-    The binding energy $E_d$ calculated with potentials of different chiral orders 
+    find simultaneously wave function values in grid of $p$ points and The binding energy $E_d$. 
+    The binding energy $E_d$ calculated with potentials at different chiral orders 
     is presented in Fig.~\ref{bind}.
 
     \begin{figure}[h]
@@ -253,25 +254,26 @@ two-nucleon states. In following I describe how to get that quantities.
         \end{center}
         \caption{Deuteron binding energy calculated using the chiral \gls{sms} potential
         at different chiral orders as a mean value over all cutoffs.
-        Error bands represent a spread the calculated binding energy with respect to
-        the cutoff parameter $\Lambda$ (minimal and maximal values).
-        Experimental data is taken from \cite{VANDERLEUN1982261}}
+        % Error bands represent a spread the calculated binding energy with respect to
+        % the cutoff parameter $\Lambda$ (minimal and maximal values).
+        Experimental data is taken from \cite{VANDERLEUN1982261}.}
         \label{bind}
     \end{figure}
 
-    An example of such wave functions is demonstrated in \fig{wave_func}. The left pane demonstrate
+    An example of such wave functions is demonstrated in \fig{wave_func}. The left panel demonstrate
     a wave function for $l=0$ - $^3S_1$ while the right one - for $l=2$ - $^3D_1$. Both 
     plots consist of the curves for different cutoff values and using the chiral \gls{sms} potential at \gls{n4lo+}.
-    The small deviation between lines show that cutoff dependency is rather weak at this stage
-    and further discrepancies connected to the value of $\Lambda$ may appear in other components.  
+    The small deviation between lines show that cutoff dependence is rather weak at this stage
+    and further discrepancies connected to the value of $\Lambda$ may appear in other components
+    of nuclear matrix elements.  
 
     \begin{figure}[h]
         \begin{center}
             \includegraphics[width=0.85\textwidth]{Figures_De/Wave_function_cutoff.pdf}
         \end{center}
-        \caption{Wave function $\phi_l$ for l=0 ($^3S_1$ partial wave)(left) and l=2 ($^3D_1$) (right).
-        Each curve shows results obtained with different values of the cutoff parameter $\Lambda$, 
-        results have been obtained using the chiral \gls{sms} potential at \gls{n4lo+}.}
+        \caption{The deuteron wave function $\phi_l$ for l=0 ($^3S_1$ partial wave)(left) and l=2 ($^3D_1$) (right).
+        Each curve shows results obtained with different values of the cutoff parameter $\Lambda$. 
+        The chiral \gls{sms} potential at \gls{n4lo+} was used.}
         \label{wave_func}
     \end{figure}
 
@@ -293,18 +295,19 @@ two-nucleon states. In following I describe how to get that quantities.
     %     \mid \Psi _f \rangle = \mid \Psi _0 \rangle + \frac{1}{E - H_0 + i \epsilon} V \mid \Psi _f \rangle
     % \end{equation}
 
-    Let us start from the time-independent formulation of the scattering process.
-    In such a case Hamiltonian is:
+    I work in the time-independent formulation of the scattering process.
+    In such a case the Hamiltonian is:
 
     \begin{equation}
         H = H_0 + V,
     \end{equation}
-    where again $H_0$ is a kinetic energy operator $H_0 = \frac{\vec{p}^2}{2m}$ 
+    where again $H_0$ is a kinetic energy operator, $H_0 = \frac{\vec{p}^2}{2m}$, 
     and $V$ is a nucleon-nucleon interaction.
     For a free particle motion, $V$ will be absent and we will denote a corresponding energy eigenstate as
-    a free particle state $\mid \vec{p}_0 \rangle$.
+    a free particle state $\ket{\vec{p}\,}$.
     The scattering state $\ket{\psi}$ fulfills similar Schr\"{o}dinger equation as 
-    $\mid \vec{p}_0 \rangle$, with the same energy eigenvalue, but with potential presented:
+    $\ket{\vec{p}\,}$, with the same energy eigenvalue,
+    but with the presence of the potential:
     
     % , the eigenstate will differ from $\ket{\phi_l}$,
     % but in case of elastic scattering (which we are interested in) the energy eigenvalue $E$ should be the same.
@@ -313,22 +316,22 @@ two-nucleon states. In following I describe how to get that quantities.
 
     \begin{equation}
         \begin{cases}
-            H_0 \mid \vec{p} \rangle &= E \mid \vec{p} \rangle \\
-            (H_0 + V) \mid \psi \rangle &= E \mid \psi \rangle
+            H_0 \ket{\vec{p}\,} &= E \ket{\vec{p}\,}, \\
+            (H_0 + V) \ket{\psi} &= E \ket{\psi}.
         \end{cases}
         \label{system}
     \end{equation}
 
-    We are interested in solution for Eq.~(\ref{system}), so that 
-    $\mid \psi \rangle \rightarrow \mid \vec{p} \rangle$ as $V \rightarrow 0$
-    and both $\mid \psi \rangle$ and $\mid \vec{p} \rangle$ have the same energy eigenvalues E.
+    We are interested in solution for \eq{system}, so that 
+    $\ket{\psi} \rightarrow \ket{\vec{p}\,}$ as $V \rightarrow 0$
+    and both $\ket{\psi}$ and $\ket{\vec{p}\,}$ have the same energy eigenvalues E.
     As we have scattering process, the energy spectra for both operators $H_0$ and $H_0 + V$
     are continuous. 
 
-    From Eq.~(\ref{system}) follows that
+    From \eq{system} it follows that
 
     \begin{equation}
-        \mid \psi \rangle = \frac{1}{E - H_0}V \mid \psi \rangle +  \mid \vec{p} \rangle,
+        \ket{\psi} = \frac{1}{E - H_0}V \ket{\psi} +  \ket{\vec{p}\,},
         \label{psieq}
     \end{equation}
     % where $\mid \vec{p} \rangle$ is a solution to the
@@ -342,13 +345,13 @@ two-nucleon states. In following I describe how to get that quantities.
     % In addition, it 
     which guarantees that
      application of the operator $(E -H_0)$ to the 
-    (\ref{psieq}) results in the second equation from the set (\ref{system}).
+    \eq{psieq} results in the second equation from the set (\ref{system}).
     % Also, \eq{psieq} for $V \rightarrow 0$ becomes $\mid \psi \rangle = \mid \vec{p} \rangle$
 
 
     In order to deal with a singular operator $\frac{1}{E - H_0}$ in \eq{psieq}, the well-known
-    technique is to make such an operator complex by adding small imaginary number to the denominator
-    so Eq.(\ref{psieq}) becomes
+    technique is used to make such an operator complex by adding small imaginary number to the denominator
+    so \eq{psieq} becomes
     % making it  $\frac{1}{E + i\epsilon - H_0}$.
 
     \begin{equation}
@@ -376,7 +379,7 @@ two-nucleon states. In following I describe how to get that quantities.
     we can rewrite it as 
 
     \begin{equation}
-        \ket{\psi} = (1 + G_0(E + i\epsilon) t)  \ket {\vec{p}}
+        \ket{\psi} = (1 + G_0(E + i\epsilon) t)  \ket {\vec{p}}.
         \label{psi_toper}
     \end{equation}
 
@@ -428,7 +431,7 @@ two-nucleon states. In following I describe how to get that quantities.
     with spin projections $m_p$ and $m_n$ as $\bra{\phi m_p m_n}$, we can write \eq{main} as
     
     \begin{equation}
-        N^\mu = \bra{\phi m_p m_n} (1 + G_0(E + i\epsilon) t) \frac{1}{e}J^\mu(0) \mid \Psi_i \vec{P_i} \rangle
+        N^\mu = \bra{\phi m_p m_n} (1 + G_0(E + i\epsilon) t) J^\mu(0) \mid \Psi_{deuteron} \rangle
         \label{main_top}
     \end{equation}
 
@@ -436,20 +439,21 @@ two-nucleon states. In following I describe how to get that quantities.
     
 \section{3N bound state}
 
-    The 3N bound state is described by the Schr\"{o}dinger equation for 3N system
+    The 3N bound state is described by the Schr\"{o}dinger equation for 3N system,
+    ie. including two- and three- nucleon interaction,
     and its total wave function obeys the following equation:
 
     \begin{equation}
         \ket{\Psi} = G_0(E+i\epsilon)\sum_{j=1}^3 (V_j + V_4^j) \ket{\Psi},
         \label{psi3_total}
     \end{equation}
-    where $G_0$ is a free propagator from \eq{g0}, $V_j$ - is a two-body potential
-    acting between nucleons $k$ and $l$ (j, k and l - numerate nucleons, $j,k,l \in {1,2,3}$ and $j \neq k \neq l$)
-    and $V_4^j$ is a component of three-body potential $V_4 = \sum_{j=1}^3 V_4^j$
+    where $G_0$ is a 3N free propagator as in \eq{g0}, $V_j$ - is a two-body potential
+    acting between nucleons $k$ and $l$ (j, k and l - numerate nucleons, $j,k,l \in {1,2,3}$ and $j \neq k \neq l$),
+    $V_4^j$ is a component of three-body potential $V_4 = \sum_{j=1}^3 V_4^j$
     symmetrical under exchange of nucleons $k$ and $l$,
-    E - is a binding energy.
+    and $E$ - is a 3N binding energy.
 
-    \eq{psi3_total} can be split into 3 independent equations for
+    \eq{psi3_total} can be split into three independent equations for
     so-called Faddeev components $\ket{\psi_j}$
 
     \begin{equation}
@@ -483,93 +487,106 @@ two-nucleon states. In following I describe how to get that quantities.
         \label{fadeed_lse}
     \end{equation}
     where $t_j$ is a two-body t-operator which obeys \eq{top2} for corresponding 
-    two-body potential $V_j$.
+    two-body potential $V_j$. I solve \eq{fadeed_lse} numerically to find $\ket{\psi_j}$
+    and the binding energy $E$. To do that, I perform PWD again.
 
 The partial wave representation of the \eq{fadeed_lse} is obtained using
-following states:
+following 3N states:
 
 \begin{equation}
     \ket{p,q,\alpha_{J,M_J}} = \ket{p,q,(ls)j, (\lambda, \frac{1}{2})I(jI)JM;(t\frac{1}{2})TM_T}_1,
     \label{3N_PW}
 \end{equation}
-where index 1 states the choice of the Jakobi momenta, such that $p$ is a relative momentum of the nucleons 2 and 3.
+where index 1 states the choice of the Jacobi momenta, such that $p$ is a relative momentum of the nucleons 2 and 3.
 Values l, s and j are quantum numbers in the two-body subsystem consisted of nucleons 2 and 3. $\lambda$ is the 
-orbital angular momentum of the first particle which spin is $\frac{1}{2}$ and total angular momentum $I$.
+orbital angular momentum with respect to the c.m. of the particles 2 and 3,
+of the first particle which spin is $\frac{1}{2}$
+and $I$ is its total angular momentum.
 $J$ and $M_J$ are the total angular momentum of the 3N system and its projection on the z-axis respectively.
-$y$ is a total isospin of the 2-3 subsystem whereas $T$ and $MT$ are the total isospin of the 3N system and its projection on the z-axis.  
+$t$ is a total isospin of the 2-3 subsystem whereas $T$ and $M_T$ are the total isospin of the 3N system and its projection on the z-axis, respectively.  
 
-Using states defined in \eq{3N_PW}, we can write a partial-wave representation of the \eq{fadeed_lse}:
-\begin{equation}
-    \begin{aligned}
-        \left\langle p, q, \alpha_{J, M_J}\right. & \left|\psi_i\right\rangle=\frac{1}{E-\frac{p^2}{m}-\frac{3 q^2}{4 m}+i \epsilon}[ \\
-        & \sum_{\alpha^{\prime}, \alpha^{\prime \prime}} \int_0^{\infty} d q^{\prime \prime} q^{\prime \prime 2} \int_{-1}^1 d x t_{\alpha, \alpha^{\prime}}^{+}\left(p, \pi_1\left(q, q^{\prime \prime}, x\right), E-\frac{3 q}{4 m}\right) \\
-        * & \frac{\tilde{G}_{\alpha^{\prime}, \alpha^{\prime \prime}}\left(q^{\prime}, q^{\prime \prime}, x\right)}{\pi_1^{l^{\prime}} \pi_2^{l^{\prime \prime}}}\left\langle\pi_2, q^{\prime \prime}, \alpha_{J^{\prime \prime}, M_{J^{\prime \prime}}^{\prime \prime}} \mid \psi_i\right\rangle \\
-        +\quad & \sum_{\alpha^{\prime \prime}} \int_0^{\infty} d p^{\prime \prime} p^{\prime \prime 2} \int_0^{\infty} d q^{\prime \prime} q^{\prime \prime 2} V_{\alpha, \alpha^{\prime \prime}}^4\left(p, q, p^{\prime \prime}, q^{\prime \prime}\right)\left\langle p^{\prime \prime}, q^{\prime \prime}, \alpha_{J^{\prime \prime}, M_{J^{\prime \prime}}^{\prime \prime}} \mid \psi_i\right\rangle \\
-        +\quad & \sum_{\alpha^{\prime}, \alpha^{\prime \prime}} \int_0^{\infty} d q^{\prime} q^{\prime 2} \int_0^{\infty} d q^{\prime \prime} q^{\prime \prime \prime} \int_{-1}^1 d x V_{\alpha, \alpha^{\prime}}^4\left(p, q, \pi_1\left(q^{\prime}, q^{\prime \prime}, x\right), q^{\prime}\right) \\
-        +\quad & \frac{\tilde{G}_{\alpha^{\prime}, \alpha^{\prime \prime}}\left(q^{\prime}, q^{\prime \prime}, x\right)}{\pi_1^{l^{\prime}} \pi_2^{l^{\prime \prime}}}\left\langle\pi_2, q^{\prime \prime}, \alpha_{J^{\prime \prime}, M_{J^{\prime \prime}}^{\prime \prime}} \mid \psi_i\right\rangle\\
-        & +\sum_{\alpha^{\prime}, \alpha^{\prime \prime}} \int_0^{\infty} d p^{\prime} p^{\prime 2} \int_0^{\infty} d p^{\prime \prime} p^{\prime \prime 2} \int_0^{\infty} d q^{\prime \prime} q^{\prime \prime 2} t_{\alpha, \alpha^{\prime}}^{+}\left(p, p^{\prime}, E-\frac{3 q^2}{4 m}\right) \frac{1}{E-\frac{p^{\prime 2}}{m}-\frac{3 q^2}{4 m}+i \epsilon} \\ & \text { * } \quad V_{\alpha^{\prime}, \alpha^{\prime \prime}}^4\left(p^{\prime}, q, p^{\prime \prime}, q^{\prime \prime}\right)\left\langle p^{\prime \prime}, q^{\prime \prime}, \alpha_{J^{\prime \prime}, M_{J^{\prime \prime}}}^{\prime \prime} \mid \psi_i\right\rangle \\ & +\sum_{\alpha^{\prime}, \alpha^{\prime \prime}, \alpha^{\prime \prime \prime}} \int_0^{\infty} d p^{\prime} p^{\prime 2} \int_0^{\infty} d q^{\prime \prime} q^{\prime \prime 2} \int_0^{\infty} d q^{\prime} q^{\prime 2} \int_{-1}^1 d x t_{\alpha, \alpha^{\prime}}^{+}\left(p, p^{\prime}, E-\frac{3 q^2}{4 m}\right) \\ & \text { * } \frac{1}{E-\frac{p^{\prime 2}}{m}-\frac{3 q^2}{4 m}+i \epsilon} V_{\alpha^{\prime}, \alpha^{\prime \prime \prime}}^4\left(p^{\prime}, q, \pi_1\left(q^{\prime}, q^{\prime \prime}, x\right), q^{\prime}\right) \\ & \left.* \quad \frac{\tilde{G}_{\alpha^{\prime \prime \prime}, \alpha^{\prime \prime}}\left(q^{\prime}, q^{\prime \prime}, x\right)}{\pi_1^{l^{\prime \prime \prime}} \pi_2^{l^{\prime \prime}}}\left\langle\pi_2, q^{\prime \prime}, \alpha_{J^{\prime \prime}, M_{J^{\prime \prime}}}^{\prime \prime} \mid \psi_i\right\rangle\right] \text {, } \\ & 
-    \end{aligned}
-\end{equation}
+% Using states defined in \eq{3N_PW}, we can write a partial-wave representation of the \eq{fadeed_lse}:
+% \begin{equation}
+%     \begin{aligned}
+%         \left\langle p, q, \alpha_{J, M_J}\right. & \left|\psi_i\right\rangle=\frac{1}{E-\frac{p^2}{m}-\frac{3 q^2}{4 m}+i \epsilon}[ \\
+%         & \sum_{\alpha^{\prime}, \alpha^{\prime \prime}} \int_0^{\infty} d q^{\prime \prime} q^{\prime \prime 2} \int_{-1}^1 d x t_{\alpha, \alpha^{\prime}}^{+}\left(p, \pi_1\left(q, q^{\prime \prime}, x\right), E-\frac{3 q}{4 m}\right) \\
+%         * & \frac{\tilde{G}_{\alpha^{\prime}, \alpha^{\prime \prime}}\left(q^{\prime}, q^{\prime \prime}, x\right)}{\pi_1^{l^{\prime}} \pi_2^{l^{\prime \prime}}}\left\langle\pi_2, q^{\prime \prime}, \alpha_{J^{\prime \prime}, M_{J^{\prime \prime}}^{\prime \prime}} \mid \psi_i\right\rangle \\
+%         +\quad & \sum_{\alpha^{\prime \prime}} \int_0^{\infty} d p^{\prime \prime} p^{\prime \prime 2} \int_0^{\infty} d q^{\prime \prime} q^{\prime \prime 2} V_{\alpha, \alpha^{\prime \prime}}^4\left(p, q, p^{\prime \prime}, q^{\prime \prime}\right)\left\langle p^{\prime \prime}, q^{\prime \prime}, \alpha_{J^{\prime \prime}, M_{J^{\prime \prime}}^{\prime \prime}} \mid \psi_i\right\rangle \\
+%         +\quad & \sum_{\alpha^{\prime}, \alpha^{\prime \prime}} \int_0^{\infty} d q^{\prime} q^{\prime 2} \int_0^{\infty} d q^{\prime \prime} q^{\prime \prime \prime} \int_{-1}^1 d x V_{\alpha, \alpha^{\prime}}^4\left(p, q, \pi_1\left(q^{\prime}, q^{\prime \prime}, x\right), q^{\prime}\right) \\
+%         +\quad & \frac{\tilde{G}_{\alpha^{\prime}, \alpha^{\prime \prime}}\left(q^{\prime}, q^{\prime \prime}, x\right)}{\pi_1^{l^{\prime}} \pi_2^{l^{\prime \prime}}}\left\langle\pi_2, q^{\prime \prime}, \alpha_{J^{\prime \prime}, M_{J^{\prime \prime}}^{\prime \prime}} \mid \psi_i\right\rangle\\
+%         & +\sum_{\alpha^{\prime}, \alpha^{\prime \prime}} \int_0^{\infty} d p^{\prime} p^{\prime 2} \int_0^{\infty} d p^{\prime \prime} p^{\prime \prime 2} \int_0^{\infty} d q^{\prime \prime} q^{\prime \prime 2} t_{\alpha, \alpha^{\prime}}^{+}\left(p, p^{\prime}, E-\frac{3 q^2}{4 m}\right) \frac{1}{E-\frac{p^{\prime 2}}{m}-\frac{3 q^2}{4 m}+i \epsilon} \\ & \text { * } \quad V_{\alpha^{\prime}, \alpha^{\prime \prime}}^4\left(p^{\prime}, q, p^{\prime \prime}, q^{\prime \prime}\right)\left\langle p^{\prime \prime}, q^{\prime \prime}, \alpha_{J^{\prime \prime}, M_{J^{\prime \prime}}}^{\prime \prime} \mid \psi_i\right\rangle \\ & +\sum_{\alpha^{\prime}, \alpha^{\prime \prime}, \alpha^{\prime \prime \prime}} \int_0^{\infty} d p^{\prime} p^{\prime 2} \int_0^{\infty} d q^{\prime \prime} q^{\prime \prime 2} \int_0^{\infty} d q^{\prime} q^{\prime 2} \int_{-1}^1 d x t_{\alpha, \alpha^{\prime}}^{+}\left(p, p^{\prime}, E-\frac{3 q^2}{4 m}\right) \\ & \text { * } \frac{1}{E-\frac{p^{\prime 2}}{m}-\frac{3 q^2}{4 m}+i \epsilon} V_{\alpha^{\prime}, \alpha^{\prime \prime \prime}}^4\left(p^{\prime}, q, \pi_1\left(q^{\prime}, q^{\prime \prime}, x\right), q^{\prime}\right) \\ & \left.* \quad \frac{\tilde{G}_{\alpha^{\prime \prime \prime}, \alpha^{\prime \prime}}\left(q^{\prime}, q^{\prime \prime}, x\right)}{\pi_1^{l^{\prime \prime \prime}} \pi_2^{l^{\prime \prime}}}\left\langle\pi_2, q^{\prime \prime}, \alpha_{J^{\prime \prime}, M_{J^{\prime \prime}}}^{\prime \prime} \mid \psi_i\right\rangle\right] \text {, } \\ & 
+%     \end{aligned}
+% \end{equation}
 
-where
+% where
 
-\begin{equation}
-    V_{\alpha, \alpha^{\prime}}^4\left(p, q, p^{\prime}, q^{\prime}\right) \equiv\left\langle p, q, \alpha_{J, M_J}\left|V_4^{(1)}\right| p^{\prime}, q^{\prime}, \alpha_{J^{\prime}, M_{J^{\prime}}}^{\prime}\right\rangle
-\end{equation}
+% \begin{equation}
+%     V_{\alpha, \alpha^{\prime}}^4\left(p, q, p^{\prime}, q^{\prime}\right) \equiv\left\langle p, q, \alpha_{J, M_J}\left|V_4^{(1)}\right| p^{\prime}, q^{\prime}, \alpha_{J^{\prime}, M_{J^{\prime}}}^{\prime}\right\rangle
+% \end{equation}
     
 
 \section{3N scattering state}
 
     Let us
-    write an asymptotic state $\ket{\Phi^{3N}_j}$ describing a free motion
-    of particles $k$ and $l$ with relative momentum $\vec{p}$. In this case
-    particle $j$ is moving with momentum $\vec{q}$ relatively to the 
+    introduce an asymptotic state $\ket{\Phi^{3N}_j}$ describing a free motion
+    of three nucleons ${j,k,l}$ with particles $k$ and $l$ 
+    having relative momentum $\vec{p}$
+    and particle $j$ moving with momentum $\vec{q}$ relatively to the 
     center of mass $(k-l)$:
     
-    \begin{eqnarray}
-        \ket{\Phi^{3N}_j} &\equiv& \frac{1}{\sqrt{2}}(1 - P_{kl})
-        \ket{\vec{p}(kl)\vec{q}(j)}\\
-        E_{3N} &=& \frac{|\vec{p}|^2}{m} + \frac{3 |\vec{q}|^2}{4m}.
-    \end{eqnarray}
+    \begin{equation}
+        \ket{\Phi^{3N}_j} \equiv \frac{1}{\sqrt{2}}(1 - P_{kl})
+        \ket{\vec{p}(kl)\vec{q}(j)}.\\
+    \end{equation}
+
+    The Jacobi momenta $\vec{p}$ and $\vec{q}$ build the total energy of three
+    nucleons in the 3N-c.m. system:
+    
+    \begin{equation}
+        E_{3N} = \frac{|\vec{p}|^2}{m} + \frac{3 |\vec{q}|^2}{4m}.
+    \end{equation}
     
     Using a free propagator $G(E_{3N} - i\epsilon)$ we can come up with
-    a the 3-nucleon scattering state
+    the total 3N scattering state
 
     \begin{equation}
-        \ket{\Psi^{(-)}}^{3N} = \frac{1}{\sqrt{3}}\ket{\Psi^{(-)}_j}^{3N},  
+        \ket{\Psi^{(-)}}^{3N} = \frac{1}{\sqrt{3}} \sum_j\ket{\Psi^{(-)}_j}^{3N},  
     \end{equation}
-    where scattering state $\ket{\Psi^{(-)}_j}^{3N}$ is defined as 
+    where auxiliary scattering states $\ket{\Psi^{(-)}_j}^{3N}$ are defined as \cite{Glockle1983} 
 
     \begin{eqnarray}
         \ket{\Psi^{(-)}_j}^{3N}  &\equiv& \lim_{\epsilon \rightarrow 0}
         i \epsilon G(E_{3N} - i\epsilon)\ket{\Phi^{3N}_j}.
     \end{eqnarray}
 
-    In this case the state $\ket{\Phi^{3N}_j}$ is fulfilling an equation \cite{Glockle1983}
+    The state $\ket{\Psi^{(-)}_j}^{3N}$ together with the state $\ket{\Phi^{3N}_j}$ fulfills an equation \cite{Glockle1983}
 
     \begin{equation}
-        \left|\Psi_i^{(-)}\right\rangle^{3 N}=\left|\Phi_i^{3 N}\right\rangle+
-        G_0\left(V_1+V_2+V_3+V_4\right)\left|\Psi_i^{(-)}\right\rangle^{3 N}.
+        \left|\Psi_j^{(-)}\right\rangle^{3 N}=\left|\Phi_j^{3 N}\right\rangle+
+        G_0\left(V_1+V_2+V_3+V_4\right)\left|\Psi_j^{(-)}\right\rangle^{3 N}.
     \end{equation}
 
-    Taking into account antysymmetrized Faddeev components
+    Defining the antysymmetrized Faddeev components, and using index "$i$" instead of "$j$"
 
     \begin{equation}
-        \left|F_i^0\right\rangle \equiv G_0\left(V_i+V_4^{(i)}\right)(1+P)\left|\Psi_i^{(-)}\right\rangle^{3 N}
+        \left|F_i^0\right\rangle \equiv G_0\left(V_i+V_4^{i}\right)(1+P)\left|\Psi_i^{(-)}\right\rangle^{3 N}
         \label{faddeev_3n}
     \end{equation}
-    we can obtain a 3N scattering wave function as:
+    we obtain a 3N scattering wave function as:
 
     \begin{equation}
         \begin{aligned}
             \left|\Psi^{(-)}\right\rangle^{3 N} & =\frac{1}{\sqrt{3}}\left(\sum_{i=1}^3\left|\Phi_i^{3 N}\right\rangle+G_0\left(V_1+V_2+V_3+V_4\right) \sum_{i=1}^3\left|\Psi_i^{(-)}\right\rangle^{3 N}\right) \\
-            & =\frac{1}{\sqrt{3}}\left(\sum_{i=1}^3\left|\Phi_i^{3 N}\right\rangle+\sum_{i=1}^3\left|F_i^0\right\rangle\right) \\
-            & =\frac{1}{\sqrt{3}}(1+P)\left(\left|\Phi_1^{3 N}\right\rangle+\left|F_1^0\right\rangle\right) .
+            & =\frac{1}{\sqrt{3}}\left(\sum_{i=1}^3\left|\Phi_i^{3 N}\right\rangle+\sum_{i=1}^3\left|F_i^0\right\rangle\right)
+            =\frac{1}{\sqrt{3}}(1+P)\left(\left|\Phi_1^{3 N}\right\rangle+\left|F_1^0\right\rangle\right) .
         \end{aligned}
         \label{3n_scat_psi}
     \end{equation}
 
-    In this case nuclear matrix element is:
+    In this case the nuclear matrix element 
+    $N_\mu^{3 N} = \matrixel{\Psi^-}{j^\mu}{\psi_i}$ 
+    (with $\ket{\psi_i}$ being the Faddeev component of the 3N bound state (\ref{faddeev_comps})) is
+    \cite{GLOCKLE_report_1996, ???}:
 
     \begin{equation}
         \begin{aligned}
@@ -584,14 +601,14 @@ where
     \begin{equation}
         \begin{aligned}
             \left|U_\mu\right\rangle & =\left[t_1^{+} G_0^{+}+\frac{1}{2}(1+P) V_4^{(1)} G_0^{+}\left(1+t_1^{+} G_0^{+}\right)\right](1+P) j_\mu\left|\Psi_i\right\rangle \\
-            & +\left[t_1^{+} G_0^{+} P+\frac{1}{2}(1+P) V_4^{(1)} G_0^{+}\left(1+t_1^{+} G_0^{+}\right) P\right]\left|U_\mu\right\rangle
+            & +\left[t_1^{+} G_0^{+} P+\frac{1}{2}(1+P) V_4^{(1)} G_0^{+}\left(1+t_1^{+} G_0^{+}\right) P\right]\left|U_\mu\right\rangle.
             \end{aligned}
         \label{u_mu}
     \end{equation}
 
 
 
-\section{Photodisintegration transition amplitude for Nd state}
+\section{Nd scattering state}
 \label{nd_state}
 
     Analogously to the bound state, one can express a nucleon-deuteron
@@ -637,31 +654,37 @@ where
     for more precise measurements of these currents and have provided insights into
     the fundamental properties of the nucleus.
 
+    The nuclear one-body current is constructed based on the electromagnetic current for a Dirac particle. To account
+    for the extended structure of nucleons, form factors are introduced. Since we use nonrelativistic wave functions, we need to use nonrelativistic currents.    
+    
     In the Hamiltonian framework, the nucleons are constrained to lie on the mass shell. The conventional current of a
     single nucleon at the spacetime point zero, denoted as $J_1^\mu(0)$, is computed between the initial nucleon momentum
     $p \equiv\left(p_0=\sqrt{M_N^2+\vec{p}^2}, \vec{p}\right)$
     and the final momentum
-    $p^{\prime} \equiv\left(p_0^{\prime}=\sqrt{M_N^2+\vec{p}^{\prime 2}}, \vec{p}^{\prime}\right)$. This computation yields the following expression:
+    $p^{\prime} \equiv\left(p_0^{\prime}=\sqrt{M_N^2+\pvec{p}^{2}}, \pvec{p}\right)$. This computation yields the following expression:
 
     \begin{equation}
         \begin{aligned}
-        \left\langle\vec{p}^{\prime}\left|\frac{1}{e} J_1^\mu(0)\right| \vec{p}\right\rangle & =\bar{u}\left(\vec{p}^{\prime} s^{\prime}\right)\left(\gamma^\mu F_1+i \sigma^{\mu \nu}\left(p^{\prime}-p\right)_\nu F_2\right) u(\vec{p} s) \\
+        \left\langle\vec{p}^{\prime}\left| J_1^\mu(0)\right| \vec{p}\right\rangle & =\bar{u}\left(\vec{p}^{\prime} s^{\prime}\right)\left(\gamma^\mu F_1+i \sigma^{\mu \nu}\left(p^{\prime}-p\right)_\nu F_2\right) u(\vec{p} s) \\
         & =\bar{u}\left(\vec{p}^{\prime} s^{\prime}\right)\left(G_M \gamma^\mu-F_2\left(p^{\prime}+p\right)^\mu\right) u(\overrightarrow{p s}) .
         \end{aligned}
         \label{current_general}       
     \end{equation}
     
-    In the above equations, the symbols $u$ represent Dirac spinors, $F_1\left(\left(p^{\prime}-p\right)^2\right)$ and $F_2\left(\left(p^{\prime}-p\right)^2\right)$ correspond to the Dirac and Pauli form factors of the nucleon, respectively, and $G_M \equiv F_1+2 M_N F_2$ denotes the magnetic form factor of the nucleon. The proton charge $e$ is extracted from the matrix element. In this thesis, only the nonrelativistic limit of \eq{current_general} is considered, which leads to well-known expressions for the operators for convection and spin currents:
+    In the above equations,
+    ie. including two- and three- nucleon interaction,, the symbols $u$ represent Dirac spinors, $F_1\left(\left(p^{\prime}-p\right)^2\right)$ and $F_2\left(\left(p^{\prime}-p\right)^2\right)$ correspond to the Dirac and Pauli form factors of the nucleon, respectively, and $G_M \equiv F_1+2 M_N F_2$ denotes the magnetic form factor of the nucleon. The proton charge $e$ is extracted from the matrix element. In this thesis, only the nonrelativistic limit of \eq{current_general} is considered, which leads to well-known expressions for the operators for convection and spin currents:
 
 
     \begin{equation}
         \begin{array}{r}
-            \left\langle\vec{p}^{\prime}\left|\frac{1}{e} J_1^0(0)\right| \vec{p}\right\rangle=\left(G_E^p \Pi^p+G_E^n \Pi^n\right), \\
-            \left\langle\vec{p}^{\prime}\left|\frac{1}{e} \vec{J}_1(0)\right| \vec{p}\right\rangle=\frac{\vec{p}+\vec{p}^{\prime}}{2 M_N}\left(G_E^p \Pi^p+G_E^n \Pi^n\right)+\frac{i}{2 M_N}\left(G_M^p \Pi^p+G_M^n \Pi^n\right) \vec{\sigma} \times\left(\vec{p}^{\prime}-\vec{p}\right) .
+            \left\langle\vec{p}^{\prime}\left| J_1^0(0)\right| \vec{p}\right\rangle=\left(G_E^p \Pi^p+G_E^n \Pi^n\right), \\
+            \left\langle\vec{p}^{\prime}\left| \vec{J}_1(0)\right| \vec{p}\right\rangle=\frac{\vec{p}+\vec{p}^{\prime}}{2 M_N}\left(G_E^p \Pi^p+G_E^n \Pi^n\right)+\frac{i}{2 M_N}\left(G_M^p \Pi^p+G_M^n \Pi^n\right) \vec{\sigma} \times\left(\vec{p}^{\prime}-\vec{p}\right) .
         \end{array}
     \end{equation}
 
-    The electric form factor, denoted as $G_E$, is defined as $G_E \equiv F_1+\frac{\left(p^{\prime}-p\right)^2}{2 M_N} F_2$. It represents the neutron (n) and proton (p) form factors. These form factors, $G_E$ and $G_M$, are normalized according to the following conditions:
+    The electric form factor, denoted as $G_E$, is defined as,
+    ie. including two- and three- nucleon interaction, $G_E \equiv F_1+\frac{\left(p^{\prime}-p\right)^2}{2 M_N} F_2$. It represents the neutron (n) and proton (p) form factors. These form factors, $G_E$ and $G_M$, are normalized according to the following,
+    ie. including two- and three- nucleon interaction, conditions:
 
     \begin{equation}
         \begin{aligned}
@@ -705,7 +728,7 @@ where
     % \end{equation}
     % where $\sigma$ is a vector of Pauli spin operators. Here we have kept only terms up to $1 / M$.
 
-    The two-nucleon current contribution is partially taken into account via Siegert approach \cite{GolakKamad2000_ExplDescr, Golak2005}.
+    The two-nucleon current contribution is partially taken into account via Siegert approach \cite{Siegert, GolakKamad2000_ExplDescr, Golak2005}.
     In order to do that we break down the single nucleon current matrix elements into multipole components and apply common formulas \cite{Golak2005}
     to represent some of the electric multipoles using the Coulomb multipoles, which arise from the single nucleon charge density operator.
     This is acceptable because, in low-energy situations, contributions from many nucleons to the nuclear charge density are typically insignificant.
@@ -986,7 +1009,7 @@ where
     In \cite{Melendez_BayesTrunc} \tmp{????} it was shown that such method is equivalent to Bayesian approach of \cite{Melendez_BayesTrunc}.
 
 
-    \subsection*{Cutoff dependency}
+    \subsection*{Cutoff dependence}
 
 
 
