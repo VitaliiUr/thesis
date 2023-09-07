@@ -586,7 +586,7 @@ $t$ is a total isospin of the 2-3 subsystem whereas $T$ and $M_T$ are the total 
     In this case the nuclear matrix element 
     $N_\mu^{3 N} = \matrixel{\Psi^-}{j^\mu}{\psi_i}$ 
     (with $\ket{\psi_i}$ being the Faddeev component of the 3N bound state (\ref{faddeev_comps})) is
-    \cite{GLOCKLE_report_1996, ???}:
+    \cite{GLOCKLE_report_1996, skibinski_prc_2003} \tmp{???}:
 
     \begin{equation}
         \begin{aligned}
@@ -606,6 +606,8 @@ $t$ is a total isospin of the 2-3 subsystem whereas $T$ and $M_T$ are the total 
         \label{u_mu}
     \end{equation}
 
+    \eq{u_mu} is being solved numerically in PWD. The techniques applied closely resemble those presented in \cite{GLOCKLE_report_1996} for N-d elastic scattering.
+
 
 
 \section{Nd scattering state}
@@ -616,69 +618,109 @@ $t$ is a total isospin of the 2-3 subsystem whereas $T$ and $M_T$ are the total 
     using a permutation operator \eq{permutation}.
 
     \begin{equation}
-        \ket{\Psi^{(-)}}^{Nd} = \frac{1}{\sqrt{3}}(1+P)\ket{\Psi^{(-)}_1}^{Nd}    
+        \ket{\Psi^{(-)}}^{Nd} = \frac{1}{\sqrt{3}}\sum_j\ket{\Psi^{(-)}_j}^{Nd}    
     \end{equation}
 
-    Further a scattering state $\ket{\Psi^{(-)}_1}^{Nd}$ can be expressed
-    in terms of asymptotic state $\ket{\Phi^{Nd}_1}$, in which particles
-    2 and 3 form a deuteron and the third particle (nucleon 1)
+    Further a scattering state $\ket{\Psi^{(-)}_j}^{Nd}$ can be expressed
+    in terms of asymptotic state $\ket{\Phi^{Nd}_j}$, in which particles
+    k and l form a deuteron and the third particle (nucleon j)
      propagates freely with a relative momentum $\vec{q}_0$ with 
     respect to the deuteron:
 
     \begin{eqnarray}
-        \ket{\Psi^{(-)}_1}^{Nd} &\equiv& \lim_{\epsilon \rightarrow 0} 
-        i \epsilon G(E_{Nd} - i\epsilon)\ket{\Phi^{Nd}_1}\\
-        \ket{\Phi^{Nd}_1} &\equiv& \ket{\Phi_{d(2,3)}}\ket{\vec{q}_0},
+        \ket{\Psi^{(-)}_j}^{Nd} &\equiv& \lim_{\epsilon \rightarrow 0} 
+        i \epsilon G(E_{Nd} - i\epsilon)\ket{\Phi^{Nd}_j}\\
+        \ket{\Phi^{Nd}_j} &\equiv& \ket{\Phi_{d(k,l)}}\ket{\vec{q}_0},
     \end{eqnarray}
-    where $\ket{\Phi_{d(2,3)}}$ is a deuteron wave function and 
-    $\ket{\vec{q}_0}$ - a free particle state. $E_{Nd}$
-    is a total energy of the 3N system:
+    where $\ket{\Phi_{d(k,l)}}$ is a deuteron wave function and 
+    $\ket{\vec{q}_0}$ - a free particle state and $G(t)$ is 
+    a free propafator of N-d pair. 
+    $E_{Nd}$ is a total energy of the N-d system:
 
     \begin{equation}
         E_{Nd} = E_d + \frac{3 |\vec{q}_0|^2}{4m},
     \end{equation}
-    where $E_d$ is the deuteron binding energy and m denotes nucleon mass. 
+    where $E_d$ is the deuteron binding energy and $m$ denotes the nucleon mass. 
 
-    The full propagator $G(E_{Nd})$ in this case takes a form:
+    $\ket{\Psi^{(-)}}^{Nd}$ can be expressed by the Faddeev components
+
+    \begin{equation}
+        \ket{\Psi^{(-)}}^{Nd} = \frac{1}{\sqrt{3}} (1+P) \ket{F_1},
+    \end{equation}
+    where 
     
     \begin{equation}
-        G(z)= \frac{1}{z - (H_0 + \sum_{i=1}^4V_i)}
+        \ket{F_1} = \ket{\phi_1^{Nd}} G_0 (\nu_1 + \nu_2 + \nu_3 + \nu_4) 
+        \sum_{j=1}^3 \ket{\Psi_j^{(-)}}^{Nd}.
     \end{equation}
+
+    The nuclear matrix element $N_\mu^{Nd} = ^{Nd} \matrixel{\Psi^{-}}{j_\mu}{\Psi_i}$ 
+    (with $\Psi_i$ - bound state) is now \cite{GLOCKLE_report_1996, skibinski_prc_2003} \tmp{???}:
+
+    \begin{equation}
+        N_\mu^{N d}=\frac{1}{\sqrt{3}} \matrixel{\Phi_1^{N d}}{(1+P) j_\mu}{\Psi_i}
+        +\frac{1}{\sqrt{3}} \matrixel{\Phi_1^{N d}}{P}{U_\mu}
+    \end{equation}
+    with $U_\mu$ being a solution to
+
+    \begin{eqnarray}
+       \ket{U_\mu} &=& \left[t_1^{+} G_0^{+}+\frac{1}{2}(1+P) V_4^{(1)} G_0^{+}\left(1+t_1^{+} G_0^{+}\right)\right](1+P) j_\mu \ket{\Psi_i} \\
+       &+& \left[t_1^{+} G_0^{+} P+\frac{1}{2}(1+P) V_4^{(1)} G_0^{+}\left(1+t_1^{+} G_0^{+}\right) P\right]\ket{U_\mu}
+       \label{u_mu_nd}
+    \end{eqnarray}
+
+    \eq{u_mu_nd} is being solved numerically in a same way as \eq{u_mu}, namely applying
+    PWD as it is described in \cite{GLOCKLE_report_1996}.
 
 
     \section{Nuclear electromagnetic current}
     \label{sec_current}
     
-    The use of nuclear currents in scattering experiments is essential for understanding the structure of the nucleus and
-    the interactions between its constituent nucleons. Advances in theoretical and experimental techniques have allowed
-    for more precise measurements of these currents and have provided insights into
-    the fundamental properties of the nucleus.
+    % The use of nuclear currents in scattering experiments is essential for understanding the structure of the nucleus and
+    % the interactions between its constituent nucleons. Advances in theoretical and experimental techniques have allowed
+    % for more precise measurements of these currents and have provided insights into
+    % the fundamental properties of the nucleus.
 
-    The nuclear one-body current is constructed based on the electromagnetic current for a Dirac particle. To account
-    for the extended structure of nucleons, form factors are introduced. Since we use nonrelativistic wave functions, we need to use nonrelativistic currents.    
+    % The nuclear one-body current is constructed based on the electromagnetic current for a Dirac particle. To account
+    % for the extended structure of nucleons, form factors are introduced. Since we use nonrelativistic wave functions, we need to use nonrelativistic currents.    
+    \tmp{????????????????????????????????????????????????????}
+    The electromagnetic current operator for 2N (3N) system is constructed 
+    from the one- and many-body currents:
     
+    \begin{equation}
+        j_\mu = j_\mu^1 + j_\mu^2 (+ j_\mu^3).
+        \label{j_mu_gen}
+    \end{equation}
+
+    In \eq{j_mu_gen} $j_\mu^n$ is a contribution from the interaction between photon and 
+    $n$ nucleons (and $j_\mu^3$ is presented in 3N system only).
+
+    In 2N system we have an explicit definition for a single nucleon current (1NC) only,
+    which is consistent with our frameworks. 
     In the Hamiltonian framework, the nucleons are constrained to lie on the mass shell. The conventional current of a
-    single nucleon at the spacetime point zero, denoted as $J_1^\mu(0)$, is computed between the initial nucleon momentum
-    $p \equiv\left(p_0=\sqrt{M_N^2+\vec{p}^2}, \vec{p}\right)$
+    single nucleon at the spacetime point zero, denoted as $j^1_\mu(0)$, is computed between the initial nucleon momentum
+    $p \equiv\left(p_0=\sqrt{M_N^2+\vec{p}\,^2}, \vec{p}\right)$
     and the final momentum
     $p^{\prime} \equiv\left(p_0^{\prime}=\sqrt{M_N^2+\pvec{p}^{2}}, \pvec{p}\right)$. This computation yields the following expression:
 
     \begin{equation}
         \begin{aligned}
-        \left\langle\vec{p}^{\prime}\left| J_1^\mu(0)\right| \vec{p}\right\rangle & =\bar{u}\left(\vec{p}^{\prime} s^{\prime}\right)\left(\gamma^\mu F_1+i \sigma^{\mu \nu}\left(p^{\prime}-p\right)_\nu F_2\right) u(\vec{p} s) \\
-        & =\bar{u}\left(\vec{p}^{\prime} s^{\prime}\right)\left(G_M \gamma^\mu-F_2\left(p^{\prime}+p\right)^\mu\right) u(\overrightarrow{p s}) .
+        \matrixel{\pvec{p}} {j_1^\mu(0)} {\vec{p}} & =& \bar{u}\left(\pvec{p} s^{\prime}\right)\left(\gamma^\mu F_1+i \sigma^{\mu \nu}\left(p^{\prime}-p\right)_\nu F_2\right) u(\vec{p} s) \\
+        & =&\bar{u}\left(\pvec{p} s^{\prime}\right)\left(G_M \gamma^\mu-F_2\left(p^{\prime}+p\right)^\mu\right) u(\vec{p} s) .
         \end{aligned}
         \label{current_general}       
     \end{equation}
     
-    In the above equations,
-    ie. including two- and three- nucleon interaction,, the symbols $u$ represent Dirac spinors, $F_1\left(\left(p^{\prime}-p\right)^2\right)$ and $F_2\left(\left(p^{\prime}-p\right)^2\right)$ correspond to the Dirac and Pauli form factors of the nucleon, respectively, and $G_M \equiv F_1+2 M_N F_2$ denotes the magnetic form factor of the nucleon. The proton charge $e$ is extracted from the matrix element. In this thesis, only the nonrelativistic limit of \eq{current_general} is considered, which leads to well-known expressions for the operators for convection and spin currents:
+    In the above equation,
+    ie. including two- and three- nucleon interaction, the symbols $u(\vec{p} s)$ represent Dirac spinors
+    for particle having momentum $\vec{p}$ and spin $s$, 
+    $F_1$ and $F_2$ are the Dirac and Pauli form factors of the nucleon, respectively, and $G_M \equiv F_1+2 M_N F_2$ denotes the magnetic form factor of the nucleon. The proton charge $e$ is extracted from the matrix element. In this thesis, only the nonrelativistic limit of \eq{current_general} is considered, which leads to well-known expressions for the operators for the current:
 
 
     \begin{equation}
         \begin{array}{r}
-            \left\langle\vec{p}^{\prime}\left| J_1^0(0)\right| \vec{p}\right\rangle=\left(G_E^p \Pi^p+G_E^n \Pi^n\right), \\
-            \left\langle\vec{p}^{\prime}\left| \vec{J}_1(0)\right| \vec{p}\right\rangle=\frac{\vec{p}+\vec{p}^{\prime}}{2 M_N}\left(G_E^p \Pi^p+G_E^n \Pi^n\right)+\frac{i}{2 M_N}\left(G_M^p \Pi^p+G_M^n \Pi^n\right) \vec{\sigma} \times\left(\vec{p}^{\prime}-\vec{p}\right) .
+            \left\langle\pvec{p}\left| j_1^0(0)\right| \vec{p}\right\rangle=\left(G_E^p \Pi^p+G_E^n \Pi^n\right), \\
+            \left\langle\pvec{p}\left| \vec{J}_1(0)\right| \vec{p}\right\rangle=\frac{\vec{p}+\pvec{p}}{2 M_N}\left(G_E^p \Pi^p+G_E^n \Pi^n\right)+\frac{i}{2 M_N}\left(G_M^p \Pi^p+G_M^n \Pi^n\right) \vec{\sigma} \times\left(\pvec{p}-\vec{p}\right) .
         \end{array}
     \end{equation}
 
@@ -697,36 +739,10 @@ $t$ is a total isospin of the 2-3 subsystem whereas $T$ and $M_T$ are the total 
 
     These values correspond to nucleons with point-like characteristics. While all the form factors depend on the squared
     four-momentum transfer $\left(p^{\prime}-p\right)^2$, in the nonrelativistic regime, it is common to use the squared
-    three-momentum transfer $-\left(\vec{p}^{\prime}-\vec{p}\right)^2$ or even set it to zero for interactions involving
+    three-momentum transfer $-\left(\pvec{p}-\vec{p}\right)^2$ or even set it to zero for interactions involving
     real photons. Numerous authors have investigated the properties of electromagnetic nucleon form factors through
     theoretical and experimental approaches, as discussed in \cite{Arrington_2007, JOURDAN1999513c}.
     $\Pi^p$ ($\Pi^n$) is a proton (neuteron) isospin projection operator.
-
-    % The central element of the formalism is the nuclear part, denoted by $\mathcal{N}^\lambda$, which is given by the matrix element of the nuclear weak-current operator $j_w^\lambda$ between the initial and final nuclear states. The single nucleon current operator, which is derived based on symmetry requirements is \cite{Golak2014}:
-    % \begin{equation}
-    %     \begin{aligned}
-    %         \left\langle\frac{1}{2} m^{\prime}\right| & \left\langle\mathbf{p}^{\prime}\left|j_w^\lambda(1)\right| \mathbf{p}\right\rangle\left|\frac{1}{2} m\right\rangle \\
-    %         = & \bar{u}\left(\mathbf{p}^{\prime}, m^{\prime}\right)\left[\left(g_1^V-2 M g_2^V\right) \gamma^\lambda+g_2^V\left(p+p^{\prime}\right)^\lambda\right. \\
-    %         & \left.+g_1^A \gamma^\lambda \gamma^5+g_2^A\left(p-p^{\prime}\right)^\lambda \gamma^5\right] \tau_{-} u(\mathbf{p}, m),
-    %     \end{aligned}
-    %     \label{maincurr}
-    % \end{equation}
-    % which contains weak form factors $g_1^V, g_2^V, g_1^A$, and $g_2^A$, that are functions of the momentum-transfer squared $\left(p^{\prime}-p\right)^2$.
-    % The difference between the proton mass $M_p$ and neutron mass $M_n$ is negligible so we can introduce the average "nucleon mass" $M \equiv \frac{1}{2}\left(M_p+M_n\right)$.
-    % The isospin lowering operator is $\tau_{-}=\left(\tau_x-i \tau_y\right) / 2$ in the isospin formalism. 
-    % The nonrelativistic reduction of \eq{maincurr} results in the following forms of the time and space components of $j_w^\lambda(1)$
-    % The zero-component is
-    % \begin{equation}
-    %     \left\langle\mathbf{p}^{\prime}\left|j_{\mathrm{NR}}^0(1)\right| \mathbf{p}\right\rangle=\left(g_1^V+g_1^A \frac{\sigma \cdot\left(\mathbf{p}+\mathbf{p}^{\prime}\right)}{2 M}\right) \tau_{-}
-    % \end{equation}
-    % and space (vector) component
-    % \begin{equation}
-    %     \begin{aligned}
-    %     \left\langle\mathbf{p}^{\prime}\left|\mathbf{j}_{\mathrm{NR}}(1)\right| \mathbf{p}\right\rangle= & {\left[g_1^V \frac{\mathbf{p}+\mathbf{p}^{\prime}}{2 M}-\frac{1}{2 M}\left(g_1^V-2 M g_2^V\right) i \sigma \times\left(\mathbf{p}-\mathbf{p}^{\prime}\right)\right.} \\
-    %     & \left.+g_1^A \sigma+g_2^A\left(\mathbf{p}-\mathbf{p}^{\prime}\right) \frac{\boldsymbol{\sigma} \cdot\left(\mathbf{p}-\mathbf{p}^{\prime}\right)}{2 M}\right] \tau_{-}
-    %     \end{aligned}    
-    % \end{equation}
-    % where $\sigma$ is a vector of Pauli spin operators. Here we have kept only terms up to $1 / M$.
 
     The two-nucleon current contribution is partially taken into account via Siegert approach \cite{Siegert, GolakKamad2000_ExplDescr, Golak2005}.
     In order to do that we break down the single nucleon current matrix elements into multipole components and apply common formulas \cite{Golak2005}
