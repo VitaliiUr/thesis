@@ -671,7 +671,7 @@
     (single nucleon current only). Bands for each of prediction specify the spread of
     predictions due to the energy band.
     
-    \tmp{stick to either SN or 1NC(this one probably) ??}
+    % \tmp{stick to either SN or 1NC(this one probably) ??}
 
     One clearly sees that the data description is better for the predictions with Siegert contributions included
     and the \gls{snc} alone is not able to describe experiment properly.
@@ -905,7 +905,21 @@
      could help predictions be more similar to experimental data. But very likely the observed discrepancy
      points to simplified character of the model used here.
 
-     In the \fig{asymmetry_90deg} I present a dependence of the photon asymmetry
+     In the \fig{asymmetry_energy_1NC} the predictions obtained with Full set of
+     components (plane wave + rescattering and \gls{snc} + Siegert, solid blue curve) are shown
+     versus predictions obtained without rescattering (green dashed-dotted line)
+     and without contribution from the Siegert (pink dashed line) for the same 
+     photon energies as above: E$_\gamma=\SI{20}{\mev}$ (left panel)
+     and E$_\gamma=\SI{60}{\mev}$ (right panel).
+     For the E$_\gamma=\SI{20}{\mev}$ the difference between Full and PW
+     is quit small, whereas \gls{snc} is noticeably differs from the Full prediction,
+     especially around the smallest and largest angle values.
+     For the E$_\gamma=\SI{60}{\mev}$ the difference between such a predictions 
+     is larger: we see not only quantitative, butalso a qualitative variations.
+     The \gls{snc} curve has much larger values and its shape becomes 
+     more asymetric with respect to the $\theta_p = \ang{90}$ point.
+
+     In the \fig{asymmetry_90deg} (left) I present a dependence of the photon asymmetry
      $\Sigma_\gamma$ on the photon energy at a fixed value
      of the outgoing proton polar direction $\theta_p = \ang{90}$ 
      (following the data given at \cite{delbianco_1981} and \cite{depascale_asymmetry}).
@@ -921,6 +935,14 @@
      \footnote{It is worth to note that data of \cite{depascale_asymmetry} are
      above these from \cite{delbianco_1981} (however still inside $3\sigma$ experimental
      error bands) and remain in agreement with my predictions even at E$_\gamma=\SI{60}{\mev}$.}
+
+    The right panel of the \fig{asymmetry_90deg} shows an impact of the
+    different model commponents to the obtained predictions.
+    We see that the difference between the Full predictions (solid blue line)
+    and the one obtained with a \gls{snc} only (without the Siegert contribution)
+    is larger than the difference with predictions with plane-wave part only (without rescattering).
+    Both these uncomplete predictions are farther from the experimental data,
+    (for PW at larger energies only) and have a different curve shape as well. 
 
     \begin{figure}[h]
         \centering
@@ -949,24 +971,49 @@
         given by the dashed-dotted curve as well.}
         \label{assymetry}
     \end{figure}
+
+
+    \begin{figure}[h]
+        \begin{center}
+        \includegraphics[width=0.95\textwidth]{Figures_De/Asymetry_20-60mev_pw_1nc.pdf}
+        \end{center}
+        \caption{The photon asymmetry $\Sigma_\gamma$ as a function of the
+        outgoing proton angle $\theta_p$ in the \gls{cm} frame at $\text{E}_\gamma = \SI{20}{\mev}$
+        (left) and $\text{E}_\gamma = \SI{60}{\mev}$(right).
+        Similarly to \fig{Diff_cross_pw_1nc} predictions obtained with chiral \gls{n4lo+} potential
+        and $\Lambda=\SI{450}{\mev}$ are presented for three theoretical models.
+        Blue solid line is the most complete prediction we have (plane-wave plus rescattering parts, 1NC + Siegert), pink dashed line shows predictions obtained with
+        single-nucleon current only (1NC) - without the Siegert contributions and green dashed-dotted line
+        is a prediction in which we neglect the rescattering part
+        and stick to the plane-wave part only but keeping the Siegert contributions.
+        Filled circles are experimental data from \cite{KRAUSE1992_asymetry},
+        empty circles - from \cite{depascale_asymmetry}, filled squares
+        - from \cite{Barannik_asymetry} and triangles are from \cite{Vnukov_asymmetry}.}
+        \label{asymmetry_energy_1NC}
+    \end{figure}
+
      
     \begin{figure}[h]
         \begin{center}
-        \includegraphics[width=0.75\textwidth]{Figures_De/AX2_90deg.pdf}
+        % \includegraphics[width=0.75\textwidth]{Figures_De/AX2_90deg.pdf}
+        \includegraphics[width=0.95\textwidth]{Figures_De/AX2_90deg_1NC_PW.pdf}
         \end{center}
         \caption{The photon asymmetry $\Sigma_\gamma$ 
         as a function of the photon energy  
         at the fixed outgoing proton's momentum polar angle $\theta_p=90^\circ$.
-        Each curve corresponds to the particular value of the cut-off parameter
+        On the left panel each curve corresponds to the particular value of the cut-off parameter
         and chiral potential used here is the \gls{n4lo+} one.
+        On the right panel the blue solid curve represents our most complete predictions
+        comprising the plane-wave plus rescattering parts and \gls{snc}+Siegert current propagator 
+        (the same as \SI{450}{\mev} line in left).
+        The pink dashed curve shows predictions obtained with
+        the single-nucleon current only (without applying the Siegert theorem) and the green dashed-dotted
+        curve represents predictions with the full current (\gls{snc} + Siegert) but plane-wave part only.
         Filled circles are experimental data from \cite{delbianco_1981},
         empty circles - from \cite{depascale_asymmetry}.}
         \label{asymmetry_90deg}
     \end{figure}
 
-    \tmp{TODO: PW, 1NC and Full for proton asymetry as function of energy (or angles). 
-    Similar to 3.11}
-    
 
     The proton polarization is demonstrated in \fig{PY_30_100_vert} for the 
     photon energy \SI{30}{\mev}(a) and \SI{100}{\mev}(b).
