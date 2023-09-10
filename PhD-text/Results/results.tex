@@ -800,6 +800,12 @@
     New experiments would be a great support in development of the nuclear interactions
     as we expect relativistic calculations in future \cite{Grassi2023}.
 
+    The \fig{T20_vs_en_cutoff} presents similar results to the \fig{T20_vs_en} but
+    with various values of the cutoff parameter. The deviation between these
+    predictions is rather small (especially below \SI{150}{\mev}), while the
+    difference with the calculation from \cite{Schmitt1989} and experimental 
+    data remains as discussed above.
+
     Similar picture is seen in the Figures \ref{tensor_energy_24-48} and \ref{tensor_energy_70-102}
     where I show an energy dependence of the mean of deuteron analyzing powers over 
     specific angular ranges (following the data from \cite{rachek2007}).
@@ -822,7 +828,7 @@
         \begin{center}
         \includegraphics[width=0.9\textwidth]{Figures_De/T20_T22_vs_en.pdf}
         \end{center}
-        \caption{\tmp{make cutof dependance vs energy}
+        \caption{
         The tensor analyzing powers T$_{20}$ (left) and T$_{22}$ (right) as
         a function of the photon energy E$_\gamma$
         at fixed outgoing proton angle $\theta_p = \ang{88}$ in the center of mass frame.
@@ -833,6 +839,22 @@
         Experimental data are taken from \cite{rachek2007} (filled circles)
         and \cite{mishev1993} (empty circles).}
         \label{T20_vs_en}
+    \end{figure}
+
+    \begin{figure}[h]
+        \begin{center}
+        \includegraphics[width=0.9\textwidth]{Figures_De/T20_T22_vs_en_cutoff.pdf}
+        \end{center}
+        \caption{
+        The tensor analyzing powers T$_{20}$ (left) and T$_{22}$ (right) as
+        a function of the photon energy E$_\gamma$
+        at fixed outgoing proton angle $\theta_p = \ang{88}$ in the center of mass frame.
+        My predictions have been obtained with the \gls{sms} potential at the chiral order \gls{n4lo+},
+        with the different values of the cut-off parameter $\Lambda$ (from \SI{400}{\mev} to \SI{550}{\mev}).
+        The dashed-dotted brown curve presents theoretical results from \cite{Schmitt1989}.
+        Experimental data are taken from \cite{rachek2007} (filled circles)
+        and \cite{mishev1993} (empty circles).}
+        \label{T20_vs_en_cutoff}
     \end{figure}
 
     \begin{figure}[h]
