@@ -1155,25 +1155,52 @@
 
 \clearpage
 
-\section{Helium photodisintegration}
+\section{Helium-3 photodisintegration}
 \label{sec:hel_results}
 
-\subsection{3N photodisintegration}
+\subsection{Three-body breakup}
 \label{sec:hel_3N}
 
     In this section I will discuss results
-    for $^3\text{He} \rightarrow p + p + n$ process.
+    for $^3\text{He} \rightarrow p + p + n$ process differential
+    cross-section obtained with \tmp{???} model of nuclear current.
+    For three free nuclepns in the final state it is convenient to
+    introduce, as a kinematical variable, the arc-length of the S-curve.
+    For giving direction of two momenta $\hat{p}_1$ and $\hat{p}_2$,
+    the S-curve spans in the plane defined by kinetic energies of the 
+    same two nucleons, $E_1$ and $E_2$.
+
+    For three particles and known initial energy and momenta five kinematical
+    variables\footnote{Among nine variables describing final state 
+    $\vec{p}_1,\vec{p}_2$ and $\vec{p}_3$, four can be derived from 
+    energy and momentum conservation laws.}
+    are required to define the final kinematics.
+    We choose four variables as directions of outgoing nucleons no 1 and 2:
+    $\theta_1, \phi_1, \theta_2$ and $\phi_2$, with the $z$-axis aligned to the 
+    photon momentum. Choosing $E_1$ as the fiveth variable would introduce
+    ambiguity, as in some cases two values of $E_2$ could be allowed.
+    Instead, the location on the S-curve defines the kinematical configuration
+    unambiguousely.
+    The various possible locations of the S-curve in $E_1-E_2$ plane,
+    as well as the convention on choosing the $S=0$ point in given
+    in Fig.~1 of \cite{GLOCKLE_report_1996}.
     
     In the \fig{CROSS_HE_EXCL_30} I demonstrate a differential cross section 
-    $\frac{d^5\sigma}{d\Omega_1d\Omega_2dS}$ as a function of the S arc length.
-    The photon energy is  E$_\gamma=\SI{30}{\mev}$ and the kinematic configuration
+    $\frac{d^5\sigma}{d\Omega_1d\Omega_2dS}$ as a function of the S arc length
+    and as in previous section, I study the convergence with respect to chiral
+    order and the cut-off dependance.
+    The photon energy is  E$_\gamma=\SI{30}{\mev}$; the kinematic configuration
     $\theta_1 = \ang{15}$, $\phi_1 = \ang{0}$,
-    $\theta_2 = \ang{15}$, $\phi_2 = \ang{180}$; predictions have been obtained without 3NF.
-    We see that only \gls{nlo} and \gls{n2lo} introduce relatively large truncation error.
+    $\theta_2 = \ang{15}$, $\phi_2 = \ang{180}$ and predictions have been
+    obtained without 3NF.\footnote{Different kinematic configurations $\theta_1$, $\phi_1$,
+    $\theta_2$ and $\phi_2$ have been tested with a step of \ang{15}
+    and most interesting cases(showing largest descripancies) are presented in this work.}
+    On the left we see that only \gls{nlo} and \gls{n2lo} introduce relatively large truncation error.
     The maximal width of a band for NLO is \SI{37.6}{\percent} at $S=\SI{10}{\mev}$,
-    for \gls{n2lo} it is \SI{12.4}{\percent} at the same point and it is gradually decreasing
+    for \gls{n2lo} it is \SI{12.4}{\percent} at the same S-value and it is gradually decreasing
     coming to \SI{0.13}{\percent} at \gls{n4lo+}.
-    The cut-off spread around maxima values is less than \SI{3}{\percent} and it is
+    The cut-off spread(right) is bigger around maxima values but remains below
+    \SI{3}{\percent}. It reaches
     \SI{0.78}{\percent} at the minimum point ($S=\SI{10}{\mev}$).
     
 
@@ -1185,19 +1212,21 @@
             energy E$_\gamma=\SI{30}{\mev}$ for the kinematic configuration
             $\theta_1 = \ang{15}$, $\phi_1 = \ang{0}$,
             $\theta_2 = \ang{15}$, $\phi_2 = \ang{180}$.
-            The left figure presents truncation error bands obtained using potential
+            The left figure presents truncation error bands obtained using the \gls{sms} potential
             with chiral orders from \gls{nlo} to \gls{n4lo+}, and with
             cut-off parameter $\Lambda=\SI{450}{\mev}$.
             The right figure presents a cut-off dependence at \gls{n4lo+}.
-            Results are obtained with two-nucleon force only.}
+            Results are obtained with two-nucleon force only and \gls{snc} current
+            and Siegert theorem used for a 2NC contributions.}
             \label{CROSS_HE_EXCL_30}
         \end{figure}
 
-    With larger energy E$_\gamma=\SI{100}{\mev}$ demonstrated in the \fig{CROSS_HE_EXCL_100},
+    With larger energy E$_\gamma=\SI{100}{\mev}$, for which predictions
+    are demonstrated in the \fig{CROSS_HE_EXCL_100},
     both truncation error and cut-off spread become larger.
-    The truncation band at the maximum point $S=\SI{10}{\mev}$ for NLO is \SI{55.0}{\percent}
-    decreasing to \SI{2.2}{\percent} at \gls{n4lo+} which is around 3 times larger than
-    it was in predictions with E$_\gamma=\SI{30}{\mev}$.
+    The truncation band at the maximum point at $S=\SI{10}{\mev}$ for NLO is \SI{55.0}{\percent}
+    decreasing to \SI{2.2}{\percent} at \gls{n4lo+} which still is around 3 times larger than
+    it was for predictions at E$_\gamma=\SI{30}{\mev}$.
     The cut-off spread also becomes larger with increasing energy value: \SI{9.0}{\percent}
     at the same (maximum) point which is also $\sim 3$ times bigger than the one we observed
     for the lower energy.
@@ -1211,19 +1240,20 @@
             \label{CROSS_HE_EXCL_100}
         \end{figure}
 
-    Results for other angular configurations at 
+    Results for the same E$_\gamma=100$~MeV but other angular configuration  
     $\theta_1 = \ang{75}$, $\phi_1 = \ang{75}$,
     $\theta_2 = \ang{75}$, $\phi_2 = \ang{105}$ are
-    demonstrated in \fig{CROSS_HE_EXCL_75_75_75_105}.
+    given in \fig{CROSS_HE_EXCL_75_75_75_105}.
     The top row shows results obtained with 2NF only, while predictions obtained with 3NF are shown
     on the bottom row.
     It seems that 3NF does not change much the convergence with respect to the chiral order:
     truncation error band at the point of maximum $S=\SI{35}{\mev}$ (\gls{n4lo+})
     is \SI{1.11}{\percent} and \SI{1.16}{\percent} with and without 3NF, respectively.
-    So it is almost the same, meaning that 3NF contribution arising starting from \gls{n2lo} order
-    does not affect chiral order convergence much.
+    As it is almost the same, I conclude that inclusion \gls{n2lo} 3NF practically
+    does not affect chiral order convergence.
+    Note, 3NF at \gls{n2lo} has been used for all forces above \gls{nlo}.
 
-    The cut-off dependence, in turn, is affected by the 3NF presence. Predictions with 2NF only have
+    The cut-off dependence, in turn, is affected by the presence of 3NF. Predictions with 2NF only have
     \SI{13.7}{\percent} spread at the same maximum point $S=\SI{35}{\mev}$, while predictions with 3NF
     have only \SI{1.23}{\percent} relative spread, so the difference is tremendous.
 
@@ -1231,12 +1261,14 @@
             \begin{center}
                 \includegraphics[width=0.9\textwidth]{Figures_HE/CROSS_excl_trunc_100mev_75_75_75_105_2NF_3NF.pdf}
                 \end{center}
-                \caption{The same as in the \fig{CROSS_HE_EXCL_100} but for the different kinematic
-                configuration
+                \caption{The same as in the \fig{CROSS_HE_EXCL_100} but for the kinematic
+                configuration at
                 $\theta_1 = \ang{75}$, $\phi_1 = \ang{75}$,
-                $\theta_2 = \ang{75}$, $\phi_2 = \ang{105}$.
-                Results obtained with 2NF are presented on the top row. The same, but
-                with 3NF is presented on the bottom row (starting from \gls{n2lo} - where 3NF appears.)}
+                $\theta_2 = \ang{75}$ and $\phi_2 = \ang{105}$.
+                Results obtained with the chiral \gls{sms} 2N force 
+                are presented on the top row. The same, but
+                with the \gls{n2lo} 3NF included is presented on the bottom row
+                (starting from the \gls{n2lo} - where 3NF appears for the first time).}
                 \label{CROSS_HE_EXCL_75_75_75_105}
         \end{figure}
 
@@ -1251,8 +1283,10 @@
             \begin{center}
                 \includegraphics[width=0.9\textwidth]{Figures_HE/CROSS_excl_trunc_100mev_15_105_15_75_2NF_3NF.pdf}
                 \end{center}
-                \caption{The same as in the \fig{CROSS_HE_EXCL_75_75_75_105} but for the different kinematic
-                configuration.}
+                \caption{The same as in the \fig{CROSS_HE_EXCL_75_75_75_105} but for the kinematic
+                configuration at
+                $\theta_1 = \ang{15}$, $\phi_1 = \ang{105}$,
+                $\theta_2 = \ang{15}$ and $\phi_2 = \ang{75}$.}
                 \label{CROSS_HE_EXCL_15_105_15_75}
         \end{figure}
 
@@ -1273,30 +1307,43 @@
             \begin{center}
                 \includegraphics[width=0.9\textwidth]{Figures_HE/CROSS_excl_trunc_100mev_165_15_15_165_2NF_3NF.pdf}
                 \end{center}
-                \caption{The same as in the \fig{CROSS_HE_EXCL_45_75_45_105} but for the different kinematic
-                configuration.}
+                \caption{The same as in the \fig{CROSS_HE_EXCL_45_75_45_105} but for the kinematic
+                configuration at
+                $\theta_1 = \ang{165}$, $\phi_1 = \ang{15}$,
+                $\theta_2 = \ang{15}$ and $\phi_2 = \ang{165}$.}
                 \label{CROSS_HE_EXCL_165_15_15_165}
         \end{figure}
 
 
-        The semi-inclusive differential cross section $\frac{d^3\sigma}{d\Omega_p d\text{E}_p}$
-        as a function of the outgoing protons energy $E_p$ is demonstrated on the
-        \fig{CROSS_HE_INCL_30MEV_2NF} (for E$_\gamma = \SI{30}{\mev}$) and
-        \fig{CROSS_HE_INCL_100MEV_2NF} (for E$_\gamma = \SI{100}{\mev}$).
+        The exclusive cross-sections shown above, in Figs.~\ref{CROSS_HE_EXCL_30}-\ref{CROSS_HE_EXCL_165_15_15_165}
+        are small and unfortunately below the possibilities of current 
+        experimental techniques. The semi-inclusive measurement is more likely to be
+        performed, thus in Figs \ref{CROSS_HE_INCL_30MEV_2NF} and \ref{CROSS_HE_INCL_100MEV_2NF}
+        I show the 
+        differential cross section $\frac{d^3\sigma}{d\Omega_p d\text{E}_p}$.
+        I choose the same photon energies as above: E$_\gamma = \SI{30}{\mev}$ and
+        E$_\gamma = \SI{100}{\mev}$.
         Each figure consists of subfigures where each row presents results
-        for a proton angles $\theta_p = \ang{10}, \ang{50}, \ang{90}, \ang{130}$ and \ang{170}.
-        The left part of each subfigure shows a chiral order dependence while the right - cut-off dependence.
+        for a proton momenta polar angle $\theta_p = \ang{10}, \ang{50}, \ang{90}, \ang{130}$ and \ang{170}.
+        The left part of each subfigure shows detected
+        chiral order dependence while the right - the cut-off dependence.
         
         At the photon energy \SI{30}{\mev} the chiral dependence is relatively weak: at the maximum point
         ($E_p \simeq \SI{3.8}{\mev}$) the relative difference varies between \SI{12}{\percent} and 
         \SI{28}{\percent} at LO for different angles. This difference decreases with each subsequent order
-        resulting in \SI{0.15}{\percent} at $N^4LO+$. At the energy $\text{E}_\gamma = \SI{100}{\mev}$ truncation errors
-        are larger: at the $E_p \simeq \SI{1.46}{\mev}$ the discrepancy is around \SI{40}{\percent} (NLO),
+        resulting in maximum \SI{0.15}{\percent} at $N^4LO+$. At the energy $\text{E}_\gamma = \SI{100}{\mev}$ truncation errors
+        are larger: at the maximum around $E_p \simeq \SI{1.46}{\mev}$ the discrepancy is around \SI{40}{\percent} (NLO),
         \SI{15}{\percent} (N2LO), coming to \SI{1.5}{\percent} at \gls{n4lo+}.
 
-        The cut-off uncertainty at $\text{E}_\gamma = \SI{30}{\mev}$ is around \SI{2}{\percent}
-        and at $\text{E}_\gamma = \SI{100}{\mev}$ is around \SI{8}{\percent} for all angles and 
+        A typical cut-off uncertainty at $\text{E}_\gamma = \SI{30}{\mev}$ is around \SI{2}{\percent}
+        and at $\text{E}_\gamma = \SI{100}{\mev}$ increases up to \SI{8}{\percent} for all angles and 
         at the same values of $E_p$ as regarded above.
+
+        Observed small uncertainties allow me to conclude that the semi-inclusive cross-section
+        $\frac{d^3\sigma}{d\Omega_p d\text{E}_p}$ is not useful in studies aiming on
+        pin-down the details of the chiral force.
+        \tmp{do we have prediction with othe current?}  
+
 
 
         \begin{figure}[h]
@@ -1304,10 +1351,13 @@
             \includegraphics[width=0.8\textwidth]{Figures_HE/CROSS_incl_trunc_30mev_all.pdf}
             \end{center}
             \caption{The semi-inclusive differential cross section $\frac{d^3\sigma}{d\Omega_p d\text{E}_p}$
-            at E$_\gamma = \SI{30}{\mev}$ as a function of outgoing proton energy E$_p$. Each row represents 
+            at E$_\gamma = \SI{30}{\mev}$ $\phi_1 = \ang{0}$ as a function of outgoing proton energy E$_p$. Each row represents 
             predictions for different values of the outgoing proton's momentum polar angle $\theta_p$: 
-            \ang{10}, \ang{50}, \ang{90}, \ang{130} and \ang{170}. Each column has similar 
-            curves and bands definitions as it was for exclusive cross section in \fig{CROSS_HE_EXCL_30}.  
+            \ang{10}, \ang{50}, \ang{90}, \ang{130} and \ang{170}.
+            The left figure presents truncation error bands obtained using the \gls{sms} potential
+            with chiral orders from \gls{nlo} to \gls{n4lo+}, and with
+            cut-off parameter $\Lambda=\SI{450}{\mev}$.
+            The right figure presents a cut-off dependence at \gls{n4lo+}.
             Predictions have been obtained with the \gls{sms} NN potential but neglecting 3NF.}
             \label{CROSS_HE_INCL_30MEV_2NF}
         \end{figure}
@@ -1316,7 +1366,8 @@
             \begin{center}
             \includegraphics[width=0.8\textwidth]{Figures_HE/CROSS_incl_trunc_100mev_all.pdf}
             \end{center}
-            \caption{The same as in \fig{CROSS_HE_INCL_30MEV_2NF} but for E$_\gamma = \SI{100}{\mev}$}
+            \caption{The same as in \fig{CROSS_HE_INCL_30MEV_2NF} but for E$_\gamma = \SI{100}{\mev}$.
+            \tmp{stylisticchages: axis label shift to left, change units to pb}}
             \label{CROSS_HE_INCL_100MEV_2NF}
         \end{figure}
 
@@ -1324,7 +1375,7 @@
 \clearpage
 
 
-\subsection{D-p photodisintegration}
+\subsection{Two-body breakup}
 
     The differential cross section $d\sigma/d\Omega_d$ for the $^3\text{He} + \gamma \rightarrow d + p$ reaction
     is presented In the \fig{CROSS_nd_30} (for the photon energy $\text{E}_\gamma = \SI{30}{\mev}$)
