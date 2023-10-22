@@ -1366,8 +1366,8 @@
             \begin{center}
             \includegraphics[width=0.8\textwidth]{Figures_HE/CROSS_incl_trunc_100mev_all.pdf}
             \end{center}
-            \caption{The same as in \fig{CROSS_HE_INCL_30MEV_2NF} but for E$_\gamma = \SI{100}{\mev}$.
-            \tmp{stylisticchages: axis label shift to left, change units to pb}}
+            \caption{The same as in \fig{CROSS_HE_INCL_30MEV_2NF} but for E$_\gamma = \SI{100}{\mev}$.}
+            % \tmp{stylistic chages: axis label shift to left, change units to pb}}
             \label{CROSS_HE_INCL_100MEV_2NF}
         \end{figure}
 
@@ -1378,9 +1378,10 @@
 \subsection{Two-body breakup}
 
     The differential cross section $d\sigma/d\Omega_d$ for the $^3\text{He} + \gamma \rightarrow d + p$ reaction
-    is presented In the \fig{CROSS_nd_30} (for the photon energy $\text{E}_\gamma = \SI{30}{\mev}$)
-    and In the \fig{CROSS_nd_100} (for the photon energy $\text{E}_\gamma = \SI{100}{\mev}$).
-    We see that both truncation and cut-off uncertainties are larger with increasing photon energy.
+    is presented in the \fig{CROSS_nd_30} (for the photon energy $\text{E}_\gamma = \SI{30}{\mev}$)
+    and in the \fig{CROSS_nd_100} (for $\text{E}_\gamma = \SI{100}{\mev}$).
+    We see a significant enlargement of both truncation and cut-off uncertainties
+    with increasing photon energy.
     The relative spread of the truncation error at the maximum point ($\theta_p = \ang{105}$)
     for the lower energy is \SI{0.05}{\percent} at \gls{n4lo+}, while for the larger energy
     similar spread is \SI{0.45}{\percent} (at \gls{n4lo+}, $\theta_p = \ang{120}$).
@@ -1393,9 +1394,9 @@
     \begin{center}
         \includegraphics[width=0.9\textwidth]{Figures_HE/CROSS_nd_trunc_30mev.pdf}
         \end{center}
-        \caption{Differential cross section for the D-$p$ 
-        two-body photodisintegraion of $^3$He as a function of the d$\gamma$ angle.
-        The initial photon energy $\text{E}_\gamma=\SI{30}{\mev}$.}
+        \caption{Differential cross section for the
+        two-body photodisintegration of $^3$He as a function of the $d-\gamma$ angle in c.m..
+        The initial photon energy $\text{E}_\gamma=\SI{30}{\mev}$ and NN with 2NF was used.}
         \label{CROSS_nd_30}
     \end{figure}
 
@@ -1404,7 +1405,7 @@
         \begin{center}
         \includegraphics[width=0.9\textwidth]{Figures_HE/CROSS_nd_trunc_100mev.pdf}
         \end{center}
-        \caption{The same as on \fig{CROSS_nd_30} but 
+        \caption{The same as in the \fig{CROSS_nd_30} but 
         for the photon energy E$_\gamma=\SI{100}{\mev}$}
         \label{CROSS_nd_100}
     \end{figure}
@@ -1415,9 +1416,11 @@
     
     
     In this section I will discuss results
-    for $^3\text{H} \rightarrow p + n + n$ process.
+    for $^3\text{H} \rightarrow n + n + p$ process in the case when two neuterons are detected 
+    and similarly to the previous chapter I present the convergence of predictions 
+    and their cut-off dependence. 
 
-    In the \fig{CROSS_Triton_EXCL_30_15_0_15_180} I demonstrate a differential cross section 
+    In the \fig{CROSS_Triton_EXCL_30_15_0_15_180} I present a differential cross section 
     $\frac{d^5\sigma}{d\Omega_1d\Omega_2dS}$ as a function of the S arc length.
     The photon energy is  E$_\gamma=\SI{30}{\mev}$ and the kinematic configuration
     $\theta_1 = \ang{15}$, $\phi_1 = \ang{0}$,
@@ -1436,24 +1439,24 @@
             \caption{The five-fold differential cross section for the photon 
             energy E$_\gamma=\SI{30}{\mev}$ for the kinematic configuration
             $\theta_1 = \ang{15}$, $\phi_1 = \ang{0}$,
-            $\theta_2 = \ang{15}$, $\phi_2 = \ang{180}$.
+            $\theta_2 = \ang{15}$, $\phi_2 = \ang{180}$ with two neuterons detected \tmp{check ???}.
             The left figure presents truncation error bands obtained using potential
             with chiral orders from \gls{nlo} to \gls{n4lo+}, and with
             cut-off parameter $\Lambda=\SI{450}{\mev}$.
             The right figure presents a cut-off dependence at \gls{n4lo+}.
-            Results are obtained with two-nucleon force only.}
+            Results are obtained with two-nucleon force only and \gls{snc} current plus Siegert.}
             \label{CROSS_Triton_EXCL_30_15_0_15_180}
     \end{figure}
 
-    With larger energy E$_\gamma=\SI{100}{\mev}$ demonstrated in the \fig{CROSS_Triton_EXCL_100mev_15_0_15_180},
+    At bigger energy E$_\gamma=\SI{100}{\mev}$ demonstrated in the \fig{CROSS_Triton_EXCL_100mev_15_0_15_180},
     the truncation band at the maximum point $S=\SI{10}{\mev}$ for NLO is \SI{50.26}{\percent}
-    decreasing to \SI{2.00}{\percent} at \gls{n4lo+}.
+    decreases to \SI{2.00}{\percent} at \gls{n4lo+}.
     The cut-off spread also becomes larger with increasing energy value: \SI{9.52}{\percent}
-    at the same (maximum).
+    at the same maximum.
 
-    The truncation error bands and cut-off dependance is very similar as it was for
-    the three-body Helium photodisintegration \ref{sec:hel_3N} and the relative errors 
-    have a similar range of values.
+    The truncation error bands and cut-off dependance is very similar to what it was found for
+    the three-body Helium-3 photodisintegration and the relative errors 
+    have a similar magnitudes.
 
     \begin{figure}[h]
         \begin{center}
@@ -1466,30 +1469,29 @@
 
 
 
-    Results for other angular configurations at 
+    Results for other angular configurations with E$_\gamma=\SI{30}{\mev}$ and at 
     $\theta_1 = \ang{75}$, $\phi_1 = \ang{75}$,
     $\theta_2 = \ang{75}$, $\phi_2 = \ang{105}$ are
-    demonstrated in \fig{CROSS_Triton_EXCL_75_75_75_105} with E$_\gamma=\SI{30}{\mev}$.
-    Both truncation errors and cut-off dependance are lower at this configuration:
+    demonstrated in \fig{CROSS_Triton_EXCL_75_75_75_105}.
+    Both truncation errors and cut-off dependance are smaller at this configuration:
     the relative  width of the truncation band at \gls{nlo} is \SI{9.39}{\percent}
     (at the maximum point $S=\SI{8}{\mev}$) and drops to only \SI{0.1}{\percent}
     at \gls{n4lo+}. The relative cut-off spread is \SI{0.93}{\percent} at the same point.
 
-    At the larger energy E$_\gamma=\SI{100}{\mev}$ demonstrated in \fig{CROSS_Triton_EXCL_100mev_75_75_75_105}
-    uncertainties have been increased. The truncation bands are \SI{44.42}{\percent} and 
+    At the bigger energy E$_\gamma=\SI{100}{\mev}$ demonstrated in \fig{CROSS_Triton_EXCL_100mev_75_75_75_105}
+    uncertainties grow. The truncation bands are \SI{44.42}{\percent} and 
     \SI{2.09}{\percent} (at \gls{nlo} and \gls{n4lo+} respectively) and
-    the cut-off spread is \SI{13.04}{\percent} (all at $S=\SI{35}{\mev}$).
+    the cut-off spread is \SI{13.04}{\percent} (all at $S=\SI{35}{\mev}$ in maximum).
 
 
     \begin{figure}[h]
         \begin{center}
             \includegraphics[width=0.9\textwidth]{Figures_Triton/CROSS_excl_trunc_30mev_75_75_75_105_2NF.pdf}
             \end{center}
-            \caption{The same as in the \fig{CROSS_Triton_EXCL_30_15_0_15_180} but for the different kinematic
-            configuration
+            \caption{The same as in the \fig{CROSS_Triton_EXCL_30_15_0_15_180} but for the kinematic
+            configuration with
             $\theta_1 = \ang{75}$, $\phi_1 = \ang{75}$,
-            $\theta_2 = \ang{75}$, $\phi_2 = \ang{105}$.
-            Results obtained with 2NF only.}
+            $\theta_2 = \ang{75}$, $\phi_2 = \ang{105}$.}
             \label{CROSS_Triton_EXCL_75_75_75_105}
     \end{figure}
 
@@ -1503,24 +1505,17 @@
             \label{CROSS_Triton_EXCL_100mev_75_75_75_105}
     \end{figure}
 
-    Similar trends are present also in other configurations, demonstrated for the comparison:
-    Figs.~\ref{CROSS_Triton_EXCL_15_105_15_75},
-    \ref{CROSS_Triton_EXCL_100mev_15_105_15_75},
-    \ref{CROSS_Triton_EXCL_45_75_45_105},
-    \ref{CROSS_Triton_EXCL_100mev_45_75_45_105},
-    \ref{CROSS_Triton_EXCL_165_15_15_165}
-    and
-    \ref{CROSS_Triton_EXCL_100mev_165_15_15_165}.
+    Similar trends are present also in other examples, demonstrated for the comparison in
+    Figs.~\ref{CROSS_Triton_EXCL_15_105_15_75}-\ref{CROSS_Triton_EXCL_100mev_165_15_15_165}.
 
     \begin{figure}[h]
         \begin{center}
             \includegraphics[width=0.9\textwidth]{Figures_Triton/CROSS_excl_trunc_30mev_15_105_15_75_2NF.pdf}
             \end{center}
-            \caption{The same as in the \fig{CROSS_Triton_EXCL_75_75_75_105} but for the different kinematic
-            configuration
+            \caption{The same as in the \fig{CROSS_Triton_EXCL_75_75_75_105} but for the kinematic
+            configuration with
             $\theta_1 = \ang{15}$, $\phi_1 = \ang{105}$,
-            $\theta_2 = \ang{15}$, $\phi_2 = \ang{75}$.
-            Results obtained with 2NF only.}
+            $\theta_2 = \ang{15}$, $\phi_2 = \ang{75}$.}
             \label{CROSS_Triton_EXCL_15_105_15_75}
     \end{figure}
 
@@ -1538,11 +1533,10 @@
         \begin{center}
             \includegraphics[width=0.9\textwidth]{Figures_Triton/CROSS_excl_trunc_30mev_45_75_45_105_2NF.pdf}
             \end{center}
-            \caption{The same as in the \fig{CROSS_Triton_EXCL_15_105_15_75} but for the different kinematic
-            configuration
+            \caption{The same as in the \fig{CROSS_Triton_EXCL_15_105_15_75} but for the kinematic
+            configuration with
             $\theta_1 = \ang{45}$, $\phi_1 = \ang{75}$,
-            $\theta_2 = \ang{45}$, $\phi_2 = \ang{105}$.
-            Results obtained with 2NF only.}
+            $\theta_2 = \ang{45}$, $\phi_2 = \ang{105}$.}
             \label{CROSS_Triton_EXCL_45_75_45_105}
     \end{figure}
 
@@ -1560,11 +1554,10 @@
         \begin{center}
             \includegraphics[width=0.9\textwidth]{Figures_Triton/CROSS_excl_trunc_30mev_165_15_15_165_2NF.pdf}
             \end{center}
-            \caption{The same as in the \fig{CROSS_Triton_EXCL_45_75_45_105} but for the different kinematic
-            configuration
+            \caption{The same as in the \fig{CROSS_Triton_EXCL_45_75_45_105} but for the kinematic
+            configuration with
             $\theta_1 = \ang{165}$, $\phi_1 = \ang{15}$,
-            $\theta_2 = \ang{15}$, $\phi_2 = \ang{165}$.
-            Results obtained with 2NF only.}
+            $\theta_2 = \ang{15}$, $\phi_2 = \ang{165}$.}
             \label{CROSS_Triton_EXCL_165_15_15_165}
     \end{figure}
 
