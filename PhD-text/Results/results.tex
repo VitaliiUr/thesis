@@ -1578,7 +1578,8 @@
 
 \subsection{Pion absorption in $^2$H}
 
-    \begin{figure}[h]
+
+\begin{figure}[h]
         \begin{center}
         \includegraphics[width=0.6\textwidth]{PlotData/PION/Dalitz_maps/figures/Gamma_nn.pdf}
         \end{center}
@@ -1587,29 +1588,36 @@
             The rates were calculated using the \gls{sms} force with different chiral orders and cut-off values.
             The results were obtained using the single-nucleon transition operator and 
             including two-nucleon contributions at the leading order.
-            The figure shows the results obtained using plane wave (PW) plus
+            The figure shows the results obtained using the plane wave (PW) plus
             two-neutron rescattering (Full) parts.
-            The experimental value is obtained from the hadronic
-            ground-state broadening in pionic deuterium~\cite{Strauch2010,Strauch2011}.}
+            The experimental value is extracted from the hadronic
+            ground-state broadening in pionic deuterium and taken from Ref.~\cite{Strauch2010,Strauch2011}.}
         \label{Gamma_nn}
     \end{figure}
 
+    \tmp{#TODO describe figure}
+
 
     \subsection{Pion absorption in $^3$He}
-
-    in \fig{Gamma_pnn} and \ref{Gamma_nd} the pion absorption rates are presented as a function
-    of the chiral order with different values of the cut-off parameter
-    (for $\pi^- + ^3\text{He} \rightarrow p + n + n$ and $\pi^- + ^3\text{He} \rightarrow n + d$ reactions, respectively).
-    Both figures show that with fixed chiral order the arrangement of values with respect of the cut-off parameter
+    
+    In \fig{Gamma_pnn} and \ref{Gamma_nd} the pion absorption rates are presented as a function
+    of the chiral order and for different values of the cut-off parameter
+    for $\pi^- + ^3\text{He} \rightarrow p + n + n$ 
+    and $\pi^- + ^3\text{He} \rightarrow n + d$ reactions, respectively.
+    Both figures show that with fixed chiral order the arrangement 
+    of absorption rates obtained with various values of the cut-off parameter
     remains the same, namely with increasing $\Lambda$, absorption rate decreases. The only exception in both cases 
     appears at \gls{n3lo} where prediction with $\Lambda = \SI{550}{\mev}$ goes above other predictions.
-    At the next order, \gls{n4lo}, it corrects to the normal arrangement.
-    This behavior may be connected to the 3NF used for the calculation and in order to check that I show
-    a similar figure for a proton radius $r_p$ in \fig{proton_rad} calculated with 
-    and without 3NF (left and right panels respectively). Results obtained with 3NF show
-    similar deviation at \gls{n3lo} while data obtained without 3NF does not have that.
-    Nevertheless, the spread of predictions with respect to the cut-off values is much smaller
-    with 3NF and deviation seems to be not crucial as total difference
+    At the next order, \gls{n4lo}, it comes back to the \tmp{normal} arrangement.
+    This behavior may be connected to the $^3$He wave function resultingfrom the
+    3NF used for the calculation.
+    In order to check that I show in \fig{proton_rad}
+    a corresponding figure for a $^3$He proton radius $r_p$ calculated with 
+    and without 3NF (left and right panels respectively). Results obtained with the 3NF show
+    similar deviation at \gls{n3lo} while radious obtained without the 3NF does not.
+    Nevertheless, the spread of predictions with respect to
+    the cut-off values seen in \fig{proton_rad} is much smaller
+    with the 3NF and deviation seems to be not crucial as total difference
     between predictions in this case is very small.
 
 
@@ -1620,8 +1628,9 @@
         \includegraphics[width=0.6\textwidth]{PlotData/PION/Dalitz_maps/figures/Gamma_pnn.pdf}
         \end{center}
         \caption{Absorption rate for $\pi^- + ^3\text{He} \rightarrow p + n + n$ reaction as a function
-        of the chiral order with different values of the cut-off parameter $\Lambda$.
-        Predictions were obtained with 3NF.}
+        of the chiral order and with different values of the cut-off parameter $\Lambda$.
+        Predictions were obtained with the \gls{sms} NN interactionat given order combined
+        with \gls{n2lo} 3NF.}
         \label{Gamma_pnn}
     \end{figure}
 
@@ -1643,23 +1652,35 @@
         \label{proton_rad}
     \end{figure}
 
+
+    By its nature the total absorption rates cannot deliver details
+    on distribution of contributions arising from various dynamical ingredients
+    to the absorption process in  the phase-space. Thus in following I show 
+    various intensity plots revealing phase-space regions of special interest.
+
+    Let us remind that in case of absorption rates only two kinetical variables are
+    neccessary to define exclusive kinematical configuration. \tmp{That is, because for that
+    process there is full rotational symmetry, as none of vectors define the S-axis.}
+
+
     In Figs.~\ref{pion_map_E1E2_cutoff} and \ref{pion_map_xy_cutoff} I show 
     intensity plots for the double differential absorption rates
     $d^2 \Gamma_{pnn}/dE_1dE_2$ for the $\pi^- + ^3\text{He} \rightarrow p + n + n$
-    process as functions of the nucleons energies (nucleon number 1 is a proton) and 
+    process as functions of the nucleons energies (assumingnucleon number 1 to be proton) and 
     of Dalitz coordinates ($x$ and $y$), respectively.
 
-    In \fig{pion_map_xy_cutoff} coordinates $x$ and $y$ are defined as:
+    The coordinates $x$ and $y$ are defined as:
 
     \begin{align}
         x &= 3 (E_1 + 2E_2 - E)/E, \nonumber\\
         y &= (3E_1 - E)/E,
         \label{dalitz_xy}
     \end{align}
-    taking the region where $r^2 \equiv x^2 + y^2 \leq 1$.
+    where $E$ is a total kinetic 3N energy. 
+    These coordinates are restricted to the region where $r^2 \equiv x^2 + y^2 \leq 1$.
 
     Each of two figures consists of four panels representing predictions obtained with different 
-    values of the cut-off parameter $\Lambda$. The difference between predictions which can be 
+    values of the cut-off parameter $\Lambda$. The difference between predictions which can be immediately
     noticed with the naked eye - is that area of the central region (corresponding to smallest values)
     becomes larger with increasing $\Lambda$. It coheres to what we saw in \fig{Gamma_pnn}
     where total absorption rate was inversely correlated with cut-off parameter. The dominant contribution
