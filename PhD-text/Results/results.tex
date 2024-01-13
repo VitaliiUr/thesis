@@ -85,7 +85,7 @@
     It is clear that one has to take with causion Siegert predictions at very small energies.
     Also above \SI{20}{\mev} there is a gap between Siegert results and experimental data,
     which points that more elaborated 2N current should be included in future.
-    The observed discrepancy cannot be explained by the cut-off dependance
+    The observed discrepancy cannot be explained by the cut-off dependence
     (see e.g. \fig{Diff_cross_cutoff} below) or by the low order of chiral potential (see discussion below).
 
     While my main goal is to describe deuteron photodisintegration
@@ -310,7 +310,7 @@
     cross section for the same energies has the cut-off spread
     around \SI{4.5}{\percent} for \SI{100}{\mev} and \SI{8}{\percent} for \SI{140}{\mev}
      For $\text{E}_\gamma=\SI{30}{\mev}$ it is below  \SI{1}{\percent}.
-     It means that even cut-off dependance for that total cross section (affected
+     It means that even cut-off dependence for that total cross section (affected
      by the extreme values close to $\theta_p = 0$ or $\theta_p = 180$)  are
      relatively small, especially at the lower energies.
 
@@ -1188,7 +1188,7 @@
     In the \fig{CROSS_HE_EXCL_30} I demonstrate a differential cross section 
     $\frac{d^5\sigma}{d\Omega_1d\Omega_2dS}$ as a function of the S arc length
     and as in previous section, I study the convergence with respect to chiral
-    order and the cut-off dependance.
+    order and the cut-off dependence.
     The photon energy is  E$_\gamma=\SI{30}{\mev}$; the kinematic configuration
     $\theta_1 = \ang{15}$, $\phi_1 = \ang{0}$,
     $\theta_2 = \ang{15}$, $\phi_2 = \ang{180}$ and predictions have been
@@ -1454,7 +1454,7 @@
     The cut-off spread also becomes larger with increasing energy value: \SI{9.52}{\percent}
     at the same maximum.
 
-    The truncation error bands and cut-off dependance is very similar to what it was found for
+    The truncation error bands and cut-off dependence is very similar to what it was found for
     the three-body Helium-3 photodisintegration and the relative errors 
     have a similar magnitudes.
 
@@ -1473,7 +1473,7 @@
     $\theta_1 = \ang{75}$, $\phi_1 = \ang{75}$,
     $\theta_2 = \ang{75}$, $\phi_2 = \ang{105}$ are
     demonstrated in \fig{CROSS_Triton_EXCL_75_75_75_105}.
-    Both truncation errors and cut-off dependance are smaller at this configuration:
+    Both truncation errors and cut-off dependence are smaller at this configuration:
     the relative  width of the truncation band at \gls{nlo} is \SI{9.39}{\percent}
     (at the maximum point $S=\SI{8}{\mev}$) and drops to only \SI{0.1}{\percent}
     at \gls{n4lo+}. The relative cut-off spread is \SI{0.93}{\percent} at the same point.
@@ -1614,26 +1614,45 @@
 
     \subsection{Pion absorption in $^3$He}
     
-    In \fig{Gamma_pnn} and \ref{Gamma_nd} the pion absorption rates are presented as a function
+    In \fig{Gamma_pnn} and \ref{Gamma_nd} the total pion absorption rates are presented as a function
     of the chiral order and for different values of the cut-off parameter
     for $\pi^- + ^3\text{He} \rightarrow p + n + n$ 
     and $\pi^- + ^3\text{He} \rightarrow n + d$ reactions, respectively.
     Both figures show that with fixed chiral order the arrangement 
     of absorption rates obtained with various values of the cut-off parameter
-    remains the same, namely with increasing $\Lambda$, absorption rate decreases. The only exception in both cases 
+    remains the same, namely with increasing $\Lambda$, the absorption rate decreases. The only exception in both cases 
     appears at \gls{n3lo} where prediction with $\Lambda = \SI{550}{\mev}$ goes above other predictions.
     At the next order, \gls{n4lo}, it comes back to the usual arrangement.
     This behavior may be connected to the $^3$He wave function resulting from the
     3NF used for the calculation.
-    In order to proof that I show in \fig{proton_rad}
+    In order to prove that, I show in \fig{proton_rad}
     a corresponding figure for a $^3$He proton radius $r_p$ calculated with 
     and without 3NF (left and right panels, respectively). Results obtained with the 3NF show
     similar deviation at \gls{n3lo} while radius computed without the 3NF does not.
-    Nevertheless, the spread of predictions with respect to
+    Nevertheless, the spread of predictions concerning
     the cut-off values seen in \fig{proton_rad} is much smaller
-    with the 3NF and deviation seems to be not crucial as total difference
+    with the 3NF and deviation seems to be not crucial as the total difference
     between predictions in this case is very small.
 
+    There are also experimental data for the $\Gamma_{pnn}$ and $\Gamma_{nd}$ available on the market.
+    As it was discussed in \cite{golak_pion}, experimental data for the $\Gamma_{pnn}$ and $\Gamma_{nd}$ 
+    can be extracted from \cite{SCHWANNER1984,McCarthy1975,truol1974} and it is
+
+    \begin{eqnarray}\label{Gam_He_exp}
+        \Gamma_{pnn} ^{\rm exp.} & =& (2.47\pm 0.65)\times 10^{16} \, {\rm s^{-1}}\\
+        \Gamma_{nd}^{\rm exp.} & =  & (6.8\pm 1.9)\times 10^{15} \, {\rm s^{-1}}.
+    \end{eqnarray}
+
+    My predictions can be summarized as follows:
+
+    \begin{eqnarray}\label{Gam_nd_our}
+        \Gamma_{pnn}  & =& (1.28^{+ 0.29}_{-0.14} \pm 1.02)\times 10^{16} \, {\rm s^{-1}}\\ \label{Gam_nd_pnn_our}
+        \Gamma_{nd} & =  & (2.0^{+1.0}_{-0.6}\pm 1.6)\times 10^{15} \, {\rm s^{-1}}\\ \label{Gam_pnn_our}
+    \end{eqnarray}
+    where the first error is related to the cut-off parameter and the second one to the chiral order (truncation error).
+
+    We see that our predictions, presented in Figs.~\ref{Gamma_pnn} and \ref{Gamma_nd}, are 
+    smaller than experimental values, but they overlap each other within the uncertainty range, giving large experimental errors as well as theoretical ones.
 
 
 
@@ -1643,7 +1662,7 @@
         \end{center}
         \caption{Absorption rate for $\pi^- + ^3\text{He} \rightarrow p + n + n$ reaction as a function
         of the chiral order and with different values of the cut-off parameter $\Lambda$.
-        Predictions were obtained with the \gls{sms} NN interaction at given order combined
+        Predictions were obtained with the \gls{sms} NN interaction at a given order combined
         with \gls{n2lo} 3NF.}
         \label{Gamma_pnn}
     \end{figure}
@@ -1658,23 +1677,23 @@
 
     \begin{figure}[h]
         \begin{center}
-        \includegraphics[width=0.99\textwidth]{PlotData/PION/Dalitz_maps/figures/proton_radius_mt31_3NF.pdf}
+        \includegraphics[width=0.99\textwidth]{PlotData/PION/Dalitz_maps/figures/proton_radius_mt3-1_3NF.pdf}
         \end{center}
         \caption{\tmp{check mt3} Proton radius $r_p$ as a function of the chiral order calculated with
         different values of the cut-off parameter $\Lambda$. The radius was calculated with 2NF and 3NF (left panel)
-        and with 2NF only (right panel).}
+        or with 2NF only (right panel).}
         \label{proton_rad}
     \end{figure}
 
 
-    By its nature the total absorption rates cannot deliver details
-    on distribution of contributions arising from various dynamical ingredients
-    to the absorption process in  the phase-space. Thus in following I show 
+    By its nature, the total absorption rates cannot deliver details
+    on the distribution of contributions arising from various dynamical ingredients
+    to the absorption process in the phase space. Thus in the following, I show 
     various intensity plots revealing phase-space regions of special interest.
 
-    Let me remind that in case of absorption rates only two kinetical variables are
-    neccessary to define exclusive kinematical configuration. That is, because for that
-    process there is full rotational symmetry, as none of vectors define the $\hat(z)$-axis.
+    Let me remind that in the case of absorption rates, only two kinetical variables are
+    necessary to define the exclusive kinematical configuration. That is, because for that
+    process there is full rotational symmetry, as none of the vectors define the $\hat(z)$-axis.
 
 
     In Figs.~\ref{pion_map_E1E2_cutoff} and \ref{pion_map_xy_cutoff} I show such
@@ -1693,29 +1712,67 @@
     where $E$ is a total kinetic 3N energy. 
     These coordinates are restricted to the region where $r^2 \equiv x^2 + y^2 \leq 1$.
 
-    Each of two figures consists of four panels representing predictions obtained with different 
+    Each of the two figures consists of four panels representing predictions obtained with different 
     values of the cut-off parameter $\Lambda$. The difference between predictions which can be immediately
-    noticed with the naked eye - is that area of the central region (corresponding to smallest values)
+    noticed with the naked eye is that area of the central region (corresponding to the smallest rates)
     becomes larger with increasing $\Lambda$. It coheres to what we saw in \fig{Gamma_pnn}
-    where total absorption rate was inversely correlated with cut-off parameter. The dominant contribution
-    comes from the region with lowest proton energy values of $E_1 \rightarrow 0$ where both neutrons have similar large values.
-    This is a situation when proton is a spectator while both neutrons share all energy
-    - quasi-free scattering(QFS). 
+    where the total absorption rate was inversely correlated with the cut-off parameter. The dominant contribution
+    comes from the region with the lowest proton energy values of $E_1 \rightarrow 0$ where both neutron energies 
+    have similar large values.
+    This is a situation of quasi-free scattering(QFS) - when a proton is a spectator and both neutrons share equally all energy. 
 
-    Another region with high absorption rate is neutron-neutron final state interaction (FSI(nn)).
-    It is located at high $E_1$ when proton gets one third part of total energy while neutrons both get
-    one sixth.
+    Another region with a high absorption rate is the neutron-neutron final state interaction configuration (FSI(nn)).
+    It is located at high $E_1$ values when a proton gets two-thirds part of the total energy while neutrons both get
+    one-sixth. In \fig{pion_map_E1E2_cutoff} we see this region at the very right region (with $E_1 \rightarrow 85$)
+    with rapid growth of the absorption rate and it is observed at every value of the cut-off parameter. The very same region 
+    is presented in  \fig{pion_map_xy_cutoff_PW} at $y \rightarrow 1$. \tmp{Explain what happens with the rest of energy?}
+
+    In \cite{golak_pion} we have shown the comparison of our predictions with one more experimental data,
+    from \cite{Gotta1995}. In that paper, the authors consider four specific regions ($I_i$ for $i=1,2,3,4$) and give experimental results
+    for each of them separately. The renormalization procedure was applied to our predictions in order to compare results with experimental data. Following \cite{Gotta1995}, we divide the predictions for each particular region ($\Gamma_i$) by the total value $\sum_{i=1}^{4}\Gamma_i$. Results are presented in the Table \ref{tableregions_norm}.
+
+    \begin{table}%[H] add [H] placement to break table across pages
+        \centering
+        \caption{Absorption rates in the four regions 
+        of the phase space $I_i$ defined in 
+            Ref.~\cite{Gotta1995} 
+        for the $\pi^- + {^3{\rm He}} \rightarrow p + n + n $ reaction
+        calculated with 
+        the chiral \gls{sms} NN potential supplemented by 3NF at \gls{n2lo}
+        with different values of the cutoff parameter $\Lambda$.}
+        \begin{tabular}{|c|c|c|c|c|}
+            \hline\hline
+                & \multicolumn{4}{c|}{Normalized absorption rates $\Gamma_{i}$} \\ 
+                                \cline{2-5}
+            \hline
+                $\Lambda$ (MeV)                             &      $I_1$ &      $I_2$ &      $I_3$ &      $I_4$ \\ 
+            \hline
+            %
+            400   &  \;\;0.804\;\; &\;\; 0.152\;\;  &\;\;\ 0.029\;\;  & \;\;0.016\;\; \\
+            450   &  0.797  & 0.152  & 0.032  & 0.019 \\
+            500   &  0.792  & 0.152  & 0.035  & 0.021 \\
+            550   &  0.793  & 0.151  & 0.036  & 0.020  \\
+            %
+            \hline\hline
+            Gotta \textit{et al.} \cite{Gotta1995} &    0.844& 0.099& 0.033& 0.023 \\
+            \hline\hline
+        \end{tabular}
+        \label{tableregions_norm}
+    \end{table}
+
+    We see that our predictions are very close to experimental results and retrieve the same pattern of the absorption rate distribution over the regarded regions.
+        
+    
     
         \begin{figure}[h]
             \begin{center}
             \includegraphics[width=0.7\textwidth]{PlotData/PION/Dalitz_maps/figures/Dalitz_map_pnn_E1E2_cutofs.pdf}
             \end{center}
             \caption{Intensity plots for the double differential absorption rates
-            $d^2 \Gamma_{pnn}/dE_1dE_2$ for the $\pi^- + ^3\text{He} \rightarrow p + n + n$
-            process, obtained using the SMS potential at \gls{n4lo+}
+            $d^2 \Gamma_{pnn}/dE_1dE_2$ for the $\pi^- + ^3\text{He} \rightarrow p + n + n$ process, obtained using the SMS NN potential
             with all contributions possible: plane wave + rescattering, 1NC + 2N, 2NF+3NF.
-            Each panel present predictions obtained with different values of the cut-off parameter $\Lambda$:
-            from \SI{400}{\mev} (upper left) to \SI{550}{\mev} (lower right). Nucleon 1 is a proton.}
+            Each panel presents predictions obtained with different values of the cut-off parameter $\Lambda$:
+            from $\Lambda=\SI{400}{\mev}$ (upper left) to $\Lambda=\SI{550}{\mev}$ (lower right). Nucleon 1 is a proton.}
             \label{pion_map_E1E2_cutoff}
         \end{figure}
 
@@ -1728,14 +1785,20 @@
         \label{pion_map_xy_cutoff}
     \end{figure}
 
-    Next I show similar colormaps but for the predictions obtained with plane wave component only (without rescattering part)
-    in Figs.~\ref{pion_map_E1E2_cutoff_PW} and \ref{pion_map_xy_cutoff_PW}. Presented plots show that
-    the difference of predictions obtained without rescattering part with full is very large. 
-    Predicted values 
-    are few times larger and the distribution is completely different.
-    The FSI(nn) region is not presented here in a sense that there is no peak with respect to other 
-    values. The QFS region is, on the contrary, 
-    which obviously tells us that one has to take into account rescattering pat in order to obtain relevant results.   
+    Next in Figs.~\ref{pion_map_E1E2_cutoff_PW} and \ref{pion_map_xy_cutoff_PW} 
+    I show similar intensity plots for the predictions obtained with plane wave component only (without rescattering part).
+    They reveal that
+    the difference of predictions obtained without rescattering part with ones including it
+    (Figs.~\ref{pion_map_E1E2_cutoff} and \ref{pion_map_xy_cutoff}) is very large. 
+    Predicted values are a few times larger and the distribution of dominant areas is completely different.
+    The FSI(nn) region is not presented here
+    in the sense that there is no peak concerning other regions.
+    That is natural, as the FSI(nn) peak arises from strong interaction in the final state,
+    which by definition is not in the plane wave approximation.
+    On the contrary, the QFS region is presented.
+    Results of Figs.~\ref{pion_map_E1E2_cutoff_PW} and \ref{pion_map_xy_cutoff_PW}
+    tell us that one has to take into account the rescattering part in order to obtain
+    realistic predictions for that process.  
 
     \begin{figure}[h]
         \begin{center}
@@ -1743,11 +1806,11 @@
         \end{center}
         \caption{Intensity plots for the double differential absorption rates
         $d^2 \Gamma_{pnn}/dE_1dE_2$ for the $\pi^- + ^3\text{He} \rightarrow p + n + n$
-        process, obtained using the SMS potential at \gls{n4lo+}
+        process obtained using the SMS NN potential at \gls{n4lo+} supplemented by \gls{n2lo} 3NF
         with plane wave part only (without rescattering).
         All other contributions are the same as in \fig{pion_map_E1E2_cutoff}: 1NC + 2N and 2NF+3NF.
-        Each panel present predictions obtained with different values of the cut-off parameter $\Lambda$:
-        from \SI{400}{\mev} (upper left) to \SI{550}{\mev} (lower right). Nucleon 1 is a proton.}
+        Each panel presents predictions obtained with different values of the cut-off parameter $\Lambda$:
+        from $\Lambda=\SI{400}{\mev}$ (upper left) to $\Lambda=\SI{550}{\mev}$ (lower right). Nucleon 1 is a proton.}
         \label{pion_map_E1E2_cutoff_PW}
     \end{figure}
 
@@ -1760,14 +1823,15 @@
         \label{pion_map_xy_cutoff_PW}
     \end{figure}
 
-    Results obtained with Plane wave plus rescattering part and with single nucleon current only
+    Results have been obtained with plane wave plus rescattering parts but with the single nucleon current only
     are presented in Figs.~\ref{pion_map_E1E2_cutoff_1NC} and \ref{pion_map_xy_cutoff_1NC}.
-    As previously, each panel in figures presents predictions obtained with different values of the cut-off parameter $\Lambda$.
-    In contrast to the configurations shown above, the change of the cut-off value has larger impact here:
-    we see that there is a different pattern in each panel. I does not change dramatically, but 
+    As previously, each panel in the figures presents predictions obtained with different values of the cut-off parameter $\Lambda$.
+    In contrast to the combinations shown above, the change in the cut-off value has a larger impact here:
+    we observe that there is a different pattern in each panel. It does not change dramatically, but 
     two peaks inside the figure become more or less clear. On the other hand, the distribution of 
-    the absorption rate is very different from the one, obtained with more complete components setup 
+    the absorption rate is very different from the one, obtained with a more complete components setup 
     (Figs.~\ref{pion_map_E1E2_cutoff} and \ref{pion_map_xy_cutoff}).
+
 
     \begin{figure}[h]
         \begin{center}
@@ -1775,11 +1839,11 @@
         \end{center}
         \caption{Intensity plots for the double differential absorption rates
         $d^2 \Gamma_{pnn}/dE_1dE_2$ for the $\pi^- + ^3\text{He} \rightarrow p + n + n$
-        process, obtained using the SMS potential at \gls{n4lo+}
-        with \gls{snc} only (without 2N).
+        process obtained using the SMS NN potential at \gls{n4lo+} supplemented by \gls{n2lo} 3NF
+        with \gls{snc} only (without 2N) currents.
         All other contributions are the same as in \fig{pion_map_E1E2_cutoff}: PWIAS+RESC and 2NF+3NF.
-        Each panel present predictions obtained with different values of the cut-off parameter $\Lambda$:
-        from \SI{400}{\mev} (upper left) to \SI{550}{\mev} (lower right). Nucleon 1 is a proton.}
+        Each panel presents predictions obtained with different values of the cut-off parameter $\Lambda$:
+        from $\Lambda = \SI{400}{\mev}$ (upper left) to $\Lambda = \SI{550}{\mev}$ (lower right). Nucleon 1 is a proton.}
         \label{pion_map_E1E2_cutoff_1NC}
     \end{figure}
 
@@ -1792,11 +1856,13 @@
         \label{pion_map_xy_cutoff_1NC}
     \end{figure}
 
-    Figs.~\ref{pion_map_E1E2_order} and \ref{pion_map_xy_order} show prediction obtained using similar configuration
+    Figs.~\ref{pion_map_E1E2_order} and \ref{pion_map_xy_order} show prediction obtained using similar
+    dynamical components
     as in Figs.~\ref{pion_map_E1E2_cutoff} and \ref{pion_map_xy_cutoff}, but each panel includes
     predictions obtained with different chiral orders of the \gls{sms} potential.
     We see that predictions are not sensitive to the chiral order and even \gls{n2lo} predictions
-    are pretty much similar to ones obtained with the most advanced \gls{n4lo} potential. 
+    are pretty much similar to ones obtained with the most advanced \gls{n4lo} potential.
+     
     
     \begin{figure}[h]
         \begin{center}
@@ -1804,11 +1870,11 @@
         \end{center}
         \caption{Intensity plots for the double differential absorption rates
         $d^2 \Gamma_{pnn}/dE_1dE_2$ for the $\pi^- + ^3\text{He} \rightarrow p + n + n$
-        process, obtained using the SMS potential at \gls{n4lo+}
+        process obtained using the SMS potential at \gls{n4lo+}
         with all contributions possible: plane wave + rescattering, 1NC + 2N, 2NF+3NF.
-        Each panel present predictions obtained with different chiral orders of the \gls{sms} potential:
+        Each panel presents predictions obtained with different chiral orders of the \gls{sms} NN potential:
         from \gls{n2lo} (upper left) to \gls{n4lo+} (lower right) and with $\Lambda = \SI{450}{\mev}$.
-        Nucleon 1 is a proton.}
+        Nucleon 1 is a proton. 3NF was taken ar \gls{n2lo} in each case.}
         \label{pion_map_E1E2_order}
     \end{figure}
 
@@ -1821,27 +1887,36 @@
         \label{pion_map_xy_order}
     \end{figure}
 
-    Following figures demonstrate the same results but from the different prospective.
+    
+    Presented above intensity plots correspond to exclusive \tmp{processes} with two particles detected.
+    Now we would like to test if the same behavior of the capture rate is observed for
+    the semi-inclusive observables.
+    Thus following figures demonstrate the same phenomena but from a different point of view.
     Namely in \fig{pion_GdEp} I show differential absorption rate $d\Gamma_{pnn} /d\text{E}_p$
     that is the same as in e.g. \fig{pion_map_E1E2_order}, but integrated over E$_n$.
     All the results are obtained with the most advanced setup (plane wave + rescattering, 1NC + 2N, 2NF+3NF).
-    The left panel consists of the results with $\Lambda=\SI{450}{\mev}$ and each curve correspond 
-    to a particular chiral order. Interesting region here is a maximum point which corresponds
-    to a bottom part of the circles from \fig{pion_map_E1E2_order}. At the point of maximum
-    \gls{n2lo} outstands from other results as its point of maximum is noticeably higher.
+    The left panel consists of the results with $\Lambda=\SI{450}{\mev}$ and each curve corresponds 
+    to a particular chiral order. An interesting region here is a maximum
+    of $d\Gamma_{pnn} /d\text{E}_p$  which corresponds
+    to the bottom part of the circles from \fig{pion_map_E1E2_order}. At the point of maximum
+    \gls{n2lo} prediction distinguishes from other results as its point of maximum is noticeably higher.
     At $\text{E}_p = \SI{0.92}{\mev}$ (maximum point) the value of \gls{n2lo} is
     \num{1.37} times larger than one from \gls{n4lo+} (\SI{3.44e+17}{fm.\s^{-1}}
     vs \SI{2.52e+17}{fm.\s^{-1}}) - the relative difference is \SI{31.1}{\percent}.
     At the same time, the relative difference between all the predictions except for \gls{n2lo}
-    is \SI{8.3}{\percent}
+    is \SI{8.3}{\percent}.
 
-    The right panel of the \fig{pion_GdEp} shows a cut-off dependance of the predictions obtained
-    with the \gls{sms} chiral potential at \gls{n4lo+}. In this case maximum point is interesting as well.
+    The right panel of the \fig{pion_GdEp} shows a cut-off dependence of the predictions obtained
+    with the \gls{sms} NN chiral potential at \gls{n4lo+} supplemented by \gls{n2lo} 3NF.
+    In this case, the maximum point is interesting as well.
     We see that predictions with $\Lambda=\SI{500}{\mev}$ and $\SI{550}{\mev}$ are quite close to each other:
     the relative difference between them at $\text{E}_p = \SI{0.92}{\mev}$ is only \SI{1.5}{\percent}.
-    In turn the spread between $\Lambda=\SIlist{400;450;500}{\mev}$ is \SI{40}{\percent} (at the same point).
-    This cut-off dependance is hidden looking at the colormaps 
-    \fig{pion_map_E1E2_cutoff}, but from this prospective it is clearly presented.
+    In turn the spread between $\Lambda=\SIlist{400;450;500}{\mev}$ is \SI{40}{\percent} (at the same $E_p$).
+    This cut-off dependence is hidden when looking at the colormaps 
+    \fig{pion_map_E1E2_cutoff}, but from this perspective it is clearly presented.
+    Anyway, the highest $\Lambda$, the biggest $d\Gamma_{pnn} /d\text{E}_p$ is seen.
+    That observable could be an intensity test for the cut-off value, however, it requires measurement
+    at low proton energy ($\sim$\SIrange{0.8}{1.0}{MeV}) which is an experimental challenge.
 
     \begin{figure}[h]
         \begin{center}
@@ -1849,11 +1924,11 @@
         \end{center}
         \caption{Differential absorption rate $d\Gamma_{pnn} /d\text{E}_p$ 
         as a function of the proton energy E$_p$ for the 
-        $\pi^- + 3\text{He} \rightarrow p + n + n$ process.
-        Left panel shows results obtained with \gls{n2lo} (green dashed line),
+        $\pi^- + ^3\text{He} \rightarrow p + n + n$ process.
+        Left panel shows results obtained with the NN \gls{n2lo} (green dashed line),
         \gls{n3lo} (blue dotted line), \gls{n4lo} (red dashed-double-dotted line)
-        and \gls{n4lo+} (black solid line) chiral orders, and with $\Lambda = \SI{450}{\mev}$.
-        The right panel includes results obtained with the \gls{n4lo+} \gls{sms} potential
+        and \gls{n4lo+} (black solid line) chiral orders plus \gls{n2lo} 3NF, and with $\Lambda = \SI{450}{\mev}$.
+        The right panel includes results obtained with the \gls{n4lo+} \gls{sms} NN potential plus \gls{n2lo} 3NF
         with different values of the $\Lambda$: \SI{400}{\mev} (red dashed-double-dotted line),
         $\Lambda$: \SI{450}{\mev} (black solid line),
         $\Lambda$: \SI{500}{\mev} (green dashed line line) and
@@ -1862,13 +1937,15 @@
         \label{pion_GdEp}
     \end{figure}
 
-    Similarly in \fig{pion_dGdEn} $d\Gamma_{pnn} /d\text{E}_n$ is presented. We observe similar trends
-    which are also shown up at the extremum point which is around E$_n = \SI{66.9}{\mev}$ now.
-    The difference between \gls{n2lo} and \gls{n4lo+} predictions at this point is \SI{29.0}{\percent}.
-    The relative difference between all the predictions except for \gls{n2lo}
-    is \SI{7.5}{\percent}.
-    The cut-off predictions are also very similar for $\Lambda=\SIlist{500;550}{\mev}$ (the spread is \SI{1.6}{\percent})
-    while all the rest predictions are quit distinguished - the spread is \SI{39.1}{\percent}.
+    Similarly in \fig{pion_dGdEn} $d\Gamma_{pnn} /d\text{E}_n$ is presented. We observe similar trends as above
+    (they are also shown up at the maximum point, which is around E$_n = \SI{66.9}{\mev}$ now):
+    the difference between \gls{n2lo} and \gls{n4lo+} predictions at this point is \SI{29.0}{\percent};
+    the relative difference between all the predictions except for \gls{n2lo}
+    is much smaller, but still is approx. \SI{7.5}{\percent};
+    the \gls{n4lo+} predictions are also very similar for $\Lambda=\SIlist{500;550}{\mev}$ (the spread is \SI{1.6}{\percent})
+    while all remaining predictions are quite distinguished - the spread is \SI{39.1}{\percent}.
+    I find that observable very interesting in the context of experimental studies as a measurement of neutron at
+    $E\eqsim\SI{70}{\mev}$ is nowadays within our reach. 
 
 
     \begin{figure}[h]
@@ -1880,16 +1957,17 @@
         \label{pion_dGdEn}
     \end{figure}
 
-    Coming to the next figures \fig{pion_dGdEr} and \fig{pion_dGdphi} which show 1D dependance of the
-    absorption rate on the Dalitz coordinates $r = \sqrt{x^2 + y^2}$  and $\phi = \arctan \frac{y}{x}$.
-    The similar trend is preserved, namely chiral order figures show that \gls{n2lo} predictions
-    outstand from all other predictions, and noticeable cut-off dependance is observed.
+    Moving to the next figures, \fig{pion_dGdEr} and \fig{pion_dGdphi}, I show 1-dim dependence of the
+    absorption rate on the Dalitz coordinates $r = \sqrt{x^2 + y^2}$  and $\phi = \arctan \frac{y}{x}$, respectively.
+    A similar trend is preserved, namely chiral order figures show that \gls{n2lo} predictions
+    outstand from all other predictions, and noticeable cut-off dependence is observed.
 
-    In general we can conclude that predictions are converged starting from the \gls{n3lo} chiral order as
+    In general, we can conclude that predictions are converged starting from the \gls{n3lo} chiral order (for NN force) as
     most of the demonstrated results show that the difference between \gls{n3lo}, \gls{n4lo} and 
-    \gls{n4lo+} is negligible. At the same time we observe a cut-off dependance where 
-    predictions obtained with $\Lambda=\SIlist{500;550}{\mev}$ are very similar, but the spread with
-    all the rest values is there. This nature of the cut-off dependance is also reflected in the total absorption 
+    \gls{n4lo+} is negligible. At the same time, we observe a strong cut-off dependence with
+    predictions obtained with $\Lambda=\SIlist{500;550}{\mev}$ being very similar,
+    but with a large spread of all the rest results.
+    This nature of the cut-off dependence is also reflected in the total absorption 
     rate, presented in \fig{Gamma_pnn}. 
 
     \begin{figure}[h]
@@ -1914,24 +1992,24 @@
     \clearpage
     \subsection{Pion absorption in $^3$H}
 
-    In this subsection I will show results of calculations for
+    In this subsection, I will show the results of calculations for
     the $\pi^- + ^3\text{H} \rightarrow n + n + n$ process.
-    In this case we have only a three-body breakup as 
+    In this case, only a three-body breakup is allowed as 
     no two-body configuration can be composed out of three neutrons.
     
-    The total absorption rate $\pi^- + ^3\text{H} \rightarrow n + n + n$ is shown in \fig{Gamma_nnn}
-    as a function on the chiral order of the \gls{sms} potential while each curve represents
+    The total absorption rate $\Gamma_{nnn}$ for that process is shown in \fig{Gamma_nnn}
+    as a function of the chiral order of the \gls{sms} NN potential while each curve represents
     different cut-off values used to obtain the prediction. 
-    THe most advanced configuration was used in this case, namely Plane wave plus rescattering part,
-    both single- and two-nucleon currents and two-nucleon plus three-nucleon forces.
+    The most advanced dynamical model was used in this case, namely Plane wave plus rescattering part,
+    both single- and two-nucleon currents and two-nucleon plus three-nucleon interaction.
 
-    Similarly to the process with $^3$He, we see that with each subsequent chiral order
-    predictions become closer to each other, so cut-off dependence gets weaker.
+    Similarly to the three-body break-up of $^3$He, we see that with each subsequent chiral order
+    predictions become closer to each other, so the cut-off dependence gets weaker.
     Also, the prediction with $\Lambda=\SI{550}{\mev}$ at \gls{n3lo} is
     strangely above the prediction with $\Lambda=\SI{500}{\mev}$.
     We can also notice, that at \gls{n4lo}
     predictions with cut-off values \SI{500}{\mev} and \SI{550}{\mev}
-    are much closer to each other than to other values.
+    are much closer to each other than to results obtained with other $\Lambda$s.
 
     \begin{figure}[h]
         \begin{center}
@@ -1939,9 +2017,36 @@
         \end{center}
         \caption{Absorption rate for $\pi^- + ^3\text{H} \rightarrow n + n + n$ reaction as a function
         of the chiral order with different values of the cut-off parameter $\Lambda$.
-        Predictions were obtained with 3NF.}
+        Predictions were obtained with 3NF at \gls{n2lo}.}
         \label{Gamma_nnn}
     \end{figure}
+
+    In Figs.~\ref{pion_nnn_E1E2_cutoff} and \ref{pion_nnn_xy_cutoff} I show intensity plots for the double differential absorption rates
+    $d^2 \Gamma_{nnn}/dE_1dE_2$ for the $\pi^- + ^3\text{H} \rightarrow n + n + n$ process as functions of the nucleons energies
+    (\fig{pion_nnn_E1E2_cutoff}) and of the Dalitz coordinates (\fig{pion_nnn_xy_cutoff}), respectively.
+    Each panel in the figures presents predictions obtained with different values of the cut-off parameter $\Lambda$.
+    On the contrary to the $^3$He case, we see a symmetric distribution of the absorption rate with respect to the
+    center of the figure. It is because of the symmetry of the three-body system as we have three identical particles - neutrons.
+    The dominant contribution comes from QFS(nn) regions - where one of the neutrons is a spectator and has the lowest energy (close to 0)
+    and the rest two are sharing almost all the energy equally.
+    In \fig{pion_nnn_E1E2_cutoff} these regions are around $(E_1, E_2) = (0, 65), (65, 0)$ and $(65, 65)$ \SI{}{\mev}.
+    Same regions are presented in \fig{pion_nnn_xy_cutoff} at around $(x, y) = (0, -1), (-0.85, 0.5)$ and $(0.85, 0.5)$.
+    We see that predictions are not sensitive to the cut-off value.
+    The only difference that can be noticed is in the distribution of the region with the lowest values of 
+    the $\Gamma_{nnn}$ (the center of each figure). It is mostly probably caused by the fact that
+    the very small values introduce larger calculational uncertainties.
+
+
+    Figs.~\ref{pion_nnn_E1E2_order} and \ref{pion_nnn_xy_order} show similar intensity plots but each panel includes
+    predictions obtained with different chiral orders of the \gls{sms} NN potential. Each of the panels
+    shows very similar distributions of the absorption rate, except for the \gls{n2lo} one, where the central region (with lowest $\Gamma_{nnn}$ values) is less pronounced.
+
+    It is further confirmed by the \fig{pion_dGdEn_3H} (left panel) where differential absorption rate $d\Gamma_{nnn} /d\text{E}_n$ at \gls{n2lo} has much larger peaks (at around $E_n = \SI{0}{\mev}$ and $E_n = \SI{68}{\mev}$)
+    while all the rest predictions are relatively close to each other.
+    On the right panel of \fig{pion_dGdEn_3H} we see that only the prediction obtained with $\Lambda=\SI{400}{\mev}$ is different from the rest. It is interesting to notice, as such a difference could not be observed from the colormaps.
+
+    Very similar tendency is observed in Figs.~\ref{pion_dGdr_3H} and \ref{pion_dGdphi_3H}.
+    In these figures I show differential absorption rate with respect to the Dalitz radial coordinates $r$ and $\phi$, respectively. The same as in \fig{pion_dGdEn_3H} we see that \gls{n2lo} and $\Lambda = \SI{400}{\mev} $ predictions are different from the rest, while all the other predictions are very close to each other.
 
 
     \begin{figure}[h]
@@ -1950,9 +2055,9 @@
         \end{center}
         \caption{Intensity plots for the double differential absorption rates
         $d^2 \Gamma_{nnn}/dE_1dE_2$ for the $\pi^- + ^3\text{H} \rightarrow n + n + n$
-        process, obtained using the SMS potential at \gls{n4lo+}
-        with all contributions possible: plane wave + rescattering, 1NC + 2N, 2NF+3NF.
-        Each panel present predictions obtained with different values of the cut-off parameter $\Lambda$:
+        process obtained using the SMS NN potential at \gls{n4lo+} supplemented by \gls{n2lo} 3NF
+        with all ingredients possible: plane wave + rescattering, 1NC + 2N, 2NF+3NF.
+        Each panel presents predictions obtained with different values of the cut-off parameter $\Lambda$:
         from \SI{400}{\mev} (upper left) to \SI{550}{\mev} (lower right).}
         \label{pion_nnn_E1E2_cutoff}
     \end{figure}
@@ -1973,9 +2078,9 @@
         \end{center}
         \caption{Intensity plots for the double differential absorption rates
         $d^2 \Gamma_{nnn}/dE_1dE_2$ for the $\pi^- + ^3\text{H} \rightarrow n + n + n$
-        process, obtained using the SMS potential at \gls{n4lo+}
+        process obtained using the SMS potential at \gls{n4lo+}
         with all contributions possible: plane wave + rescattering, 1NC + 2N, 2NF+3NF.
-        Each panel present predictions obtained with different chiral orders of the \gls{sms} potential:
+        Each panel presents predictions obtained with different chiral orders of the \gls{sms} potential:
         from \gls{n2lo} (upper left) to \gls{n4lo+} (lower right) and with $\Lambda = \SI{450}{\mev}$.}
         \label{pion_nnn_E1E2_order}
     \end{figure}
@@ -1998,10 +2103,12 @@
         \caption{Differential absorption rate $d\Gamma_{nnn} /d\text{E}_n$ 
         as a function of the neutron energy E$_n$ for the 
         $\pi^- + 3\text{H} \rightarrow n + n + n$ process.
-        Left panel shows results obtained with \gls{n2lo} (green dashed line),
+        Left panel shows results obtained with \ NN force at gls{n2lo} (green dashed line),
         \gls{n3lo} (blue dotted line), \gls{n4lo} (red dashed-double-dotted line)
         and \gls{n4lo+} (black solid line) chiral orders, and with $\Lambda = \SI{450}{\mev}$.
-        The right panel includes results obtained with the \gls{n4lo+} \gls{sms} potential
+        The \gls{n2lo} 3NF was used.
+        The right panel includes results obtained with the \gls{n4lo+} NN \gls{sms} potential
+        supplemented by the \gls{n2lo} 3NF
         with different values of the $\Lambda$: \SI{400}{\mev} (red dashed-double-dotted line),
         $\Lambda$: \SI{450}{\mev} (black solid line),
         $\Lambda$: \SI{500}{\mev} (green dashed line line) and
