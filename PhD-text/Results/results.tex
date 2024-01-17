@@ -1,17 +1,5 @@
 \chapter{Results}\label{chap:results}
 
-    % In this chapter I will show results of my calculations. I start from the deuteron photodisintegraion process
-    % (Section~\ref{sec:de_results}),
-    % presenting predictions for the cross section (subsection~\ref{sec:cross_results}) 
-    % and polarization observables  (subsection~\ref{sec:polarization_results}).
-    % Next, in 
-    % Section~\ref{sec:hel_results} I will present my predictions of the observables
-    % in $^3$He photodisintegration.
-    % In the following Section~\ref{sec:triton_results} the results of calculations for 
-    % Triton photodisintegration observables will be lightened. 
-    % Finally in Section~\ref{sec:pion_results} I will discuss results of the calculations
-    % for the pion absorption from the lowest atomic orbital of $^2$H, $^3$H and $^3$He.
-
     In this chapter, I will present the results of my calculations. I will begin with the deuteron photodisintegration process in Section~\ref{sec:de_results}, where I will provide predictions for the cross section (Subsection~\ref{sec:cross_results}) and polarization observables (Subsection~\ref{sec:polarization_results}).
     Next, in Section~\ref{sec:hel_results}, I will present my predictions for 
     the observables in $^3$He photodisintegration.
@@ -28,7 +16,7 @@
     In this section I will show the results of my calculation starting from the
     deuteron photodisintegration process. One of the most
     studying observable is obviously the cross section. There is
-    a number of papers which present 
+    several papers which present 
     measurement results for both differential and total cross section
     \cite{BOSMAN1979,ARENDS1984,Skopik1974, Moreh1989, Birenbaum1985, Bernabei1986, rachek2007,Ying_Experiment_Deut, DeSanctis_Experiment_Deut} 
     and it is interesting to compare 
@@ -43,8 +31,8 @@
     (below \SI{50}{\mev})
     both 1NC predictions and results which include 2N contributions
     to the electromagnetic current
-    via the Siegert approach, describe experimental results quite well quantitavely.
-    We observe that predicions based on the \gls{snc} describe the data 
+    via the Siegert approach, describe experimental results quite well quantitatively.
+    We observe that predictions based on the \gls{snc} describe the data 
     only up to approx. \SI{10}{\mev}.
     Beyond that energy
     % We can suppose that the difference with experimental data may come from 
@@ -64,7 +52,7 @@
     % Even with energy increasing from 5~MeV to \SI{20}{\mev} -
     % the difference between predictions has changed from 10.8\% to 39.2\% and
     
-    Here and later the relative difference between set of predictions ($x_1$, $x_2$, ..., $x_N$) is calculated
+    Here and later the relative difference between a set of predictions ($x_1$, $x_2$, ..., $x_N$) is calculated
     using the formula:
 
     \begin{equation}
@@ -72,19 +60,19 @@
         \label{eq:relative_diff}
     \end{equation}
     so in the specific case of comparison the date with \gls{snc} current and "\gls{snc} + Siegert" we
-    calculate relative difference as 
+    calculate the relative difference as 
     $\Delta = \frac{|\sigma^{\gls{snc}+Siegert} - \sigma^{1N}|}{0.5(\sigma^{\gls{snc}+Siegert} + \sigma^{1N})}$.
     
     From \fig{TOTAL_CROSS_small} we see that the gap between these predictions
     continues increasing even more with larger energies.
     This tells us that the Siegert approach works quite well as no additional 2N contributions are taken into account.
-    The cross section predictions corrected via Siegert 2N contribution  reproduce 
-    experimental data to some extend.
+    The cross section predictions corrected via Siegert 2N contribution reproduce 
+    experimental data to some extent.
     
-    \fig{TOTAL_CROSS_small} reveals the approximated charachter of the Siegert approach.
-    It is clear that one has to take with causion Siegert predictions at very small energies.
+    \fig{TOTAL_CROSS_small} reveals the approximated character of the Siegert approach.
+    It is clear that one has to take with caution Siegert predictions at very small energies.
     Also above \SI{20}{\mev} there is a gap between Siegert results and experimental data,
-    which points that more elaborated 2N current should be included in future.
+    which points that more elaborated 2N current should be included in the future.
     The observed discrepancy cannot be explained by the cut-off dependence
     (see e.g. \fig{Diff_cross_cutoff} below) or by the low order of chiral potential (see discussion below).
 
@@ -95,10 +83,10 @@
     present theory works at higher energies.
     Above $\text{E}_\gamma=\SI{50}{\mev}$
     we can notice that the discrepancy with experimental data is not only 
-    quantitative, but also qualitative see \fig{TOTAL_CROSS}.  
+    quantitative but also qualitative see \fig{TOTAL_CROSS}.  
     This starts already above $\text{E}_\gamma=\SI{50}{\mev}$ and is especially pronounced at peak around \SI{300}{\mev}
     seen in the experimental data from \cite{Bernabei1986} which is not
-    reflected in my predictions. The reason of such discrepancy 
+    reflected in my predictions. The reason for such discrepancy 
     is most likely coming from the relativistic effects
     which we do not take into account within this work.
     It is also confirmed by the calculations in \cite{ArenhovelPhotodisint1991},
@@ -106,18 +94,13 @@
     Despite using much simpler models of the nuclear force than those used in this thesis,
     their predictions, which include some relativistic effects, show that such a peak appears in their predictions. 
     
-    
-    %  The higher energies region is presented in order
-    % to investigate how far the predictions are from experimental results and 
-    % what should be improved in the future (e.g. include relativistic part). 
-    
     \begin{figure}[h]
         \begin{center}
         \includegraphics[width=0.75\textwidth]{Figures_De/TOTAL_CROSSSECTION_SMALL_REGION.pdf}
         \end{center}
         \caption{Total cross section $\sigma_{tot}$ for the deuteron photodisintegration process
         as a function of the photon energy E$_\gamma$.
-        Solid blue line presents results obtained with \gls{snc}+Siegert 
+        The solid blue line presents results obtained with \gls{snc}+Siegert 
         and dashed pink line - predictions based on the \gls{snc}.
         In both cases the \gls{sms} \gls{n4lo+} $\Lambda=\SI{450}{\mev}$ force is used.
         The experimental data are from \cite{Bernabei1986} (black filled circles),
@@ -147,48 +130,40 @@
         \begin{center}
             \includegraphics[width=0.95\textwidth]{Figures_De/TOTAL_CROSSSECTION_Truncation.pdf}
         \end{center}
-        \caption{Total cross section of the deuteron photonisintegration
+        \caption{Total cross section of the deuteron photodisintegration
         process as a dependence on the chiral order for three photon energy E$_\gamma$ values: \SIlist[list-units = single]{30;100;140}{\mev}.
         Error bands show an estimated truncation error at each order.}
         \label{Trunc_100}
     \end{figure}
     
-    In Fig. \ref{Trunc_100} I present the
-    total cross-section for the deuteron photodisintegration 
+    In Fig. \ref{Trunc_100} I present the total cross-section for the deuteron photodisintegration 
     at three photon energy values: \SIlist[list-units = single]{30;100;140}{\mev} as a function of the chiral order.
     Error bars show truncation errors calculated using Eq.~\ref{trunc2}~-~\ref{trunc5}.
     One can see that the truncation errors are being reduced with each consecutive chiral order. 
     At \gls{lo} uncertainty is the biggest: \SI{29.46}{\percent} at $\text{E}_\gamma = \SI{30}{\mev}$,
     \SI{29.46}{\percent} at $\text{E}_\gamma = \SI{100}{\mev}$ and
     \SI{41.82}{\percent} at $\text{E}_\gamma = \SI{140}{\mev}$.
-    At \gls{n4lo+} it is hardly visible at presented scale and amounts up to 
+    At \gls{n4lo+} it is hardly visible at the presented scale and amounts up to 
     \SI{1.3}{\percent} for each energy(however decreasing with the chiral order).
-    For each energy the prediction is within the uncertainty range at lower orders.
+    For each energy, the prediction is within the uncertainty range at lower orders.
     We see that at lower energy $\sigma_{tot}$ already at NLO reaches valve which remains
     practically unchanged at higher orders.
-    Contrary, at two higher energies, contributions from higher orders are necessary to obtain 
+    Contrarily, at two higher energies, contributions from higher orders are necessary to obtain 
     stable predictions up to approx. \gls{n3lo}.
 
         
     Figures \ref{Diff_cross_order_pw} and \ref{Diff_cross_err} show my predictions 
     for the differential cross section
     $\frac{d\sigma}{d\Omega}$.
-    In both figures the top, middle and bottom row shows predictions at 
+    In both figures, the top, middle, and bottom row shows predictions at 
     $\text{E}_\gamma = \SIlist[list-units = single]{30;100;140}{\mev}$, respectively.
     For all predictions, the contributions of the 2N current are taken into account via the Siegert theorem,
     and unless stated otherwise, I utilize the \gls{sms} \gls{n4lo+} potential.
-    % They all are organized in a similar way: the left panel
-    % presents predictions obtained using \gls*{sms} potential at different chiral orders (from LO to \gls{n4lo+})
-    % with cut-off parameter $L = \SI{450}{\mev}$,
-    % the middle panel includes the truncation error's bands (described in Sec. \ref{sec:deu\text{T}_bound})
-    % for each chiral order starting
-    % from NLO. And the right panel shows predictions obtained with different values of the
-    % cut-off parameter at the chiral order \gls{n4lo+}.
     The left column of \fig{Diff_cross_order_pw} shows the predictions obtained at 
     different chiral orders (from LO to \gls{n4lo+}) and with $\Lambda=\SI{450}{\mev}$.
     Looking at the best predictions (\gls{n4lo+}, $\Lambda=$~\SI{450}{\mev}) for each
     energy, I
-    conclude that the higher photon energy is, the larger 
+    conclude that the higher the photon energy, the larger 
     difference between the theoretical predictions and experimental 
     data is. At $\text{E}_\gamma = \SI{30}{\mev}$ (top panel) my predictions
     almost perfectly match the data and the difference is almost always
@@ -205,34 +180,34 @@
     angular dependence is presented, but the predictions are 
     far from the experimental points.
     The relative difference between experimental data and predictions obtained with $N^4LO+$ and $\Lambda=$~\SI{450}{\mev} at \SI{30}{\mev} is less then \SI{13}{\percent}
-    and absulute difference is < \SI{3.07}{\micro \barn \per \steradian}.
-    At \SI{100}{\mev} descripancy is larger and relative difference reaches 46\% with absolute difference up to \SI{1.39}{\micro \barn \per \steradian}.
+    and absolute difference is < \SI{3.07}{\micro \barn \per \steradian}.
+    At \SI{100}{\mev} discrepancy is larger and the relative difference reaches 46\% with absolute difference up to \SI{1.39}{\micro \barn \per \steradian}.
     Coming to \SI{140}{\mev} the relative difference 
     increases up to \SI{48.6}{\percent} and absolute - \SI{1.93}{\micro \barn \per \steradian}.
     What may be helpful
     for a better data description is a 2N current 
-    and relativistic correction, mentioned earlier.
+    and relativistic correction mentioned earlier.
     We observe improvements introduced by each subsequent chiral order, but 
     stabilization shows that some ingredients beyond 2N potential are missing.
 
-    Obtained results at each energy confirm the convergence 
-    of the predictions with respect to the chiral order.
+    The obtained results at each energy confirm the convergence 
+    of the predictions concerning the chiral order.
     We see that the cross section at LO is far from both experimental 
     data and the most advanced \gls{n4lo+} predictions, and
-    the higher photon energy, the larger this
+    the higher the photon energy, the larger this
     difference is. With each subsequent chiral order, the 
     curves are more closer to each other and the difference
-    between \gls{n4lo} and \gls{n4lo+} is hardly visible at scale used in \fig{Trunc_100}.
+    between \gls{n4lo} and \gls{n4lo+} is hardly visible at the scale used in \fig{Trunc_100}.
     The relative difference between these two predictions at $\text{E}_\gamma=\SI{30}{\mev}$ around the point of maximum 
     ($\theta_p = \ang{80}$) is \SI{0.05}{\percent} which is \SI{0.02}{\micro \barn \per \steradian};
     at \SI{100}{\mev} and $\theta_p = \ang{107}$ it is \SI{0.79}{\percent} (\SI{0.025}{\micro \barn \per \steradian});
     and at \SI{140}{\mev} (same angle) it is \SI{1.8}{\percent} (\SI{0.043}{\micro \barn \per \steradian}).
-    Having such a small differences between predictions from two highest chiral orders,
+    Having such small differences between predictions from the two highest chiral orders,
     I can conclude that predictions are converged and 
     using NN potential beyond \gls{n4lo+} chiral orders would rather not bring significant contribution 
     to the cross section values. 
     The difference with experimental data is systematic 
-    and is not related with the chiral order. 
+    and is not related to the chiral order. 
     
 
     Predictions obtained with the \gls{av18} potential 
@@ -240,7 +215,7 @@
     are very similar to these from the \gls{n4lo+} \gls{sms} force at lower energies
     (relative difference at $\text{E}_\gamma=\SI{30}{\mev}$ is \SI{0.06}{\percent}
     at the point of maximum $\theta_p = \ang{80}$) and with increasing energy to \SI{140}{\mev}
-    it growes up to \SI{3.1}{\percent} at the same scattering angle. 
+    it grows up to \SI{3.1}{\percent} at the same scattering angle. 
     It can be connected with our potential's quality loss, but \gls{av18} can
     be struggling with high energies as well.
     That once again shows that other 
@@ -255,13 +230,13 @@
     With $\text{E}_\gamma=\SI{30}{\mev}$ the relative difference is \SI{10}{\percent} (\SI{4.03}{\micro \barn \per \steradian})
     at $\theta_p = \ang{80}$. Difference at \SI{100}{\mev} and the same angle is \SI{4}{\percent} (\SI{0.21}{\micro \barn \per \steradian})
     and at \SI{140}{\mev} it is \SI{7}{\percent} (\SI{0.21}{\micro \barn \per \steradian}).
-    In contrast, predictions without two-body current component (1NC) have much larger gap with full prediction:
+    In contrast, predictions without a two-body current component (1NC) have a much larger gap with a full prediction:
     the difference is \SI{46.5}{\percent} (\SI{13.67}{\micro \barn \per \steradian}) at \SI{30}{\mev},
     \SI{78.6}{\percent} (\SI{2.88}{\micro \barn \per \steradian}) at \SI{100}{\mev} and
     \SI{77.8}{\percent} (\SI{1.68}{\micro \barn \per \steradian}) at \SI{140}{\mev}
     at the same $\theta_p=\ang{80}$.
-    Obviously 2NC contributions are extremely important in this case, the difference connected with them
-    is much bigger then theoretical uncertainties or even rescattering contribution.
+    Obviously, 2NC contributions are extremely important in this case, the difference connected with them
+    is much bigger than theoretical uncertainties or even rescattering contribution.
     For other scattering angles, especially $\theta_p=\ang{0}$ or $\theta_p=\ang{180}$,
     the role of two-body current or FSI is relatively even more pronounced.
 
@@ -270,7 +245,7 @@
     presents theoretical truncation uncertainties.
     That confirms our expectations
     that for the regarded photo reaction chiral order
-    \gls{n4lo+} is able to produce converged predictions: 
+    \gls{n4lo+} can produce converged predictions: 
     the black band (representing truncation error at \gls{n4lo+}) is hardly visible
     for the $\text{E}_\gamma=$~\SI{30}{\mev}
     (the relative error for \gls{n4lo+} at \ang{80} is only \SI{0.12}{\percent})
@@ -279,12 +254,11 @@
     At the lower chiral orders, this band is obviously much wider:
     at \gls{n2lo} it is \SI{1.25}{\percent} at $\text{E}_\gamma=$~\SI{30}{\mev}
     and \SI{15.0}{\percent} at $\text{E}_\gamma=$~\SI{140}{\mev}.
-    I note, that the magnitude of the truncation error
-    only very tiny depends on the scattering angle.
+    I note, that the magnitude of the truncation error is only very tiny depending on the scattering angle.
     
     Last but not least, in the right column of \fig{Diff_cross_err}
     I show the cut-off dependence of the differential cross section.
-    In the ideal case that dependence is so weak that
+    In the ideal case, that dependence is so weak that
     the choice of the parameter $\Lambda$ would not introduce significant 
     changes. In practice the choice of this parameter is 
     important as it makes a noticeable variation in prediction at higher energies.
@@ -292,19 +266,19 @@
     that, in fact, all the lines (for different $\Lambda$ values)
     overlap each other and we cannot distinguish them with the naked eye:
     the relative difference at the maximum of the cross section is \SI{0.08}{\percent}.
-    This is approximately $\frac{2}{3}$ smaller than truncation error discussed above.
+    This is approximately $\frac{2}{3}$ smaller than the truncation error discussed above.
     However, with increasing photon energy up to \SIlist{100; 140}{\mev} 
     (middle and bottom rows of the right column of \fig{Diff_cross_err}) the spread becomes bigger:
     the  uncertainty related to the 
     $\Lambda$-dependence is  \SI{3.35}{\percent} at \SI{100}{\mev}
     and \SI{5.66}{\percent} at \SI{140}{\mev} (the same $\theta_p$).
-    Thus at two higher energies the cut-off dependence becomes more important
+    Thus at two higher energies, the cut-off dependence becomes more important
     than truncation errors.
     That shows, that proper choice of the $\Lambda$ is important.
     However, if I restrict myself to $\Lambda=\SIlist{450;500}{\mev}$,
     the dependence drops to \SI{1.98}{\percent} at $\text{E}_\gamma=\SI{140}{\mev}$.
-    Such a restriction is advocated by better description of the scattering data
-    delivered by the SMS potential for that two values of $\Lambda$.
+    Such a restriction is advocated by a better description of the scattering data
+    delivered by the SMS potential for those two values of $\Lambda$.
 
     In the \fig{Cutoff_dep} we have already seen that the total
     cross section for the same energies has the cut-off spread
@@ -332,9 +306,9 @@
         for the photon energy \SI{30}{\mev} (top), \SI{100}{\mev} (middle) and \SI{140}{\mev} (bottom).
         {\bf (a)} Results obtained using the \gls{sms} potential
         at different chiral orders (from LO to \gls{n4lo+}) with the cut-off parameter $\Lambda=\SI{450}{\mev}$ and 
-        2NC contributions taking via the Siegert theorem.
+        2NC contributions taken via the Siegert theorem.
         For the sake of comparison, predictions obtained with the \gls*{av18} potential are shown
-        by dashed-dotted purple line.
+        by a dashed-dotted purple line.
         Data points (filled and empty circles) are from \cite{Ying_Experiment_Deut}
         for $\text{E}_\gamma=\SIlist[list-units = single]{30; 100}{\mev}$
         and from \cite{DeSanctis_Experiment_Deut} for $\text{E}_\gamma=\SI{140}{\mev}$.
@@ -347,16 +321,6 @@
         the single-nucleon current only (without applying the Siegert theorem) and the green dashed-dotted
         curve represents predictions with the full current (\gls{snc} + Siegert) but plane-wave part only.
         }
-        % Results in {\bf (a)} are obtained using \gls*{sms} potential
-        % at different chiral orders (from LO to \gls{n4lo+}) with the cut-off parameter $\Lambda=\SI{450}{\mev}$ and 
-        % 2NC contributions taking via Siegert theorem.
-        % Data points (filled and empty circles) are from \cite{Ying_Experiment_Deut}
-        % for (\SIlist[list-units = single]{30; 100}{\mev})
-        % and \cite{DeSanctis_Experiment_Deut} (for energy \SI{140}{\mev}).
-        % Predictions obtained with chiral \gls{n4lo+} potential and $\Lambda=\SI{450}{\mev}$ are on {\bf (b)}.
-        % Blue solid line is a best predictions we have (plane-wave plus rescattering parts, 1NC + Siegert), pink dashed line shows predictions obtained with
-        % single-nucleon current only (without Siegert contributions) and green dashed-dotted line
-        % is a prediction with plane-wave part only - without rescattering.}
         \label{Diff_cross_order_pw}
     \end{figure}
 
@@ -374,16 +338,16 @@
             \includegraphics[width=\textwidth]{Figures_De/CROSS2_cutoff_vert.pdf}
             \label{Diff_cross_cutoff}
         \end{subfigure}
-        \caption{Theoretical uncertainies 
+        \caption{Theoretical uncertainties 
         for the differential cross section $\frac{d^2\sigma}{d\Omega}$
-        as a function of the outgoing proton's momentum polar angle $\theta_p$ in the center of mass frame 
+        as a function of the outgoing proton's momentum polar angle $\theta_p$ in the center of the mass frame 
         for the photon energy is \SI{30}{\mev} (top row), \SI{100}{\mev} (middle row) and \SI{140}{\mev} (bottom row).
         {\bf(a)} The truncation error bands obtained using the \gls{sms} potential
         at different chiral orders (from NLO to \gls{n4lo+}) 
         with the cut-off parameter $\Lambda=\SI{450}{\mev}$ and 2NC contributions taking via the Siegert approach.
         {\bf (b)} Results obtained using different values of the cut-off parameter $\Lambda$.
         The double-dotted-dashed red curve, the solid black line, the dashed green line
-        and the dotted blue line represent predictions obtained 
+        and the dotted blue line represents predictions obtained 
         with $\Lambda=\SIlist[list-units = single]{400;450;500;550}{\mev}$ respectively
         and the chiral potential \gls{n4lo+}. 
         Data points are the same as in \fig{Diff_cross_order}}
@@ -395,7 +359,7 @@
     \subsection{Polarization observables}
     \label{sec:polarization_results}
 
-    In this subsection I will present my predictions for the 
+    In this subsection, I will present my predictions for the 
     selected polarization observables in the deuteron photodisintegration process
     at two photon energies: $\text{E}_\gamma = \SI{30}{\mev}$ and
     $\text{E}_\gamma = \SI{100}{\mev}$.
@@ -403,18 +367,18 @@
     are thinkable for the $\gamma + \text{d}$ scattering.
     Polarization of the target deuteron leads to the deuteron
     analyzing power.
-    Similarly using the polarized photons result in the photon asymmetry measurements.
+    Similarly using the polarized photons results in the photon asymmetry measurements.
     Using both polarized photon and deuteron allows for spin
     correlation measurement.
-    Finely, detecting spin polarization of at least one nucleon in the final state would deliver
+    Finally, detecting the spin polarization of at least one nucleon in the final state would deliver
     final polarization or spin transfer coefficients. 
     However, such experiments are very challenging and, up to my best knowledge,
     have not been done yet at regarded here photon energies.
-    Thus, in the following I will restrict myself to results for polarization
+    Thus, in the following, I will restrict myself to results for polarization
     observables arising from the polarization of the initial particles.
 
     I start with deuteron vector $i\text{T}_{11}$ and tensor $\text{T}_{20}$, $\text{T}_{21}$ and $\text{T}_{22}$
-    analyzing power, which arise from various spin state of the deuteron.
+    analyzing power, which arises from various spin states of the deuteron.
     
     Deuteron tensor analyzing powers can be calculated via cross section as it is defined in \cite{rachek2007}:
     
@@ -431,19 +395,19 @@
     between polarization axis and photon momentum,
     and $\phi_H$ - is the angle between the polarization plane 
     (containing the polarization axis and momentum of the photon),
-    and the reaction plane (containing momenta of the proton
+    and the reaction plane (containing the momenta of the proton
     and neutron).
 
     In the Figures \ref{T20_T21_30} (a, b) and \ref{T22_T11_30}(a,b)
     I show my predictions at $\text{E}_\gamma = \SI{30}{\mev}$, for the
     $\text{T}_{20}$, $\text{T}_{21}$, $\text{T}_{22}$  and $i\text{T}_{11}$ respectively as functions 
     of the outgoing proton momentum polar angle $\theta_p$ in the \gls{cm} frame. Each of them
-    is organized in the similar way: the top
+    is organized in a similar way: the top
     panel shows a dependence of the predictions on the 
     chiral order of the potential. The middle subfigure is
     showing a correspondent truncation error for each of the 
     predictions from a top row (except LO, because its uncertainty is
-    too large and will spoil clarity of the figure). The last (bottom)
+    too large and will spoil the clarity of the figure). The last (bottom)
     panel shows the cut-off dependence at the chiral
     order \gls{n4lo+}. 
     All results have been obtained using \gls{snc}+Siegert model of nuclear current.
@@ -479,7 +443,7 @@
     for 
     $\text{T}_{22}$ and $i\text{T}_{11}$ analyzing powers (\fig{T22_T11_100} vs \fig{T22_T11_30}),
     where one can see 
-    slightly stronger discrepancy at the maxima and minima points.
+    the slightly stronger discrepancy at the maxima and minima points.
     
     The choice of $\Lambda$ does not affect predictions substantially
     even at that higher energy:
@@ -491,12 +455,12 @@
     and \SI{4.91}{\percent} at $\theta_p = \ang{75}$ for $i\text{T}_{11}$.
     We see again that $i\text{T}_{11}$ has much larger spread in the maximum and
     is more sensitive to the cut-off choice.
-    However, summarising my findings 
+    However, summarizing my findings 
     for the deuteron tensor analyzing powers,
     I conclude that cut-off dependence is generally weak
     also at $\text{E}_\gamma = \SI{100}{\mev}$.
 
-    Turning our attraction to the chiral order convergence, we
+    Turning our attention to the chiral order convergence, we
     observe that predictions are mostly converged starting either from \gls{n2lo} or \gls{n3lo}.
     The relative width of \gls{n4lo+} truncation band 
     for T$_{20}$, T$_{21}$ and T$_{22}$
@@ -504,9 +468,9 @@
     Another case is $i\text{T}_{11}$, for which this width is much larger: \SI{6.8}{\percent} at $\theta_p = \ang{20}$.
     The truncation uncertainty for all analyzing powers is much lower than one,
     related to the choice of the cut-off parameter.
-    Although, $i\text{T}_{11}$ seems to be more sensitive both
+    However, $i\text{T}_{11}$ seems to be more sensitive both
     to the choice of the cut-off parameter and to the chiral order than other regarded observables.
-    Even for $i\text{T}_{11}$, cut-off spread is almost twice larger than truncation error.
+    Even for $i\text{T}_{11}$, the cut-off spread is almost twice larger than the truncation error.
     Standing out of other tensor components, $i\text{T}_{11}$ can be useful for the investigation of 
     the cut-off dependence of the model.
     Of course, we can repeat once more that 
@@ -520,7 +484,7 @@
     show a very good agreement: the relative difference at $\text{E}_\gamma=\SI{30}{\mev}$
     is below \SI{6}{\percent} for the regarded tensor analyzing powers at specified angles.
     Picture at  $\text{E}_\gamma=\SI{100}{\mev}$ is even better: the difference does not exceed 
-    \SI{4}{\percent} for all observables and whole range of scattering angles.
+    \SI{4}{\percent} for all observables and a whole range of scattering angles.
 
 
     \begin{figure}[htb]
@@ -539,7 +503,7 @@
         and T$_{21}$ {\bf (b)}
         as a function of the outgoing proton angle $\theta_p$ in the \glsxtrlong{cm} frame 
         for the photon energy $\text{E}_\gamma = \SI{30}{\mev}$.
-        Top row presents results obtained using the \gls{sms} potential
+        The top row presents results obtained using the \gls{sms} potential
         at different chiral orders (from LO to \gls{n4lo+}) with the cut-off parameter $\Lambda=\SI{450}{\mev}$.
         The middle row shows truncation errors for each 
         chiral order starting from NLO and
@@ -583,7 +547,7 @@
         and T$_{21}$ {\bf (b)}
         as a function of the outgoing proton angle $\theta_p$ in the center of mass frame 
         for the photon energy E$_\gamma=\SI{100}{\mev}$.
-        Top row presents results obtained using the \gls{sms} potential
+        The top row presents results obtained using the \gls{sms} potential
         at different chiral orders (from \gls{lo} to \gls{n4lo+}) with the cut-off parameter $\Lambda=\SI{450}{\mev}$.
         The middle row shows truncation errors for each 
         chiral order starting from \gls{nlo} and the
@@ -618,12 +582,12 @@
     I show predictions obtained with 1NC only and 
     the Siegert predictions but with plane-wave contribution without rescattering part.
     In the case of deuteron's tensor analyzing power components, the contribution of rescattering part is  
-    imortant for T$_{20}$, T$_{21}$ and T$_{22}$ (the relative difference is up to \SI{20}{\percent} 
+    important for T$_{20}$, T$_{21}$ and T$_{22}$ (the relative difference is up to \SI{20}{\percent} 
     in extremes).
     and crucial for
     $i\text{T}_{11}$ where the PW part equals to zero.
     The 2NC component taken into account via Siegert theorem has a dominant contribution here. We see that 
-    1NC predictions are absolutely away from the "Full" predictions and in case of $i\text{T}_{11}$
+    1NC predictions are absolutely away from the "Full" predictions and in the case of $i\text{T}_{11}$
     does not even reflect complete prediction qualitatively.
 
     \begin{figure}[h]
@@ -635,27 +599,27 @@
         outgoing proton angle $\theta_p$ in the \gls{cm} frame at $\text{E}_\gamma = \SI{30}{\mev}$.
         Similarly to \fig{Diff_cross_pw_1nc} predictions obtained with chiral \gls{n4lo+} potential
         and $\Lambda=\SI{450}{\mev}$ are presented for three theoretical models.
-        Blue solid line is the most complete prediction we have (plane-wave plus rescattering parts, 1NC + Siegert), pink dashed line shows predictions obtained with
-        single-nucleon current only (1NC) - without the Siegert contributions and green dashed-dotted line
+        The blue solid line is the most complete prediction we have (plane-wave plus rescattering parts, 1NC + Siegert), the pink dashed line shows predictions obtained with
+        single-nucleon current only (1NC) - without the Siegert contributions and the green dashed-dotted line
         is a prediction in which we neglect the rescattering part
         and stick to the plane-wave part only but keeping the Siegert contributions.}
         \label{tensor_pw_1nc}
     \end{figure}
 
     \fig{tensor_pw_1nc_100mev} presents similar results but for E$_\gamma = \SI{100}{\mev}$
-    and it is intersting that the difference between Full and 1NC prediction becomes smaller
-    and it is especially visible for $\text{T}_{22}$. At this energy the relative difference 
+    and it is interesting that the difference between Full and 1NC prediction becomes smaller
+    and it is especially visible for $\text{T}_{22}$. At this energy, the relative difference 
     between "Full" and 1NC predictions
-    at $\theta_p = \ang{90}$ is \SI{43.6}{\percent} comparing to \SI{122.8}{\percent}
+    at $\theta_p = \ang{90}$ is \SI{43.6}{\percent} compared to \SI{122.8}{\percent}
     at E$_\gamma = \SI{30}{\mev}$. Similarly, the difference for T$_{20}$
     at E$_\gamma = \SI{30}{\mev}$($\theta_p = \ang{90}$) is \SI{91.4}{\percent}
     and at E$_\gamma = \SI{100}{\mev}$ it drops to \SI{28.8}{\percent}.
     This may also be affected by the fact that values at $\theta_p = \ang{90}$ 
-    are quit small for the Full prediction, nevertheless the difference still becomes smaller at the
+    are quite small for the Full prediction, nevertheless, the difference still becomes smaller at the
     E$_\gamma = \SI{100}{\mev}$.
-    This trend is noticeable looking also on results presented below.
-    Nevertheless, in both cases 2NC (via the Siegert) bring sufficient contributions
-    and cannot be omitted for the full picture.
+    This trend is noticeable by looking also on the results presented below.
+    Nevertheless, in both cases 2NC (via the Siegert) brings sufficient contributions
+    and cannot be omitted for obtaining the full picture.
 
     \begin{figure}[h]
         \begin{center}
@@ -667,28 +631,28 @@
 
     
     In the following figures, I will compare my predictions with experimental data.
-    In some cases I will keep a similar way as it was done
+    In some cases, I will keep a similar way as it was done
     in \cite{rachek2007} where due to experimental conditions results are given not at single photon energy,
     but for a specific ranges of $\text{E}_\gamma$.
     In the Figures \ref{tensor_angular_25-45} - \ref{tensor_angular_230-330}
     I show an angular dependence of the $\text{T}_{2i}$ ($i=0,1,2$) for a specific energy bands:
     \SIrange[range-phrase=--]{25}{45}{\mev}, \SIrange[range-phrase=--]{45}{70}{\mev},
     \SIrange[range-phrase=--]{70}{100}{\mev}, and \SIrange[range-phrase=--]{230}{330}{\mev}.
-    Solid blue line shows an average value of the observable in the specified energy intervals:
+    The solid blue line shows an average value of the observable in the specified energy intervals:
     obtained at \gls{n4lo+} with $\Lambda=\SI{450}{\mev}$, while the pink dashed line is a prediction
-    obtained with a same setup but without using a contributions from Siegert approach
-    (single nucleon current only). Bands for each of prediction specify the spread of
+    obtained with the same setup but without using contributions from Siegert approach
+    (single nucleon current only). Bands for each prediction specify the spread of
     predictions due to the energy band.
     
     % \tmp{stick to either SN or 1NC(this one probably) ??}
 
     One clearly sees that the data description is better for the predictions with Siegert contributions included
-    and the \gls{snc} alone is not able to describe experiment properly.
+    and the \gls{snc} alone is not able to describe the experiment properly.
     Our Full model nicely describes data up to $\text{E}_\gamma = \SI{70}{\mev}$.
     With increasing energy (above \SI{100}{\mev}),
     the difference between predicted values and experimental data becomes larger
     (especially for $\text{T}_{22}$), 
-    which shows a neccesity of improving theoretical model befor applying it to 
+    which shows a necessity of improving the theoretical model before applying it to 
     higher energies. Nevertheless, even with approximations used,
     the data description remains reasonable. 
     We observe that quite often and in particular in \fig{tensor_angular_180-230} and \fig{tensor_angular_230-330}
@@ -696,9 +660,8 @@
     the group of data point lying closer to $\theta_p = \ang{30}$ are farther 
     from the theoretical prediction than second group.
     In \fig{tensor_angular_230-330} the description of data points for T$_{20}$ seem to be better
-    with the \gls{snc} (dashed line), but in this case it is only accidental match as we do not observe similar 
-    trend for any other angular range or for different observable. 
-    In addition, experimental uncertainties are larger at small angles and in all cases 
+    with the \gls{snc} (dashed line), but in this case, it is only an accidental match as we do not observe similar rend for any other angular range or for different observables.
+    In addition, experimental uncertainties are larger at small angles, and in all cases 
     our description is inside 3$\sigma$ uncertainty.
     
 
@@ -711,18 +674,13 @@
         \end{center}
         \caption{Tensor analyzing powers T$_{20}$, T$_{21}$ and T$_{22}$ as a function of the
         outgoing proton angle $\theta_p$ in the \gls{cm} frame.
-        The solid blue line is a mean value of my predictions obtained 
+        The solid blue line is the mean value of my predictions obtained 
         at energy values from \SIrange[range-phrase=\text{ to }]{25}{45}{\mev} with the
         \gls{sms} potential at \gls{n4lo+} chiral order and with $\Lambda$~=~450~MeV
          and with \gls{snc} used together with the Siegert approach. 
-        The pink dashed line is similar prediction but with the \gls{snc} only. 
+        The pink dashed line is a similar prediction but with the \gls{snc} only. 
         The corresponding bands show the limits of predictions in the regarded
         energy region.
-        % Filled bands show maximal spread of my predictions obtained with a 
-        % \gls*{sms} potential at \gls{n4lo+} chiral order and with $\Lambda$~=~450~MeV
-        % for the energy span from 25 to 45 MeV. Blue bands correspond to the
-        % case where \gls{snc} was used together with Siegert approach and 
-        % pink bands - to the \gls{snc}only. 
         Filled circles are experimental data
         from \cite{rachek2007} for the same energy range.}
         \label{tensor_angular_25-45}
@@ -783,13 +741,13 @@
 
     In the Figure \ref{T20_vs_en} the energy dependence of $\text{T}_{20}$ and $\text{T}_{22}$
     at specific angle $\theta_p = \ang{88}$
-    is presented for the energy range 0-400~MeV. Beside my predictions I also demonstrate the experimental data from
+    is presented for the energy range 0-400~MeV. Besides my predictions I also demonstrate the experimental data from
     \cite{rachek2007} and \cite{mishev1993} as well as theoretical calculations from \cite{Schmitt1989}.
     For $\text{T}_{20}$ all models are able to describe experimental data well even for
     high energies. On the other hand, $\text{T}_{22}$ is not described so well: for the 
     energies below \SI{140}{\mev} the predictions are within uncertainties of experimental data,
     but further the difference with the data increases. Above \SI{140}{\mev}
-    my Full predictions do not  
+    Full predictions do not  
     reflect the qualitative nature of the data. Namely, I observe that
     data points start ascending which is not represented in my predictions.
     Theoretical predictions from \cite{Schmitt1989} (brown dashed curve) are also not able
@@ -800,15 +758,15 @@
     NN potential with the major part of meson exchange
     currents (MEC) included implicitly via the Siegert operators plus explicit
     pion exchange currents (MEC), isobar configurations
-    (IC) and the leading order relativistic corrections
+    (IC) and the leading order of relativistic corrections
     (RC). So authors use a different potential, but
-    probably the main difference of predictions is coming from the
-    more advance model of the current operator
+    probably the main difference in predictions is coming from the
+    more advanced model of the current operator
     and the RC included there.
     We see that experimental errors are quite large which is not so surprising
     giving that the experiment was conducted back in 1989.
     New experiments would be a great support in development of the nuclear interactions
-    as we expect relativistic calculations in future \cite{Grassi2023}.
+    as we expect relativistic calculations in the future \cite{Grassi2023}.
 
     The \fig{T20_vs_en_cutoff} presents similar results to the \fig{T20_vs_en} but
     with various values of the cutoff parameter. The deviation between these
@@ -819,19 +777,18 @@
     Similar picture is seen in the Figures \ref{tensor_energy_24-48} and \ref{tensor_energy_70-102}
     where I show an energy dependence of the mean of deuteron analyzing powers over 
     specific angular ranges (following the data from \cite{rachek2007}).
-    In \fig{tensor_energy_24-48} we see that only predictions for $\text{T}_{20}$
-    are able to reflect the experimental results,
+    In \fig{tensor_energy_24-48} we see that only predictions for $\text{T}_{20}$ are able to reflect the experimental results,
     while for $\text{T}_{21}$ and $\text{T}_{22}$ my results are reasonable (quantitative-wise) 
-    only for lower energies and difference with data becomes larger
+    only for lower energies and difference in data becomes larger
     when energy increases. Predictions for $\text{T}_{21}$ and $\text{T}_{22}$ once more 
-    confirm an insufficiency of 1NC and an importance of
+    confirm an insufficiency of 1NC and the importance of
     2-nucleon current contributions.
     The description is better for bigger angles \fig{tensor_energy_70-102}):
     at lower energies (below \SI{140}{\mev}) the correspondence to
-    experimental data is good for all three observables, but above that 
+    experimental data is good for all three observables but above that 
     threshold, all predictions (especially for $\text{T}_{22}$)
-    move away from the measurements data.
-    Again, big uncertainty of the data calls for experiment to be repeated.
+    move away from the measurement data.
+    Again, big uncertainty of the data calls for the experiment to be repeated.
     
 
     \begin{figure}[h]
@@ -844,7 +801,7 @@
         at fixed outgoing proton angle $\theta_p = \ang{88}$ in the center of mass frame.
         My predictions (blue solid line) are obtained with the \gls{sms} potential at the chiral order \gls{n4lo+},
         with the cut-off parameter $\Lambda = \SI{450}{\mev}$ and with 2NC contributions included via the Siegert theorem.
-        The dashed pink curve shows predictions obtained with the same interaction, but without 2NC contributions.
+        The dashed pink curve shows predictions obtained with the same interaction but without 2NC contributions.
         The dashed-dotted brown curve presents theoretical results from \cite{Schmitt1989}.
         Experimental data are taken from \cite{rachek2007} (filled circles)
         and \cite{mishev1993} (empty circles).}
@@ -905,7 +862,7 @@
     figures I showed above for the tensor analyzing powers (e.g. \fig{T22_T11_30}).
     That is the top panel is aimed to demonstrate predictions obtained
     with the chiral \gls{sms} potential at different orders of the chiral expansion,
-    the middle one is showing a truncation errors and the bottom one shows 
+    the middle one shows a truncation error and the bottom one shows 
     the cut-off dependence. For that observable we see an excellent 
     convergence with respect to the chiral order. For both regarded 
     energies predictions at different orders are very close to each other
@@ -923,7 +880,7 @@
     is \SI{0.26}{\percent} while at the photon energy \SI{60}{\mev}
     it is  \SI{4.41}{\percent} (both calculated at $\theta_p=\ang{90}$).
     So the theoretical uncertainty related to regulator value
-    is nearly 17 times bigger that due to the truncation error ($4.11/0.26 = 16.96$).
+    is nearly 17 times bigger than due to the truncation error ($4.11/0.26 = 16.96$).
 
      Comparing my predictions to experimental data, I observe that
      for the lower energy predictions are almost perfectly overlapping
@@ -931,23 +888,23 @@
      For a few data points our predictions are
      outside data error bars, but they are still within $3\sigma$ range.
      For \SI{60}{\mev}, experimental data points are systematically below theoretical
-     curves, especially in the middle of angular range. It seems that some systematic 
+     curves, especially in the middle of the angular range. It seems that some systematic 
      uncertainty is presented in predictions and ad hoc multiplication by some factor
      (around 0.8)
      could help predictions be more similar to experimental data. But very likely the observed discrepancy
-     points to simplified character of the model used here.
+     points to the simplified character of the model used here.
 
-     In the \fig{asymmetry_energy_1NC} the predictions obtained with Full set of
+     In the \fig{asymmetry_energy_1NC} the predictions obtained with the Full set of
      components (plane wave + rescattering and \gls{snc} + Siegert, solid blue curve) are shown
      versus predictions obtained without rescattering (green dashed-dotted line)
      and without contribution from the Siegert (pink dashed line) for the same 
      photon energies as above: E$_\gamma=\SI{20}{\mev}$ (left panel)
      and E$_\gamma=\SI{60}{\mev}$ (right panel).
      For the E$_\gamma=\SI{20}{\mev}$ the difference between Full and PW
-     is quit small, whereas \gls{snc} is noticeably differs from the Full prediction,
+     is quite small, whereas \gls{snc} is noticeably differs from the Full prediction,
      especially around the smallest and largest angle values.
-     For the E$_\gamma=\SI{60}{\mev}$ the difference between such a predictions 
-     is larger: we see not only quantitative, but also a qualitative variations.
+     For the E$_\gamma=\SI{60}{\mev}$ the difference between such predictions 
+     is larger: we see not only quantitative, but also qualitative variations.
      The \gls{snc} curve has much larger values and its shape becomes 
      more asymmetric with respect to the $\theta_p = \ang{90}$ point.
 
@@ -961,7 +918,7 @@
      was also observed in the angular dependence of the asymmetry at \SI{60}{\mev}
      so I conclude that within our framework, 
      $\Sigma_\gamma$ is sensitive to the initial photon energy and some theoretical
-     contributions are missing in order to get satisfactory predictions
+     contributions are missing to get satisfactory predictions
      at higher energies. From the \fig{asymmetry_90deg} we can say that
      large discrepancy with data starts already above $\text{E}_\gamma = \SI{35}{\mev}$.
      \footnote{It is worth to note that data of \cite{depascale_asymmetry} are
@@ -991,7 +948,7 @@
         \caption{The photon asymmetry $\Sigma_\gamma$ 
         as a function of the outgoing proton angle in the center of mass frame 
         for the photon energy \SI{20}{\mev}(a) and \SI{60}{\mev}(b).
-        Top row presents results obtained using the \gls{sms} potential
+        The top row presents results obtained using the \gls{sms} potential
         with chiral orders from \gls{lo} to \gls{n4lo+} and with the cut-off parameter $\Lambda=\SI{450}{\mev}$.
         The middle row shows truncation errors for each 
         chiral order starting from NLO and the
@@ -1014,8 +971,8 @@
         (left) and $\text{E}_\gamma = \SI{60}{\mev}$(right).
         Similarly to \fig{Diff_cross_pw_1nc} predictions obtained with chiral \gls{n4lo+} potential
         and $\Lambda=\SI{450}{\mev}$ are presented for three theoretical models.
-        Blue solid line is the most complete prediction we have (plane-wave plus rescattering parts, 1NC + Siegert), pink dashed line shows predictions obtained with
-        single-nucleon current only (1NC) - without the Siegert contributions and green dashed-dotted line
+        The blue solid line is the most complete prediction we have (plane-wave plus rescattering parts, 1NC + Siegert), the pink dashed line shows predictions obtained with
+        single-nucleon current only (1NC) - without the Siegert contributions and the green dashed-dotted line
         is a prediction in which we neglect the rescattering part
         and stick to the plane-wave part only but keeping the Siegert contributions.
         Filled circles are experimental data from \cite{KRAUSE1992_asymetry},
@@ -1033,9 +990,9 @@
         \caption{The photon asymmetry $\Sigma_\gamma$ 
         as a function of the photon energy  
         at the fixed outgoing proton's momentum polar angle $\theta_p=90^\circ$.
-        On the left panel each curve corresponds to the particular value of the cut-off parameter
+        On the left panel, each curve corresponds to the particular value of the cut-off parameter
         and chiral potential used here is the \gls{n4lo+} one.
-        On the right panel the blue solid curve represents our most complete predictions
+        On the right panel, the blue solid curve represents our most complete predictions
         comprising the plane-wave plus rescattering parts and \gls{snc}+Siegert current propagator 
         (the same as \SI{450}{\mev} line in left).
         The pink dashed curve shows predictions obtained with
@@ -1050,10 +1007,8 @@
     The proton polarization is demonstrated in \fig{PY_30_100_vert} for the 
     photon energy \SI{30}{\mev}(a) and \SI{100}{\mev}(b).
     In this case even at higher energy
-    (such as \SI{100}{\mev}) predictions do not reveal neither
-    slower convergence with respect to the chiral order no
-    stronger cut-off dependence. Figures for both energies show
-    that only next-to-leading order brings relatively high contribution
+    (such as \SI{100}{\mev}) predictions reveal neither slower convergence concerning the chiral order nor stronger cut-off dependence. Figures for both energies show
+    that only next-to-leading order brings a relatively high contribution
     while taking into account other subsequent orders does not change predictions
     significantly. In the case of the cut-off dependence, we see that curves for each
     value of $\Lambda$ are very close to each other. 
@@ -1079,9 +1034,9 @@
         \label{PY_30_100_vert}
         as a function of the outgoing proton's momentum polar angle in the center of mass frame 
         with the photon energy \SI{30}{\mev} (a) and \SI{100}{\mev} (b).
-        Top figures present results obtained using potential
+        The top figures present results obtained using potential
         with different chiral orders (from \gls{lo} to \gls{n4lo+}) with cut-off parameter $\Lambda=\SI{450}{\mev}$.
-        The middle panel show truncation errors for each 
+        The middle panel shows truncation errors for each 
         chiral order starting from \gls{nlo} and
         bottom figures present a cut-off dependence of predictions
         based on the \gls{sms} \gls{n4lo+} potential.
@@ -1097,25 +1052,25 @@
     in 1986 at TRIUMF facility \cite{CAMERON_neuteronpolarization}.
     In the case of E$_\gamma = \SI{2.75}{\mev}$ (\fig{Pn_2p75_vert}), we see that predictions reflect
     the behavior of experimental data points qualitatively,
-    having more o less a constant offset of the values. Similar offset was obtained
-    also in \cite{ArenhovelPhotodisint1991}, where various approaches  were presented.
-    Authors compare different models which leads to a very similar theoretical results
+    having more o less a constant offset of the values. A similar offset was obtained
+    also in \cite{ArenhovelPhotodisint1991}, where various approaches were presented.
+    Authors compare different models which leads to very similar theoretical results
     even though different potentials are used with and without relativistic correction.
     One of the theoretical predictions is included even in the experimental papers
     \cite{Jewell_neuteronpolarization} and authors state that there might be a
     systematic error in the calibration of the analyzing power
     of the neutron polarimeter which could affect experimental results precision.
-    Interesting is that predictions clearly show symmetrical form of the curve, while the experimental data
-    have some deviations from symmetrical form. It can be a sign that some problem with data can be
-    in this case (taking into account also that experiment had been done in 1965).
-    In \cite{Jewell_neuteronpolarization} authors even make a plot of theoretical curve
-    multiplied by the factor 0.879 which is almost perfectly overlaps with experimental data afterwards. 
+    Interestingly, predictions clearly show a symmetrical form of the curve, while the experimental data
+    have some deviations from the symmetrical form. It can be a sign that some problem with the data can be
+    in this case (taking into account also that the experiment had been done in 1965).
+    In \cite{Jewell_neuteronpolarization} authors even make a plot of the theoretical curve
+    multiplied by the factor 0.879 which almost perfectly overlaps with experimental data afterward. 
 
     At the energy E$_\gamma = \SI{100}{\mev}$ (\fig{Pn_100_vert}) 
     my predictions describe the data very well.
-    For most of data points, predicted values are within error bars and only some
-    of points (e.g. around \ang{50}) have prediction in distance more than one standard deviation.
-    Nevertheless, these data points look like being out of general trend and may be
+    For most of the data points, predicted values are within error bars, and only some
+    of the points (e.g. around \ang{50}) have a prediction in distance more than one standard deviation.
+    Nevertheless, these data points look like they are out of general trend and may be
     a result of imprecise measurement.
     Observing the stability of my predictions on the chiral order and regulator value I 
     conclude that nucleon polarizations are not the observables, which, even measured with much
@@ -1127,8 +1082,8 @@
     are very stable with respect to the potential parameters (chiral order or the regulator).
     It shows an ability for a good data description as well. For a higher energies (especially above \SI{100}{\mev})
     the quality of predictions becomes lower: the dependency on the cut-off value is higher as well as 
-    discrepancy with experimental data. Still predictions are converged with respect to the chiral order.
-    The general problem is a lack of 2N current and in case of higher energies - relativistic corrections are missing. 
+    discrepancy with experimental data. Still, predictions are converged with respect to the chiral order.
+    The general problem is a lack of 2N current and in the case of higher energies - relativistic corrections are missing. 
 
 
     \begin{figure}[h]
@@ -1164,9 +1119,9 @@
     In this section I will discuss results
     for $^3\text{He} \rightarrow p + p + n$ process differential
     cross-section obtained with \tmp{???} model of nuclear current.
-    For three free nuclepns in the final state it is convenient to
+    For three free nucleons in the final state, it is convenient to
     introduce, as a kinematical variable, the arc-length of the S-curve.
-    For giving direction of two momenta $\hat{p}_1$ and $\hat{p}_2$,
+    For a given direction of two momenta $\hat{p}_1$ and $\hat{p}_2$,
     the S-curve spans in the plane defined by kinetic energies of the 
     same two nucleons, $E_1$ and $E_2$.
 
@@ -1177,25 +1132,25 @@
     are required to define the final kinematics.
     We choose four variables as directions of outgoing nucleons no 1 and 2:
     $\theta_1, \phi_1, \theta_2$ and $\phi_2$, with the $z$-axis aligned to the 
-    photon momentum. Choosing $E_1$ as the fiveth variable would introduce
+    photon momentum. Choosing $E_1$ as the fifth variable would introduce
     ambiguity, as in some cases two values of $E_2$ could be allowed.
     Instead, the location on the S-curve defines the kinematical configuration
-    unambiguousely.
+    unambiguously.
     The various possible locations of the S-curve in $E_1-E_2$ plane,
-    as well as the convention on choosing the $S=0$ point in given
+    as well as the convention on choosing the $S=0$ point is given
     in Fig.~1 of \cite{GLOCKLE_report_1996}.
     
     In the \fig{CROSS_HE_EXCL_30} I demonstrate a differential cross section 
     $\frac{d^5\sigma}{d\Omega_1d\Omega_2dS}$ as a function of the S arc length
-    and as in previous section, I study the convergence with respect to chiral
+    and as in the previous section, I study the convergence with respect to chiral
     order and the cut-off dependence.
     The photon energy is  E$_\gamma=\SI{30}{\mev}$; the kinematic configuration
     $\theta_1 = \ang{15}$, $\phi_1 = \ang{0}$,
     $\theta_2 = \ang{15}$, $\phi_2 = \ang{180}$ and predictions have been
     obtained without 3NF.\footnote{Different kinematic configurations $\theta_1$, $\phi_1$,
     $\theta_2$ and $\phi_2$ have been tested with a step of \ang{15}
-    and most interesting cases(showing largest descripancies) are presented in this work.}
-    On the left we see that only \gls{nlo} and \gls{n2lo} introduce relatively large truncation error.
+    and most interesting cases(showing the largest discrepancies) are presented in this work.}
+    On the left, we see that only \gls{nlo} and \gls{n2lo} introduce relatively large truncation errors.
     The maximal width of a band for NLO is \SI{37.6}{\percent} at $S=\SI{10}{\mev}$,
     for \gls{n2lo} it is \SI{12.4}{\percent} at the same S-value and it is gradually decreasing
     coming to \SI{0.13}{\percent} at \gls{n4lo+}.
@@ -1217,7 +1172,7 @@
             cut-off parameter $\Lambda=\SI{450}{\mev}$.
             The right figure presents a cut-off dependence at \gls{n4lo+}.
             Results are obtained with two-nucleon force only and \gls{snc} current
-            and Siegert theorem used for a 2NC contributions.}
+            and Siegert theorem used for 2NC contributions.}
             \label{CROSS_HE_EXCL_30}
         \end{figure}
 
@@ -1342,7 +1297,7 @@
         Observed small uncertainties allow me to conclude that the semi-inclusive cross-section
         $\frac{d^3\sigma}{d\Omega_p d\text{E}_p}$ is not useful in studies aiming on
         pin-down the details of the chiral force.
-        \tmp{do we have prediction with othe current?}  
+        \tmp{do we have prediction with other current?}  
 
 
 
@@ -1415,9 +1370,8 @@
     \label{sec:triton_results}
     
     
-    In this section I will discuss results
-    for $^3\text{H} \rightarrow n + n + p$ process in the case when two neuterons are detected 
-    and similarly to the previous chapter I present the convergence of predictions 
+    In this section, I will discuss results for $^3\text{H} \rightarrow n + n + p$ process in the case when two neutrons are detected 
+    and similarly to the previous chapter, I present the convergence of predictions 
     and their cut-off dependence. 
 
     In the \fig{CROSS_Triton_EXCL_30_15_0_15_180} I present a differential cross section 
@@ -1425,7 +1379,7 @@
     The photon energy is  E$_\gamma=\SI{30}{\mev}$ and the kinematic configuration
     $\theta_1 = \ang{15}$, $\phi_1 = \ang{0}$,
     $\theta_2 = \ang{15}$, $\phi_2 = \ang{180}$; predictions have been obtained without 3NF.
-    We see that only \gls{nlo} and \gls{n2lo} introduce relatively large truncation error.
+    We see that only \gls{nlo} and \gls{n2lo} introduce relatively large truncation errors.
     The maximal width of a band for NLO is \SI{30.95}{\percent} at $S=\SI{10}{\mev}$,
     for \gls{n2lo} it is \SI{6.79}{\percent} at the same point and it is gradually decreasing
     coming to \SI{0.10}{\percent} at \gls{n4lo+}.
@@ -1454,9 +1408,9 @@
     The cut-off spread also becomes larger with increasing energy value: \SI{9.52}{\percent}
     at the same maximum.
 
-    The truncation error bands and cut-off dependence is very similar to what it was found for
+    The truncation error bands and cut-off dependence are very similar to what was found for
     the three-body Helium-3 photodisintegration and the relative errors 
-    have a similar magnitudes.
+    have similar magnitudes.
 
     \begin{figure}[h]
         \begin{center}
@@ -1473,7 +1427,7 @@
     $\theta_1 = \ang{75}$, $\phi_1 = \ang{75}$,
     $\theta_2 = \ang{75}$, $\phi_2 = \ang{105}$ are
     demonstrated in \fig{CROSS_Triton_EXCL_75_75_75_105}.
-    Both truncation errors and cut-off dependence are smaller at this configuration:
+    Both truncation errors and cut-off dependence are smaller with such configuration:
     the relative  width of the truncation band at \gls{nlo} is \SI{9.39}{\percent}
     (at the maximum point $S=\SI{8}{\mev}$) and drops to only \SI{0.1}{\percent}
     at \gls{n4lo+}. The relative cut-off spread is \SI{0.93}{\percent} at the same point.
@@ -1600,16 +1554,16 @@
     together with experimental data extracted from \cite{Strauch2010,Strauch2011}.
     We see a significant difference between
     predictions obtained using different $\Lambda$. The impact of chiral orders is large at \gls{lo}
-    and \gls{nlo} (each subsequent order differs from previous 
+    and \gls{nlo} (each subsequent order differs from the previous 
     by $\sim\SI{40}{\percent}$ and $\sim\SI{30}{\percent}$, respectively) 
     and is gradually decreasing, and \gls{n3lo}-\gls{n4lo}-\gls{n4lo+} steps are almost invisible
     (the relative difference between subsequent orders is $\sim\SI{5}{\percent}$).
-    The comparison with experimental data shows that our predications converge to a correct value coming 
+    The comparison with experimental data shows that our predictions converge to a correct value coming 
     closely to it all large chiral orders and $\Lambda$s except $\Lambda = \SI{450}{\mev}$ 
     which is clearly separated from other predictions. The bias $\Gamma^{550}_{nn} - \Gamma^{exp}_{nn}$
     is still \SI{0.178e15}{s^{-1}} which is \SI{12.7}{\percent}.
-    Such result reveals that NN interaction with $\Lambda = \SI{450}{\mev}$  is inadequate in data description. 
-    However using it gives additional measure of uncertainty related to the cut-off parameter value.
+    Such a result reveals that NN interaction with $\Lambda = \SI{450}{\mev}$  is inadequate in data description. 
+    However, using it gives an additional measure of uncertainty related to the cut-off parameter value.
 
 
     \subsection{Pion absorption in $^3$He}
@@ -1628,7 +1582,7 @@
     In order to prove that, I show in \fig{proton_rad}
     a corresponding figure for a $^3$He proton radius $r_p$ calculated with 
     and without 3NF (left and right panels, respectively). Results obtained with the 3NF show
-    similar deviation at \gls{n3lo} while radius computed without the 3NF does not.
+    similar deviation at \gls{n3lo} while the radius computed without the 3NF does not.
     Nevertheless, the spread of predictions concerning
     the cut-off values seen in \fig{proton_rad} is much smaller
     with the 3NF and deviation seems to be not crucial as the total difference
@@ -1714,7 +1668,7 @@
 
     Each of the two figures consists of four panels representing predictions obtained with different 
     values of the cut-off parameter $\Lambda$. The difference between predictions which can be immediately
-    noticed with the naked eye is that area of the central region (corresponding to the smallest rates)
+    noticed with the naked eye is that the area of the central region (corresponding to the smallest rates)
     becomes larger with increasing $\Lambda$. It coheres to what we saw in \fig{Gamma_pnn}
     where the total absorption rate was inversely correlated with the cut-off parameter. The dominant contribution
     comes from the region with the lowest proton energy values of $E_1 \rightarrow 0$ where both neutron energies 
