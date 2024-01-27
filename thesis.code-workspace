@@ -2,6 +2,12 @@
 	"folders": [
 		{
 			"path": "."
+		},
+		{
+			"path": "../../Deuteron/PRODUCTION1_DEUTERON_2022"
+		},
+		{
+			"path": "../../Three-body_photodisintegration/Helium_VU_2"
 		}
 	],
 	"settings": {
