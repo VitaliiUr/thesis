@@ -1115,8 +1115,8 @@
 \label{sec:hel_3N}
 
     In this section I will discuss results
-    for $^3\text{He} \rightarrow p + p + n$ process differential
-    cross-section obtained with \tmp{???} model of nuclear current.
+    for $^3\text{He} \rightarrow p + p + n$ differential
+    cross-section obtained with the \gls{snc} + Siegert model of nuclear current.
     For three free nucleons in the final state, it is convenient to
     introduce, as a kinematical variable, the arc-length of the S-curve.
     For a given direction of two momenta $\hat{p}_1$ and $\hat{p}_2$,
@@ -1295,7 +1295,8 @@
         Observed small uncertainties allow me to conclude that the semi-inclusive cross-section
         $\frac{d^3\sigma}{d\Omega_p d\text{E}_p}$ is not useful in studies aiming on
         pin-down the details of the chiral force.
-        \tmp{do we have prediction with other current?}  
+        \tmp{do we have prediction with other current ::: calculate with ISIEGERT=0, IMEC=0 and compare results 
+        for one configuration for 30 MeV and for 100 MeV}  
 
 
 
@@ -1390,7 +1391,7 @@
             \caption{The five-fold differential cross section for the photon 
             energy E$_\gamma=\SI{30}{\mev}$ for the kinematic configuration
             $\theta_1 = \ang{15}$, $\phi_1 = \ang{0}$,
-            $\theta_2 = \ang{15}$, $\phi_2 = \ang{180}$ with two neuterons detected \tmp{check ???}.
+            $\theta_2 = \ang{15}$, $\phi_2 = \ang{180}$ with detected particles proton (number 1) and neuteron (number 2).
             The left figure presents truncation error bands obtained using potential
             with chiral orders from \gls{nlo} to \gls{n4lo+}, and with
             cut-off parameter $\Lambda=\SI{450}{\mev}$.
@@ -1579,7 +1580,8 @@
     In order to prove that, I show in \fig{proton_rad}
     a corresponding figure for a $^3$He proton radius $r_p$ calculated with 
     and without 3NF (left and right panels, respectively). Results obtained with the 3NF show
-    similar deviation at \gls{n3lo} while the radius computed without the 3NF does not.
+    also a deviation at \gls{n3lo} where $\Lambda=\SI{550}{\mev}$ and $\Lambda=\SI{500}{\mev}$ are 
+    very close to each other while for the radius computed without the 3NF a clear separation is present.
     Nevertheless, the spread of predictions concerning
     the cut-off values seen in \fig{proton_rad} is much smaller
     with the 3NF and deviation seems to be not crucial as the total difference
@@ -1628,9 +1630,9 @@
 
     \begin{figure}[h]
         \begin{center}
-        \includegraphics[width=0.99\textwidth]{PlotData/PION/Dalitz_maps/figures/proton_radius_mt3-1_3NF.pdf}
+        \includegraphics[width=0.99\textwidth]{PlotData/PION/Dalitz_maps/figures/proton_radius_mt31_3NF.pdf}
         \end{center}
-        \caption{\tmp{check mt3} Proton radius $r_p$ as a function of the chiral order calculated with
+        \caption{ Proton radius $r_p$ for $^3$He nuclei as a function of the chiral order calculated with
         different values of the cut-off parameter $\Lambda$. The radius was calculated with 2NF and 3NF (left panel)
         or with 2NF only (right panel).}
         \label{proton_rad}
@@ -1674,9 +1676,12 @@
 
     Another region with a high absorption rate is the neutron-neutron final state interaction configuration (FSI(nn)).
     It is located at high $E_1$ values when a proton gets two-thirds part of the total energy while neutrons both get
-    one-sixth. In \fig{pion_map_E1E2_cutoff} we see this region at the very right region (with $E_1 \rightarrow 85$)
+    one-sixth of it.
+    It means that proton's kinetic energy is four times larger than neutron's.
+    % (what is visible in the figure). 
+    In \fig{pion_map_E1E2_cutoff} we see this region at the very right region (with $E_1 \rightarrow 85$)
     with rapid growth of the absorption rate and it is observed at every value of the cut-off parameter. The very same region 
-    is presented in  \fig{pion_map_xy_cutoff_PW} at $y \rightarrow 1$. \tmp{Explain what happens with the rest of energy?}
+    is presented in  \fig{pion_map_xy_cutoff} at $y \rightarrow 1$.
 
     In \cite{golak_pion} we have shown the comparison of our predictions with one more experimental data,
     from \cite{Gotta1995}. In that paper, the authors consider four specific regions ($I_i$ for $i=1,2,3,4$) and give experimental results
@@ -1839,7 +1844,7 @@
     \end{figure}
 
     
-    Presented above intensity plots correspond to exclusive \tmp{processes} with two particles detected.
+    Presented above intensity plots correspond to exclusive processes with two particles detected.
     Now we would like to test if the same behavior of the capture rate is observed for
     the semi-inclusive observables.
     Thus following figures demonstrate the same phenomena but from a different point of view.
