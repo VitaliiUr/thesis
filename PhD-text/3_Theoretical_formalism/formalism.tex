@@ -1,4 +1,4 @@
-\chapter{Formalism \& numerical methods}
+\chapter{Formalism and numerical methods}
 \label{sec:formalism}
 
 Even though the deuteron problem was solved a long time ago, I will describe it briefly 
@@ -21,7 +21,13 @@ one has to find a nuclear matrix elements:
 with the two-nucleon wave function of the initial state $\Psi_{initial}  = \Psi_{deuteron}$;
 the two-nucleon wave function of the final scattering state $\Psi_{final}$ 
 and a four-vector current operator $J^\mu$ which acts between initial and final 
-two-nucleon states. In the following, I describe how to get those quantities.
+two-nucleon states. 
+In case of $^3$He or $^3$H photodisintegration analogous nuclear matrix element
+$\langle \Psi_{final} \mid J^\mu \mid \Psi_{initial}$ has to be found, but now 
+$\ket{\Psi_{initial}}$ is either $^3$He or $^3$H bound state and $\bra{\Psi_{}final}$
+describes a 3N scattering state with all three nucleons unbound after reaction
+or Nd scattering state with the pair nucleon-deuteron in the final state.
+In the following, I describe how to get these quantities.
 
 
 % $\vec{P_i}$($\vec{P_f}$) is an initial (final) total 2N m\vec{p}omentum.
@@ -36,7 +42,7 @@ two-nucleon states. In the following, I describe how to get those quantities.
     % \end{eqnarray}
     % where $\vec{p}_1$($\pvec{p}_1^\prime$) and $\vec{p}_2$($\pvec{p}_2^\prime$) are
     % initial(final) momenta of the first and second nucleons.
-\section{Deuteron bound state}
+\section{2N bound state}
     \label{sec:deut_bound}
 
     Let's find a deuteron bound state wave function $\ket{\phi_d}$. 
@@ -70,8 +76,8 @@ two-nucleon states. In the following, I describe how to get those quantities.
         &\frac{\vec{p}^2}{2\mu} \langle \vec{p} \mid \Psi_{int} \rangle +
         \langle \vec{p} \mid V \mid \Psi_{int} \rangle = 
         (E_d - E)\langle \vec{p} \mid \Psi_{int} \rangle \label{se1}\\
-        &\frac{\vec{\mathcal{P}}^2}{2M} \langle \mathcal{P} \mid \Psi \rangle = 
-        E\langle \mathcal{P} \mid \Psi \rangle \label{se2},
+        &\frac{\vec{\mathcal{P}}^2}{2M} \braket{ \vec{\mathcal{P}} }{ \Psi } = 
+        E\braket{ \vec{\mathcal{P}} }{ \Psi } \label{se2},
     \end{eqnarray}
     with $\matrixel{\vec{p},\vec{\mathcal{P}}}{H_0}{\phi_d} = \frac{\vec{p}^2}{2\mu} \braket{\vec{p}}{\Psi_{int}} +
     \frac{\vec{\mathcal{P}}^2}{2M} \braket {\mathcal{P}} {\Psi} $. So $\Psi$ is a component 
@@ -99,7 +105,7 @@ two-nucleon states. In the following, I describe how to get those quantities.
         \label{shrod_old}
     \end{equation}
 
-    Working in 3-dimensional space  is difficult, especially numerically,
+    Working in 3-dimensional space (i.e. directly with $\vec{p}$ vectors) is difficult, especially numerically,
     so I follow a standard path and introduce the partial-wave decomposed representation (PWD) 
     of the momentum state, adding spin and isospin degrees of freedom in the following form:
 
@@ -185,7 +191,7 @@ two-nucleon states. In the following, I describe how to get those quantities.
         \delta_{ss'}V^{sjtm_t}_{l'l}(p',p)
         \label{conservation}
     \end{equation}
-    which introduces restrictions for particular sets of quantum numbers and $\alpha$.
+    which introduces restrictions for particular sets of quantum numbers $\alpha$ and $\alpha^\prime$.
     Strong interaction allows for change of the orbital angular momenta $l = j \pm 1,~l'=j'\pm1$.
     The channels, in which  $l \neq l'$ is allowed,
     are called coupled channels and for the deuteron bound state 
@@ -193,7 +199,7 @@ two-nucleon states. In the following, I describe how to get those quantities.
     two coupled channels 
     which are commonly denoted as $^3S_1$ and $^3D_1$ (the naming stands for $^{2s+1}l_j$). They correspond 
     to $l=0$ and $l=2$ respectively (with $s = j = 1$ and $t = m_t = 0$). 
-    We will call wave functions for these channels as $\phi_l(p)$ with $l=0,2$, such that:
+    I will denote wave functions for these channels as $\phi_l(p)$ with $l=0,2$, such that:
 
     % Taking into account Eq.(\ref{parity}), one can find only one possible PWD state combination for 
     % the deuteron bound state(under ... experimental evidence): 2 coupled channels for l=0,2; s=1; j=1 and $t = m_t = 0$. 
@@ -201,7 +207,7 @@ two-nucleon states. In the following, I describe how to get those quantities.
     % corresponding wave functions are $\phi_0(p)$ and $\phi_2(p)$:
     
     \begin{equation}
-        \phi_l(p) = \bra{p (ls) j m_j}\braket{t m_t}{\Psi_{int}} = \bra{p(l1)1m_d} \braket{00}{\Psi_{int}}; l=0,2.
+        \phi_l(p) = \bra{p (ls) j m_d}\braket{t m_t}{\Psi_{int}} = \bra{p(l1)1m_d} \braket{00}{\Psi_{int}}; l=0,2.
         \label{deut_waves}
     \end{equation}
 
@@ -223,14 +229,14 @@ two-nucleon states. In the following, I describe how to get those quantities.
     In order to get rid of the integral I use a Gaussian quadrature 
     method of numerical integration \cite{jacobi1826ueber}.
     It allows me to replace an integral by the weighted sum:
-        $\int_a^b f(x)dx = \sum_{i=1}^n \omega_i f(x_i)$
+        $\int_a^b f(x)dx = \sum_{i=1}^N \omega_i f(x_i)$.
     In current work I used $N=72$ points in the interval from $0$ to \SI{50}{fm^{-1}}. 
     Using this method, Eq.(\ref{integral}) becomes  
 
     
     \begin{equation}
         \frac{p_i^2}{2\mu} \phi_l(p_i) +
-        \sum_{l^\prime =0,2}\sum_{j =0}^{N_P}  \omega_j p^{2}_j 
+        \sum_{l^\prime =0,2}\sum_{j =0}^{N}  \omega_j p^{2}_j 
         \bra{p_i(l1)1m_d} \matrixel{00}{V}{00} \ket{p_j(l^\prime1)1m_d}
         % \langle p_jlm_l \mid V \mid p^\prime_j l^\prime m_l^\prime  \rangle
         \phi_{l^\prime}(p_j) = 
@@ -238,12 +244,12 @@ two-nucleon states. In the following, I describe how to get those quantities.
         \label{integral2}
     \end{equation}
 
-    In practical computations, the same grid points $p_i$ and $p_j$ are used in order
+    In practical computations, the same grid points $p_i$ are used for $p$ and $p^\prime$ in order to
     optimize computational time. 
     I solve this equation as an eigenvalue problem $M\Psi = E_d \Psi$ and
     in that way
-    find simultaneously wave function values in a grid of $p$ points and The binding energy $E_d$. 
-    The binding energy $E_d$ calculated with potentials at different chiral orders 
+    find simultaneously wave function values in a grid of $p$ points and the binding energy $E_d$. 
+    For example, the binding energy $E_d$ calculated with the \gls{sms} potential at different chiral orders 
     is presented in Fig.~\ref{bind}.
 
     \begin{figure}[h]
@@ -262,7 +268,7 @@ two-nucleon states. In the following, I describe how to get those quantities.
     a wave function for $l=0$ - $^3S_1$ while the right one - for $l=2$ - $^3D_1$. Both 
     plots consist of the curves for different cutoff values and using the chiral \gls{sms} potential at \gls{n4lo+}.
     The small deviation between lines shows that cutoff dependence is rather weak at this stage
-    and further discrepancies connected to the value of $\Lambda$ may appear in other components
+    but further discrepancies connected to the value of $\Lambda$ may appear in other components
     of nuclear matrix elements.  
 
     \begin{figure}[h]
@@ -381,7 +387,7 @@ two-nucleon states. In the following, I describe how to get those quantities.
         \label{psi_toper}
     \end{equation}
 
-    With substitution of \eq{lse} into \eq{t-op} we can find
+    With substitution of \eq{lse} into \eq{t-op} we find
     an explicit form of the $t$ operator:
 
     \begin{eqnarray}
@@ -391,7 +397,7 @@ two-nucleon states. In the following, I describe how to get those quantities.
     \end{eqnarray}
 
     Getting rid off the initial state $\ket{\vec{p}}$ in the \eq{top2} we can get the LSE
-    for the transition operator in the iterative form:
+    for the transition operator in the iterative operator form:
 
     \begin{eqnarray}
         t = V + V G_0 t = \nonumber\\
@@ -426,10 +432,10 @@ two-nucleon states. In the following, I describe how to get those quantities.
     I solve \eq{lse_pwd_reduced} numerically, which again requires discretisation
     and therefore leads to a set of linear equations.
     Finally, using \eq{psi_toper} and denoting the momentum state of two nucleons
-    with spin projections $m_p$ and $m_n$ as $\bra{\phi m_p m_n}$, we can write \eq{main} as
+    with spin projections $m_d$ and $m_n$ as $\bra{\phi m_d m_n}$, we can write \eq{main} as
     
     \begin{equation}
-        N^\mu = \bra{\phi m_p m_n} (1 + G_0(E + i\epsilon) t) J^\mu(0) \mid \Psi_{deuteron} \rangle
+        N^\mu = \bra{\phi m_d m_n} (1 + G_0(E + i\epsilon) t) J^\mu \mid \Psi_{deuteron} \rangle
         \label{main_top}
     \end{equation}
 
@@ -438,8 +444,8 @@ two-nucleon states. In the following, I describe how to get those quantities.
 \section{3N bound state}
 
     The 3N bound state is described by the Schr\"{o}dinger equation for 3N system,
-    ie. including two- and three- nucleon interaction,
-    and its total wave function obeys the following equation:
+    with Hamiltonian comprising two- and three- nucleon interaction.
+    The bound state total wave function $\ket{\Psi}$ obeys the following equation:
 
     \begin{equation}
         \ket{\Psi} = G_0(E+i\epsilon)\sum_{j=1}^3 (V_j + V_4^j) \ket{\Psi},
@@ -473,10 +479,10 @@ two-nucleon states. In the following, I describe how to get those quantities.
         \label{permutation}
     \end{equation}
 
-    The operator component $P_{jk}$ acting on the state interchange the momenta and  
+    The operator $P_{jk}$ acting on the state interchange the momenta and  
     quantum numbers of the nucleons $j$ and $k$.
 
-    Using definitions \ref{permutation} and \ref{faddeev_comps},
+    Using definitions (\ref{permutation}) and (\ref{faddeev_comps}),
     one can rewrite \eq{psi3_component} as:
 
     \begin{equation}
@@ -502,6 +508,11 @@ of the first particle which spin is $\frac{1}{2}$
 and $I$ is its total angular momentum.
 $J$ and $M_J$ are the total angular momentum of the 3N system and its projection on the z-axis respectively.
 $t$ is a total isospin of the 2-3 subsystem whereas $T$ and $M_T$ are the total isospin of the 3N system and its projection on the z-axis, respectively.  
+The Jacobi momenta $\vec{p}$ and $\vec{q}$ for three particles with individual momenta $\vec{k_i}, i={1,2,3}$ are defined as [\cite{Glockle1983}]:
+    \begin{eqnarray}
+        \vec{p_i} &=& \frac{1}{2}(\vec{k_j} - \vec{k_k}),\nonumber\\
+        \vec{q_i} &=& \frac{1}{3}(2\vec{k_i} - \vec{k_j} - \vec{k_k}), \quad \{i,j,k\}=\{1,2,3\}, \{2,3,1\}, \{3,1,2\}.
+    \end{eqnarray}
 
 % Using states defined in \eq{3N_PW}, we can write a partial-wave representation of the \eq{fadeed_lse}:
 % \begin{equation}
@@ -529,8 +540,8 @@ $t$ is a total isospin of the 2-3 subsystem whereas $T$ and $M_T$ are the total 
     introduce an asymptotic state $\ket{\Phi^{3N}_j}$ describing a free motion
     of three nucleons ${j,k,l}$ with particles $k$ and $l$ 
     having relative momentum $\vec{p}$
-    and particle $j$ moving with momentum $\vec{q}$ relatively to the 
-    center of mass $(k-l)$:
+    and particle $j$ moving with momentum $\vec{q}$ with respect to the 
+    center of mass $(k-l)$ subsystem:
     
     \begin{equation}
         \ket{\Phi^{3N}_j} \equiv \frac{1}{\sqrt{2}}(1 - P_{kl})
@@ -584,7 +595,7 @@ $t$ is a total isospin of the 2-3 subsystem whereas $T$ and $M_T$ are the total 
     In this case the nuclear matrix element 
     $N_\mu^{3 N} = \matrixel{\Psi^-}{j^\mu}{\psi_i}$ 
     (with $\ket{\psi_i}$ being the Faddeev component of the 3N bound state (\ref{faddeev_comps})) is
-    \cite{GLOCKLE_report_1996, skibinski_prc_2003} \tmp{???}:
+    \cite{GLOCKLE_report_1996, skibinski_prc_2003, Skibiski2005}:
 
     \begin{equation}
         \begin{aligned}
@@ -603,14 +614,15 @@ $t$ is a total isospin of the 2-3 subsystem whereas $T$ and $M_T$ are the total 
         \label{u_mu}
     \end{equation}
 
-    \eq{u_mu} is being solved numerically in PWD. The techniques applied closely resemble those presented in \cite{GLOCKLE_report_1996} for N-d elastic scattering.
+    \eq{u_mu} is being solved numerically in PWD scheme. The numerical techniques applied are the same as
+    those presented in \cite{GLOCKLE_report_1996} for N-d elastic scattering.
 
 
 
 \section{Nd scattering state}
 \label{nd_state}
 
-    Analogously to the bound state, one can express a nucleon-deuteron
+    Analogously to the bound and 3N scattering states, one can express a nucleon-deuteron
     scattering state
     using a permutation operator \eq{permutation}.
 
@@ -647,27 +659,29 @@ $t$ is a total isospin of the 2-3 subsystem whereas $T$ and $M_T$ are the total 
     where 
     
     \begin{equation}
-        \ket{F_1} = \ket{\phi_1^{Nd}} G_0 (\nu_1 + \nu_2 + \nu_3 + \nu_4) 
+        \ket{F_1} = \ket{\phi_1^{Nd}} G_0 (V_1 + V_2 + V_3 + V_4) 
         \sum_{j=1}^3 \ket{\Psi_j^{(-)}}^{Nd}.
     \end{equation}
 
     The nuclear matrix element $N_\mu^{Nd} = ^{Nd} \matrixel{\Psi^{-}}{j_\mu}{\Psi_i}$ 
-    (with $\Psi_i$ - bound state) is now \cite{GLOCKLE_report_1996, skibinski_prc_2003} \tmp{???}:
+    (with $\Psi_i$ - bound state) is now \cite{GLOCKLE_report_1996, skibinski_prc_2003}:
 
     \begin{equation}
         N_\mu^{N d}=\frac{1}{\sqrt{3}} \matrixel{\Phi_1^{N d}}{(1+P) j_\mu}{\Psi_i}
         +\frac{1}{\sqrt{3}} \matrixel{\Phi_1^{N d}}{P}{U_\mu}
     \end{equation}
-    with $U_\mu$ being a solution to
+    with $U_\mu$ being a solution of \eq{u_mu}.
+    Fact that solving once \eq{u_mu} opens opportunity to compute both  $N_{\mu}^{Nd}$
+    and $N_{\mu}^{3N}$ is a great advantage of the presented formulas. 
 
-    \begin{eqnarray}
-       \ket{U_\mu} &=& \left[t_1^{+} G_0^{+}+\frac{1}{2}(1+P) V_4^{(1)} G_0^{+}\left(1+t_1^{+} G_0^{+}\right)\right](1+P) j_\mu \ket{\Psi_i} + \nonumber\\
-       &+& \left[t_1^{+} G_0^{+} P+\frac{1}{2}(1+P) V_4^{(1)} G_0^{+}\left(1+t_1^{+} G_0^{+}\right) P\right]\ket{U_\mu}
-       \label{u_mu_nd}
-    \end{eqnarray}
+    % \begin{eqnarray}
+    %    \ket{U_\mu} &=& \left[t_1^{+} G_0^{+}+\frac{1}{2}(1+P) V_4^{(1)} G_0^{+}\left(1+t_1^{+} G_0^{+}\right)\right](1+P) j_\mu \ket{\Psi_i} + \nonumber\\
+    %    &+& \left[t_1^{+} G_0^{+} P+\frac{1}{2}(1+P) V_4^{(1)} G_0^{+}\left(1+t_1^{+} G_0^{+}\right) P\right]\ket{U_\mu}
+    %    \label{u_mu_nd}
+    % \end{eqnarray}
 
-    \eq{u_mu_nd} is being solved numerically in a same way as \eq{u_mu}, namely applying
-    PWD, as it is described in \cite{GLOCKLE_report_1996}.
+    % \eq{u_mu_nd} is being solved numerically in a same way as \eq{u_mu}, namely applying
+    % PWD, as it is described in \cite{GLOCKLE_report_1996}.
 
 
     \section{Nuclear electromagnetic current}
@@ -689,9 +703,10 @@ $t$ is a total isospin of the 2-3 subsystem whereas $T$ and $M_T$ are the total 
         \label{j_mu_gen}
     \end{equation}
 
-    In \eq{j_mu_gen} $j_\mu^n$ is a contribution from the interaction between a photon and 
-    $n$ nucleons ($j_\mu^3$ is presented in 3N system only)
-    and ($j_\mu^1$) is a sum of interactions with each nucleon in the system. 
+    Here $j_\mu^n$ is a contribution from the interaction between a photon and 
+    $n$ nucleons (obviously $j_\mu^3$ is present in 3N system only).
+    Each $j_\mu^n$ describes the interaction of photon with all relevant permutations of $n$ nucleons,
+    i.e. $j_\mu^1$ is a sum of photon interactions with each of nucleons in the system separately. 
     % For 2N:
 
     % \begin{equation}
@@ -700,13 +715,16 @@ $t$ is a total isospin of the 2-3 subsystem whereas $T$ and $M_T$ are the total 
     % where $j_\mu^1(i)$ is an interaction of photon with $i$-th nucleon.
 
 
-    Regarding the photodisintegration process, only a \gls{snc} is used, so I stick to its definition here.
+    In the case of the photodisintegration process, I will use only a \gls{snc},
+    so I stick to its definition here.
     In the Hamiltonian framework, the nucleons are constrained to lie on the mass shell.
     The general current expression for a
     single nucleon at the spacetime point zero, denoted as $j^1_\mu(0)$, is computed between the initial nucleon momentum
     $p \equiv\left(p_0=\sqrt{M_N^2+\vec{p}\,^2}, \vec{p}\right)$
     and the final momentum
-    $p^{\prime} \equiv\left(p_0^{\prime}=\sqrt{M_N^2+\pvec{p}^{2}}, \pvec{p}\right)$. This computation yields the following expression:
+    $p^{\prime} \equiv\left(p_0^{\prime}=\sqrt{M_N^2+\pvec{p}^{2}}, \pvec{p}\right)$
+    with the latter one constrained by the four-momentum transfer $Q$ from photon to nucleon.
+    This computation yields the following matrix elements:
 
     \begin{equation}
         \begin{aligned}
@@ -717,9 +735,12 @@ $t$ is a total isospin of the 2-3 subsystem whereas $T$ and $M_T$ are the total 
     \end{equation}
     
     In the above equation,
-    ie. including two- and three- nucleon interaction, the symbols $u(\vec{p} s)$ represent Dirac spinors
+    the symbols $u(\vec{p} s)$ represent Dirac spinors
     for particle having momentum $\vec{p}$ and spin $s$, 
-    $F_1$ and $F_2$ are the Dirac and Pauli form factors of the nucleon, respectively, and $G_M \equiv F_1+2 M_N F_2$ denotes the magnetic form factor of the nucleon. The proton charge $e$ is extracted from the matrix element. In this thesis, only the nonrelativistic limit of \eq{current_general} is considered, which leads to well-known expressions for the operators for the current:
+    $F_1$ and $F_2$ are the Dirac and Pauli form factors of the nucleon, respectively, and $G_M \equiv F_1+2 M_N F_2$ denotes the magnetic form factor of the nucleon. 
+    The proton charge $e$ is extracted from the matrix element. Further $\gamma^\mu$ are Dirac matrices 
+    and $\sigma^{\mu\nu} = \frac{i}{2}\left[\gamma^\mu, \gamma^\nu\right]$.
+    In this thesis, only the nonrelativistic limit of \eq{current_general} is considered, which leads to well-known expressions for the operators for the single nucleon current \cite{Golak2005}:
 
 
     \begin{align}
@@ -733,7 +754,7 @@ $t$ is a total isospin of the 2-3 subsystem whereas $T$ and $M_T$ are the total 
     The electric form factor denoted as $G_E$ is defined as
     $G_E \equiv F_1+\frac{\left(p^{\prime}-p\right)^2}{2 M_N} F_2$ and 
     represents the neutron (n) and proton (p) form factors.
-    Both electric and magnetic form factors($G_E$ and $G_M$) are normalized as:
+    Both electric and magnetic form factors, $G_E(Q^2)$ and $G_M(Q^2)$, are normalized as:
     \begin{equation}
         \begin{aligned}
         G_E^n(0) & =0 \\
@@ -744,20 +765,22 @@ $t$ is a total isospin of the 2-3 subsystem whereas $T$ and $M_T$ are the total 
     \end{equation}
 
     The above values correspond to nucleons with point-like characteristics. While all the form factors depend on the squared
-    four-momentum transfer $\left(p^{\prime}-p\right)^2$, in the nonrelativistic regime, it is common to use the squared
+    four-momentum transfer $\left(p^{\prime}-p\right)^2$, in the nonrelativistic regime, it is common to use
+    as arguments of $G_E$ and $G_M$ the squared
     three-momentum transfer $-\left(\pvec{p}-\vec{p}\right)^2$ or even set it to zero for interactions involving
     real photons. Numerous authors have investigated the properties of electromagnetic nucleon form factors through
-    theoretical and experimental approaches, as discussed in \cite{Arrington_2007, JOURDAN1999513c}.
+    theoretical and experimental approaches, as discussed in \cite{Arrington_2007, JOURDAN1999513c}
+    but at low energies discussed here, all models lead to practically the same values of the form factors.
     $\Pi^p$ ($\Pi^n$) in \eq{snc_formfact} is a proton (neutron) isospin projection operator.
 
     The two-nucleon current contribution is in that work taken into account via Siegert approach \cite{Siegert, GolakKamad2000_ExplDescr, Golak2005}.
     To do that we break down the single nucleon current matrix elements into multipole components and 
     represent some of the electric multipoles using the Coulomb multipoles,
     which arise from the single nucleon charge density operator \cite{Golak2005}.
-    This is acceptable because, in low-energy situations, contributions from many nucleons to the nuclear charge density are typically insignificant.
+    This is acceptable because, in low-energy regime, contributions from many nucleons to the nuclear charge density are typically small.
     We then obtain the rest of the electric multipoles and all of the magnetic multipoles exclusively from the single nucleon current operators.
 
-    In 3N system we have following components of the \gls{snc}:
+    In 3N system we have following expressions for the \gls{snc}:
 
     \begin{align}
         % \begin{aligned}
@@ -779,8 +802,9 @@ $t$ is a total isospin of the 2-3 subsystem whereas $T$ and $M_T$ are the total 
         % \end{aligned}
     \end{align}
 
-    In \eq{3n_conv} and \eq{3n_spin} we present conventional and spin currents which combined form a spatial component of the 
-    single nucleon current $\vec{j^1}(0)$. Here I use a model of M.~Garu and W.~Kr\"umpelmann  \cite{GARI198610} for which:
+    In \eq{3n_conv} and \eq{3n_spin} we present convection and spin currents which combined form a spatial component of the 
+    single nucleon current $\vec{j^1}(\mu) \equiv \vec{j^1}(\mu, conv) + \vec{j^1}(\mu, spin)$. 
+    In my thesis I use a model of M.~Garu and W.~Kr\"umpelmann  \cite{GARI198610} for which:
     \begin{align}
         % \begin{ar
             F_1^p(0)&=1 & 2 m F_2^p(0)&=1.793 \\
@@ -792,25 +816,25 @@ $t$ is a total isospin of the 2-3 subsystem whereas $T$ and $M_T$ are the total 
     \section{Pion absorption}
 
     For the pion absorption, I include explicitly \gls{2nc} as well as \gls{snc}.
-    Thus the absorption operator $\rho = \rho(1) + \rho(1, 2)$,
+    Thus the absorption operator is $\rho = \rho(1) + \rho(1, 2)$,
     where absorption on  a single nucleon is included in $\rho(1)$ and
     $\rho(1, 2)$ plays a role of two-body charge current.
     The matrix element of the single nucleon pion absorption operator $\rho(1)$ in momentum-space for nucleon 1 relies on the
-    nucleon's incoming momentum (${\bf p}$) and outgoing momentum (${\bf p}^{, \prime}$) \cite{BERNARD_1995}:
+    nucleon's incoming momentum ($\vec{p}$) and outgoing momentum ($\pvec{p}$) \cite{BERNARD_1995}:
 
     \begin{eqnarray}
-        \matrixel{{\bf p}^{\, \prime}} 
-        {\rho(1)} {{\bf p}} = 
+        \matrixel{\pvec{p}} 
+        {\rho(1)} {\vec{p}} = 
         - \frac{g_A M_\pi}{\sqrt{2} F_\pi } \,
-            \frac{ \left( {\bf p}^{\, \prime} +  {\bf p} \right) \cdot {\bm \sigma}_1 } { 2 M } \, 
-            ({\bm \tau}_{1})_- \, ,
+            \frac{ \left( \pvec{p} +  \vec{p} \right) \cdot  \vec{\sigma}_1 } { 2 M } \, 
+            (\vec{\tau}_1)_- \, ,
     \label{rho1}
     \end{eqnarray}
     where the values of the nucleon axial vector coupling, pion decay constant, and negative pion mass are $g_A =$ 1.29, 
     $F_\pi = \SI{92.4}{\mev}$, and $M_\pi = \SI{139.57}{\mev \per \clight\squared}$, respectively. $\rho (1)$ operates in the spin
-    and isospin spaces and involves the Pauli spin (isospin) operator ${\bf \sigma}_1$ ($\tau_1$) for nucleon 1 and the isospin lowering operator
-    $({\bm \tau}_{1})_- \equiv(({\bm \tau}_1)_x -{\rm i} ({\bm \tau}_1)_y)/2$.
-    As before we use the average 
+    and isospin spaces and involves the Pauli spin (isospin) operator $\vec{\sigma}_1$ ($\tau_1$) for nucleon 1 and the isospin lowering operator
+    $(\vec{\tau}_1)_- \equiv((\vec{\tau}_1)_x -{\rm i} (\vec{\tau}_1)_y)/2$.
+    As before I use the average 
     "nucleon mass" $M \equiv \frac{1}{2} \left( M_p + M_n , \right)$ where the proton mass is $M_p$ and neutron mass is $M_n$.
 
 
@@ -818,28 +842,27 @@ $t$ is a total isospin of the 2-3 subsystem whereas $T$ and $M_T$ are the total 
     The 2N part of $\rho$ at \gls{lo} has the form \cite{Lensky2006}
     \begin{eqnarray}
     \matrixel{
-        {\bf p}_1^{\, \prime}\,
-        {\bf p}_2^{\, \prime}
+        \pvec{p}_1, \pvec{p}_2
         } 
     {\rho(1,2)}
     {
-        {\bf p}_1 \, 
-        {\bf p}_2 \, 
+        \vec{p}_1 \, 
+        \vec{p}_2 \, 
         } = 
         \left(
-        v( k_2 )  {\bf k}_2 \cdot {\bm \sigma}_2 \, - \, 
-        v( k_1 )  {\bf k}_1 \cdot {\bm \sigma}_1 \,
+        v( k_2 )  \vec{k}_2 \cdot \vec{\sigma}_2 \, - \, 
+        v( k_1 )  \vec{k}_1 \cdot \vec{\sigma}_1 \,
         \right) \, \nonumber \\ \times \,
         \frac{i}{\sqrt{2}} \, 
         \left[ 
-            \left( {\bm \tau}_1 \times {\bm \tau}_2 \, \right)_x 
-            - i \left( {\bm \tau}_1 \times {\bm \tau}_2 \, \right)_y \,
+            \left( \vec{\tau}_1 \times \vec{\tau}_2 \, \right)_x 
+            - i \left( \vec{\tau}_1 \times \vec{\tau}_2 \, \right)_y \,
         \right] \,,
     \label{rho12}
     \end{eqnarray}
     where 
-    $ {\bf k}_1 = {\bf p}_1^{\, \prime} - {\bf p}_1 $,
-    $ {\bf k}_2 = {\bf p}_2^{\, \prime} - {\bf p}_2 $
+    $ \vec{k}_1 = \vec{p}_1^{\, \prime} - \vec{p}_1 $,
+    $ \vec{k}_2 = \vec{p}_2^{\, \prime} - \vec{p}_2 $
     and the formfactor $v(k)$ reads 
     \begin{eqnarray}
     v (k) = \frac 1{ \left( 2 \pi \, \right)^3 } \,
@@ -850,32 +873,32 @@ $t$ is a total isospin of the 2-3 subsystem whereas $T$ and $M_T$ are the total 
 
     In the case of the pion absorption process, we follow a standard procedure
     including partial wave states for both 2N and 3N induced nuclei.
+    It occurs that in such a case one needs current matrix elements. 
     % An important difference between these two cases is that
     % after introducing partial wave states, the transition operator is acting between
     % different states. 
     For 2N this is 
-    $ \matrixel{\, {\bf p} + \frac12{\bf P}_f } 
-    {\rho (1) }{ {\bf p} - \frac12{\bf P}_f + {\bf P}_i \, }$
-    while for 3N case
-    $\matrixel {\, {\bf q} + \frac13{\bf P}_f}  
-    {\rho(1)} {{\bf q} - \frac23{\bf P}_f + {\bf P}_i \,}$.
+    $ \matrixel{\, \vec{p} + \frac12\vec{P}_f } 
+    {\rho (1) }{ \vec{p} - \frac12\vec{P}_f + \vec{P}_i \, }$
+    and for 3N case
+    $\matrixel {\, \vec{q} + \frac13\vec{P}_f}  
+    {\rho(1)} {\vec{q} - \frac23\vec{P}_f + \vec{P}_i \,}$.
 
     For the $\pi^- + {^2{\rm H}} \rightarrow n + n $ reaction,
     the nuclear matrix element for the transition operator is given by:
     \begin{eqnarray}
         N_{nn} (m_1, m_2, m_d \, ) \ = \
-   ^{(-)}\matrixel{ {\bf p}_0 \, m_{1} \, m_2 \ {\bf P}_f=0 } 
-   {\rho } {\phi_d \, m_d \ {\bf P}_i=0 \, },
+   ^{(-)}\matrixel{ \vec{p}_0 \, m_{1} \, m_2 \ \vec{P}_f=0 } 
+   {\rho } {\phi_d \, m_d \ \vec{P}_i=0 \, },
    \label{nnn1}
    \end{eqnarray}
-   where $ \ket{  {\bf p}_0 \, m_{1} \, m_2 \ {\bf P}_f=0  }^{(-)}  $ denotes the 2N scattering state \cite{Golak2018}.
-
-   The total absorption rate for this matrix would be:
+   where $ \ket{  \vec{p}_0 \, m_{1} \, m_2 \ \vec{P}_f=0  }^{(-)}  $ denotes the 2N scattering state \cite{Golak2018}.
+   The total absorption rate for this reaction expresses as:
 
    \begin{eqnarray}
         &&\Gamma_{nn} = 
     \frac{ \left( \alpha \, M^\prime_d \, \right)^3 \, c \, M_n \, p_0 }{ 2 M_{\pi^-} }
-        \int d {\bf\hat p}_0 \,
+        \int d \hat{p}_0 \,
         \frac13 \, 
         \sum\limits_{m_1, m_2, m_d} 
         \left| 
@@ -890,15 +913,15 @@ $t$ is a total isospin of the 2-3 subsystem whereas $T$ and $M_T$ are the total 
     obtaining predictions is calculating
     the matrix element
     of the 3N transition operator $\rho_{3N}$,
-     which is the $\rho$ acting between the initial $^3$He and the final 3N scattering state immersed in 3N space:
+     which is the $\rho$ acting between the initial $^3$He and the final Nd scattering state immersed in 3N space:
 
     \begin{eqnarray}  
         N_{nd} (m_n, m_d , m_{^3{\rm He}}  \, )  \, \equiv \, 
         {}^{(-)}\matrixel{\Psi_{nd}  \, 
             m_n \, m_d \,
-            {\bf P}_f=0 
+            \vec{P}_f=0 
             } {\rho_{3N} }
-        {\Psi_{^3{\rm He}} \, m_{^3{\rm He}} \, {\bf P}_i=0 \, }.
+        {\Psi_{^3{\rm He}} \, m_{^3{\rm He}} \, \vec{P}_i=0 \, }.
         \label{nnd}
     \end{eqnarray}
 
@@ -908,7 +931,7 @@ $t$ is a total isospin of the 2-3 subsystem whereas $T$ and $M_T$ are the total 
     \begin{equation}
         \Gamma_{nd} = 
      {\cal R} \, \frac{ 16 \, \left( \alpha^3 \, M^\prime_{^3{\rm He}} \, \right)^3  \, c \, M q_0 }{ 9 M_{\pi^-}  }
-          \int d {\bf\hat q}_0 \,
+          \int d \hat{q}_0 \,
           \frac12 \, 
          \sum\limits_{m_n, m_d, m_{^3{\rm He}}} 
          \left| 
@@ -921,9 +944,9 @@ $t$ is a total isospin of the 2-3 subsystem whereas $T$ and $M_T$ are the total 
     is now the reduced mass of the $\pi^- - {^3{\rm He}}$ system.
     The factor ${\cal R} = 0.98 $ appears due to the finite
     volume of the $^3$He charge \cite{marcucci_2011}.
-    The final state energy is expressed in terms of the neutron momentum ${\bf q}_0$
+    The final state energy is expressed in terms of the neutron momentum $\vec{q}_0$
     \begin{eqnarray}
-    M_\pi + M_{^3{\rm He}} \approx M_n + M_d + \frac{3}{4} \frac{ {\bf q}_0^{\ 2}} {M} \, ,
+    M_\pi + M_{^3{\rm He}} \approx M_n + M_d + \frac{3}{4} \frac{ \vec{q}_0^{\ 2}} {M} \, ,
     \label{eq0}
     \end{eqnarray}  
 
@@ -932,7 +955,7 @@ $t$ is a total isospin of the 2-3 subsystem whereas $T$ and $M_T$ are the total 
     \begin{eqnarray}
         \Gamma_{pnn} = 
        {\cal R} \, \frac{ 16 \, \left( \alpha\, M^\prime_{^3{\rm He}} \, \right)^3 \, c\, M}{ 9 M_{\pi^-} }
-          \int d {\bf\hat q} \,
+          \int d \hat{q} \,
           \int\limits_{0}^{2 \pi} d \phi_{p} \,
               \int\limits_{0}^{\pi} d \theta_{p} \sin \theta_{p} \, \nonumber \\
               \times 
@@ -951,19 +974,19 @@ $t$ is a total isospin of the 2-3 subsystem whereas $T$ and $M_T$ are the total 
         N_{pnn} (m_1, m_2, m_3 , m_{^3{\rm He}}  \, )  \, \equiv \, 
         {{}^{(-)}\bra{\Psi_{pnn}  \, 
             m_1 \, m_2 \, m_3 \,
-            {\bf P}_f=0 
+            \vec{P}_f=0 
             }}\, 
             \rho_{3N}
-        \, \ket{\Psi_{^3{\rm He}} \, m_{^3{\rm He}} \, {\bf P}_i=0 \, 
+        \, \ket{\Psi_{^3{\rm He}} \, m_{^3{\rm He}} \, \vec{P}_i=0 \, 
             } 
         \label{npnn}
     \end{eqnarray}
 
-    $E_{pq}$ is the internal energy of the final 3N state and can be expressed in terms of the Jacobi relative momenta ${\bf p}$ and ${\bf q}$ 
+    $E_{pq}$ is the internal energy of the final 3N state and can be expressed in terms of the Jacobi relative momenta $\vec{p}$ and $\vec{q}$ 
 
     \begin{eqnarray}
         M_\pi + M_{^3{\rm He}} 
-        \approx 3 M + \frac{ {\bf p}^{\, 2}} {M} + \frac34 \frac{ {\bf q}^{\, 2}} {M} 
+        \approx 3 M + \frac{ \vec{p}^{\, 2}} {M} + \frac34 \frac{ \vec{q}^{\, 2}} {M} 
         \equiv 3 M + E_{pq}  \, 
         = 3 M + \frac{ p_{max}^{\, 2}} {M} \,
         = 3 M + \frac34 \frac{ q_{max}^{\, 2}} {M} \, .
@@ -971,7 +994,7 @@ $t$ is a total isospin of the 2-3 subsystem whereas $T$ and $M_T$ are the total 
     \end{eqnarray} 
 
     In \eq{epq} $p_{max}$ and $q_{max}$ are maximal kinematically allowed values of 
-    Jacobi momenta. $p$ and $q$, respectively.
+    Jacobi momenta $p$ and $q$, respectively.
 
     Analogously, the total absorption rate for $\pi^- + {^3{\rm H}} \rightarrow n + n + n $
     reads
@@ -990,7 +1013,7 @@ $t$ is a total isospin of the 2-3 subsystem whereas $T$ and $M_T$ are the total 
             \frac12 \, 
             \sum\limits_{m_1, m_2, m_3, m_{^3{\rm H}}} 
             \left| 
-            N_{nnn} (m_1, m_2, m_3, m_{^3{\rm He}} \, ) \, 
+            N_{nnn} (m_1, m_2, m_3, m_{^3{\rm H}} \, ) \, 
             \right|^2  \,
     \label{gnnn}
     \end{eqnarray}
@@ -1000,21 +1023,22 @@ $t$ is a total isospin of the 2-3 subsystem whereas $T$ and $M_T$ are the total 
         N_{nnn} (m_1, m_2, m_3 , m_{^3{\rm H}}  \, )  \, \equiv \, 
         {{}^{(-)}\bra{\Psi_{nnn}  \, 
                 m_1 \, m_2 \, m_3 \,
-                {\bf P}_f=0 
+                \vec{P}_f=0 
                 }}\, 
                 \rho_{3N}
-        \, \ket{\Psi_{^3{\rm H}} \, m_{^3{\rm H}} \, {\bf P}_i=0 
-                } \, ,
+        \, \ket{\Psi_{^3{\rm H}} \, m_{^3{\rm H}} \, \vec{P}_i=0 
+        } \, .
         \label{nnnn}
     \end{eqnarray}
 
 
 
 
-    In the Results section, I also demonstrate predictions of the differential absorption rates.
-    The natural domain is defined on energies of outgoing nucleons    
+    In the Results section, I also demonstrate (for processes
+    with three free nucleons in the final state) predictions of the differential absorption rates.
+    The natural domain is defined by energies of outgoing nucleons    
     $(E_1, E_2)$; in such a case the differential absorption rate
-     $ {d^2\Gamma_{pnn} }/ \left( {d E_1 \, d E_2} \right) $ expresses as 
+     $ {d^2\Gamma_{pnn} }/ \left( {d E_1 \, d E_2} \right) $ expresses as\cite{Golak2018}
     \begin{eqnarray}
         \frac{d^2\Gamma_{pnn} }{ {d E_1 \, d E_2}  }\, = \,
                     {\cal R} \, 
@@ -1030,8 +1054,12 @@ $t$ is a total isospin of the 2-3 subsystem whereas $T$ and $M_T$ are the total 
     \end{eqnarray}
     
     The kinematically allowed region is restricted to energies fulfilling 
-    the condition 
-    $ -1 \le \frac{E - 2 E_1 - 2 E_2 }{ 2 \sqrt{ E_1 \, E_2} } \le 1 $.
+    the condition
+
+    \begin{equation}
+         -1 \le \frac{E - 2 E_1 - 2 E_2 }{ 2 \sqrt{ E_1 \, E_2} } \le 1
+    \end{equation}
+    with $E=E_1 + E_2 + E_3$.
 
     One can also calculate the differential absorption rate with 
     respect to the dimensionless variables $x$ and $y$
@@ -1041,16 +1069,18 @@ $t$ is a total isospin of the 2-3 subsystem whereas $T$ and $M_T$ are the total 
     \begin{eqnarray}
         x & = & \sqrt{3} \, ( E_1 + 2 E_2 - E ) / E \, , \nonumber \\
         y & = &  ( 3 E_1 - E ) / E \, .
-    \label{xy}cutoff
+    \label{xy}
     \end{eqnarray}
 
-    Such definition leads to simple kinematically allowed region, namely to
+    Such definition leads to a simple kinematically allowed region, namely to
     the disk $ r^2 \equiv x^2 + y^2 \le 1 $.
     One can evaluate 
     $ {d^2\Gamma_{pnn} }/ \left( {d x \, d y} \right) $
     or (using polar coordinates)
     $ {d^2\Gamma_{pnn} }/ \left( {d r \, d \phi} \right)$
     and relate it with $\frac{d^2\Gamma_{pnn}}{dE_1dE_2}$.
+    The same can be done for $\frac{d^2\Gamma_{nnn}}{dE_1dE_2}$,
+    $\frac{d^2\Gamma_{nnn}}{dxdy}$ and $\frac{d^2\Gamma_{nnn}}{drd\phi}$.
 
 \section{Theoretical uncertainties}
 
@@ -1061,7 +1091,7 @@ $t$ is a total isospin of the 2-3 subsystem whereas $T$ and $M_T$ are the total 
     The latter can be easily estimated by computing predictions arising from various 
     models, see discussion below.
     The way how to estimate the first two types of uncertainties, together with a short
-    discussion of the remaining types of uncertainties are given below. 
+    discussion of the remaining sources of theoretical errors is given below. 
 
     \subsection*{Truncation error}
     \label{sec:trunc}
@@ -1070,7 +1100,7 @@ $t$ is a total isospin of the 2-3 subsystem whereas $T$ and $M_T$ are the total 
     expansion provides us with more and more sophisticated
     potential which is expected to increase the accuracy of data description.
     Starting from the leading order (LO) and coming next to
-    N2LO, N3LO, etc., we take into account more topologies (equivalents of Feynmann diagrams) 
+    \gls{nlo}, \gls{n2lo}, \gls{n3lo}, etc., we take into account more topologies (equivalents of Feynmann diagrams) 
     and resulting potential is expected to provide us with more precise predictions
     for the regarded process and observables. However, the chiral expansion (as any expansion) 
     in principle can be continued up to the infinity, improving the resulting series.
@@ -1083,12 +1113,12 @@ $t$ is a total isospin of the 2-3 subsystem whereas $T$ and $M_T$ are the total 
     Typically predictions at lower orders serve as input information to get truncation error at given order.
     It is worth adding that Bayesian analysis is also used for truncation error estimation.
 
-    We use the method proposed in \cite{Binder2015}.
+    I use the method proposed in \cite{Binder2015}.
     Let us regard some prediction $X^i(p)$ for observable $X$ which is calculated
     at $i$-th order of the chiral expansion 
     with the expansion parameter $Q$ ($i = 0,2,3...)$\footnote{As mentioned in Sec.~\ref{sec:intro}, we do not have a first order of expansion
     because this term in the chiral expansion always vanishes
-    and NLO  corresponds to the quadratic term (number 2)}.
+    and NLO  corresponds to the quadratic term ($\nu=2$)}.
     Here $p$ specifies a momentum
     scale of the reaction. In the case of photodisintegration, $p$ is given by a
     photon's momentum.  
@@ -1144,7 +1174,7 @@ $t$ is a total isospin of the 2-3 subsystem whereas $T$ and $M_T$ are the total 
         \end{center}
         \caption{Total cross section of the deuteron photodisintegration
         process (normalized to the maximal cross section among all $\Lambda$)
-        as a dependence on the cutoff parameter $\Lambda$ 
+        as a dependence of the cutoff parameter $\Lambda$ 
         for three photon energy E$_\gamma$ values: 30, 100, and 140 MeV.}
         \label{Cutoff_dep}
         \end{figure}
@@ -1186,12 +1216,12 @@ $t$ is a total isospin of the 2-3 subsystem whereas $T$ and $M_T$ are the total 
     \subsection*{Other theoretical uncertainties}
 
     There are obviously more sources of theoretical uncertainties. 
-    Our model has several either intrinsic limitations in precision or 
+    Our model has several either intrinsic limitations in the precision or 
     some simplifications which may be improved with further developments of the model.
     
     \paragraph{Nuclear currents}
     At the moment, our model is limited to a single nucleon current, which may not be sufficient to accurately describe the processes under consideration.  This limitation will be further discussed and tested in
-    Chapter~\ref{chap:results}. To address this issue, we utilize the Siegert theorem, which enables us to
+    Chapter~\ref{chap:results}. To address this issue, I utilize the Siegert theorem, which enables me to
     incorporate some contributions from the two-nucleon current, although it does not yet complete a job.
     It is worth noting
     that the incorporation of the two-nucleon current can significantly affect the predicted observables, as it
@@ -1203,11 +1233,12 @@ $t$ is a total isospin of the 2-3 subsystem whereas $T$ and $M_T$ are the total 
     All the results presented here do not include relativistic corrections.
     At the lower energies, the relativistic contribution might not be crucial,
     but at the region with higher energy, we may see a lack of precision.
-    This will be also confirmed and discussed regarding the total cross section
+    This will be also confirmed and discussed on example of the total cross section
     for the deuteron photodisintegration (see \fig{TOTAL_CROSS}).
     
     \paragraph{Uncertainties in the potential free parameters}
-    Since the chiral potential is of a semi-phenomenological type, the fitting procedure is applied
+    Since not all the chiral potential parameters are given by the theory, the 
+    fitting-to-data procedure is applied
     to obtain the potential parameters \cite{reinkrebs2018}. 
     The values of the free parameter of the \gls{sms} NN potential as well as free
     parameters of the  3N  interaction have been obtained from the data by the least square fitting.
@@ -1220,13 +1251,13 @@ $t$ is a total isospin of the 2-3 subsystem whereas $T$ and $M_T$ are the total 
     force parameters to 3N observables. It is done in \cite{skibincki_prc_2018, Volkotrub_2020} for the
     elastic and inelastic nucleon-deuteron scattering.
     Resulting uncertainties have been found to be much smaller (typically one order of magnitude)
-    than uncertainties arising from truncation errors or cutoff dependence.
+    than uncertainties arising from truncation errors or from the cutoff dependence.
     I expect  the same uncertainty level in electromagnetic processes and thus I do not
     intend to study that theoretical error in the presented thesis.
     Moreover, the estimation of such errors is computationally expensive, since it requires 
     significant amount of computer processing power (separate calculations for each set of parameters).
-    In future, it could be interesting to check that type of uncertainty for photodisintegration
-    processes but it should be done after completing all pieces of Hamiltonian 
+    In the future, it could be interesting to check that type of uncertainty for photodisintegration
+    processes but it should be done after completing all pieces of Hamiltonian,
     specifically after including many-body electromagnetic currents.
 
     \paragraph{Uncertainties from the numerical method}
@@ -1236,11 +1267,11 @@ $t$ is a total isospin of the 2-3 subsystem whereas $T$ and $M_T$ are the total 
     Our approach is based on partial wave decomposition 
     and in practice only a limited number of partial waves is included 
     (usually for 2N scattering we use all channels up to $j^{max}=4$ which corresponds to 18 partial waves).
-    For 3N calculations we use $J^{max}=15/2$ which corresponds to 142 partial waves.
+    For 3N calculations we use $j^{max}=5$ and $J^{max}=15/2$ which corresponds to 142 partial waves.
     In addition, I work with a grid of points which is used for the calculation of potential, wave function, numerical integration, etc. 
     The choice of grid affects the final results' precision. 
-    Usually, we use a grid of 72 values which was proven to make resulting
-    uncertainty small \cite{Glockle1983}.
+    Usually, we use a grid of 32 values which was proven to make resulting
+    uncertainty very small \cite{Glockle1983}.
 
     \paragraph{Model choice}
     I focus on the \gls{sms} potential, but using another model of interaction 
@@ -1260,4 +1291,5 @@ $t$ is a total isospin of the 2-3 subsystem whereas $T$ and $M_T$ are the total 
     choice of the processor and memory card may lead to numerical uncertainty. However, we have found that this
     uncertainty is much smaller than the uncertainties discussed above, and its impact on our results is
     negligible. We have taken great care to ensure that our calculations are performed using appropriate numerical
-    methods and sufficient computational resources to minimize any numerical errors that may arise. 
+    methods and sufficient computational resources to minimize any numerical errors that may arise.
+    This is done by careful choice of the Fortran compiler and compilation options. 
