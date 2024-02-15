@@ -65,20 +65,20 @@
     
     From \fig{TOTAL_CROSS_small} we see that the gap between these predictions
     continues increasing even more with larger energies.
-    This tells us that the Siegert approach works quite well as no additional 2N contributions are taken into account.
     The cross section predictions corrected via Siegert 2N contribution reproduce 
-    experimental data to some extent.
-    
-    \fig{TOTAL_CROSS_small} reveals the approximated character of the Siegert approach.
+    experimental data better than \gls{snc} model.
+    % To some extent
+    % the Siegert approach works  as no additional 2N contributions are taken into account.
+    However, \fig{TOTAL_CROSS_small} reveals the approximated character of the Siegert approach.
     It is clear that one has to take with caution Siegert predictions at very small energies.
     Also above \SI{20}{\mev} there is a gap between Siegert results and experimental data,
     which points that more elaborated 2N current should be included in the future.
     The observed discrepancy cannot be explained by the cut-off dependence
-    (see e.g. \fig{Diff_cross_cutoff} below) or by the low order of chiral potential (see discussion below).
+    (see e.g. \fig{Diff_cross_cutoff} below) or by the low order of chiral potential (see e.g. \fig{Trunc_100} or \fig{Diff_cross_truncation} below).
 
     While my main goal is to describe deuteron photodisintegration
     at energies $\text{E}_\gamma \lesssim \SI{50}{\mev}$, 
-    where predictions seem to describe experimental data reasonably well,
+    where predictions seem to describe experimental data \tmp{reasonably (quite?)} well,
     it is also interesting to check how 
     present theory works at higher energies.
     Above $\text{E}_\gamma=\SI{50}{\mev}$
@@ -144,7 +144,7 @@
     \SI{29.46}{\percent} at $\text{E}_\gamma = \SI{100}{\mev}$ and
     \SI{41.82}{\percent} at $\text{E}_\gamma = \SI{140}{\mev}$.
     At \gls{n4lo+} it is hardly visible at the presented scale and amounts up to 
-    \SI{1.3}{\percent} for each energy(however decreasing with the chiral order).
+    \SI{1.3}{\percent} for each energy (however increasing with the reaction energy).
     For each energy, the prediction is within the uncertainty range at lower orders.
     We see that at lower energy $\sigma_{tot}$ already at NLO reaches valve which remains
     practically unchanged at higher orders.
@@ -216,9 +216,13 @@
     (relative difference at $\text{E}_\gamma=\SI{30}{\mev}$ is \SI{0.06}{\percent}
     at the point of maximum $\theta_p = \ang{80}$) and with increasing energy to \SI{140}{\mev}
     it grows up to \SI{3.1}{\percent} at the same scattering angle. 
-    It can be connected with our potential's quality loss, but \gls{av18} can
+    It can be connected with 
+    increasing uncertainty of the chiral potential,
+    % our potential's quality loss,
+    but \gls{av18} can
     be struggling with high energies as well.
-    That once again shows that other 
+    The similar discrepancy with the data observed for both potentials
+    once again shows that other 
     components of Hamiltonian become important at that energies.
 
     
@@ -1295,9 +1299,6 @@
         Observed small uncertainties allow me to conclude that the semi-inclusive cross-section
         $\frac{d^3\sigma}{d\Omega_p d\text{E}_p}$ is not useful in studies aiming on
         pin-down the details of the chiral force.
-        \tmp{do we have prediction with other current ::: calculate with ISIEGERT=0, IMEC=0 and compare results 
-        for one configuration for 30 MeV and for 100 MeV}  
-
 
 
         \begin{figure}[h]
@@ -1348,7 +1349,7 @@
         \includegraphics[width=0.9\textwidth]{Figures_HE/CROSS_nd_trunc_30mev.pdf}
         \end{center}
         \caption{Differential cross section for the
-        two-body photodisintegration of $^3$He as a function of the $d-\gamma$ angle in c.m..
+        two-body photodisintegration of $^3$He as a function of the $d-\gamma$ angle in \gls{cm}.
         The initial photon energy $\text{E}_\gamma=\SI{30}{\mev}$ and NN with 2NF was used.}
         \label{CROSS_nd_30}
     \end{figure}
