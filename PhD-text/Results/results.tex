@@ -2035,12 +2035,30 @@ total capture rate.
     In \fig{pion_nnn_E1E2_cutoff} these regions are around $(E_1, E_2) = (0, 65), (65, 0)$ and $(65, 65)$ \SI{}{\mev}.
     Same regions are placed in \fig{pion_nnn_xy_cutoff} around $(x, y) = (0, -1), (-0.85, 0.5)$ and $(0.85, 0.5)$, respectively.
     We see that predictions are not sensitive to the cut-off value.
-    The only difference between that various panels is seen is in the distribution of the region with the lowest values of 
+    The only difference between those various panels is seen in the distribution of the region with the lowest values of 
     the $\Gamma_{nnn}$ (the center of each figure). It is mostly probably caused by the fact that
     the very small values introduce larger calculational uncertainties.
 
+    Figs.~\ref{pion_nnn_E1E2_cutoff_PW} and \ref{pion_nnn_xy_cutoff_PW} show similar intensity plots 
+    with predictions obtained without rescattering part of the interaction.
+    We see that the absorption rate in FSI regions around $(E_1, E_2) = (21, 85), (85, 21)$ and $(21, 21)$ \SI{}{\mev} in 
+    the \fig{pion_nnn_E1E2_cutoff_PW}
+    and $(x, y) = (0, 1), (0.75, -0.5)$ and $(-0.75, -0.5)$ in the \fig{pion_nnn_xy_cutoff_PW}
+    is much smaller compared to the \gls{pw}+rescattering model discussed above.
+    This is natural as rescattering brings the most in FSI. 
+    Except for these regions, the figures are very similar to the full model's prediction and do not show 
+    any interesting or disturbing deviations.
 
-    Figs.~\ref{pion_nnn_E1E2_order} and \ref{pion_nnn_xy_order} show similar intensity plots but here each panel includes
+    In turn, Figs.~\ref{pion_nnn_E1E2_cutoff_1NC} and \ref{pion_nnn_xy_cutoff_1NC}, 
+    which represent predictions obtained with \gls{snc} only, have a completely
+    different structure and even scale. The contribution from 2N current is not 
+    located in a particular region but affects the whole picture.
+    We see three minima appear around the central one which are not observed 
+    in full model's predictions.
+    This once more confirms the importance of the inclusion of a proper 2N current in the model. 
+
+    Figs.~\ref{pion_nnn_E1E2_order} and \ref{pion_nnn_xy_order} show similar intensity plots to those shown in
+    Figs.~\ref{pion_nnn_E1E2_cutoff} and \ref{pion_nnn_xy_cutoff}, but here each panel includes
     predictions obtained at different chiral orders of the \gls{sms} NN potential. Each of the panels
     shows very similar distributions of the absorption rate,
     except for the \gls{n2lo} one, where the central region (with lowest $\Gamma_{nnn}$ values) is less pronounced.
@@ -2066,7 +2084,7 @@ total capture rate.
         \end{center}
         \caption{Intensity plots for the double differential absorption rates
         $d^2 \Gamma_{nnn}/dE_1dE_2$ for the $\pi^- + ^3\text{H} \rightarrow n + n + n$
-        process obtained using the SMS NN potential supplemented by \gls{n2lo} 3NF
+        process obtained using the SMS NN potential at \gls{n4lo+} supplemented by \gls{n2lo} 3NF
         with all ingredients possible: \gls{pw} + rescattering, 1NC+2NC, 2NF+3NF.
         Each panel presents predictions obtained with different values of the cut-off parameter $\Lambda$:
         from \SI{400}{\mev} (upper left) to \SI{550}{\mev} (lower right).}
@@ -2082,6 +2100,49 @@ total capture rate.
         \label{pion_nnn_xy_cutoff}
     \end{figure}
 
+    \begin{figure}[h]
+        \begin{center}
+        \includegraphics[width=0.7\textwidth]{PlotData/PION/Dalitz_maps/figures/Dalitz_map_nnn_E1E2_cutofs_PW.pdf}
+        \end{center}
+        \caption{Intensity plots for the double differential absorption rates
+        $d^2 \Gamma_{nnn}/dE_1dE_2$ for the $\pi^- + ^3\text{H} \rightarrow n + n + n$
+        process obtained using the SMS NN potential at \gls{n4lo+} supplemented by \gls{n2lo} 3NF
+        with all ingredients possible: \gls{pw} only (without rescattering), 1NC+2NC, 2NF+3NF.
+        Each panel presents predictions obtained with different values of the cut-off parameter $\Lambda$:
+        from \SI{400}{\mev} (upper left) to \SI{550}{\mev} (lower right).}
+        \label{pion_nnn_E1E2_cutoff_PW}
+    \end{figure}
+
+    \begin{figure}[h]
+        \begin{center}
+        \includegraphics[width=0.7\textwidth]{PlotData/PION/Dalitz_maps/figures/Dalitz_map_nnn_xy_cutofs_PW.pdf}
+        \end{center}
+        \caption{The same as in \fig{pion_nnn_E1E2_cutoff_PW} but for the double differential absorption rates
+        $d^2 \Gamma_{nnn}/dxdy$.}
+        \label{pion_nnn_xy_cutoff_PW}
+    \end{figure}
+
+    \begin{figure}[h]
+        \begin{center}
+        \includegraphics[width=0.7\textwidth]{PlotData/PION/Dalitz_maps/figures/Dalitz_map_nnn_E1E2_cutofs_1NC.pdf}
+        \end{center}
+        \caption{Intensity plots for the double differential absorption rates
+        $d^2 \Gamma_{nnn}/dE_1dE_2$ for the $\pi^- + ^3\text{H} \rightarrow n + n + n$
+        process obtained using the SMS NN potential at \gls{n4lo+} supplemented by \gls{n2lo} 3NF
+        with all ingredients possible: \gls{pw} + rescattering, 1NC, 2NF+3NF.
+        Each panel presents predictions obtained with different values of the cut-off parameter $\Lambda$:
+        from \SI{400}{\mev} (upper left) to \SI{550}{\mev} (lower right).}
+        \label{pion_nnn_E1E2_cutoff_1NC}
+    \end{figure}
+
+    \begin{figure}[h]
+        \begin{center}
+        \includegraphics[width=0.7\textwidth]{PlotData/PION/Dalitz_maps/figures/Dalitz_map_nnn_xy_cutofs_1NC.pdf}
+        \end{center}
+        \caption{The same as in \fig{pion_nnn_E1E2_cutoff_1NC} but for the double differential absorption rates
+        $d^2 \Gamma_{nnn}/dxdy$.}
+        \label{pion_nnn_xy_cutoff_1NC}
+    \end{figure}
 
     \begin{figure}[h]
         \begin{center}
@@ -2089,7 +2150,7 @@ total capture rate.
         \end{center}
         \caption{Intensity plots for the double differential absorption rates
         $d^2 \Gamma_{nnn}/dE_1dE_2$ for the $\pi^- + ^3\text{H} \rightarrow n + n + n$
-        process obtained using the SMS potential
+        process obtained using the SMS NN potential
         with all contributions possible: \gls{pw} + rescattering, 1NC+2NC, 2NF+3NF.
         Each panel presents predictions obtained at different chiral orders of the \gls{sms} potential:
         from \gls{n2lo} (upper left) to \gls{n4lo+} (lower right) and with $\Lambda = \SI{450}{\mev}$.
