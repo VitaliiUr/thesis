@@ -59,7 +59,7 @@
         \Delta = \frac{\max(x) - \min(x)}{\frac{1}{N}\sum_{i=1}^N x_i} \cdot 100\%,
         \label{eq:relative_diff}
     \end{equation}
-    so in the specific case of comparison the data with predictions based on \gls{snc} current and "\gls{snc} + Siegert" we
+    so in the specific case of comparison predictions based on \gls{snc} current with "\gls{snc} + Siegert" ones I
     calculate the relative difference as 
     $\Delta = \frac{|\sigma^{\gls{snc}+Siegert} - \sigma^{1N}|}{0.5(\sigma^{\gls{snc}+Siegert} + \sigma^{1N})}$.
     
@@ -172,7 +172,7 @@
     the description of the data is deteriorating: theoretical
     predictions still match the data qualitatively, but
     the gap for proton emission angle $\theta_p$ in range ($\ang{60} < \theta_p < \ang{130}$) 
-    is up to \SI{32}{\percent} (of the predicted value)
+    is up to \SI{32}{\percent} of the predicted value
     and relative difference (calculated with \eq{eq:relative_diff}) is up to
     \SI{7}{\percent}.
     At the highest energy (bottom row), it is even hard to say about 
@@ -248,7 +248,7 @@
     The \fig{Diff_cross_err} (left)
     presents theoretical truncation uncertainties.
     That confirms our expectations
-    that for the regarded photo reaction chiral order
+    that for the regarded photoreaction chiral order
     \gls{n4lo+} can produce converged predictions: 
     the black band (representing truncation error at \gls{n4lo+}) is hardly visible
     for the $\text{E}_\gamma=$~\SI{30}{\mev}
@@ -288,9 +288,9 @@
     cross section for the same energies has the cut-off spread
     around \SI{4.5}{\percent} for \SI{100}{\mev} and \SI{8}{\percent} for \SI{140}{\mev}
      For $\text{E}_\gamma=\SI{30}{\mev}$ it is below  \SI{1}{\percent}.
-     It means that even cut-off dependence for that total cross section remains
+     It means that cut-off dependence for that total cross section remains
      relatively small, especially at the lower energies.
-     Note, that the biggest relative difference arise from regions 
+     Note, that the biggest relative difference arises from regions 
      with $\theta_p$ close to \ang{0} and \ang{180}.
 
 
@@ -901,7 +901,7 @@
      points to the simplified character of the model used in my calculations.
 
      In the \fig{asymmetry_energy_1NC} the predictions obtained with the Full set of
-     components (plane wave + rescattering and \gls{snc} + Siegert, solid blue curve) are shown
+     components (\gls{pw} + rescattering and \gls{snc} + Siegert, solid blue curve) are shown
      together with predictions obtained with the same current but without rescattering (green dashed-dotted line)
      and without contribution from the Siegert but keeping rescattering (pink dashed line) for the same 
      photon energies as above: E$_\gamma=\SI{20}{\mev}$ (left panel)
@@ -1362,7 +1362,8 @@
         \end{center}
         \caption{Differential cross section for the
         two-body photodisintegration of $^3$He as a function of the $d-\gamma$ angle in \gls{cm}.
-        The initial photon energy $\text{E}_\gamma=\SI{30}{\mev}$, NN with 2NF and \gls{snc}+Siegert model are used.}
+        The initial photon energy $\text{E}_\gamma=\SI{30}{\mev}$, 
+        Full model(2N+3N force, \gls{snc}+Siegert) is used.}
         \label{CROSS_nd_30}
     \end{figure}
 
@@ -1555,7 +1556,7 @@ state.
 Due to the rotational symmetry, the directions of those momenta are not important.
 In contrast, in the case of absorption on 3N bound state one can be also interested in various
 differential absorption rates.
-Thus in the following, I show predictions of the differential and total capture rates
+Thus in the following, I show predictions for the differential and total capture rates
 for absorption on $^3$He and $^3$H, while for the absorption on the deuteron I will restrict myself to the 
 total capture rate.
 
@@ -1630,12 +1631,13 @@ total capture rate.
     My predictions can be summarized as follows:
 
     \begin{eqnarray}\label{Gam_nd_our}
-        \Gamma_{pnn}  & =& (1.28^{+ 0.29}_{-0.14} \pm 1.02)\times 10^{16} \, {\rm s^{-1}}\\ \label{Gam_nd_pnn_our}
-        \Gamma_{nd} & =  & (2.0^{+1.0}_{-0.6}\pm 1.6)\times 10^{15} \, {\rm s^{-1}}\\ \label{Gam_pnn_our}
+        \Gamma_{pnn}  & =& (1.28^{+ 0.29}_{-0.14} \pm 1.02)\times 10^{16} \, {\rm s^{-1}}\label{Gam_nd_pnn_our}\\ 
+        \Gamma_{nd} & =  & (2.0^{+1.0}_{-0.6}\pm 1.6)\times 10^{15} \, {\rm s^{-1}} \label{Gam_pnn_our}
     \end{eqnarray}
     where the first uncertainty is related to the cut-off parameter and the second one to the chiral order (truncation error). The latter error is a half-width of the band of truncation uncertainty.
-    The values of the absorption are those for \gls{n4lo+} and $\Lambda=\SI{450}{\mev}$
-
+    The first uncertainty simply shows ranges of minimal and maximal value
+    of the absorption rate taken among the predictions with $\Lambda \in (400, 550)~\SI{}{\mev}$.
+    The values of the absorption are those for \gls{n4lo+} and $\Lambda=\SI{450}{\mev}$.
     We see that our predictions, present in Figs.~\ref{Gamma_pnn} and \ref{Gamma_nd}, are 
     much smaller than experimental values,
     but they overlap each other within the uncertainty range,
@@ -1763,7 +1765,7 @@ total capture rate.
             \end{center}
             \caption{Intensity plots for the double differential absorption rates
             $d^2 \Gamma_{pnn}/dE_1dE_2$ for the $\pi^- + ^3\text{He} \rightarrow p + n + n$ process, obtained using the SMS NN potential
-            with all contributions possible: plane wave + rescattering, 1NC+2NC, 2NF+3NF.
+            with all contributions possible: \gls{pw} + rescattering, 1NC+2NC, 2NF+3NF.
             Each panel presents predictions obtained with different values of the cut-off parameter $\Lambda$:
             from $\Lambda=\SI{400}{\mev}$ (upper left) to $\Lambda=\SI{550}{\mev}$ (lower right). Nucleon 1 is a proton.}
             \label{pion_map_E1E2_cutoff}
@@ -1865,7 +1867,7 @@ total capture rate.
         \caption{Intensity plots for the double differential absorption rates
         $d^2 \Gamma_{pnn}/dE_1dE_2$ for the $\pi^- + ^3\text{He} \rightarrow p + n + n$
         process obtained using the SMS potential
-        with all contributions possible: plane wave + rescattering, 1NC+2NC, 2NF+3NF.
+        with all contributions possible: \gls{pw} + rescattering, 1NC+2NC, 2NF+3NF.
         Each panel presents predictions obtained with different chiral orders of the \gls{sms} NN potential:
         from \gls{n2lo} (upper left) to \gls{n4lo+} (lower right) and with $\Lambda = \SI{450}{\mev}$.
         Nucleon 1 is a proton. 3NF was taken at \gls{n2lo} in each case.}
@@ -1888,7 +1890,7 @@ total capture rate.
     Thus following figures demonstrate the same phenomena but from a different point of view.
     Namely in \fig{pion_GdEp} I show differential absorption rate $d\Gamma_{pnn} /d\text{E}_p$
     that is the same as in e.g. \fig{pion_map_E1E2_order}, but integrated over E$_n$($\equiv\text{E}_2$).
-    All the results are obtained with the most advanced setup (plane wave + rescattering, 1NC+2NC, 2NF+3NF).
+    All the results are obtained with the most advanced setup (\gls{pw} + rescattering, 1NC+2NC, 2NF+3NF).
     The left panel consists of the results with $\Lambda=\SI{450}{\mev}$ and each curve corresponds 
     to a particular chiral order. An interesting region here is a maximum
     of $d\Gamma_{pnn} /d\text{E}_p$  which corresponds
@@ -1962,7 +1964,7 @@ total capture rate.
     predictions obtained with $\Lambda=\SIlist{500;550}{\mev}$ being very similar,
     but with a large spread of all the rest results.
     This nature of the cut-off dependence is also reflected in the total absorption 
-    rate, present in \fig{Gamma_pnn}. 
+    rate, shown in \fig{Gamma_pnn}. 
 
     \begin{figure}[h]
         \begin{center}
@@ -1997,7 +1999,7 @@ total capture rate.
     as a function of the chiral order of the \gls{sms} NN potential while each curve represents
     different cut-off values used to obtain the prediction. 
     The most advanced dynamical model was used in this case, namely \gls{pw} + rescattering part,
-    both single- and two-nucleon currents and two-nucleon plus three-nucleon (at \gls{n2lo}) interaction.
+    both single- and two-nucleon absorption operators and two-nucleon plus three-nucleon (at \gls{n2lo}) interaction.
 
     Similarly to the three-body break-up of $^3$He, we see that with each subsequent chiral order
     predictions become closer to each other, so the cut-off dependence gets weaker.
@@ -2020,8 +2022,10 @@ total capture rate.
     My predictions from the \fig{Gamma_nnn} can be summarized by the value from \gls{n4lo+}:
 
     \begin{eqnarray}\label{Gam_nnn_our}
-        \Gamma_{nnn}  & =& (1.1^{+ 0.2}_{-0.1} \pm 0.9)\times 10^{15} \, {\rm s^{-1}}.
+        \Gamma_{nnn}  & =& (1.1^{+ 0.2}_{-0.1} \pm 0.9)\times 10^{15} \, {\rm s^{-1}},
     \end{eqnarray}
+    where the uncertainties show cutoff dependence and truncation errors,
+    and were obtained as for $\Gamma_{pnn}$ (\eq{Gam_nd_pnn_our}).
 
     In Figs.~\ref{pion_nnn_E1E2_cutoff} and \ref{pion_nnn_xy_cutoff} I show intensity plots for the double differential absorption rates
     $d^2 \Gamma_{nnn}/dE_1dE_2$ for the $\pi^- + ^3\text{H} \rightarrow n + n + n$ process as functions of the nucleons energies
@@ -2029,7 +2033,8 @@ total capture rate.
     Each panel in the figures presents predictions obtained with different values of the cut-off parameter $\Lambda$.
     On the contrary to the $^3$He case, we see a symmetric distribution of the absorption rate with respect to the
     center of the figure.
-    It is because of the symmetry of the three-body system as there are three identical particles - neutrons in the final state.
+    It is because of the symmetry of the three-body system as there are
+    three identical particles - neutrons - in the final state.
     The dominant contribution comes from QFS(nn) regions - where one of the neutrons is a spectator and has the lowest energy (close to 0)
     and the rest two are sharing almost all the energy equally.
     In \fig{pion_nnn_E1E2_cutoff} these regions are around $(E_1, E_2) = (0, 65), (65, 0)$ and $(65, 65)$ \SI{}{\mev}.
@@ -2051,17 +2056,17 @@ total capture rate.
 
     In turn, Figs.~\ref{pion_nnn_E1E2_cutoff_1NC} and \ref{pion_nnn_xy_cutoff_1NC}, 
     which represent predictions obtained with \gls{snc} only, have a completely
-    different structure and even scale. The contribution from 2N current is not 
+    different structure and even scale. The contribution from the 2N absorption operator is not 
     located in a particular region but affects the whole picture.
     We see three minima appear around the central one which are not observed 
     in full model's predictions.
-    This once more confirms the importance of the inclusion of a proper 2N current in the model. 
+    This once more confirms the importance of the inclusion of a proper 2N absorption operator in the model. 
 
     Figs.~\ref{pion_nnn_E1E2_order} and \ref{pion_nnn_xy_order} show similar intensity plots to those shown in
     Figs.~\ref{pion_nnn_E1E2_cutoff} and \ref{pion_nnn_xy_cutoff}, but here each panel includes
     predictions obtained at different chiral orders of the \gls{sms} NN potential. Each of the panels
-    shows very similar distributions of the absorption rate,
-    except for the \gls{n2lo} one, where the central region (with lowest $\Gamma_{nnn}$ values) is less pronounced.
+    reveals very similar distributions of the absorption rate,
+    except for the \gls{n2lo} one, where the central region (with the lowest $\Gamma_{nnn}$ values) is less pronounced.
 
     It is further confirmed in the \fig{pion_dGdEn_3H} (left panel) where differential absorption rate $d\Gamma_{nnn} /d\text{E}_n$ at \gls{n2lo} has much larger peaks (at around $E_n = \SI{0}{\mev}$ and $E_n = \SI{68}{\mev}$)
     while all other predictions are relatively close to each other.
@@ -2107,7 +2112,7 @@ total capture rate.
         \caption{Intensity plots for the double differential absorption rates
         $d^2 \Gamma_{nnn}/dE_1dE_2$ for the $\pi^- + ^3\text{H} \rightarrow n + n + n$
         process obtained using the SMS NN potential at \gls{n4lo+} supplemented by \gls{n2lo} 3NF
-        with all ingredients possible: \gls{pw} only (without rescattering), 1NC+2NC, 2NF+3NF.
+        with following ingredients: \gls{pw} only (without rescattering), 1NC+2NC, 2NF+3NF.
         Each panel presents predictions obtained with different values of the cut-off parameter $\Lambda$:
         from \SI{400}{\mev} (upper left) to \SI{550}{\mev} (lower right).}
         \label{pion_nnn_E1E2_cutoff_PW}
@@ -2129,7 +2134,7 @@ total capture rate.
         \caption{Intensity plots for the double differential absorption rates
         $d^2 \Gamma_{nnn}/dE_1dE_2$ for the $\pi^- + ^3\text{H} \rightarrow n + n + n$
         process obtained using the SMS NN potential at \gls{n4lo+} supplemented by \gls{n2lo} 3NF
-        with all ingredients possible: \gls{pw} + rescattering, 1NC, 2NF+3NF.
+        with following ingredients: \gls{pw} + rescattering, 1NC (without 2N operator), 2NF+3NF.
         Each panel presents predictions obtained with different values of the cut-off parameter $\Lambda$:
         from \SI{400}{\mev} (upper left) to \SI{550}{\mev} (lower right).}
         \label{pion_nnn_E1E2_cutoff_1NC}

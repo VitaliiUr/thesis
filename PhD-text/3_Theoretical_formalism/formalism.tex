@@ -23,10 +23,10 @@ the two-nucleon wave function of the final scattering state $\Psi_{final}$
 and a four-vector current operator $J^\mu$ which acts between initial and final 
 two-nucleon states. 
 In case of $^3$He or $^3$H photodisintegration analogous nuclear matrix element
-$\langle \Psi_{final} \mid J^\mu \mid \Psi_{initial}$ has to be found, but now 
-$\ket{\Psi_{initial}}$ is either $^3$He or $^3$H bound state and $\bra{\Psi_{}final}$
-describes a 3N scattering state with all three nucleons unbound after reaction
-or Nd scattering state with the pair nucleon-deuteron in the final state.
+$\matrixel{\Psi_{final}} {J^\mu} {\Psi_{initial}}$ has to be found, but now 
+$\ket{\Psi_{initial}}$ is either $^3$He or $^3$H bound state and $\bra{\Psi_{final}}$
+describes a 3N scattering state with all three nucleons unbound after the reaction
+or Nd scattering state with the two particles: nucleon and deuteron in the final state.
 In the following, I describe how to get these quantities.
 
 
@@ -265,7 +265,7 @@ In the following, I describe how to get these quantities.
     \end{figure}
 
     An example of such wave functions is demonstrated in \fig{wave_func}. The left panel demonstrates
-    a wave function for $l=0$ - $^3S_1$ while the right one - for $l=2$ - $^3D_1$. Both 
+    a wave function for $l=0$ - $(^3S_1)$, while the right one for $l=2$ - $(^3D_1)$. Both 
     plots consist of the curves for different cutoff values and using the chiral \gls{sms} potential at \gls{n4lo+}.
     The small deviation between lines shows that cutoff dependence is rather weak at this stage
     but further discrepancies connected to the value of $\Lambda$ may appear in other components
@@ -338,25 +338,14 @@ In the following, I describe how to get these quantities.
         \ket{\psi} = \frac{1}{E - H_0}V \ket{\psi} +  \ket{\vec{p}\,},
         \label{psieq}
     \end{equation}
-    % where $\mid \vec{p} \rangle$ is a solution to the
-    % free-particle Schr\"{o}dinger equation
-    % \begin{equation}
-    %     H_0 \ket{\vec{p}} =  E  \ket{\vec{p}},
-    % \end{equation}
-    % with same energy eigenvalue\cite{Sakurai}.
-    % was added artificially in order to satisfy a criterion mentioned above 
-    % and following the logic from . 
-    % In addition, it 
     which guarantees that
      application of the operator $(E -H_0)$ to the 
     \eq{psieq} results in the second equation from the set (\ref{system}).
-    % Also, \eq{psieq} for $V \rightarrow 0$ becomes $\mid \psi \rangle = \mid \vec{p} \rangle$
 
 
     In order to deal with a singular operator $\frac{1}{E - H_0}$ in \eq{psieq}, the well-known
     technique is used to make such an operator complex by adding a small imaginary number to the denominator
     so \eq{psieq} becomes
-    % making it  $\frac{1}{E + i\epsilon - H_0}$.
 
     \begin{equation}
         \ket{\psi} = G_0(E \pm i\epsilon)V \mid \psi \rangle +  \mid \vec{p} \rangle,
@@ -429,7 +418,7 @@ In the following, I describe how to get these quantities.
         \label{lse_pwd_reduced}
     \end{multline}
 
-    I solve \eq{lse_pwd_reduced} numerically, which again requires discretisation
+    I solve \eq{lse_pwd_reduced} numerically, which again requires discretization
     and therefore leads to a set of linear equations.
     Finally, using \eq{psi_toper} and denoting the momentum state of two nucleons
     with spin projections $m_d$ and $m_n$ as $\bra{\phi m_d m_n}$, we can write \eq{main} as
@@ -508,31 +497,12 @@ of the first particle which spin is $\frac{1}{2}$
 and $I$ is its total angular momentum.
 $J$ and $M_J$ are the total angular momentum of the 3N system and its projection on the z-axis respectively.
 $t$ is a total isospin of the 2-3 subsystem whereas $T$ and $M_T$ are the total isospin of the 3N system and its projection on the z-axis, respectively.  
-The Jacobi momenta $\vec{p}$ and $\vec{q}$ for three particles with individual momenta $\vec{k_i}, i={1,2,3}$ are defined as [\cite{Glockle1983}]:
+The Jacobi momenta $\vec{p}$ and $\vec{q}$ for three particles with individual momenta $\vec{k_i}, i={1,2,3}$ are defined as in \cite{Glockle1983}:
     \begin{eqnarray}
         \vec{p_i} &=& \frac{1}{2}(\vec{k_j} - \vec{k_k}),\nonumber\\
         \vec{q_i} &=& \frac{1}{3}(2\vec{k_i} - \vec{k_j} - \vec{k_k}), \quad \{i,j,k\}=\{1,2,3\}, \{2,3,1\}, \{3,1,2\}.
     \end{eqnarray}
 
-% Using states defined in \eq{3N_PW}, we can write a partial-wave representation of the \eq{fadeed_lse}:
-% \begin{equation}
-%     \begin{aligned}
-%         \left\langle p, q, \alpha_{J, M_J}\right. & \left|\psi_i\right\rangle=\frac{1}{E-\frac{p^2}{m}-\frac{3 q^2}{4 m}+i \epsilon}[ \\
-%         & \sum_{\alpha^{\prime}, \alpha^{\prime \prime}} \int_0^{\infty} d q^{\prime \prime} q^{\prime \prime 2} \int_{-1}^1 d x t_{\alpha, \alpha^{\prime}}^{+}\left(p, \pi_1\left(q, q^{\prime \prime}, x\right), E-\frac{3 q}{4 m}\right) \\
-%         * & \frac{\tilde{G}_{\alpha^{\prime}, \alpha^{\prime \prime}}\left(q^{\prime}, q^{\prime \prime}, x\right)}{\pi_1^{l^{\prime}} \pi_2^{l^{\prime \prime}}}\left\langle\pi_2, q^{\prime \prime}, \alpha_{J^{\prime \prime}, M_{J^{\prime \prime}}^{\prime \prime}} \mid \psi_i\right\rangle \\
-%         +\quad & \sum_{\alpha^{\prime \prime}} \int_0^{\infty} d p^{\prime \prime} p^{\prime \prime 2} \int_0^{\infty} d q^{\prime \prime} q^{\prime \prime 2} V_{\alpha, \alpha^{\prime \prime}}^4\left(p, q, p^{\prime \prime}, q^{\prime \prime}\right)\left\langle p^{\prime \prime}, q^{\prime \prime}, \alpha_{J^{\prime \prime}, M_{J^{\prime \prime}}^{\prime \prime}} \mid \psi_i\right\rangle \\
-%         +\quad & \sum_{\alpha^{\prime}, \alpha^{\prime \prime}} \int_0^{\infty} d q^{\prime} q^{\prime 2} \int_0^{\infty} d q^{\prime \prime} q^{\prime \prime \prime} \int_{-1}^1 d x V_{\alpha, \alpha^{\prime}}^4\left(p, q, \pi_1\left(q^{\prime}, q^{\prime \prime}, x\right), q^{\prime}\right) \\
-%         +\quad & \frac{\tilde{G}_{\alpha^{\prime}, \alpha^{\prime \prime}}\left(q^{\prime}, q^{\prime \prime}, x\right)}{\pi_1^{l^{\prime}} \pi_2^{l^{\prime \prime}}}\left\langle\pi_2, q^{\prime \prime}, \alpha_{J^{\prime \prime}, M_{J^{\prime \prime}}^{\prime \prime}} \mid \psi_i\right\rangle\\
-%         & +\sum_{\alpha^{\prime}, \alpha^{\prime \prime}} \int_0^{\infty} d p^{\prime} p^{\prime 2} \int_0^{\infty} d p^{\prime \prime} p^{\prime \prime 2} \int_0^{\infty} d q^{\prime \prime} q^{\prime \prime 2} t_{\alpha, \alpha^{\prime}}^{+}\left(p, p^{\prime}, E-\frac{3 q^2}{4 m}\right) \frac{1}{E-\frac{p^{\prime 2}}{m}-\frac{3 q^2}{4 m}+i \epsilon} \\ & \text { * } \quad V_{\alpha^{\prime}, \alpha^{\prime \prime}}^4\left(p^{\prime}, q, p^{\prime \prime}, q^{\prime \prime}\right)\left\langle p^{\prime \prime}, q^{\prime \prime}, \alpha_{J^{\prime \prime}, M_{J^{\prime \prime}}}^{\prime \prime} \mid \psi_i\right\rangle \\ & +\sum_{\alpha^{\prime}, \alpha^{\prime \prime}, \alpha^{\prime \prime \prime}} \int_0^{\infty} d p^{\prime} p^{\prime 2} \int_0^{\infty} d q^{\prime \prime} q^{\prime \prime 2} \int_0^{\infty} d q^{\prime} q^{\prime 2} \int_{-1}^1 d x t_{\alpha, \alpha^{\prime}}^{+}\left(p, p^{\prime}, E-\frac{3 q^2}{4 m}\right) \\ & \text { * } \frac{1}{E-\frac{p^{\prime 2}}{m}-\frac{3 q^2}{4 m}+i \epsilon} V_{\alpha^{\prime}, \alpha^{\prime \prime \prime}}^4\left(p^{\prime}, q, \pi_1\left(q^{\prime}, q^{\prime \prime}, x\right), q^{\prime}\right) \\ & \left.* \quad \frac{\tilde{G}_{\alpha^{\prime \prime \prime}, \alpha^{\prime \prime}}\left(q^{\prime}, q^{\prime \prime}, x\right)}{\pi_1^{l^{\prime \prime \prime}} \pi_2^{l^{\prime \prime}}}\left\langle\pi_2, q^{\prime \prime}, \alpha_{J^{\prime \prime}, M_{J^{\prime \prime}}}^{\prime \prime} \mid \psi_i\right\rangle\right] \text {, } \\ & 
-%     \end{aligned}
-% \end{equation}
-
-% where
-
-% \begin{equation}
-%     V_{\alpha, \alpha^{\prime}}^4\left(p, q, p^{\prime}, q^{\prime}\right) \equiv\left\langle p, q, \alpha_{J, M_J}\left|V_4^{(1)}\right| p^{\prime}, q^{\prime}, \alpha_{J^{\prime}, M_{J^{\prime}}}^{\prime}\right\rangle
-% \end{equation}
-    
 
 \section{3N scattering state}
 
@@ -541,7 +511,7 @@ The Jacobi momenta $\vec{p}$ and $\vec{q}$ for three particles with individual m
     of three nucleons ${j,k,l}$ with particles $k$ and $l$ 
     having relative momentum $\vec{p}$
     and particle $j$ moving with momentum $\vec{q}$ with respect to the 
-    center of mass $(k-l)$ subsystem:
+    center of mass of $(k-l)$ subsystem:
     
     \begin{equation}
         \ket{\Phi^{3N}_j} \equiv \frac{1}{\sqrt{2}}(1 - P_{kl})
@@ -555,7 +525,7 @@ The Jacobi momenta $\vec{p}$ and $\vec{q}$ for three particles with individual m
         E_{3N} = \frac{|\vec{p}|^2}{m} + \frac{3 |\vec{q}|^2}{4m}.
     \end{equation}
     
-    Using a free propagator $G(E_{3N} - i\epsilon)$ we can come up with
+    Using a free propagator $G(E_{3N} - i\epsilon)$ we come up with
     the total 3N scattering state
 
     \begin{equation}
@@ -659,7 +629,7 @@ The Jacobi momenta $\vec{p}$ and $\vec{q}$ for three particles with individual m
     where 
     
     \begin{equation}
-        \ket{F_1} = \ket{\phi_1^{Nd}} G_0 (V_1 + V_2 + V_3 + V_4) 
+        \ket{F_1} = \ket{\phi_1^{Nd}}^{+} G_0 (V_1 + V_2 + V_3 + V_4) 
         \sum_{j=1}^3 \ket{\Psi_j^{(-)}}^{Nd}.
     \end{equation}
 
@@ -674,27 +644,10 @@ The Jacobi momenta $\vec{p}$ and $\vec{q}$ for three particles with individual m
     Fact that solving once \eq{u_mu} opens opportunity to compute both  $N_{\mu}^{Nd}$
     and $N_{\mu}^{3N}$ is a great advantage of the presented formulas. 
 
-    % \begin{eqnarray}
-    %    \ket{U_\mu} &=& \left[t_1^{+} G_0^{+}+\frac{1}{2}(1+P) V_4^{(1)} G_0^{+}\left(1+t_1^{+} G_0^{+}\right)\right](1+P) j_\mu \ket{\Psi_i} + \nonumber\\
-    %    &+& \left[t_1^{+} G_0^{+} P+\frac{1}{2}(1+P) V_4^{(1)} G_0^{+}\left(1+t_1^{+} G_0^{+}\right) P\right]\ket{U_\mu}
-    %    \label{u_mu_nd}
-    % \end{eqnarray}
-
-    % \eq{u_mu_nd} is being solved numerically in a same way as \eq{u_mu}, namely applying
-    % PWD, as it is described in \cite{GLOCKLE_report_1996}.
-
 
     \section{Nuclear electromagnetic current}
     \label{sec_current}
     
-    % The use of nuclear currents in scattering experiments is essential for understanding the structure of the nucleus and
-    % the interactions between its constituent nucleons. Advances in theoretical and experimental techniques have allowed
-    % for more precise measurements of these currents and have provided insights into
-    % the fundamental properties of the nucleus.
-
-    % The nuclear one-body current is constructed based on the electromagnetic current for a Dirac particle. To account
-    % for the extended structure of nucleons, form factors are introduced. Since we use nonrelativistic wave functions, we need to use nonrelativistic currents.    
-    % \tmp{????????????????????????????????????????????????????}
     The electromagnetic current operator for 2N (3N) system is constructed 
     from the one- and many-body currents:
     
@@ -754,7 +707,8 @@ The Jacobi momenta $\vec{p}$ and $\vec{q}$ for three particles with individual m
     The electric form factor denoted as $G_E$ is defined as
     $G_E \equiv F_1+\frac{\left(p^{\prime}-p\right)^2}{2 M_N} F_2$ and 
     represents the neutron (n) and proton (p) form factors.
-    Both electric and magnetic form factors, $G_E(Q^2)$ and $G_M(Q^2)$, are normalized as:
+    Both electric and magnetic form factors depend on $Q^2$, $G_E \equiv G_E(Q^2)$ and $G_M \equiv G_M(Q^2)$,
+    and are normalized as:
     \begin{equation}
         \begin{aligned}
         G_E^n(0) & =0 \\
@@ -781,44 +735,49 @@ The Jacobi momenta $\vec{p}$ and $\vec{q}$ for three particles with individual m
     We then obtain the rest of the electric multipoles and all of the magnetic multipoles exclusively from the single nucleon current operators.
 
     In 3N system we have following expressions for the \gls{snc}:
-
-    \begin{align}
-        % \begin{aligned}
-            \matrixel**{\pvec{p}, \pvec{q}}{j_0^1}{\vec{p}, \vec{q}} 
-            & =\int d \ppvec{p} d \ppvec{q}
-            \matrixel**{\pvec{p}, \pvec{q}}{\frac{1}{2}\left(1+\tau(1)_z\right) F_1^p+\frac{1}{2}\left(1-\tau(1)_z\right) F_1^n}{\ppvec{p}, \ppvec{q}}\nonumber\\
-            &\braket{\ppvec{p}, \ppvec{q}-\frac{2}{3} \vec{Q}}{\vec{p}, \vec{q}} \\
-            \matrixel**{\pvec{p}, \pvec{q}}{j_{ \pm}^{1, \text { conv }}} {\vec{p}, \vec{q}} 
-            & =\frac{1}{m} \int d \ppvec{p} d \ppvec{q}
-            \bra{\pvec{p}, \pvec{q}}\left[\frac{1}{2}\left(1+\tau(1)_z\right) F_1^p+\frac{1}{2}\left(1-\tau(1)_z\right) F_1^n \right] q_{ \pm}\nonumber\\
-            &\ket{\ppvec{p}, \ppvec{q}}
-            \braket{\ppvec{p}, \ppvec{q}-\frac{2}{3} \vec{Q}}{\vec{p}, \vec{q}} \label{3n_conv}\\
+    \begin{multline}
+        \matrixel**{\pvec{p}, \pvec{q}}{j_0^1}{\vec{p}, \vec{q}} 
+         =\int d \ppvec{p} d \ppvec{q}
+        \matrixel**{\pvec{p}, \pvec{q}}{\frac{1}{2}\left(1+\tau(1)_z\right) F_1^p+\frac{1}{2}\left(1-\tau(1)_z\right) F_1^n}{\ppvec{p}, \ppvec{q}}\\
+        \braket{\ppvec{p}, \ppvec{q}-\frac{2}{3} \vec{Q}}{\vec{p}, \vec{q}},
+    \end{multline}
+    \begin{multline}
+        \matrixel**{\pvec{p}, \pvec{q}}{j_{ \pm}^{1, \text { conv }}} {\vec{p}, \vec{q}} =\\
+         \frac{1}{m} \int d \ppvec{p} d \ppvec{q}
+        \matrixel**{\pvec{p}, \pvec{q}}{\left[\frac{1}{2}\left(1+\tau(1)_z\right) F_1^p+\frac{1}{2}\left(1-\tau(1)_z\right) F_1^n \right] q_{ \pm}}
+        {\ppvec{p}, \ppvec{q}}\\
+        \braket{\ppvec{p}, \ppvec{q}-\frac{2}{3} \vec{Q}}{\vec{p}, \vec{q}},
+        \label{3n_conv}
+    \end{multline}
+    \begin{multline}
             \matrixel**{\pvec{p}, \pvec{q}}{j_{ \pm}^{1, spin}}{\vec{p}, \vec{q}} 
-            & =\frac{i}{2 m} \int d \ppvec{p} d \ppvec{q}
-            \bra{\pvec{p}, \pvec{q}}\nonumber\\
-            & *\left[\frac{1}{2}\left(1+\tau(1)_z\right)\left(F_1^p+2 m F_2^p\right)+\frac{1}{2}\left(1-\tau(1)_z\right)\left(F_1^n+2 m F_2^n\right)\right] \nonumber \\
-            & *(\vec{\sigma}(1) \times \vec{Q})_{ \pm}\ket{\ppvec{p}, \ppvec{q}}\braket{\ppvec{p}, \ppvec{q}-\frac{2}{3} \vec{Q}}{\vec{p}, \vec{q}} .
+             =\frac{i}{2 m} \int d \ppvec{p} d \ppvec{q}
+            \bra{\pvec{p}, \pvec{q}}\\
+             *\left[\frac{1}{2}\left(1+\tau(1)_z\right)\left(F_1^p+2 m F_2^p\right)+\frac{1}{2}\left(1-\tau(1)_z\right)\left(F_1^n+2 m F_2^n\right)\right]  \\
+             *(\vec{\sigma}(1) \times \vec{Q})_{ \pm}\ket{\ppvec{p}, \ppvec{q}}\braket{\ppvec{p}, \ppvec{q}-\frac{2}{3} \vec{Q}}{\vec{p}, \vec{q}} .
             \label{3n_spin}
-        % \end{aligned}
-    \end{align}
+    \end{multline}
 
-    In \eq{3n_conv} and \eq{3n_spin} we present convection and spin currents which combined form a spatial component of the 
+    In \eq{3n_conv} and \eq{3n_spin} we present convection and spin currents which combined 
+    together form a spatial component of the 
     single nucleon current $\vec{j^1}(\mu) \equiv \vec{j^1}(\mu, conv) + \vec{j^1}(\mu, spin)$. 
-    In my thesis I use a model of M.~Garu and W.~Kr\"umpelmann  \cite{GARI198610} for which:
+    In my thesis I use a M.~Garu and W.~Kr\"umpelmann model  \cite{GARI198610} for which:
     \begin{align}
         % \begin{ar
             F_1^p(0)&=1 & 2 m F_2^p(0)&=1.793 \\
-            F_1^n(0)&=0 & 2 m F_2^n(0)&=-1.913
+            F_1^n(0)&=0 & 2 m F_2^n(0)&=-1.913.
         % \end{array}
     \end{align}
 
 
     \section{Pion absorption}
+    \label{sec:pion_formalism}
 
-    For the pion absorption, I include explicitly \gls{2nc} as well as \gls{snc}.
+    For the pion absorption, I include explicitly
+    two nucleon operator on the top of a single nucleon absorption.
     Thus the absorption operator is $\rho = \rho(1) + \rho(1, 2)$,
     where absorption on  a single nucleon is included in $\rho(1)$ and
-    $\rho(1, 2)$ plays a role of two-body charge current.
+    $\rho(1, 2)$ plays a role of two-body operator.
     The matrix element of the single nucleon pion absorption operator $\rho(1)$ in momentum-space for nucleon 1 relies on the
     nucleon's incoming momentum ($\vec{p}$) and outgoing momentum ($\pvec{p}$) \cite{BERNARD_1995}:
 
@@ -832,7 +791,7 @@ The Jacobi momenta $\vec{p}$ and $\vec{q}$ for three particles with individual m
     \end{eqnarray}
     where the values of the nucleon axial vector coupling, pion decay constant, and negative pion mass are $g_A =$ 1.29, 
     $F_\pi = \SI{92.4}{\mev}$, and $M_\pi = \SI{139.57}{\mev \per \clight\squared}$, respectively. $\rho (1)$ operates in the spin
-    and isospin spaces and involves the Pauli spin (isospin) operator $\vec{\sigma}_1$ ($\tau_1$) for nucleon 1 and the isospin lowering operator
+    and isospin spaces and involves the Pauli spin (isospin) operator $\vec{\sigma}_1$ ($\vec{\tau}_1$) for nucleon 1 and the isospin lowering operator
     $(\vec{\tau}_1)_- \equiv((\vec{\tau}_1)_x -{\rm i} (\vec{\tau}_1)_y)/2$.
     As before I use the average 
     "nucleon mass" $M \equiv \frac{1}{2} \left( M_p + M_n , \right)$ where the proton mass is $M_p$ and neutron mass is $M_n$.
@@ -873,10 +832,7 @@ The Jacobi momenta $\vec{p}$ and $\vec{q}$ for three particles with individual m
 
     In the case of the pion absorption process, we follow a standard procedure
     including partial wave states for both 2N and 3N induced nuclei.
-    It occurs that in such a case one needs current matrix elements. 
-    % An important difference between these two cases is that
-    % after introducing partial wave states, the transition operator is acting between
-    % different states. 
+    It occurs that in such a case one needs  matrix elements of $\rho$. 
     For 2N this is 
     $ \matrixel{\, \vec{p} + \frac12\vec{P}_f } 
     {\rho (1) }{ \vec{p} - \frac12\vec{P}_f + \vec{P}_i \, }$
@@ -893,7 +849,7 @@ The Jacobi momenta $\vec{p}$ and $\vec{q}$ for three particles with individual m
    \label{nnn1}
    \end{eqnarray}
    where $ \ket{  \vec{p}_0 \, m_{1} \, m_2 \ \vec{P}_f=0  }^{(-)}  $ denotes the 2N scattering state \cite{Golak2018}.
-   The total absorption rate for this reaction expresses as:
+   The total absorption rate for this reaction is expressed as:
 
    \begin{eqnarray}
         &&\Gamma_{nn} = 
@@ -977,7 +933,7 @@ The Jacobi momenta $\vec{p}$ and $\vec{q}$ for three particles with individual m
             \vec{P}_f=0 
             }}\, 
             \rho_{3N}
-        \, \ket{\Psi_{^3{\rm He}} \, m_{^3{\rm He}} \, \vec{P}_i=0 \, 
+        \, \ket{\Psi_{^3{\rm He}} \, m_{^3{\rm He}} \, \vec{P}_i=0 \,.
             } 
         \label{npnn}
     \end{eqnarray}
@@ -1003,7 +959,7 @@ The Jacobi momenta $\vec{p}$ and $\vec{q}$ for three particles with individual m
         \Gamma_{nnn} = 
     \frac { 2\, \left( \alpha \, M^\prime_{^3{\rm H}} \, \right)^3 \, c \, M}
     { 27 M_{\pi^-}  }
-            \int d {\bf\hat q} \,
+            \int d {\hat q} \,
             \int\limits_{0}^{2 \pi} d \phi_{p} \, 
             \int\limits_{0}^{\pi} d \theta_{p} \sin \theta_{p} \, 
             \nonumber \\
@@ -1043,13 +999,12 @@ The Jacobi momenta $\vec{p}$ and $\vec{q}$ for three particles with individual m
         \frac{d^2\Gamma_{pnn} }{ {d E_1 \, d E_2}  }\, = \,
                     {\cal R} \, 
                     \frac { 64\, \pi^2 \, \left( \alpha \, M^\prime_{^3{\rm He}} \, \right)^3 \, c\, M^3 } { 3 M_{\pi^-}   } \,
-            \nonumber \\
             \times \,
             \frac12 \, 
             \sum\limits_{m_1, m_2, m_3, m_{^3{\rm He}}} 
             \left| 
             N_{pnn} (m_1, m_2, m_3, m_{^3{\rm He}} \, ) \, 
-            \right|^2  \, .   % with \rho(1) + \rho(2) + \rho(3) + ...
+            \right|^2  \, \, .   % with \rho(1) + \rho(2) + \rho(3) + ...
     \label{gpnn.4}
     \end{eqnarray}
     
@@ -1174,8 +1129,8 @@ The Jacobi momenta $\vec{p}$ and $\vec{q}$ for three particles with individual m
         \end{center}
         \caption{Total cross section of the deuteron photodisintegration
         process (normalized to the maximal cross section among all $\Lambda$)
-        as a dependence of the cutoff parameter $\Lambda$ 
-        for three photon energy E$_\gamma$ values: 30, 100, and 140 MeV.}
+        as a function of the cutoff parameter $\Lambda$ 
+        for three photon energy values E$_\gamma$ values: 30, 100, and 140 MeV.}
         \label{Cutoff_dep}
         \end{figure}
 
@@ -1270,7 +1225,7 @@ The Jacobi momenta $\vec{p}$ and $\vec{q}$ for three particles with individual m
     For 3N calculations we use $j^{max}=5$ and $J^{max}=15/2$ which corresponds to 142 partial waves.
     In addition, I work with a grid of points which is used for the calculation of potential, wave function, numerical integration, etc. 
     The choice of grid affects the final results' precision. 
-    Usually, we use a grid of 32 values which was proven to make resulting
+    Usually, we use a grid of 32 values which was proven to make a resulting
     uncertainty very small \cite{Glockle1983}.
 
     \paragraph{Model choice}
@@ -1287,7 +1242,7 @@ The Jacobi momenta $\vec{p}$ and $\vec{q}$ for three particles with individual m
     \paragraph{Machine precision}
 
     Finally, it should be noted that every computer calculation includes limited numerical machine precision which
-    can be noticeable for complex calculations. We perform our calculations via CPU machine, where the particular
+    can be noticeable for complex calculations. We perform our calculations via a CPU machine, where the particular
     choice of the processor and memory card may lead to numerical uncertainty. However, we have found that this
     uncertainty is much smaller than the uncertainties discussed above, and its impact on our results is
     negligible. We have taken great care to ensure that our calculations are performed using appropriate numerical

@@ -1,0 +1,152 @@
+\documentclass[a4paper, 14pt]{extarticle}
+% \usepackage{simplemargins}
+
+\usepackage{geometry}
+\geometry{lmargin=1.9cm, rmargin=1.32cm, tmargin=2.54cm,bmargin=1.9cm}
+
+%\usepackage[square]{natbib}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage[resetlabels]{multibib}
+\newcites{reg}{\large Regular papers}
+\newcites{conf}{\large Conference proceedings}
+
+\usepackage{siunitx}
+\sisetup{
+  range-phrase= \text{ -- },
+  range-units=single,
+  % per-mode=power
+  per-mode=fraction
+}
+
+\DeclareSIUnit\mm{\milli\metre}
+\DeclareSIUnit\cm{\centi\metre}
+\DeclareSIUnit\ms{\milli\second}
+\DeclareSIUnit\um{\micro\metre}
+\DeclareSIUnit\ns{\nano\second}
+\DeclareSIUnit\mev{\mega\electronvolt}
+\DeclareSIUnit\gev{\giga\electronvolt}
+\DeclareSIUnit\kev{\kilo\electronvolt}
+\DeclareSIUnit\clight{\text{\ensuremath{c}}}
+
+\providecommand{\tmp}[1]
+{
+\textcolor{red}{\textit{#1}}
+}
+
+% \renewcommand\refname{\large Publications}
+
+\begin{document}
+\pagenumbering{gobble}
+
+\Large
+ \begin{center}
+    Photodisintegration and Pion Absorption
+    % \newline
+    
+    in Two- and Three-Nucleon Systems:
+    % \newline
+    
+    A Testing Ground for Chiral Models
+
+\hspace{10pt}
+
+% Author names and affiliations
+\large
+Vitalii Urbanevych \\
+% Arthur Author$^1$, Cecilia CoAuthor$^2$ \\
+
+\hspace{10pt}
+
+% \small  
+% $^1$) First affiliation\\
+% arthur.author@correspondence.email.com\\
+% $^2$) Second affiliation
+
+\end{center}
+
+\hspace{10pt}
+
+\normalsize
+
+This Ph.D. thesis presents a comprehensive investigation into the application of the chiral potential to understand two types of processes with two- and three-nucleons.
+The primary focus is on the application of 
+the state-of-the-art SMS potential to $^2$H, $^3$H, and $^3$He photodisintegration processes,
+as well as to pion absorption by the same nuclei.
+The SMS potential is taken up to the fifth order of chiral expansion, N$^4$LO+, and augmented by the consistently regularized three-nucleon force at N$^2$LO.
+
+The study employs the momentum space formalism, solving the standard Lippmann-Schwinger equation to obtain the $t$-operator and the corresponding two-nucleon scattering state. For three-nucleon processes, the Faddeev equations are utilized to include both initial and final state interactions, allowing a thorough examination of observables such as total cross sections, capture rates, differential cross sections, and polarization observables.
+
+The main goal is to assess the quality and convergence of predictions based on the chiral SMS potential, particularly in comparison to the semi-phenomenological AV18 potential. The research explores the convergence of predictions with respect to the chiral order, revealing that predictions based on the SMS interaction are generally well-converged, indicating satisfactory model performance. Additionally, in this work I study the dependence of predictions on the intrinsic cut-off parameter $\Lambda$, providing valuable insights into the sensitivity of results to this parameter.
+
+Furthermore, the study investigates the role of various dynamical components, including final state interactions and two-nucleon current contributions. The analysis highlights the significance of these components in influencing predicted values, emphasizing the importance of a fully consistent model incorporating 2N forces, 3N forces, and one-, two-, and three-body currents.
+
+In conclusion, this work contributes to our understanding of electromagnetic and strong processes in nuclear physics, demonstrating the high quality and convergence of the chiral SMS potential.
+For all studied processes I point out especially interesting observables and kinematical configurations, in which the role of individual components of the Hamiltonian is highlighted.
+% The findings provide valuable insights for future developments in theoretical frameworks and emphasize the importance of comprehensive models for accurate predictions in nuclear physics.
+
+
+Among my results, I would like to highlight the following 
+conclusions:
+
+\begin{enumerate}
+    \item The chiral SMS nucleon-nucleon interaction at higher orders of chiral expansion (above N$^2$LO)
+    leads to a very stable behavior of predictions for the photodisintegraion and pion absorption processes.
+    That confirms previous findings for processes in pure nucleonic systems.
+    I have not observed any strange or warning pattern for observables that could be related to
+    deficiencies in the nucleon-nucleon interaction.
+    In consequence, I conclude, that NN force is known with sufficient accuracy to be used in studies of 
+    nuclear processes with external probes.
+    \item 2NC is very important for the regarded electromagnetic processes and observables. Even including it via the Siegert theorem allows seeing significant improvements.
+    \item The same is true for the pion absorption process. I took into account 2N absorption operator at leading order and the difference between
+    predictions proofs its importance.
+    In addition, the discrepancy with the existing data for the total capture rates calls for a more advanced model of two-
+    and three-body absorption operator.
+    \item The importance of 3NF is less obvious looking at my results.
+    For example, for $^3$He photodisintegration 3NF makes cutoff dependence weaker,
+    but the difference between predictions with and without 3NF is not very big.
+    Thus the investigated here processes are not the best field to study details
+    of the three-nucleon interaction.
+    The only exception is pion absorption on $^3$H, see below.
+    \item For $\pi + ^3$H there are three neutrons in the final state. It is one of very few such situations and it allows us to investigate the
+    neutron-neutron two-body force as well as the neutron-neutron-neutron three-body interaction. 
+    Relevant  experiments are certainly challenging and difficult to perform, but
+    could provide valuable information, important for the understanding and modeling
+    the 2N and 3N interactions.
+    \item In general, I observe that uncertainty arising from the truncation error at the highest
+    studied chiral order N$^4$LO+ is much lower than the spread of predictions with different
+    cut-off values. 
+    Similar is observed in case, where the N$^4$LO+ relative 
+    truncation error at $S=\SI{10}{\mev}$ is equal to \SI{2.2}{\percent} while
+    the relative cut-off spread is \SI{9.0}{\percent}.
+    \item Investigation of the differential cross section is beneficial compared to the total cross sections as it allows us to see smaller details of the reaction mechanisms and the model in a sense of convergence and cutoff dependence. One may observe the reason for particular discrepancies.
+    % (e.g. some singularity point which causes computational problems).
+    It is also less computationally expensive as the total cross section is obtained via integration of the differential cross section through the whole region.
+    Thus, while exclusive or semi-inclusive experiments are much harder to do than the measurement of the total
+    cross sections or absorption rates, the experimental efforts should focus on such types of measurements in the future. 
+    \item \tmp{It would be interesting to check experimentally if theoretical uncertainties appearing at some configurations would be also reflected in the data. So measuring the data for $^3$He gives more possibilities to test the model as lots of configurations for the differential cross section are possible.}
+    \item In my opinion, for the pion absorption it would be interesting to have a measurement data for FSI(nn) region. As we do not have a fully consistent 2NC, it would be beneficial to take into account experimental data when analyzing predictions obtained by approximations or (in future) by fully consistent 2NC. 
+    \item Analyzing the FSI contribution to the cross section of the deuteron photodisintegration 
+    I observe that it becomes bigger at higher photon energies.
+    Thus I conclude that the cross-section for deuteron photodisintegration is 
+    more sensitive to FSI at larger energies.
+    Similarly, it increases for the photon asymmetry $\Sigma_\gamma$ observable.
+    In turn, I do not observe such a dependence on energy of FSI contribution to analyzing powers.
+    The difference between plane wave and "Full"
+    predictions do not change much increasing the photon energy from \SI{30}{\mev} to \SI{100}{\mev}.
+    So if one would like to investigate the FSI contribution to the deuteron photodisintegration,
+    it is smarter to measure (or calculate) either cross section or photon asymmetry at large energies.
+    \item Our Full model nicely describes data up to approx $\text{E}_\gamma = \sim\SI{70}{\mev}$. It is not a strict value, but the general trend is that for higher energies the difference between the model and the data increases. For example, predictions for the total cross section and the tensor analyzing powers for the deuteron photodisintegraion nicely describe experimental data even up to $E_\gamma = \SI{100}{\mev}$, but photon asymmetry starts deteriorating already at $E_\gamma = \SI{40}{\mev}$.
+    \item Concerning the pion absorption I would conclude that the most interesting is, due to its final state, 
+    $\pi^- + ^3\text{H} \rightarrow n + n + n$ process.
+    It is beneficial over the absorption in $^2$H as the system has more degrees of freedom and allows
+    investigation of more configurations.
+    My results for $^3$He and $^3$H show similar sensitivity to FSI and 2N absorption operator contributions. Nevertheless, a complementary measurement of these reactions would open the way to studies of the isospin dependence of the two-body absorption operator.
+\end{enumerate}
+
+\tmp{This work is organized as follows. Chapter 1 provides an introduction to the theoretical framework and the motivation for the study. Chapter 2 presents the formalism and methodology used in the study. Chapter 3 presents the results of numerical calculations for studied processes, and Chapter 4 provides a summary and conclusions.
+Finally, I summarize in Chapter 4.}
+
+\end{document}
