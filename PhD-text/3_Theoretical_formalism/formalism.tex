@@ -30,23 +30,11 @@ or Nd scattering state with the two particles: nucleon and deuteron in the final
 In the following, I describe how to get these quantities.
 
 
-% $\vec{P_i}$($\vec{P_f}$) is an initial (final) total 2N m\vec{p}omentum.
-
-% One can introduce relative and total momenta for 2 nucleons:
-
-% \begin{eqnarray}
-    %     \vec{p} &=& \frac{1}{2} (\vec{p}_1 - \vec{p}_2)\\
-    %     \vec{\mathcal{P}} &=& \vec{p}_1 + \vec{p}_2\\
-    %     \pvec{p} &=& \frac{1}{2} (\pvec{p}_1^\prime - \pvec{p}_2^\prime)\\
-    %     \pvec{\mathcal{P}}^\prime &=& \pvec{p}_1^\prime + \pvec{p}_2^\prime,
-    % \end{eqnarray}
-    % where $\vec{p}_1$($\pvec{p}_1^\prime$) and $\vec{p}_2$($\pvec{p}_2^\prime$) are
-    % initial(final) momenta of the first and second nucleons.
 \section{2N bound state}
     \label{sec:deut_bound}
 
     Let's find a deuteron bound state wave function $\ket{\phi_d}$. 
-    The time-independent Schr\"{o}dinger equation for two particles is expressed as:
+    The time-independent Schr\"{o}din\-ger equation for two particles is expressed as:
 
     \begin{equation}
         (H_0 + V) \ket{\phi_d}  = E_d \ket{\phi_d},
@@ -58,7 +46,7 @@ In the following, I describe how to get these quantities.
 
     \begin{equation}
         H_0 = \frac{\vec{p}_1^2}{2m_1} + \frac{\vec{p}_2^2}{2m_2} = 
-        \frac{\vec{p}^2}{2\mu} + \frac{\vec{\mathcal{P}}^2}{2M}, 
+        \frac{\vec{p}^2}{2\mu} + \frac{\vec{\mathcal{P}}^2}{2M} \, , 
     \end{equation}
     where the relative and total momenta are defined as follows:
 
@@ -176,8 +164,8 @@ In the following, I describe how to get these quantities.
     \end{equation}
 
     Nucleons are fermions so exchanging them leads to antisymmetry of the
-    wave function. In PWD it results in additional requirements on allowed quantum numbers which
-    is:
+    wave function.
+    In PWD it results in the additional requirement for allowed quantum numbers which is:
 
     \begin{equation}
         (-1)^{l+s+t} = -1.
@@ -200,11 +188,6 @@ In the following, I describe how to get these quantities.
     which are commonly denoted as $^3S_1$ and $^3D_1$ (the naming stands for $^{2s+1}l_j$). They correspond 
     to $l=0$ and $l=2$ respectively (with $s = j = 1$ and $t = m_t = 0$). 
     I will denote wave functions for these channels as $\phi_l(p)$ with $l=0,2$, such that:
-
-    % Taking into account Eq.(\ref{parity}), one can find only one possible PWD state combination for 
-    % the deuteron bound state(under ... experimental evidence): 2 coupled channels for l=0,2; s=1; j=1 and $t = m_t = 0$. 
-    % These 2 channels are usually denoted as $^3S_1$ and $^3D_1$ and
-    % corresponding wave functions are $\phi_0(p)$ and $\phi_2(p)$:
     
     \begin{equation}
         \phi_l(p) = \bra{p (ls) j m_d}\braket{t m_t}{\Psi_{int}} = \bra{p(l1)1m_d} \braket{00}{\Psi_{int}}; l=0,2.
@@ -258,8 +241,6 @@ In the following, I describe how to get these quantities.
         \end{center}
         \caption{Deuteron binding energy calculated using the chiral \gls{sms} potential
         at different chiral orders as a mean value over all cutoffs.
-        % Error bands represent a spread the calculated binding energy with respect to
-        % the cutoff parameter $\Lambda$ (minimal and maximal values).
         Experimental data is taken from \cite{VANDERLEUN1982261}.}
         \label{bind}
     \end{figure}
@@ -283,22 +264,6 @@ In the following, I describe how to get these quantities.
 
 \section{2N scattering state}
 
-% \subsection{The Lippmann-Schwinger equation}
-    % Let us consider a two-nucleon scattering state $\mid \Psi _f \rangle$, It fulfills
-    % a Schr\"{o}dinger equation
-
-    % \begin{equation}
-    %     (H_0 + V) \mid \Psi _f \rangle = E \mid \Psi _f \rangle,
-    %     \label{schrod_scatt}
-    % \end{equation}
-    % with $H_0 = \frac{\vec{p}^2}{m}$ and $E > 0$.
-
-    % Solution to the Eq.(\ref{schrod_scatt}) can be presented in the form:
-
-    % \begin{equation}
-    %     \mid \Psi _f \rangle = \mid \Psi _0 \rangle + \frac{1}{E - H_0 + i \epsilon} V \mid \Psi _f \rangle
-    % \end{equation}
-
     I work in the time-independent formulation of the scattering process.
     In such a case the Hamiltonian is:
 
@@ -313,10 +278,6 @@ In the following, I describe how to get these quantities.
     $\ket{\vec{p}\,}$, with the same energy eigenvalue,
     but with the presence of the potential:
     
-    % , the eigenstate will differ from $\ket{\phi_l}$,
-    % but in case of elastic scattering (which we are interested in) the energy eigenvalue $E$ should be the same.
-
-    % So these two states fulfill Schr\"{o}dinger equations for such scattering process:
 
     \begin{equation}
         \begin{cases}
@@ -658,14 +619,8 @@ The Jacobi momenta $\vec{p}$ and $\vec{q}$ for three particles with individual m
 
     Here $j_\mu^n$ is a contribution from the interaction between a photon and 
     $n$ nucleons (obviously $j_\mu^3$ is present in 3N system only).
-    Each $j_\mu^n$ describes the interaction of photon with all relevant permutations of $n$ nucleons,
-    i.e. $j_\mu^1$ is a sum of photon interactions with each of nucleons in the system separately. 
-    % For 2N:
-
-    % \begin{equation}
-    %     j_\mu^1 = j_\mu^1(1) + j_\mu^1(2),
-    % \end{equation}
-    % where $j_\mu^1(i)$ is an interaction of photon with $i$-th nucleon.
+    Each $j_\mu^n$ describes the interaction of a photon with all relevant permutations of $n$ nucleons,
+    i.e. $j_\mu^1$ is a sum of photon interactions with each of the nucleons in the system separately. 
 
 
     In the case of the photodisintegration process, I will use only a \gls{snc},
@@ -731,7 +686,7 @@ The Jacobi momenta $\vec{p}$ and $\vec{q}$ for three particles with individual m
     To do that we break down the single nucleon current matrix elements into multipole components and 
     represent some of the electric multipoles using the Coulomb multipoles,
     which arise from the single nucleon charge density operator \cite{Golak2005}.
-    This is acceptable because, in low-energy regime, contributions from many nucleons to the nuclear charge density are typically small.
+    This is acceptable because, in a low-energy regime, contributions from many nucleons to the nuclear charge density are typically small.
     We then obtain the rest of the electric multipoles and all of the magnetic multipoles exclusively from the single nucleon current operators.
 
     In 3N system we have following expressions for the \gls{snc}:
@@ -822,7 +777,7 @@ The Jacobi momenta $\vec{p}$ and $\vec{q}$ for three particles with individual m
     where 
     $ \vec{k}_1 = \vec{p}_1^{\, \prime} - \vec{p}_1 $,
     $ \vec{k}_2 = \vec{p}_2^{\, \prime} - \vec{p}_2 $
-    and the formfactor $v(k)$ reads 
+    and the form factor $v(k)$ reads 
     \begin{eqnarray}
     v (k) = \frac 1{ \left( 2 \pi \, \right)^3 } \,
             \frac{g_A M_\pi}{4 F_\pi^3 } \,
@@ -832,7 +787,7 @@ The Jacobi momenta $\vec{p}$ and $\vec{q}$ for three particles with individual m
 
     In the case of the pion absorption process, we follow a standard procedure
     including partial wave states for both 2N and 3N induced nuclei.
-    It occurs that in such a case one needs  matrix elements of $\rho$. 
+    It occurs that in such a case one needs matrix elements of $\rho$. 
     For 2N this is 
     $ \matrixel{\, \vec{p} + \frac12\vec{P}_f } 
     {\rho (1) }{ \vec{p} - \frac12\vec{P}_f + \vec{P}_i \, }$
@@ -992,7 +947,7 @@ The Jacobi momenta $\vec{p}$ and $\vec{q}$ for three particles with individual m
 
     In the Results section, I also demonstrate (for processes
     with three free nucleons in the final state) predictions of the differential absorption rates.
-    The natural domain is defined by energies of outgoing nucleons    
+    The natural domain is defined by the energies of outgoing nucleons    
     $(E_1, E_2)$; in such a case the differential absorption rate
      $ {d^2\Gamma_{pnn} }/ \left( {d E_1 \, d E_2} \right) $ expresses as\cite{Golak2018}
     \begin{eqnarray}
@@ -1138,7 +1093,6 @@ The Jacobi momenta $\vec{p}$ and $\vec{q}$ for three particles with individual m
     of regulator described in the Chapter \ref{sec:intro}.
 
     In the case of the \gls{sms} interaction, its free parameters have been obtained from data for 
-    % According to \cite{reinkrebs2018}, where the \gls{sms} potential was presented,
    four values of the cutoff parameter $\Lambda$:
    \SIlist[list-units = single]{400;450;500;550}{\mev} \cite{reinkrebs2018}.
    Using each of these values, one obtains different predictions which, of course, can further differ 
@@ -1150,8 +1104,6 @@ The Jacobi momenta $\vec{p}$ and $\vec{q}$ for three particles with individual m
     That is exemplified in \fig{Cutoff_dep}  for the deuteron photodisintegration cross section for the
     photon's energy $E_\gamma = \SIlist{30;100;140}{\mev}$.
     The \gls{sms} model at \gls{n4lo+} with two-nucleon force is used.
-    % Comparison of predictions obtained with different values of the 
-    % cutoff parameter $\Lambda$ is presented on the Fig.~\ref{Cutoff_dep}.
     Each subfigure shows predictions for the total cross section as 
     a function of the cutoff parameter,
     normalized to the maximum value among all cross sections
